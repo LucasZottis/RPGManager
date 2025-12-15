@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RPGCharacterSheetManager</string>
+    <string name="create_new_character_button_label">Criar personagem</string>
+    <string name="manage_character_button_label">Selecionar personagem</string>
+
+    <string name="next_button_label">Avançar</string>
+    <string name="previous_button_label">Voltar</string>
+
+    <string name="races_spinner_label">Raça</string>
+    <string name="classes_spinner_label">Classe</string>
+    <string name="alignment_spinner_label">Tendência</string>
+    <string name="background_spinner_label">Antecedente</string>
+
+    <string name="personality_traits_spinner_label">Traços de Personalidade</string>
+    <string name="ideals_spinner_label">Ideias</string>
+    <string name="bonds_spinner_label">Vínculos</string>
+    <string name="flaws_spinner_label">Defeitos</string>
+</resources>
