@@ -1,0 +1,29 @@
+@startuml
+entity WeaponGroup {
+  Id: Guid <<PK>>
+  Name: varchar 30
+}
+
+entity WeaponCategory {
+  Id: Guid <<PK>>
+  Name: varchar 30
+}
+
+entity WeaponProperty {
+  Id: Guid <<PK>>
+  Name: varchar 50
+  Description: text
+}
+
+entity Weapon {
+  Id: Guid <<PK>>
+  WeaponGroupId: Guid <<FK>>
+  Name: varchar 100
+  Description: text
+}
+
+entity WeaponProperties {
+  WeaponId: Guid <<PK>> <<FK>>
+  WeaponPropertyId: Guid <<PK>> <<FK>>
+}
+@enduml
