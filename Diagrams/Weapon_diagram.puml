@@ -16,6 +16,9 @@ entity WeaponProperty {
     GameSystemId: Guid <<FK>>
     Name: varchar 30
     Description: text
+    AltersDamage: bit
+    RequiresAlternativeDamage: bit
+    AllowsAttributeOverride: bit
 }
 
 entity Weapon {
@@ -23,39 +26,35 @@ entity Weapon {
     GameSystemId: Guid <<FK>>
     WeaponCategoryId: Guid <<FK>>
     WeaponGroupId: Guid <<FK>> null
+    BaseAbilityScoreId: Guid <<FK>>
+    AlternativeAbilityScoreId: Guid <<FK>> null
     Name: varchar 50
     Description: text null
     Cost: decimal(10,2)
     Weight: float
-    DamageDieCount: int
-    DamageDieType: int
-    DamageType: varchar 30
     RangeNormal: int null
     RangeLong: int null
-    ' IsFinesse: bit
-    ' IsLight: bit
-    ' IsHeavy: bit
-    ' IsTwoHanded: bit
-    ' IsVersatile: bit
-    ' AlternativeDamageDieCount: int null
-    ' AlternativeDamageDieType: int null
 }
 
-'entity DamageType {
-'    Id: Guid <<PK>>
-'    Name: varchar 30
-'}
+entity DamageType {
+    Id: Guid <<PK>>
+    Name: varchar 30
+}
 
 entity WeaponDamage {
-    Id: Guid <<PK>>
-    WeaponId: Guid <<FK>>
+    WeaponId: Guid <<PK>> <<FK>>
+    DamageTypeId: <<PK>> <<FK>>
+    AttackIncrease: int null
+    DamageDieCount: int null
+    DamageDieType: int null
+    AlternativeDamageDieCount: int null
+    AlternativeDamageDieType: int null
+    DamageIncrease: int null
 }
 
 entity WeaponProperties {
     WeaponId: Guid <<PK>> <<FK>>
     WeaponPropertyId: Guid <<PK>> <<FK>>
-    AlternativeDamageDieCount: int null
-    AlternativeDamageDieType: int null
 }
 
 GameSystem -- WeaponCategory
@@ -68,4 +67,7 @@ WeaponGroup -- Weapon
 
 Weapon -- WeaponProperties
 WeaponProperty -- WeaponProperties
+
+Weapon -- WeaponDamage
+DamageType -- WeaponDamage
 @enduml
