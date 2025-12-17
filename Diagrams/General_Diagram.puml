@@ -1,0 +1,75 @@
+@startuml General
+entity GameSystem {
+    Id: Guid <<PK>>
+    Name: varchar 50
+}
+
+entity Language {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    RaceId: Guid <<FK>> null
+    Name: varchar 30
+    Alphabet: varchar 20 null
+}
+
+entity Alignment {
+    Id: Guid <<PK>>
+    Name: varchar 25
+    Description: text
+}
+
+entity AbilityScore {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    Name: varchar 30
+    Abbreviation: varchar 3 null
+    Description: text null
+}
+
+entity Skill {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    AbilityScoreId: Guid <<FK>>
+    Name: varchar 50
+}
+
+entity WeaponSkill {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    WeaponId: Guid null <<FK>>
+    WeaponGroupId: Guid null <<FK>>
+    Name: varchar 50
+}
+
+entity ToolSkill {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    ToolId: Guid null <<FK>>
+    ToolGroupId: Guid null <<FK>>
+    Name: varchar 50
+}
+
+entity Trick {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    Name: varchar 50
+    Description: text null
+}
+
+entity Spell {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    Name: varchar 100
+    Description: text null
+}
+
+GameSystem -- Race
+GameSystem -- Language
+GameSystem -- AbilityScore
+GameSystem -- Alignment
+GameSystem -- Skill
+GameSystem -- WeaponSkill
+GameSystem -- ToolSkill
+GameSystem -- Trick
+GameSystem -- Spell
+@enduml

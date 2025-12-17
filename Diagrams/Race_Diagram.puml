@@ -1,0 +1,82 @@
+@startuml Race_Diagram.puml
+entity Race {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    ParentRaceId: Guid null <<FK>>
+    SystemId: Guid <<FK>>
+    Name: varchar 150
+    Description: varchar 150
+    IsSubRace: bit
+    Speed: float
+}
+
+entity RaceLanguage {
+    RaceId: Guid <<PK>>
+    LanguageId: Guid <<PK>>
+}
+
+entity RaceAbilityScore {
+    Id: Guid <<PK>>
+    RaceId: Guid <<FK>>
+    AbilityScoreId: Guid <<FK>>
+    AbilityScoreIncrease: int
+}
+
+entity RaceFeature {
+    Id: Guid <<PK>>
+    RaceId: Guid <<FK>>
+    Name: varchar: 30
+    Description: text
+}
+
+entity RaceWeaponSkill {
+    RaceId: Guid <<PK>> <<FK>>
+    WeaponSkillId: Guid <<PK>> <<FK>>
+    IsExpertise: bit
+}
+
+entity RaceSkill {
+    RaceId: Guid <<PK>> <<FK>>
+    SkillId: Guid <<PK>> <<FK>>
+    IsExpertise: bit
+}
+
+entity RaceToolSkill {
+    RaceId: Guid <<PK>> <<FK>>
+    ToolSkillId: Guid <<PK>> <<FK>>
+    IsExpertise: bit
+}
+
+entity RaceTrick {
+    RaceId: Guid <<PK>> <<FK>>
+    TrickId: Guid <<PK>> <<FK>>
+}
+
+entity RaceSpell {
+    RaceId: Guid <<PK>> <<FK>>
+    SpellId: Guid <<PK>> <<FK>>
+}
+
+Race -- RaceLanguage
+Language -- RaceLanguage
+
+Race -- RaceAbilityScore
+AbilityScore -- RaceAbilityScore
+
+Race -- RaceFeature
+
+Race -- RaceWeaponSkill
+WeaponSkill -- RaceWeaponSkill
+
+Race -- RaceSkill
+Skill -- RaceSkill
+
+Race -- RaceToolSkill
+ToolSkill -- RaceToolSkill
+
+Race -- RaceTrick
+Trick -- RaceTrick
+
+Race -- RaceSpell
+Spell -- RaceSpell
+@enduml

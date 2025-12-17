@@ -1,0 +1,26 @@
+@startuml Level
+entity Level {
+    Id: Guid <<PK>>
+    GameSystemId: Guid <<FK>>
+    LevelNumber: int
+    ExperiencePoints: int
+    ProficiencyBonus: int
+}
+
+entity RaceLevel {
+    RaceId: Guid <<PK>> <<FK>>
+    LevelId: Guid <<PK>> <<FK>>
+    HitPointIncrease: int
+}
+
+entity ClassLevel {
+    ClassId: Guid <<PK>> <<FK>>
+    LevelId: Guid <<PK>> <<FK>>
+    AbilityScoreIncrease: int
+}
+
+GameSystem -- Level
+
+Level -- RaceLevel
+Race -- RaceLevel
+@enduml
