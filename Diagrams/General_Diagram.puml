@@ -37,7 +37,7 @@ entity WeaponSkill {
     Id: Guid <<PK>>
     GameSystemId: Guid <<FK>>
     WeaponId: Guid null <<FK>>
-    WeaponGroupId: Guid null <<FK>>
+    WeaponCategoryId: Guid null <<FK>>
     Name: varchar 50
 }
 
