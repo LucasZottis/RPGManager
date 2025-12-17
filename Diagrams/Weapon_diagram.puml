@@ -41,10 +41,31 @@ entity Weapon {
     ' AlternativeDamageDieType: int null
 }
 
+'entity DamageType {
+'    Id: Guid <<PK>>
+'    Name: varchar 30
+'}
+
+entity WeaponDamage {
+    Id: Guid <<PK>>
+    WeaponId: Guid <<FK>>
+}
+
 entity WeaponProperties {
     WeaponId: Guid <<PK>> <<FK>>
     WeaponPropertyId: Guid <<PK>> <<FK>>
     AlternativeDamageDieCount: int null
     AlternativeDamageDieType: int null
 }
+
+GameSystem -- WeaponCategory
+GameSystem -- WeaponGroup
+GameSystem -- Weapon
+GameSystem -- WeaponProperty
+
+WeaponCategory -- Weapon
+WeaponGroup -- Weapon
+
+Weapon -- WeaponProperties
+WeaponProperty -- WeaponProperties
 @enduml
