@@ -1,32 +1,21 @@
 ﻿using RpgContentCreator.Application.Models;
 using RpgContentCreator.Application.Models.Races;
-using RpgContentCreator.IntegrationTest.Models.AbilitiesScores;
-using RpgContentCreator.IntegrationTest.Models.GameSystems;
-using RpgContentCreator.IntegrationTest.Models.Languages;
 
 namespace RpgContentCreator.IntegrationTest.Models.Races.DwarfRace;
 
 internal class Dwarf : RaceModel
 {
-    public Dwarf(GameSystemModel gameSystem)
+    public Dwarf( GameSystemModel gameSystem )
     {
         Name = "Anão";
         Description = GetDescription();
         GameSystem = gameSystem;
-        RaceAbilitiesScores = GetAbilitiesScores();
         RaceFeatures = GetFeatures();
     }
 
     private string GetDescription()
     {
         return "";
-    }
-
-    protected ICollection<RaceAbilitiesScoreModel> GetAbilitiesScores()
-    {
-        return [
-            new RaceAbilitiesScoreModel { AbilityScore = new Constitution(), Increase = 2  }
-        ];
     }
 
     protected ICollection<RaceFeatureModel> GetFeatures()
@@ -59,10 +48,20 @@ internal class Dwarf : RaceModel
         ];
     }
 
-    private ICollection<RaceLanguageModel> GetLanguages()
+    public void AddAbilityScore( AbilityScoreModel abilityScore, int increase )
     {
-        return [
-            new RaceLanguageModel { Language = new CommonLanguage() },
-        ];
+        RaceAbilitiesScores.Add( new RaceAbilitiesScoreModel
+        {
+            AbilityScore = abilityScore,
+            Increase = increase
+        } );
+    }
+
+    public void AddLanguage( LanguageModel language )
+    {
+        RaceLanguages.Add( new RaceLanguageModel
+        {
+            Language = language
+        } );
     }
 }
