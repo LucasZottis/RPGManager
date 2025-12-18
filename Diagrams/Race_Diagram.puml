@@ -3,7 +3,6 @@ entity Race {
     Id: Guid <<PK>>
     GameSystemId: Guid <<FK>>
     ParentRaceId: Guid null <<FK>>
-    SystemId: Guid <<FK>>
     Name: varchar 150
     Description: varchar 150
     IsSubRace: bit
@@ -18,7 +17,7 @@ entity RaceLanguage {
 entity RaceAbilityScore {
     Id: Guid <<PK>>
     RaceId: Guid <<FK>>
-    AbilityScoreId: Guid <<FK>>
+    AbilityScoreId: Guid <<FK>> null
     AbilityScoreIncrease: int
 }
 

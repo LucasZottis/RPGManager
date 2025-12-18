@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="RpgContentCreator.Application/RpgContentCreator.Application.csproj" Id="aaffd6b9-0ecc-4577-8629-909f110ac86d" />
+  <Project Path="RpgContentCreator.Domain/RpgContentCreator.Domain.csproj" />
+  <Project Path="RpgContentCreator.Infra/RpgContentCreator.Infra.csproj" />
+  <Project Path="RpgContentCreator.IntegrationTest/RpgContentCreator.IntegrationTest.csproj" Id="8a4d1502-9edd-4e93-a191-092a7208caba" />
+  <Project Path="RpgContentCreator.Library/RpgContentCreator.Library.csproj" />
+  <Project Path="RpgContentCreator.Migration.SqLite/RpgContentCreator.Migration.SqLite.csproj" Id="7fa1c4a3-86f4-4ba8-9d18-12dafcb3f559" />
+</Solution>
