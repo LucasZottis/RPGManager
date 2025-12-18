@@ -24,58 +24,62 @@ entity RaceAbilityScore {
 entity RaceFeature {
     Id: Guid <<PK>>
     RaceId: Guid <<FK>>
-    Name: varchar: 30
+    Name: varchar 30
     Description: text
 }
 
-entity RaceWeaponSkill {
-    RaceId: Guid <<PK>> <<FK>>
-    WeaponSkillId: Guid <<PK>> <<FK>>
-    IsExpertise: bit
-}
+'entity RaceWeaponSkill {
+'    RaceId: Guid <<PK>> <<FK>>
+'    WeaponSkillId: Guid <<PK>> <<FK>>
+'    IsExpertise: bit
+'}
 
-entity RaceSkill {
-    RaceId: Guid <<PK>> <<FK>>
-    SkillId: Guid <<PK>> <<FK>>
-    IsExpertise: bit
-}
+'entity RaceSkill {
+'    RaceId: Guid <<PK>> <<FK>>
+'    SkillId: Guid <<PK>> <<FK>>
+'    IsExpertise: bit
+'}
 
-entity RaceToolSkill {
-    RaceId: Guid <<PK>> <<FK>>
-    ToolSkillId: Guid <<PK>> <<FK>>
-    IsExpertise: bit
-}
+'entity RaceToolSkill {
+'    RaceId: Guid <<PK>> <<FK>>
+'    ToolSkillId: Guid <<PK>> <<FK>>
+'    IsExpertise: bit
+'}
 
-entity RaceTrick {
-    RaceId: Guid <<PK>> <<FK>>
-    TrickId: Guid <<PK>> <<FK>>
-}
+'entity RaceTrick {
+'    RaceId: Guid <<PK>> <<FK>>
+'    TrickId: Guid <<PK>> <<FK>>
+'}
 
-entity RaceSpell {
-    RaceId: Guid <<PK>> <<FK>>
-    SpellId: Guid <<PK>> <<FK>>
-}
+'entity RaceSpell {
+'    RaceId: Guid <<PK>> <<FK>>
+'    SpellId: Guid <<PK>> <<FK>>
+'}
 
-Race -- RaceLanguage
-Language -- RaceLanguage
+GameSystem "1" ||--o{ "0..N" Race
 
-Race -- RaceAbilityScore
-AbilityScore -- RaceAbilityScore
+Race "1" ||--o{ "0..N" Race : ParentRaceId
 
-Race -- RaceFeature
+Race "1" ||--o{ "0..N" RaceLanguage
+Language "1" ||--o{ "0..N" RaceLanguage
 
-Race -- RaceWeaponSkill
-WeaponSkill -- RaceWeaponSkill
+Race "1" ||--o{ "0..N" RaceAbilityScore
+AbilityScore "0..1" ||--o{ "0..N" RaceAbilityScore
 
-Race -- RaceSkill
-Skill -- RaceSkill
+Race "1" ||--o{ "0..N" RaceFeature
 
-Race -- RaceToolSkill
-ToolSkill -- RaceToolSkill
+'Race -- RaceWeaponSkill
+'WeaponSkill -- RaceWeaponSkill
 
-Race -- RaceTrick
-Trick -- RaceTrick
+'Race -- RaceSkill
+'Skill -- RaceSkill
 
-Race -- RaceSpell
-Spell -- RaceSpell
+'Race -- RaceToolSkill
+'ToolSkill -- RaceToolSkill
+
+'Race -- RaceTrick
+'Trick -- RaceTrick
+
+'Race -- RaceSpell
+'Spell -- RaceSpell
 @enduml
