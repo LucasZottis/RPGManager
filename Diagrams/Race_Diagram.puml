@@ -5,8 +5,8 @@ entity Race {
     ParentRaceId: Guid null <<FK>>
     Name: varchar 150
     Description: varchar 150
-    IsSubRace: bit
     Speed: float
+    IsPlayable: bit
 }
 
 entity RaceLanguage {
