@@ -16,13 +16,17 @@ public class WeaponProperty : EntityBase
     [HasColumn( nameof( Description ), ColumnType.LongText )]
     public string Description { get; set; }
 
-    [Required]
-    [HasColumn( nameof( AltersDamage ), ColumnType.Boolean )]
-    public bool AltersDamage { get; set; }
+    //[Required]
+    //[HasColumn( nameof( AltersDamage ), ColumnType.Boolean )]
+    //public bool AltersDamage { get; set; }
+
+    //[Required]
+    //[HasColumn( nameof( RequiresAlternativeDamage ), ColumnType.Boolean )]
+    //public bool RequiresAlternativeDamage { get; set; }
 
     [Required]
-    [HasColumn( nameof( RequiresAlternativeDamage ), ColumnType.Boolean )]
-    public bool RequiresAlternativeDamage { get; set; }
+    [HasColumn( nameof(HasAlternativeDamage), ColumnType.Boolean )]
+    public bool HasAlternativeDamage {get;set;}
 
     [Required]
     [HasColumn( nameof( AllowsAttributeOverride ), ColumnType.Boolean )]
