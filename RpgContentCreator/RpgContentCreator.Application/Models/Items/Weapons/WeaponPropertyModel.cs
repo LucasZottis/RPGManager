@@ -6,7 +6,8 @@ public class WeaponPropertyModel
     public Guid GameSystemId { get; set; }
     public string Name { get; set; } = null!;
     public string Description { get; set; } = null!;
-    public bool AltersDamage { get; set; }
-    public bool RequiresAlternativeDamage { get; set; }
+    //public bool AltersDamage { get; set; }
+    //public bool RequiresAlternativeDamage { get; set; }
+    public bool HasAlternativeDamage {get; set;}
     public bool AllowsAttributeOverride { get; set; }
 }
