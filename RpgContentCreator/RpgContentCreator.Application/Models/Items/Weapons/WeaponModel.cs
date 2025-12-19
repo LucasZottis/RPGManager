@@ -6,7 +6,7 @@ public class WeaponModel
     public Guid GameSystemId { get; set; }
 
     public Guid WeaponCategoryId { get; set; }
-    public Guid? WeaponGroupId { get; set; }
+    public Guid? WeaponTypeId { get; set; }
 
     public Guid BaseAbilityScoreId { get; set; }
     public Guid? AlternativeAbilityScoreId { get; set; }
