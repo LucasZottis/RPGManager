@@ -1,6 +1,6 @@
 ﻿namespace RpgContentCreator.Application.Models.Items.Weapons;
 
-public class WeaponGroupModel
+public class WeaponTypeModel
 {
     public Guid Id { get; set; }
     public Guid GameSystemId { get; set; }
