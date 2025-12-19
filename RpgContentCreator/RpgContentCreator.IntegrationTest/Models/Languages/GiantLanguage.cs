@@ -2,12 +2,12 @@
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
-public class CommonLanguage : LanguageModel
+public class GiantLanguage : LanguageModel
 {
-    public CommonLanguage(GameSystemModel gameSystem)
+    public GiantLanguage(GameSystemModel gameSystem)
     {
-        Name = "Comum";
-        Alphabet = "Comum";
+        Name = "Gigante";
+        Alphabet = "Anão";
         GameSystem = gameSystem;
     }
 }

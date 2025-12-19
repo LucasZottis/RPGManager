@@ -1,4 +1,6 @@
-﻿namespace RpgContentCreator.Application.Models.Races;
+﻿using RpgContentCreator.Domain.Entities.RaceEntities;
+
+namespace RpgContentCreator.Application.Models.Races;
 
 public class RaceModel
 {
@@ -14,4 +16,10 @@ public class RaceModel
     public ICollection<RaceFeatureModel> RaceFeatures { get; set; }
 
     public ICollection<RaceLanguageModel> RaceLanguages { get; set; }
+
+    public ICollection<RaceSkillProficiency> SkillProficiencies { get; set; }
+
+    public ICollection<RaceWeaponProficiency> WeaponProficiencies { get; set; }
+
+    public ICollection<RaceWeaponGroupProficiency> WeaponGroupProficiencies { get; set; }
 }

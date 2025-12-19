@@ -23,5 +23,7 @@ public class AbilityScore : EntityBase
     [HasColumn( nameof( Description ), ColumnType.LongText )]
     public string? Description { get; set; }
 
+    public ICollection<Skill> Skills { get; set; }
+
     public GameSystem GameSystem { get; set; }
 }

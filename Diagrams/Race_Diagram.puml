@@ -28,23 +28,26 @@ entity RaceFeature {
     Description: text
 }
 
-'entity RaceWeaponSkill {
-'    RaceId: Guid <<PK>> <<FK>>
-'    WeaponSkillId: Guid <<PK>> <<FK>>
-'    IsExpertise: bit
-'}
+entity RaceSkillProficiency {
+    RaceId: Guid <<PK>> <<FK>>
+    SkillId: Guid <<PK>> <<FK>>
+    IsExpertise: bit
+}
 
-'entity RaceSkill {
-'    RaceId: Guid <<PK>> <<FK>>
-'    SkillId: Guid <<PK>> <<FK>>
-'    IsExpertise: bit
-'}
+entity RaceWeaponProficiency {
+    RaceId: Guid <<PK>> <<FK>>
+    WeaponId: Guid <<PK>> <<FK>>
+}
 
-'entity RaceToolSkill {
-'    RaceId: Guid <<PK>> <<FK>>
-'    ToolSkillId: Guid <<PK>> <<FK>>
-'    IsExpertise: bit
-'}
+entity RaceWeaponGroupProficiency {
+    RaceId: Guid <<PK>> <<FK>>
+    WeaponGroupId: Guid <<PK>> <<FK>>
+}
+
+entity RaceToolProficiency {
+    RaceId: Guid <<PK>> <<FK>>
+    ToolId: Guid <<PK>> <<FK>>
+}
 
 'entity RaceTrick {
 '    RaceId: Guid <<PK>> <<FK>>

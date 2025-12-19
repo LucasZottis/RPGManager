@@ -1,12 +1,13 @@
 ﻿using RpgContentCreator.Application.Models;
+using System.Xml.Linq;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
-public class CommonLanguage : LanguageModel
+public class HalflingLanguage : LanguageModel
 {
-    public CommonLanguage(GameSystemModel gameSystem)
+    public HalflingLanguage( GameSystemModel gameSystem )
     {
-        Name = "Comum";
+        Name = "Halfling";
         Alphabet = "Comum";
         GameSystem = gameSystem;
     }

@@ -2,12 +2,12 @@
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
-public class CommonLanguage : LanguageModel
+public class AbyssalLanguage : LanguageModel
 {
-    public CommonLanguage(GameSystemModel gameSystem)
+    public AbyssalLanguage( GameSystemModel gameSystem )
     {
-        Name = "Comum";
-        Alphabet = "Comum";
+        Name = "Abissal";
+        Alphabet = "Infernal";
         GameSystem = gameSystem;
     }
 }

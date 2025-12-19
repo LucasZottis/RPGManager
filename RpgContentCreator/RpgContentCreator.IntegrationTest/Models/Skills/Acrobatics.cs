@@ -1,0 +1,28 @@
+﻿using RpgContentCreator.Application.Models;
+
+namespace RpgContentCreator.IntegrationTest.Models.Skills;
+
+public class Acrobatics : SkillModel
+{
+    public Acrobatics(GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore)
+    {
+        Name = "Acrobacia";
+        Description = GetDescription();
+        GameSystem = gameSystem;
+        BaseAbilityScore = baseAbilityScore;
+    }
+
+    private string GetDescription()
+    {
+        return @"<section class=""skill-description acrobatics"">
+              <h3>Destreza (Acrobacia)</h3>
+              <p>
+                Um teste de <strong>Destreza (Acrobacia)</strong> cobre sua tentativa de se manter em pé em uma situação
+                complicada, como quando você tenta correr através de uma camada de gelo, equilibrar-se em uma corda
+                bamba ou se manter ereto em um convés de navio balançando. O Mestre também pode pedir um teste de <strong>Destreza (Acrobacia)</strong> para ver se você consegue
+                executar acrobacias, incluindo mergulhos, rolamentos, saltos e cambalhotas.
+              </p>
+            </section>";
+    }
+}
+
