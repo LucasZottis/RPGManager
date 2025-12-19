@@ -14,9 +14,9 @@ public class Weapon : EntityBase
     [HasColumn( nameof( WeaponCategoryId ), ColumnType.Guid )]
     public Guid WeaponCategoryId { get; set; }
 
-    [ForeignKey( nameof( WeaponGroup ) )]
-    [HasColumn( nameof( WeaponGroupId ), ColumnType.Guid )]
-    public Guid? WeaponGroupId { get; set; }
+    [ForeignKey( nameof( WeaponType ) )]
+    [HasColumn( nameof( WeaponTypeId ), ColumnType.Guid )]
+    public Guid? WeaponTypeId { get; set; }
 
     [Required]
     [ForeignKey( nameof( BaseAbilityScore ) )]
@@ -52,7 +52,7 @@ public class Weapon : EntityBase
 
     public GameSystem GameSystem { get; set; }
     public WeaponCategory WeaponCategory { get; set; }
-    public WeaponGroup WeaponGroup { get; set; }
+    public WeaponType WeaponType { get; set; }
     public AbilityScore BaseAbilityScore { get; set; }
     public AbilityScore AlternativeAbilityScore { get; set; }
 }
