@@ -21,7 +21,7 @@ public class Race : EntityBase
     public string Description { get; set; }
 
     [Required]
-    [HasColumn( nameof( Speed ), ColumnType.ShortDecimal )]
+    [HasColumn( nameof( Speed ), ColumnType.Double )]
     public double Speed { get; set; }
 
     //public bool IsSubRace { get; set; }

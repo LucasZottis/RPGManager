@@ -1,6 +1,6 @@
-﻿namespace RpgContentCreator.Domain.Entities.Items.WeaponEntities;
+﻿namespace RpgContentCreator.Domain.Entities.ItemsEntities.WeaponEntities;
 
-public class WeaponGroup : EntityBase
+public class WeaponCategory : EntityBase
 {
     [Required]
     [ForeignKey( nameof( GameSystem ) )]

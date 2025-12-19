@@ -16,4 +16,10 @@
     <ProjectReference Include="..\RpgContentCreator.Application\RpgContentCreator.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Items\" />
+    <Folder Include="Models\Items\Weapon\WeaponGroup\" />
+    <Folder Include="Models\DamageTypes\" />
+  </ItemGroup>
+
 </Project>
