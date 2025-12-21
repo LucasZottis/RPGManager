@@ -1,6 +1,4 @@
-﻿using RpgContentCreator.Domain.Entities.ItemsEntities.WeaponEntities;
-
-namespace RpgContentCreator.Domain.Entities.Items.WeaponEntities;
+﻿namespace RpgContentCreator.Domain.Entities.ItemsEntities.WeaponEntities;
 
 public class Weapon : EntityBase
 {

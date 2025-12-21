@@ -1,7 +1,6 @@
 ﻿using RpgContentCreator.Application.Interfaces;
-using RpgContentCreator.Application.Models.Races;
 using RpgContentCreator.Domain.Entities.RaceEntities;
-using RpgContentCreator.Domain.Interfaces.Repositories;
+using RpgContentCreator.Domain.Models.Races;
 
 namespace RpgContentCreator.Application.Services;
 

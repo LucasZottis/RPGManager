@@ -1,14 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
-using System.Xml.Linq;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class InfernalLanguage : LanguageModel
 {
-    public InfernalLanguage( GameSystemModel gameSystem )
+    public InfernalLanguage( GameSystemRules rules )
     {
         Name = "Infernal";
         Alphabet = "Infernal";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

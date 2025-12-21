@@ -1,11 +1,8 @@
 ﻿namespace RpgContentCreator.Domain.Entities;
 
 [PrimaryKey( nameof( Id ) )]
-public class Language
+public class Language : EntityBase
 {
-    [HasColumn( nameof( Id ), ColumnType.Guid )]
-    public Guid Id { get; set; }
-
     [Required]
     [ForeignKey( nameof( GameSystem ) )]
     [HasColumn( nameof( GameSystemId ), ColumnType.Guid )]

@@ -1,14 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
-using System.Xml.Linq;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class GnomishLanguage : LanguageModel
 {
-    public GnomishLanguage(GameSystemModel gameSystem)
+    public GnomishLanguage( GameSystemRules rules )
     {
         Name = "Gnômico";
         Alphabet = "Anão";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

@@ -1,13 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class GiantLanguage : LanguageModel
 {
-    public GiantLanguage(GameSystemModel gameSystem)
+    public GiantLanguage( GameSystemRules rules )
     {
         Name = "Gigante";
         Alphabet = "Anão";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

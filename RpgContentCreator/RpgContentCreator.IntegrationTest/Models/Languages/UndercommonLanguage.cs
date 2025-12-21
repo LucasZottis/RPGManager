@@ -1,14 +1,13 @@
-﻿using RpgContentCreator.Application.Models;
-using System.Xml.Linq;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class UndercommonLanguage : LanguageModel
 {
-    public UndercommonLanguage(GameSystemModel gameSystem)
+    public UndercommonLanguage( GameSystemRules rules )
     {
         Name = "Subcomum";
         Alphabet = "Élfico";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

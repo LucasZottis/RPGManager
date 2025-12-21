@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Skills;
 
 public class Perception : SkillModel
 {
-    public Perception( GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore )
+    public Perception( GameSystemRules rules )
     {
         Name = "Percepção";
         Description = GetDescription();
-        GameSystem = gameSystem;
-        BaseAbilityScore = baseAbilityScore;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        //BaseAbilityScore = baseAbilityScore;
     }
 
     private string GetDescription()

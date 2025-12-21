@@ -1,14 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 using System.Xml.Linq;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class SylvanLanguage : LanguageModel
 {
-    public SylvanLanguage( GameSystemModel gameSystem )
+    public SylvanLanguage( GameSystemRules rules )
     {
         Name = "Silvestre";
         Alphabet = "Élfico";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

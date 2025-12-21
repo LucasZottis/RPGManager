@@ -1,14 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
-using System.Xml.Linq;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class CelestialLanguage : LanguageModel
 {
-    public CelestialLanguage( GameSystemModel gameSystem )
+    public CelestialLanguage( GameSystemRules rules )
     {
         Name = "Celestial";
         Alphabet = "Celestial";
-        GameSystem = gameSystem
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

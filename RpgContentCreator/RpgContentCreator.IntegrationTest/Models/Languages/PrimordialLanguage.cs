@@ -1,14 +1,13 @@
-﻿using RpgContentCreator.Application.Models;
-using System.Xml.Linq;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class PrimordialLanguage : LanguageModel
 {
-    public PrimordialLanguage( GameSystemModel gameSystem )
+    public PrimordialLanguage( GameSystemRules rules )
     {
         Name = "Primordial";
         Alphabet = "Dracônico";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

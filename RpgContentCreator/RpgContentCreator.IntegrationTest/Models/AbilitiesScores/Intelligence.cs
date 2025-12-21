@@ -1,15 +1,17 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Models.Skills;
 
 namespace RpgContentCreator.IntegrationTest.Models.AbilitiesScores;
 
 public class Intelligence : AbilityScoreModel
 {
-    public Intelligence( GameSystemModel gameSystem )
+    public Intelligence( GameSystemRules rules )
     {
         Name = "Inteligência";
         Description = GetDescription();
         Abbreviation = "INT";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        Skills = GetSkillList( rules );
     }
 
     private string GetDescription()
@@ -51,4 +53,14 @@ public class Intelligence : AbilityScoreModel
                 </section>";
     }
 
+    private List<SkillModel> GetSkillList( GameSystemRules rules )
+    {
+        return new List<SkillModel> {
+            new Arcana( rules ),
+            new History( rules ),
+            new Investigation( rules ),
+            new Nature( rules ),
+            new Religion( rules ),
+        };
+    }
 }

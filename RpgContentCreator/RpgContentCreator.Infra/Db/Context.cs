@@ -1,9 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RpgContentCreator.Domain.Entities.RaceEntities;
+using RpgContentCreator.Infra.Db.DbContextConfigurator;
 
 namespace RpgContentCreator.Infra.Db;
 
 public class Context : ContextBase
 {
-    internal DbSet<Race> Race { get; set; }
+    internal DbSet<GameSystem> GameSystem { get; set; }
+
+    public Context( DbContextConfiguratorBuilder dbContextConfiguratorBuilder ) : base( dbContextConfiguratorBuilder )
+    {
+    }
 }

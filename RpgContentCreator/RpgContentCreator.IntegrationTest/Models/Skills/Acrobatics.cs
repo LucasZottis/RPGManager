@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Skills;
 
 public class Acrobatics : SkillModel
 {
-    public Acrobatics(GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore)
+    public Acrobatics( GameSystemRules rules )
     {
         Name = "Acrobacia";
         Description = GetDescription();
-        GameSystem = gameSystem;
-        BaseAbilityScore = baseAbilityScore;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        ////BaseAbilityScore = baseAbilityScore;
     }
 
     private string GetDescription()
@@ -25,4 +25,3 @@ public class Acrobatics : SkillModel
             </section>";
     }
 }
-

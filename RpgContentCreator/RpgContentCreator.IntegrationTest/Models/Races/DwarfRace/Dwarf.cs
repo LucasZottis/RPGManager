@@ -1,15 +1,16 @@
-﻿using RpgContentCreator.Application.Models;
-using RpgContentCreator.Application.Models.Races;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.Domain.Models.Races;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Races.DwarfRace;
 
 public class Dwarf : RaceModel
 {
-    public Dwarf( GameSystemModel gameSystem )
+    public Dwarf( GameSystemRules rules )
     {
         Name = "Anão";
         Description = GetDescription();
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
         RaceFeatures = GetFeatures();
     }
 

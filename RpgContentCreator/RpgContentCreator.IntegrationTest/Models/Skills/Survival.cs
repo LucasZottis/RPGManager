@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Skills;
 
 public class Survival : SkillModel
 {
-    public Survival( GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore )
+    public Survival( GameSystemRules rules )
     {
         Name = "Sobrevivência";
         Description = GetDescription();
-        GameSystem = gameSystem;
-        BaseAbilityScore = baseAbilityScore;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        //BaseAbilityScore = baseAbilityScore;
     }
 
     private string GetDescription()

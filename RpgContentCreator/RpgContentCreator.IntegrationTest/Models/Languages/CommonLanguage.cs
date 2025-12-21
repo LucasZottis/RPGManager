@@ -1,13 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class CommonLanguage : LanguageModel
 {
-    public CommonLanguage(GameSystemModel gameSystem)
+    public CommonLanguage( GameSystemRules rules )
     {
         Name = "Comum";
         Alphabet = "Comum";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

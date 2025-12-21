@@ -13,13 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RpgContentCreator.Application\RpgContentCreator.Application.csproj" />
+    <Folder Include="Models\DamageTypes\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Items\" />
-    <Folder Include="Models\Items\Weapon\WeaponGroup\" />
-    <Folder Include="Models\DamageTypes\" />
+    <ProjectReference Include="..\RpgContentCreator.Domain\RpgContentCreator.Domain.csproj" />
   </ItemGroup>
 
 </Project>

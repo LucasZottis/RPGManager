@@ -1,8 +1,8 @@
-﻿using RpgContentCreator.Domain.Entities.Items.WeaponEntities;
+﻿using RpgContentCreator.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RpgContentCreator.Domain.Entities.RaceEntities;
 
-[PrimaryKey( nameof( RaceId ), nameof( WeaponGroupId ) )]
+[PrimaryKey( nameof( RaceId ), nameof( WeaponTypeId ) )]
 public class RaceWeaponGroupProficiency
 {
     [Required]
@@ -11,11 +11,11 @@ public class RaceWeaponGroupProficiency
     public Guid RaceId { get; set; }
 
     [Required]
-    [ForeignKey( nameof( WeaponGroup) )]
-    [HasColumn( nameof( WeaponGroupId ), ColumnType.Guid )]
-    public Guid WeaponGroupId { get; set; }
+    [ForeignKey( nameof( WeaponType ) )]
+    [HasColumn( nameof( WeaponType ), ColumnType.Guid )]
+    public Guid WeaponTypeId { get; set; }
 
     public Race Race { get; set; }
 
-    public WeaponGroup WeaponGroup { get; set; }
+    public WeaponType WeaponType { get; set; }
 }

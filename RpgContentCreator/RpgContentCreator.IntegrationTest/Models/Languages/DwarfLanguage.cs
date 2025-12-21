@@ -1,13 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class DwarfLanguage : LanguageModel
 {
-    public DwarfLanguage(GameSystemModel gameSystem)
+    public DwarfLanguage( GameSystemRules rules )
     {
         Name = "Anão";
         Alphabet = "Anão";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

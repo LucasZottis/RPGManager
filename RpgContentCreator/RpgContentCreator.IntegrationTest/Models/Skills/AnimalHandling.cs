@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Skills;
 
 public class AnimalHandling : SkillModel
 {
-    public AnimalHandling( GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore )
+    public AnimalHandling( GameSystemRules rules )
     {
         Name = "Adestrar Animais";
         Description = GetDescription();
-        GameSystem = gameSystem;
-        BaseAbilityScore = baseAbilityScore;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        //BaseAbilityScore = baseAbilityScore;
     }
 
     private string GetDescription()

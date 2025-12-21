@@ -1,15 +1,16 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Models.Skills;
 
 namespace RpgContentCreator.IntegrationTest.Models.AbilitiesScores;
 
 public class Strength : AbilityScoreModel
 {
-    public Strength(GameSystemModel gameSystem )
+    public Strength(GameSystemRules rules )
     {
         Name = "Força";
         Description = GetDescription();
         Abbreviation = "FOR";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 
     private string GetDescription()
@@ -99,5 +100,12 @@ public class Strength : AbilityScoreModel
             </ul>
         </section>
         ";
+    }
+
+    private List<SkillModel> GetSkillList( GameSystemRules rules )
+    {
+        return new List<SkillModel> {
+            new Athletics( rules ),
+        };
     }
 }

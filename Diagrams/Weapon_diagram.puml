@@ -5,7 +5,7 @@ entity WeaponCategory {
     Name: varchar 30
 }
 
-entity WeaponGroup {
+entity WeaponType {
     Id: Guid <<PK>>
     GameSystemId: Guid <<FK>>
     Name: varchar 30
@@ -17,7 +17,9 @@ entity WeaponProperty {
     Name: varchar 30
     Description: text
     AltersDamage: bit
-    RequiresAlternativeDamage: bit
+    ' RequiresAlternativeDamage: bit
+    ' AllowsAttributeOverride: bit
+    HasAlternativeDiceTypeDamage: bit
     AllowsAttributeOverride: bit
 }
 
@@ -25,12 +27,12 @@ entity Weapon {
     Id: Guid <<PK>>
     GameSystemId: Guid <<FK>>
     WeaponCategoryId: Guid <<FK>>
-    WeaponGroupId: Guid <<FK>> null
+    WeaponTypeId: Guid <<FK>> null
     BaseAbilityScoreId: Guid <<FK>>
     AlternativeAbilityScoreId: Guid <<FK>> null
     Name: varchar 50
     Description: text null
-    Cost: decimal(10,2)
+    Price: decimal(10,2)
     Weight: float
     RangeNormal: int null
     RangeLong: int null

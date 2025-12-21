@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Skills;
 
 public class History : SkillModel
 {
-    public History( GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore )
+    public History( GameSystemRules rules )
     {
         Name = "História";
         Description = GetDescription();
-        GameSystem = gameSystem;
-        BaseAbilityScore = baseAbilityScore;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        //BaseAbilityScore = baseAbilityScore;
     }
 
     private string GetDescription()

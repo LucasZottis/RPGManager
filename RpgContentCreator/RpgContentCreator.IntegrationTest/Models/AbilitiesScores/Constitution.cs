@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.AbilitiesScores;
 
 public class Constitution : AbilityScoreModel
 {
-    public Constitution(GameSystemModel gameSystem)
+    public Constitution( GameSystemRules rules )
     {
         Name = "Constituição";
         Description = GetDesciption();
         Abbreviation = "CON";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 
     private string GetDesciption()

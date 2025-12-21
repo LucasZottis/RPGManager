@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Skills;
 
 public class Arcana : SkillModel
 {
-    public Arcana( GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore )
+    public Arcana( GameSystemRules rules )
     {
         Name = "Arcanismo";
         Description = GetDescription();
-        GameSystem = gameSystem;
-        BaseAbilityScore = baseAbilityScore;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        //BaseAbilityScore = baseAbilityScore;
     }
 
     private string GetDescription()

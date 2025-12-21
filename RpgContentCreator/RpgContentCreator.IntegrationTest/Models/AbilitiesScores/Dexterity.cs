@@ -1,16 +1,18 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 using RpgContentCreator.IntegrationTest.Models.GameSystems;
+using RpgContentCreator.IntegrationTest.Models.Skills;
 
 namespace RpgContentCreator.IntegrationTest.Models.AbilitiesScores;
 
 public class Dexterity : AbilityScoreModel
 {
-    public Dexterity(GameSystemModel gameSystem)
+    public Dexterity( GameSystemRules rules )
     {
         Name = "Destreza";
         Description = GetDescription();
         Abbreviation = "DES";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        Skills = GetSkillList( rules );
     }
 
     private string GetDescription()
@@ -114,5 +116,14 @@ public class Dexterity : AbilityScoreModel
                 combate.
               </p>
             </section>";
+    }
+
+    private List<SkillModel> GetSkillList( GameSystemRules rules )
+    {
+        return new List<SkillModel> {
+            new Acrobatics( rules ),
+            new SleightOfHand( rules ),
+            new Stealth( rules ),
+        };
     }
 }

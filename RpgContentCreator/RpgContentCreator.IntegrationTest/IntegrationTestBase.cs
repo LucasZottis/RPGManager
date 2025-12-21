@@ -1,29 +1,47 @@
 ﻿using Microsoft.Extensions.Configuration;
+using System.Net.Http.Json;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace RpgContentCreator.IntegrationTest;
 
-internal class IntegrationTestBase
+public abstract class IntegrationTestBase
 {
-    protected IConfiguration Configurarion { get; private set; }
+    protected HttpClient Client { get; private set; }
+    protected GameSystemRules Rules { get; private set; }
 
-    public IntegrationTestBase()
+    public IntegrationTestBase( GameSystemRules rules, HttpClient client )
     {
-        SetupConfiguration();
+        Client = client;
+        Rules = rules;
     }
 
-    private IEnumerable<KeyValuePair<string, string?>> GetConfigurationCollection()
+    private HttpContent GetContent( object content )
     {
-        return new Dictionary<string, string?>
+        var json = JsonSerializer.Serialize( content );
+
+        return new StringContent(
+            json,
+            Encoding.UTF8,
+            "application/json"
+        );
+    }
+
+    protected async Task<TReturn> Post<TReturn>( string url, object content )
+        where TReturn : class
+    {
+        var response = await Client.PostAsync( url, GetContent( content ) );
+       
+        if (response.IsSuccessStatusCode)
         {
-            { "ConnectionStrings:SqLite", @$"{AppContext.BaseDirectory}\db\DBTest" },
-            { "DataBaseType", "SqLite" },
-            //{ "MigrationAssembly", "RpgContentCreator.Migration" }
-        };
+            var result = await response.Content.ReadAsStringAsync();
+            var jsonOptions = new JsonSerializerOptions( JsonSerializerDefaults.Web );
+            return JsonSerializer.Deserialize<TReturn>( result, jsonOptions );
+        }
+
+        return null;
     }
 
-    private void SetupConfiguration()
-    {
-        var builder = new ConfigurationBuilder().AddInMemoryCollection( GetConfigurationCollection() );
-        Configurarion = builder.Build();
-    }
+    public abstract Task Execute();
 }

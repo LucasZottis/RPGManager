@@ -61,13 +61,13 @@ public class DbContextConfigurator : IDbContextConfigurator
         DbContextOptionsBuilder.UseSqlServer( connectionString, options => options.MigrationsAssembly( GetMigrationAssembly( dataBaseType ) ) );
     }
 
+    private void SetInMemoryProvider()
+    {
+        DbContextOptionsBuilder.UseInMemoryDatabase( "RPGManagerDB", i => i.EnableNullChecks() );
+    }
+
     private void SetDbProvider()
     {
-        //var connectionString = AppSettings.ConnectionStrings.GetConnectionString( dataBaseType );
-        //var migrationAssembly = AppSettings.Assemblies.Migrations.FirstOrDefault( m => m.Contains( dataBaseType.ToString() ) );
-
-        //var connectionString = _configuration.GetConnectionString( dataBaseType.ToString() );
-        //var migrationAssembly = _configuration.GetRequiredSection( "MigrationAssembly" ).Value;
         var dataBaseType = _configuration.GetDataBaseType();
 
         switch ( dataBaseType )
@@ -90,6 +90,10 @@ public class DbContextConfigurator : IDbContextConfigurator
 
             case DataBaseType.PostgreSql:
                 SetPostegreSqlProvider( dataBaseType );
+                break;
+
+            default:
+                SetInMemoryProvider();
                 break;
         }
     }

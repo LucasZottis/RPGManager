@@ -1,13 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class DeepSpeechLanguage : LanguageModel
 {
-    public DeepSpeechLanguage( GameSystemModel gameSystem )
+    public DeepSpeechLanguage( GameSystemRules rules )
     {
         Name = "Dialeto Profundo";
         Alphabet = null;
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

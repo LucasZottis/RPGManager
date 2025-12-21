@@ -1,13 +1,14 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
+using RpgContentCreator.IntegrationTest.Constants;
 
 namespace RpgContentCreator.IntegrationTest.Models.Languages;
 
 public class AbyssalLanguage : LanguageModel
 {
-    public AbyssalLanguage( GameSystemModel gameSystem )
+    public AbyssalLanguage( GameSystemRules rules )
     {
         Name = "Abissal";
         Alphabet = "Infernal";
-        GameSystem = gameSystem;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using RpgContentCreator.Domain.Entities.Items.WeaponEntities;
 
 namespace RpgContentCreator.Domain.Entities.ItemsEntities.WeaponEntities;
 

@@ -55,11 +55,16 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
 
     public virtual async Task Add(TEntity entity)
     {
-        if (entity is IRegistrableEntity)
-            //if ( typeof( TEntity ).IsAssignableFrom( typeof( IRegistrableEntity ) ) )
-            Context.Register(entity);
-        else
-            Context.Add(entity);
+        entity.Id = Guid.NewGuid();
+        Context.Add( entity );
+    }
+
+    public async Task AddRange( IEnumerable<TEntity> entities )
+    {
+        entities.ForEach<TEntity>( e =>
+        {
+            Add( e );
+        } );
     }
 
     public virtual async Task Update(TEntity entity)
@@ -68,24 +73,7 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
             throw new ArgumentNullException("Entidade não pode ser nula.");
 
         //UpdateCore( entity );
-
         Context.Update(entity);
-    }
-
-    public virtual async Task Deactivate(TEntity entity)
-    {
-        if (entity == null)
-            throw new ArgumentNullException("Entidade não pode ser nula.");
-
-        Context.Deactivate(entity);
-    }
-
-    public virtual async Task Reactivate(TEntity entity)
-    {
-        if (entity == null)
-            throw new ArgumentNullException("Entidade não pode ser nula.");
-
-        Context.Reactivate(entity);
     }
 
     public virtual async Task Remove(TEntity entity)
@@ -93,38 +81,21 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
         if (entity == null)
             throw new ArgumentNullException("Entidade não pode ser nula.");
 
-        if (typeof(TEntity).IsAssignableFrom(typeof(IDeactivatableEntity)))
-            Context.Deactivate(entity);
-        else
-            Context.Remove(entity);
+        Context.Remove( entity );
     }
 
-    public virtual async Task<TEntity?> GetById(int id)
+    public async Task RemoveRange( IEnumerable<TEntity> entities )
     {
-        if (typeof(TEntity).IsAssignableFrom(typeof(IIdentifiableEntity)))
-            return await GetEntity(e => ((IIdentifiableEntity)e).Id == id);
+        Context.Set<TEntity>().RemoveRange( entities );
+    }
 
-        return null;
+    public virtual async Task<TEntity?> GetById(Guid id)
+    {
+        return await GetEntity( e => e.Id == id );
     }
 
     public virtual async Task<TEntity?> GetByGuid(Guid guid)
         => await GetEntity(e => e.Id == guid);
-
-    public virtual async Task<IEnumerable<TEntity>> GetByRegistrationDate(DateTime registerDate)
-    {
-        if (typeof(TEntity).IsAssignableFrom(typeof(IRegistrableEntity)))
-            return await GetEntityList(e => ((IRegistrableEntity)e).RegistrationDate == registerDate);
-
-        return new List<TEntity>();
-    }
-
-    public virtual async Task<IEnumerable<TEntity>> GetAllByDeactivationDate()
-    {
-        if (typeof(TEntity).IsAssignableFrom(typeof(IDeactivatableEntity)))
-            await GetEntityList(e => ((IDeactivatableEntity)e).DeactivationDate.HasValue);
-
-        return new List<TEntity>();
-    }
 
     public virtual async Task<IEnumerable<TEntity>> GetAll()
         => await Context.Set<TEntity>().AsNoTracking().IgnoreQueryFilters().ToListAsync();
@@ -132,18 +103,5 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
     public async Task SaveChanges()
     {
         Context.SaveChanges();
-    }
-
-    public async Task AddRange(IEnumerable<TEntity> entities)
-    {
-        entities.ForEach<TEntity>( e =>
-        {
-            Add( e );
-        } );
-    }
-
-    public async Task RemoveRange(IEnumerable<TEntity> entities)
-    {
-        Context.Set<TEntity>().RemoveRange(entities);
     }
 }

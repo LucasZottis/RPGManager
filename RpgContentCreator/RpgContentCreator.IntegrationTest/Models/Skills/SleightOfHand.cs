@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Skills;
 
 public class SleightOfHand : SkillModel
 {
-    public SleightOfHand( GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore )
+    public SleightOfHand( GameSystemRules rules )
     {
         Name = "Prestidigitação";
         Description = GetDescription();
-        GameSystem = gameSystem;
-        BaseAbilityScore = baseAbilityScore;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        ////BaseAbilityScore = baseAbilityScore;
     }
 
     private string GetDescription()

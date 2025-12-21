@@ -4,14 +4,18 @@ namespace RpgContentCreator.IntegrationTest;
 
 internal class RaceIntegrationTest : IntegrationTestBase
 {
-    public RaceIntegrationTest() : base()
+    public RaceIntegrationTest( GameSystemRules rules, HttpClient client ) : base( rules, client )
     {
-        AddDwarfs();
     }
 
     private void AddDwarfs()
     {
-        var dwarfBase = new Dwarf(GameSystemStatic.GameSystem);
+        //var dwarfBase = new Dwarf(GameSystemStatic.GameSystem);
         //var hillDwarf = new HillDwarf(GameSystemStatic.GameSystem);
+    }
+
+    public override Task Execute()
+    {
+        throw new NotImplementedException();
     }
 }

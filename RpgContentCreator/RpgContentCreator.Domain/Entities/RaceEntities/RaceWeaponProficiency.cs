@@ -1,8 +1,8 @@
-﻿using RpgContentCreator.Domain.Entities.Items.WeaponEntities;
+﻿using RpgContentCreator.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RpgContentCreator.Domain.Entities.RaceEntities;
 
-[PrimaryKey( nameof( RaceId ), nameof( WeaponId )]
+[PrimaryKey( nameof( RaceId ), nameof( WeaponId ) )]
 public class RaceWeaponProficiency
 {
     [Required]

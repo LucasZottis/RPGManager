@@ -1,15 +1,15 @@
-﻿using RpgContentCreator.Application.Models;
+﻿using RpgContentCreator.Domain.Models;
 
 namespace RpgContentCreator.IntegrationTest.Models.Skills;
 
 public class Performance : SkillModel
 {
-    public Performance( GameSystemModel gameSystem, AbilityScoreModel baseAbilityScore )
+    public Performance( GameSystemRules rules )
     {
         Name = "Atuação";
         Description = GetDescription();
-        GameSystem = gameSystem;
-        BaseAbilityScore = baseAbilityScore;
+        GameSystem = rules.GetGameSystem( GameSystemKey.DND5E );
+        ////BaseAbilityScore = baseAbilityScore;
     }
 
     private string GetDescription()
