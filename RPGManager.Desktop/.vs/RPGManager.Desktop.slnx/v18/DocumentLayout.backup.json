@@ -1,0 +1,348 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\quarterstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\quarterstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\pike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\pike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\net.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\net.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\morningstar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\morningstar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\maul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\maul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\mace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\mace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\longsword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\longsword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\longbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\longbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\lighthammer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\lighthammer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\lightcrossbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\lightcrossbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\lance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\lance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\javelin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\javelin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\heavycrossbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\heavycrossbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\handcrossbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\handcrossbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\handaxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\handaxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\halberd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\models\\items\\weapons\\weapons\\halberd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.application\\services\\weaponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|solutionrelative:rpgmanager.desktop.application\\services\\weaponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.domain\\models\\items\\weapons\\weaponmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|solutionrelative:rpgmanager.desktop.domain\\models\\items\\weapons\\weaponmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.application\\services\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|solutionrelative:rpgmanager.desktop.application\\services\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\integrationtestbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\integrationtestbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 271,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QuarterStaff.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\QuarterStaff.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\QuarterStaff.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\QuarterStaff.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\QuarterStaff.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T04:42:02.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pike.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Pike.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Pike.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Pike.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Pike.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T04:41:32.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Net.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Net.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Net.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Net.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Net.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T04:41:13.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Morningstar.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Morningstar.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Morningstar.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Morningstar.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Morningstar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:46:00.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Maul.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Maul.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Maul.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Maul.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Maul.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:45:44.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Mace.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Mace.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Mace.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Mace.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Mace.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:45:34.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LongSword.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LongSword.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LongSword.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LongSword.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LongSword.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:45:25.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Longbow.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Longbow.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Longbow.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Longbow.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Longbow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:45:00.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LightHammer.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LightHammer.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LightHammer.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LightHammer.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LightHammer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:44:35.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LightCrossbow.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LightCrossbow.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LightCrossbow.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LightCrossbow.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\LightCrossbow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:44:08.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Lance.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Lance.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Lance.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Lance.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Lance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:43:50.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Javelin.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Javelin.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Javelin.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Javelin.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Javelin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:43:40.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HeavyCrossbow.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HeavyCrossbow.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HeavyCrossbow.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HeavyCrossbow.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HeavyCrossbow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:43:08.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HandCrossbow.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HandCrossbow.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HandCrossbow.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HandCrossbow.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HandCrossbow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:42:39.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HandAxe.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HandAxe.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HandAxe.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HandAxe.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\HandAxe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:42:31.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Halberd.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Halberd.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Halberd.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Halberd.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\Models\\Items\\Weapons\\Weapons\\Halberd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:42:05.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "WeaponModel.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Models\\Items\\Weapons\\WeaponModel.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Domain\\Models\\Items\\Weapons\\WeaponModel.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Models\\Items\\Weapons\\WeaponModel.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Domain\\Models\\Items\\Weapons\\WeaponModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T00:13:04.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WeaponService.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\WeaponService.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Application\\Services\\WeaponService.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\WeaponService.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Application\\Services\\WeaponService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T00:10:49.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ServiceBase.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\ServiceBase.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Application\\Services\\ServiceBase.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\ServiceBase.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Application\\Services\\ServiceBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T23:46:12.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IntegrationTestBase.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\IntegrationTestBase.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\IntegrationTestBase.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\IntegrationTestBase.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\IntegrationTestBase.cs",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAuwBEBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T17:50:59.894Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

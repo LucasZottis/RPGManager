@@ -1,0 +1,37 @@
+﻿namespace RPGManager.Desktop.Test.Integration.Models.Items.Weapons.Weapons;
+
+[DictionaryKey( WeaponKey.HANDAXE )]
+public class Handaxe : WeaponModel
+{
+    public Handaxe( Dictionaries rules )
+    {
+        GameSystemId = rules.GamaSystem.Get( GameSystemKey.DND5E ).Id;
+        WeaponCategoryId = rules.WeaponCategories.Get( WeaponCategoryKeys.SIMPLE ).Id;
+        WeaponTypeId = rules.WeaponTypes.Get( WeaponTypeKeys.MELEE ).Id;
+        BaseAbilityScoreId = rules.Abilities.Get( AbilityScoreKeys.STRENGTH ).Id;
+        AlternativeAbilityScoreId = null;
+        CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
+
+        Name = "Machadinha";
+        Description = null;
+        Cost = 5m;
+        Weight = 1;
+        RangeNormal = 6;
+        RangeLong = 18;
+
+        Damages =
+        [
+            new WeaponDamageModel {
+                DamageTypeId = rules.DamageTypes.Get(DamageTypeKeys.SLASHING).Id,
+                DamageDieCount = 1,
+                DamageDieType = 6,
+            }
+        ];
+
+        Properties =
+        [
+            rules.WeaponProperty.Get(WeaponPropertyKey.LIGHT),
+            rules.WeaponProperty.Get(WeaponPropertyKey.THROWN)
+        ];
+    }
+}

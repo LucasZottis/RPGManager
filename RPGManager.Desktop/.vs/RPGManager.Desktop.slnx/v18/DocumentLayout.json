@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.domain\\models\\items\\weapons\\weaponmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|solutionrelative:rpgmanager.desktop.domain\\models\\items\\weapons\\weaponmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.application\\services\\weaponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|solutionrelative:rpgmanager.desktop.application\\services\\weaponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.application\\services\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|solutionrelative:rpgmanager.desktop.application\\services\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|e:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.test.integration\\integrationtestbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8D3D89-6A74-F141-359A-0812C4CCE93A}|RPGManager.Desktop.Test.Integration\\RPGManager.Desktop.Test.Integration.csproj|solutionrelative:rpgmanager.desktop.test.integration\\integrationtestbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 271,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeaponModel.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Models\\Items\\Weapons\\WeaponModel.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Domain\\Models\\Items\\Weapons\\WeaponModel.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Models\\Items\\Weapons\\WeaponModel.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Domain\\Models\\Items\\Weapons\\WeaponModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T00:13:04.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeaponService.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\WeaponService.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Application\\Services\\WeaponService.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\WeaponService.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Application\\Services\\WeaponService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T00:10:49.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceBase.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\ServiceBase.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Application\\Services\\ServiceBase.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\ServiceBase.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Application\\Services\\ServiceBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T23:46:12.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IntegrationTestBase.cs",
+              "DocumentMoniker": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\IntegrationTestBase.cs",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Test.Integration\\IntegrationTestBase.cs",
+              "ToolTip": "E:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Test.Integration\\IntegrationTestBase.cs",
+              "RelativeToolTip": "RPGManager.Desktop.Test.Integration\\IntegrationTestBase.cs",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAuwBEBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T17:50:59.894Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

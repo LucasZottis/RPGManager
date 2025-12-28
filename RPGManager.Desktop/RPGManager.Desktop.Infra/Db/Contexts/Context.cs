@@ -1,0 +1,25 @@
+﻿using Microsoft.EntityFrameworkCore;
+using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
+using RPGManager.Desktop.Infra.Db.Interfaces;
+
+namespace RPGManager.Desktop.Infra.Db.Contexts;
+
+public class Context : ContextBase
+{
+    public Context( IDbContextConfigurator dbContextConfigurator ) : base( dbContextConfigurator )
+    {
+    }
+
+    internal DbSet<GameSystem> GameSystem { get; set; }
+    internal DbSet<AbilityScore> AbilityScore { get; set; }
+    internal DbSet<Language> Language { get; set; }
+    internal DbSet<Alignment> Alignment { get; set; }
+    internal DbSet<DamageType> DamageType { get; set; }
+    internal DbSet<CurrencyType> CurrencyTpe { get; set; }
+    internal DbSet<Skill> Skill { get; set; }
+    internal DbSet<WeaponCategory> WeaponCategory { get; set; }
+    internal DbSet<WeaponProperty> WeaponProperty { get; set; }
+    internal DbSet<Weapon> Weapon { get; set; }
+    internal DbSet<WeaponType> WeaponType { get; set; }
+    //internal DbSet<ArmorCategory> ArmorCategory { get; set; }
+}
