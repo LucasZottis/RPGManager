@@ -13,7 +13,7 @@ public class Spear : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Lança";
         Description = null;
-        Cost = 1m;
+        Price = 1m;
         Weight = 1.5f;
         RangeNormal = 6;
         RangeLong = 18;

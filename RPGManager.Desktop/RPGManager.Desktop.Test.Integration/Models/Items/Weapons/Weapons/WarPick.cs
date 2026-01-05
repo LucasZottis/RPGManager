@@ -13,7 +13,7 @@ public class WarPick : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Picareta de guerra";
         Description = null;
-        Cost = 5m;
+        Price = 5m;
         Weight = 1;
         RangeNormal = null;
         RangeLong = null;

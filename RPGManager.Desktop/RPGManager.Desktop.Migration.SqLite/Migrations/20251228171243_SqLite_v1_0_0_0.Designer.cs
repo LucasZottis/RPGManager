@@ -11,7 +11,7 @@ using RPGManager.Desktop.Infra.Db.Contexts;
 namespace RPGManager.Desktop.SqLite.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20251226220720_SqLite_v1_0_0_0")]
+    [Migration("20251228171243_SqLite_v1_0_0_0")]
     partial class SqLite_v1_0_0_0
     {
         /// <inheritdoc />
@@ -24,7 +24,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Abbreviation")
                         .HasMaxLength(3)
@@ -34,7 +35,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                         .HasColumnType("text");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -52,14 +54,16 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -77,7 +81,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Abbreviation")
                         .IsRequired()
@@ -85,7 +90,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                         .HasColumnType("text");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -96,17 +102,19 @@ namespace RPGManager.Desktop.SqLite.Migrations
 
                     b.HasIndex("GameSystemId");
 
-                    b.ToTable("CurrencyTpe");
+                    b.ToTable("CurrencyType");
                 });
 
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.DamageType", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -124,7 +132,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -140,22 +149,22 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
-
-                    b.Property<Guid?>("AlternativeAbilityScoreId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<Guid>("BaseAbilityScoreId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
-                    b.Property<Guid>("CurrencyTypeId")
+                    b.Property<Guid?>("CurrencyTypeId")
                         .HasColumnType("text(36)");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -172,18 +181,17 @@ namespace RPGManager.Desktop.SqLite.Migrations
                         .HasColumnType("REAL");
 
                     b.Property<Guid>("WeaponCategoryId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
-                    b.Property<Guid?>("WeaponTypeId")
-                        .IsRequired()
-                        .HasColumnType("text(36)");
+                    b.Property<Guid>("WeaponTypeId")
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<float>("Weight")
                         .HasColumnType("real");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AlternativeAbilityScoreId");
 
                     b.HasIndex("BaseAbilityScoreId");
 
@@ -202,10 +210,12 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -222,10 +232,12 @@ namespace RPGManager.Desktop.SqLite.Migrations
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities.WeaponProperties", b =>
                 {
                     b.Property<Guid>("WeaponPropertyId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<Guid>("WeaponId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.HasKey("WeaponPropertyId", "WeaponId");
 
@@ -238,20 +250,23 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
-                    b.Property<Guid>("AlterantiveAbilityScoreId")
+                    b.Property<Guid?>("AlternativeAbilityScoreId")
                         .HasColumnType("text(36)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<bool>("HasAlternativeDiceTypeDamage")
-                        .HasColumnType("integer");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -259,6 +274,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AlternativeAbilityScoreId");
 
                     b.HasIndex("GameSystemId");
 
@@ -269,10 +286,12 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -290,14 +309,16 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Alphabet")
                         .HasMaxLength(20)
                         .HasColumnType("text");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -315,17 +336,20 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<Guid>("BaseAbilityScoreId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid>("GameSystemId")
-                        .HasColumnType("text(36)");
+                        .HasColumnType("text(36)")
+                        .UseCollation("NOCASE");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -387,10 +411,6 @@ namespace RPGManager.Desktop.SqLite.Migrations
 
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities.Weapon", b =>
                 {
-                    b.HasOne("RPGManager.Desktop.Domain.Entities.AbilityScore", "AlternativeAbilityScore")
-                        .WithMany("AlternativeWeapons")
-                        .HasForeignKey("AlternativeAbilityScoreId");
-
                     b.HasOne("RPGManager.Desktop.Domain.Entities.AbilityScore", "BaseAbilityScore")
                         .WithMany("Weapons")
                         .HasForeignKey("BaseAbilityScoreId")
@@ -399,9 +419,7 @@ namespace RPGManager.Desktop.SqLite.Migrations
 
                     b.HasOne("RPGManager.Desktop.Domain.Entities.CurrencyType", "CurrencyType")
                         .WithMany("Weapons")
-                        .HasForeignKey("CurrencyTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CurrencyTypeId");
 
                     b.HasOne("RPGManager.Desktop.Domain.Entities.GameSystem", "GameSystem")
                         .WithMany("Weapons")
@@ -420,8 +438,6 @@ namespace RPGManager.Desktop.SqLite.Migrations
                         .HasForeignKey("WeaponTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("AlternativeAbilityScore");
 
                     b.Navigation("BaseAbilityScore");
 
@@ -448,7 +464,7 @@ namespace RPGManager.Desktop.SqLite.Migrations
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities.WeaponProperties", b =>
                 {
                     b.HasOne("RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities.Weapon", "Weapon")
-                        .WithMany("Properties")
+                        .WithMany("WeaponProperties")
                         .HasForeignKey("WeaponId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -466,11 +482,17 @@ namespace RPGManager.Desktop.SqLite.Migrations
 
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities.WeaponProperty", b =>
                 {
+                    b.HasOne("RPGManager.Desktop.Domain.Entities.AbilityScore", "AlternativeAbilityScore")
+                        .WithMany("AlternativeAbilityScoreForWeaponProperties")
+                        .HasForeignKey("AlternativeAbilityScoreId");
+
                     b.HasOne("RPGManager.Desktop.Domain.Entities.GameSystem", "GameSystem")
                         .WithMany("WeaponProperties")
                         .HasForeignKey("GameSystemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AlternativeAbilityScore");
 
                     b.Navigation("GameSystem");
                 });
@@ -518,7 +540,7 @@ namespace RPGManager.Desktop.SqLite.Migrations
 
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.AbilityScore", b =>
                 {
-                    b.Navigation("AlternativeWeapons");
+                    b.Navigation("AlternativeAbilityScoreForWeaponProperties");
 
                     b.Navigation("Skills");
 
@@ -555,7 +577,7 @@ namespace RPGManager.Desktop.SqLite.Migrations
 
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities.Weapon", b =>
                 {
-                    b.Navigation("Properties");
+                    b.Navigation("WeaponProperties");
                 });
 
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities.WeaponCategory", b =>

@@ -13,7 +13,7 @@ public class Javelin : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.SILVER ).Id;
         Name = "Azagaia";
         Description = null;
-        Cost = 5m;
+        Price = 5m;
         Weight = 1;
         RangeNormal = 9;
         RangeLong = 36;

@@ -13,7 +13,7 @@ public class Sickle : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Foice Curta";
         Description = null;
-        Cost = 1m;
+        Price = 1m;
         Weight = 1;
         RangeNormal = null;
         RangeLong = null;

@@ -13,7 +13,7 @@ public class LightCrossbow : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Besta leve";
         Description = null;
-        Cost = 25m;
+        Price = 25m;
         Weight = 2.5f;
         RangeNormal = 24;
         RangeLong = 96;

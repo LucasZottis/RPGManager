@@ -13,7 +13,7 @@ public class Trident : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Tridente";
         Description = null;
-        Cost = 5m;
+        Price = 5m;
         Weight = 2;
         RangeNormal = 6;
         RangeLong = 18;

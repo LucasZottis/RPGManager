@@ -15,11 +15,12 @@ public class Context : ContextBase
     internal DbSet<Language> Language { get; set; }
     internal DbSet<Alignment> Alignment { get; set; }
     internal DbSet<DamageType> DamageType { get; set; }
-    internal DbSet<CurrencyType> CurrencyTpe { get; set; }
+    internal DbSet<CurrencyType> CurrencyType { get; set; }
     internal DbSet<Skill> Skill { get; set; }
     internal DbSet<WeaponCategory> WeaponCategory { get; set; }
     internal DbSet<WeaponProperty> WeaponProperty { get; set; }
     internal DbSet<Weapon> Weapon { get; set; }
+    //internal DbSet<WeaponProperties> PropertiesOfWeapon { get; set; }
     internal DbSet<WeaponType> WeaponType { get; set; }
     //internal DbSet<ArmorCategory> ArmorCategory { get; set; }
 }

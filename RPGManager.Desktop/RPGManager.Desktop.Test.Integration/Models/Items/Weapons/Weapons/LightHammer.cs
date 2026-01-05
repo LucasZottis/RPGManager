@@ -13,7 +13,7 @@ public class LightHammer : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Martelo Leve";
         Description = null;
-        Cost = 2m;
+        Price = 2m;
         Weight = 1;
         RangeNormal = 6;
         RangeLong = 18;

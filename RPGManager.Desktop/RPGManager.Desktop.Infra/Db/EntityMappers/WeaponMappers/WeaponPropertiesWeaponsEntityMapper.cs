@@ -8,12 +8,12 @@ public class WeaponPropertiesWeaponsEntityMapper : IEntityTypeConfiguration<Weap
 {
     public void Configure( EntityTypeBuilder<WeaponProperties> builder )
     {
-        builder.Property( e => e.WeaponPropertyId ).IsRequired();
-        builder.Property( e => e.WeaponId ).IsRequired();
+        builder.Property( e => e.WeaponPropertyId ).IsRequired().ValueGeneratedNever();
+        builder.Property( e => e.WeaponId ).IsRequired().ValueGeneratedNever();
 
         builder.HasKey( e => new { e.WeaponPropertyId, e.WeaponId } );
 
-        builder.HasOne( e => e.Weapon ).WithMany( e => e.Properties ).HasForeignKey( e => e.WeaponId );
+        builder.HasOne( e => e.Weapon ).WithMany( e => e.WeaponProperties ).HasForeignKey( e => e.WeaponId );
         builder.HasOne( e => e.WeaponProperty ).WithMany( e => e.Weapons ).HasForeignKey( e => e.WeaponPropertyId );
     }
 }

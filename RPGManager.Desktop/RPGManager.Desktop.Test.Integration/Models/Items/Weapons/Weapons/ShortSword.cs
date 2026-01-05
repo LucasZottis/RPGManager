@@ -13,7 +13,7 @@ public class Shortsword : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Espada curta";
         Description = null;
-        Cost = 10m;
+        Price = 10m;
         Weight = 1;
         RangeNormal = null;
         RangeLong = null;

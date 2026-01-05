@@ -13,7 +13,7 @@ public class Halberd : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Alabarda";
         Description = null;
-        Cost = 20m;
+        Price = 20m;
         Weight = 3;
         RangeNormal = null;
         RangeLong = null;

@@ -13,7 +13,7 @@ public class Longbow : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Arco longo";
         Description = null;
-        Cost = 50m;
+        Price = 50m;
         Weight = 1;
         RangeNormal = 45;
         RangeLong = 180;

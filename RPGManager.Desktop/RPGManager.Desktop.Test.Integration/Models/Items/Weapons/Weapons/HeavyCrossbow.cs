@@ -13,7 +13,7 @@ public class HeavyCrossbow : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Besta pesada";
         Description = null;
-        Cost = 50m;
+        Price = 50m;
         Weight = 4.5f;
         RangeNormal = 30;
         RangeLong = 120;

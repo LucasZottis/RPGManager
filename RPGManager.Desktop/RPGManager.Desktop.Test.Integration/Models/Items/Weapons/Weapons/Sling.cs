@@ -14,7 +14,7 @@ public class Sling : WeaponModel
 
         Name = "Funda";
         Description = null;
-        Cost = 1m;
+        Price = 1m;
         Weight = 0;
         RangeNormal = 9;
         RangeLong = 36;

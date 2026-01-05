@@ -13,7 +13,7 @@ public class HandCrossbow : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Besta de mão";
         Description = null;
-        Cost = 75m;
+        Price = 75m;
         Weight = 1.5f;
         RangeNormal = 9;
         RangeLong = 36;

@@ -22,7 +22,12 @@ public class SqLiteColumnTypeConfigurator : ColumnTypeConfigurator
             [ typeof( char ) ] = p => p.SetColumnType( "text(1)" ),
             [ typeof( string ) ] = p => p.SetColumnType( "text" ),
 
-            [ typeof( Guid ) ] = p => p.SetColumnType( "text(36)" ),
+            [ typeof( Guid ) ] = p =>
+            {
+                p.SetColumnType( "text(36)" );
+                p.SetCollation( "NOCASE" );
+            },
+
             [ typeof( DateOnly ) ] = p => p.SetColumnType( "text" ),
             [ typeof( DateTime ) ] = p => p.SetColumnType( "text" ),
             [ typeof( TimeOnly ) ] = p => p.SetColumnType( "text" ),

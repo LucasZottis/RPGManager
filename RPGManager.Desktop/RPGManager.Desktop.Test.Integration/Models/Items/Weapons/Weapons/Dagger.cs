@@ -14,7 +14,7 @@ public class Dagger : WeaponModel
 
         Name = "Adaga";
         Description = null;
-        Cost = 2m;
+        Price = 2m;
         Weight = 0.5f;
         RangeNormal = 6;
         RangeLong = 18;

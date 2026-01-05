@@ -13,7 +13,7 @@ public class Warhammer : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Martelo de guerra";
         Description = null;
-        Cost = 15m;
+        Price = 15m;
         Weight = 1;
         RangeNormal = null;
         RangeLong = null;

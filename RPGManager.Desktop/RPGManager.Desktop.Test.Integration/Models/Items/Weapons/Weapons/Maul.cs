@@ -13,7 +13,7 @@ public class Maul : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Malho";
         Description = null;
-        Cost = 10m;
+        Price = 10m;
         Weight = 5;
         RangeNormal = null;
         RangeLong = null;

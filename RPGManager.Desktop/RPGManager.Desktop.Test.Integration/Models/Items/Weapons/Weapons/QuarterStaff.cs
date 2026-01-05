@@ -13,7 +13,7 @@ public class Quarterstaff : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.SILVER ).Id;
         Name = "Bordão";
         Description = null;
-        Cost = 2m;
+        Price = 2m;
         Weight = 2;
         RangeNormal = null;
         RangeLong = null;

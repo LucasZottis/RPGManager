@@ -13,7 +13,7 @@ public class Pike : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Lança longa";
         Description = null;
-        Cost = 5m;
+        Price = 5m;
         Weight = 4;
         RangeNormal = null;
         RangeLong = null;

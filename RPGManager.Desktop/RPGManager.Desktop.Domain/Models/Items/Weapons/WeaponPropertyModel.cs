@@ -3,7 +3,7 @@
 public class WeaponPropertyModel
 {
     public Guid Id { get; set; }
-    public Guid AlternativeAbilityScoreId { get; set; }
+    public Guid? AlternativeAbilityScoreId { get; set; }
     public Guid GameSystemId { get; set; }
     public string Name { get; set; } = null!;
     public string Description { get; set; } = null!;

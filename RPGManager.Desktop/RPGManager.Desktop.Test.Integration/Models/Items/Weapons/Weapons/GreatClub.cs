@@ -14,7 +14,7 @@ public class GreatClub : WeaponModel
 
         Name = "Clava Grande";
         Description = null;
-        Cost = 2m;
+        Price = 2m;
         Weight = 5;
         RangeNormal = null;
         RangeLong = null;

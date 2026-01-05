@@ -13,7 +13,7 @@ public class Lance : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Lança de montaria";
         Description = null;
-        Cost = 10m;
+        Price = 10m;
         Weight = 3;
         RangeNormal = null;
         RangeLong = null;

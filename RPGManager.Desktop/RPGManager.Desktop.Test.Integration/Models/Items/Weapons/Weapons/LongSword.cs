@@ -13,7 +13,7 @@ public class LongSword : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Espada longa";
         Description = null;
-        Cost = 15m;
+        Price = 15m;
         Weight = 1.5f;
         RangeNormal = null;
         RangeLong = null;

@@ -13,7 +13,7 @@ public class Rapier : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Rapieira";
         Description = null;
-        Cost = 25m;
+        Price = 25m;
         Weight = 1;
         RangeNormal = null;
         RangeLong = null;

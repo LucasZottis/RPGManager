@@ -13,7 +13,7 @@ public class Whip : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Chicote";
         Description = null;
-        Cost = 2m;
+        Price = 2m;
         Weight = 1.5f;
         RangeNormal = null;
         RangeLong = null;

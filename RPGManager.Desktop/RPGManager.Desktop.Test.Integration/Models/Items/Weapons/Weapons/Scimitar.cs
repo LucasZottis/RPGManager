@@ -13,7 +13,7 @@ public class Scimitar : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Cimitarra";
         Description = null;
-        Cost = 25m;
+        Price = 25m;
         Weight = 1.5f;
         RangeNormal = null;
         RangeLong = null;

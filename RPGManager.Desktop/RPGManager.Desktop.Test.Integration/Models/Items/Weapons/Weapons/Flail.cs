@@ -13,7 +13,7 @@ public class Flail : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Mangual";
         Description = null;
-        Cost = 10m;
+        Price = 10m;
         Weight = 1;
         RangeNormal = null;
         RangeLong = null;

@@ -15,7 +15,7 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "GameSystem",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
@@ -27,8 +27,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "AbilityScore",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false),
                     Abbreviation = table.Column<string>(type: "text", maxLength: 3, nullable: true),
                     Description = table.Column<string>(type: "text", nullable: true)
@@ -48,8 +48,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "Alignment",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false)
                 },
@@ -65,19 +65,19 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CurrencyTpe",
+                name: "CurrencyType",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false),
                     Abbreviation = table.Column<string>(type: "text", maxLength: 5, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CurrencyTpe", x => x.Id);
+                    table.PrimaryKey("PK_CurrencyType", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CurrencyTpe_GameSystem_GameSystemId",
+                        name: "FK_CurrencyType_GameSystem_GameSystemId",
                         column: x => x.GameSystemId,
                         principalTable: "GameSystem",
                         principalColumn: "Id",
@@ -88,8 +88,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "DamageType",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
@@ -107,8 +107,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "Language",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false),
                     Alphabet = table.Column<string>(type: "text", maxLength: 20, nullable: true)
                 },
@@ -127,8 +127,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "WeaponCategory",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
@@ -143,33 +143,11 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "WeaponProperty",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    AlterantiveAbilityScoreId = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
-                    Name = table.Column<string>(type: "text", maxLength: 30, nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false),
-                    HasAlternativeDiceTypeDamage = table.Column<bool>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_WeaponProperty", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_WeaponProperty_GameSystem_GameSystemId",
-                        column: x => x.GameSystemId,
-                        principalTable: "GameSystem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "WeaponType",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
@@ -187,9 +165,9 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "Skill",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
-                    BaseAbilityScoreId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    BaseAbilityScoreId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
                     Name = table.Column<string>(type: "text", maxLength: 30, nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false)
                 },
@@ -211,16 +189,42 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "WeaponProperty",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    AlternativeAbilityScoreId = table.Column<Guid>(type: "text(36)", nullable: true),
+                    Name = table.Column<string>(type: "text", maxLength: 30, nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: true),
+                    HasAlternativeDiceTypeDamage = table.Column<bool>(type: "integer", nullable: false, defaultValue: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_WeaponProperty", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_WeaponProperty_AbilityScore_AlternativeAbilityScoreId",
+                        column: x => x.AlternativeAbilityScoreId,
+                        principalTable: "AbilityScore",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_WeaponProperty_GameSystem_GameSystemId",
+                        column: x => x.GameSystemId,
+                        principalTable: "GameSystem",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Weapon",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "text(36)", nullable: false),
-                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false),
-                    WeaponCategoryId = table.Column<Guid>(type: "text(36)", nullable: false),
-                    WeaponTypeId = table.Column<Guid>(type: "text(36)", nullable: false),
-                    BaseAbilityScoreId = table.Column<Guid>(type: "text(36)", nullable: false),
-                    AlternativeAbilityScoreId = table.Column<Guid>(type: "text(36)", nullable: true),
-                    CurrencyTypeId = table.Column<Guid>(type: "text(36)", nullable: false),
+                    Id = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    GameSystemId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    WeaponCategoryId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    BaseAbilityScoreId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    WeaponTypeId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    CurrencyTypeId = table.Column<Guid>(type: "text(36)", nullable: true),
                     Name = table.Column<string>(type: "text", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
                     Price = table.Column<decimal>(type: "numeric", nullable: false),
@@ -232,22 +236,16 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 {
                     table.PrimaryKey("PK_Weapon", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Weapon_AbilityScore_AlternativeAbilityScoreId",
-                        column: x => x.AlternativeAbilityScoreId,
-                        principalTable: "AbilityScore",
-                        principalColumn: "Id");
-                    table.ForeignKey(
                         name: "FK_Weapon_AbilityScore_BaseAbilityScoreId",
                         column: x => x.BaseAbilityScoreId,
                         principalTable: "AbilityScore",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Weapon_CurrencyTpe_CurrencyTypeId",
+                        name: "FK_Weapon_CurrencyType_CurrencyTypeId",
                         column: x => x.CurrencyTypeId,
-                        principalTable: "CurrencyTpe",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "CurrencyType",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Weapon_GameSystem_GameSystemId",
                         column: x => x.GameSystemId,
@@ -272,8 +270,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "WeaponProperties",
                 columns: table => new
                 {
-                    WeaponId = table.Column<Guid>(type: "text(36)", nullable: false),
-                    WeaponPropertyId = table.Column<Guid>(type: "text(36)", nullable: false)
+                    WeaponId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE"),
+                    WeaponPropertyId = table.Column<Guid>(type: "text(36)", nullable: false, collation: "NOCASE")
                 },
                 constraints: table =>
                 {
@@ -303,8 +301,8 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 column: "GameSystemId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CurrencyTpe_GameSystemId",
-                table: "CurrencyTpe",
+                name: "IX_CurrencyType_GameSystemId",
+                table: "CurrencyType",
                 column: "GameSystemId");
 
             migrationBuilder.CreateIndex(
@@ -326,11 +324,6 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "IX_Skill_GameSystemId",
                 table: "Skill",
                 column: "GameSystemId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Weapon_AlternativeAbilityScoreId",
-                table: "Weapon",
-                column: "AlternativeAbilityScoreId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Weapon_BaseAbilityScoreId",
@@ -366,6 +359,11 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "IX_WeaponProperties_WeaponId",
                 table: "WeaponProperties",
                 column: "WeaponId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_WeaponProperty_AlternativeAbilityScoreId",
+                table: "WeaponProperty",
+                column: "AlternativeAbilityScoreId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_WeaponProperty_GameSystemId",
@@ -406,7 +404,7 @@ namespace RPGManager.Desktop.SqLite.Migrations
                 name: "AbilityScore");
 
             migrationBuilder.DropTable(
-                name: "CurrencyTpe");
+                name: "CurrencyType");
 
             migrationBuilder.DropTable(
                 name: "WeaponCategory");

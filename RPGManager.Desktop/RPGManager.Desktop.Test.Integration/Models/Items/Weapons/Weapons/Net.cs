@@ -13,7 +13,7 @@ public class Net : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Rede";
         Description = null;
-        Cost = 1m;
+        Price = 1m;
         Weight = 1.5f;
         RangeNormal = 1.5f;
         RangeLong = 4.5f;

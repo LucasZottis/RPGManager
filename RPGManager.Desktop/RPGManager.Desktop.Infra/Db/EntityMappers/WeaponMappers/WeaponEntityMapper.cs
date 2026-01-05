@@ -11,8 +11,8 @@ public class WeaponEntityMapper : EntityBaseEntityMapper<Weapon>
         builder.Property( e => e.WeaponCategoryId ).IsRequired();
         builder.Property( e => e.WeaponTypeId ).IsRequired();
         builder.Property( e => e.BaseAbilityScoreId ).IsRequired();
-        builder.Property( e => e.AlternativeAbilityScoreId );
-        builder.Property( e => e.CurrencyTypeId ).IsRequired();
+        //builder.Property( e => e.AlternativeAbilityScoreId );
+        builder.Property( e => e.CurrencyTypeId );
         builder.Property( e => e.Name ).IsRequired().HasMaxLength( MaxLength.MediumName );
         builder.Property( e => e.Description );
         builder.Property( e => e.Price ).IsRequired();
@@ -24,7 +24,7 @@ public class WeaponEntityMapper : EntityBaseEntityMapper<Weapon>
         builder.HasOne( e => e.WeaponCategory ).WithMany( e => e.Weapons ).HasForeignKey( e => e.WeaponCategoryId );
         builder.HasOne( e => e.WeaponType ).WithMany( e => e.Weapons ).HasForeignKey( e => e.WeaponTypeId );
         builder.HasOne( e => e.BaseAbilityScore ).WithMany( e => e.Weapons ).HasForeignKey( e => e.BaseAbilityScoreId );
-        builder.HasOne( e => e.AlternativeAbilityScore ).WithMany( e => e.AlternativeWeapons ).HasForeignKey( e => e.AlternativeAbilityScoreId );
+        //builder.HasOne( e => e.AlternativeAbilityScore ).WithMany( e => e.AlternativeAbilityScoreForWeaponProperties ).HasForeignKey( e => e.AlternativeAbilityScoreId );
         builder.HasOne( e => e.CurrencyType ).WithMany( e => e.Weapons ).HasForeignKey( e => e.CurrencyTypeId );
     }
 }

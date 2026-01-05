@@ -13,7 +13,7 @@ public class Morningstar : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Maça-estrela";
         Description = null;
-        Cost = 15m;
+        Price = 15m;
         Weight = 2;
         RangeNormal = null;
         RangeLong = null;

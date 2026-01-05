@@ -13,17 +13,21 @@ public class WeaponService : ServiceBase<Weapon, WeaponModel>, IWeaponService
         //return base.Create( model );
         var entity = Mapper.ToEntity( model );
 
-        await Repository.Add( entity );
 
-        model.Properties.ForEach<WeaponPropertiesModel>( m =>
+        model.Properties.ForEach<WeaponPropertyModel>( m =>
         {
-            entity.Properties.Add( new WeaponProperties
+            if ( entity.WeaponProperties == null )
+                entity.WeaponProperties = [];
+
+            entity.WeaponProperties.Add( new WeaponProperties
             {
-                WeaponId = entity.Id,
-                WeaponPropertyId = m.WeaponPropertyId,
+                //WeaponId = entity.Id,
+                WeaponPropertyId = m.Id,
+                Weapon = entity,
             } );
         } );
 
+        await Repository.Add( entity );
         await Repository.SaveChanges();
 
         return entity.Id;

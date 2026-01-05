@@ -14,7 +14,7 @@ public class Dart : WeaponModel
 
         Name = "Dardo";
         Description = null;
-        Cost = 5m;
+        Price = 5m;
         Weight = 0.25f;
         RangeNormal = 6;
         RangeLong = 18;

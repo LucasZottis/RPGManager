@@ -13,7 +13,7 @@ public class Shortbow : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Arco curto";
         Description = null;
-        Cost = 25m;
+        Price = 25m;
         Weight = 1;
         RangeNormal = 24;
         RangeLong = 96;

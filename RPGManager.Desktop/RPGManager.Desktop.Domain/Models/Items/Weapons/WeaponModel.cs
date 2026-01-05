@@ -15,7 +15,7 @@ public class WeaponModel
     public string Name { get; set; } = null!;
     public string? Description { get; set; }
 
-    public decimal Cost { get; set; }
+    public decimal Price { get; set; }
     public float Weight { get; set; }
 
     public float? RangeNormal { get; set; }

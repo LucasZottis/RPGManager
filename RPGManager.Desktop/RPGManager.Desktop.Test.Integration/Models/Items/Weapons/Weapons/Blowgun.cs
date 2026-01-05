@@ -13,7 +13,7 @@ public class Blowgun : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Zarabatana";
         Description = null;
-        Cost = 10m;
+        Price = 10m;
         Weight = 0.5f;
         RangeNormal = 7.5f;
         RangeLong = 30;

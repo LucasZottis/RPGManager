@@ -13,7 +13,7 @@ public class Club : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.SILVER ).Id;
         Name = "Porrete";
         Description = null;
-        Cost = 1m;
+        Price = 1m;
         Weight = 1;
         RangeNormal = null;
         RangeLong = null;

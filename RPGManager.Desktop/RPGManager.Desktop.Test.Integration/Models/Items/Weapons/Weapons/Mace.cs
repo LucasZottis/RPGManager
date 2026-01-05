@@ -13,7 +13,7 @@ public class Mace : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Maça";
         Description = null;
-        Cost = 5m;
+        Price = 5m;
         Weight = 2;
         RangeNormal = null;
         RangeLong = null;

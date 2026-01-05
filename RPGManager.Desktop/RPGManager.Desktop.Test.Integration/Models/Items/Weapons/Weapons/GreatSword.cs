@@ -13,7 +13,7 @@ public class GreatSword : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Espada grande";
         Description = null;
-        Cost = 50m;
+        Price = 50m;
         Weight = 3;
         RangeNormal = null;
         RangeLong = null;

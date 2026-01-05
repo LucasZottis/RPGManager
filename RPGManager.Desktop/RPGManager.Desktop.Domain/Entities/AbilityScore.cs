@@ -12,7 +12,7 @@ public class AbilityScore : EntityBase
 
     public ICollection<Skill> Skills { get; set; }
     public ICollection<Weapon> Weapons { get; set; }
-    public ICollection<Weapon> AlternativeWeapons { get; set; }
+    public ICollection<WeaponProperty> AlternativeAbilityScoreForWeaponProperties { get; set; }
 
     public GameSystem GameSystem { get; set; }
 }

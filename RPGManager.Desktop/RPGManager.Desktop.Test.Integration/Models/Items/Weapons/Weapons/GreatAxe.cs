@@ -13,7 +13,7 @@ public class GreatAxe : WeaponModel
         CurrencyTypeId = rules.CurrencyTypes.Get( CurrencyTypeKey.GOLD ).Id;
         Name = "Machado grande";
         Description = null;
-        Cost = 30m;
+        Price = 30m;
         Weight = 3.5f;
         RangeNormal = null;
         RangeLong = null;

@@ -14,7 +14,7 @@ public class Handaxe : WeaponModel
 
         Name = "Machadinha";
         Description = null;
-        Cost = 5m;
+        Price = 5m;
         Weight = 1;
         RangeNormal = 6;
         RangeLong = 18;
