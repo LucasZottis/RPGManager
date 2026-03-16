@@ -7,32 +7,8 @@
       "RelativeMoniker": "D:0:0:{4F20299D-0AD1-3F39-B3DA-9CA2D2F0A90A}|RPGManager.Desktop.Infra\\RPGManager.Desktop.Infra.csproj|solutionrelative:rpgmanager.desktop.infra\\db\\entitymappers\\weaponmappers\\weaponpropertyentitymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|d:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.domain\\entities\\itemsentities\\weaponentities\\weaponproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|solutionrelative:rpgmanager.desktop.domain\\entities\\itemsentities\\weaponentities\\weaponproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|d:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.application\\services\\weaponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C368B46B-9AE7-06FD-97E1-98E1EEC70A32}|RPGManager.Desktop.Application\\RPGManager.Desktop.Application.csproj|solutionrelative:rpgmanager.desktop.application\\services\\weaponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F20299D-0AD1-3F39-B3DA-9CA2D2F0A90A}|RPGManager.Desktop.Infra\\RPGManager.Desktop.Infra.csproj|d:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.infra\\repositories\\weaponrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F20299D-0AD1-3F39-B3DA-9CA2D2F0A90A}|RPGManager.Desktop.Infra\\RPGManager.Desktop.Infra.csproj|solutionrelative:rpgmanager.desktop.infra\\repositories\\weaponrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6869657D-8CD6-2466-33C2-6946E9ECB96D}|RPGManager.Desktop.Migration.SqLite\\RPGManager.Desktop.SqLite.csproj|d:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.migration.sqlite\\migrations\\20251228171243_sqlite_v1_0_0_0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6869657D-8CD6-2466-33C2-6946E9ECB96D}|RPGManager.Desktop.Migration.SqLite\\RPGManager.Desktop.SqLite.csproj|solutionrelative:rpgmanager.desktop.migration.sqlite\\migrations\\20251228171243_sqlite_v1_0_0_0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|d:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.domain\\entities\\itemsentities\\weaponentities\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|solutionrelative:rpgmanager.desktop.domain\\entities\\itemsentities\\weaponentities\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F20299D-0AD1-3F39-B3DA-9CA2D2F0A90A}|RPGManager.Desktop.Infra\\RPGManager.Desktop.Infra.csproj|d:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.infra\\db\\entitymappers\\weaponmappers\\weaponentitymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F20299D-0AD1-3F39-B3DA-9CA2D2F0A90A}|RPGManager.Desktop.Infra\\RPGManager.Desktop.Infra.csproj|solutionrelative:rpgmanager.desktop.infra\\db\\entitymappers\\weaponmappers\\weaponentitymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|d:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.domain\\entities\\abilityscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71457018-482C-C653-45EA-20CE86285BE1}|RPGManager.Desktop.Domain\\RPGManager.Desktop.Domain.csproj|solutionrelative:rpgmanager.desktop.domain\\entities\\abilityscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC9CA9B-5265-2616-FCB3-0B17BC416766}|RPGManager.Desktop.Api\\RPGManager.Desktop.Api.csproj|d:\\projetos\\rpgmanager\\rpgmanager.desktop\\rpgmanager.desktop.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4AC9CA9B-5265-2616-FCB3-0B17BC416766}|RPGManager.Desktop.Api\\RPGManager.Desktop.Api.csproj|solutionrelative:rpgmanager.desktop.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,6 +34,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "RPGManager.Desktop.Api\\appsettings.Development.json",
+              "ToolTip": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Api\\appsettings.Development.json",
+              "RelativeToolTip": "RPGManager.Desktop.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-16T22:26:29.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "WeaponPropertyEntityMapper.cs",
               "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Infra\\Db\\EntityMappers\\WeaponMappers\\WeaponPropertyEntityMapper.cs",
@@ -68,101 +57,16 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-28T17:18:13.15Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20251228171243_SqLite_v1_0_0_0.cs",
-              "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Migration.SqLite\\Migrations\\20251228171243_SqLite_v1_0_0_0.cs",
-              "RelativeDocumentMoniker": "RPGManager.Desktop.Migration.SqLite\\Migrations\\20251228171243_SqLite_v1_0_0_0.cs",
-              "ToolTip": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Migration.SqLite\\Migrations\\20251228171243_SqLite_v1_0_0_0.cs",
-              "RelativeToolTip": "RPGManager.Desktop.Migration.SqLite\\Migrations\\20251228171243_SqLite_v1_0_0_0.cs",
-              "ViewState": "AgIAAFwBAAAAAAAAAAAAAG8BAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T17:13:25.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeaponRepository.cs",
-              "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Infra\\Repositories\\WeaponRepository.cs",
-              "RelativeDocumentMoniker": "RPGManager.Desktop.Infra\\Repositories\\WeaponRepository.cs",
-              "ToolTip": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Infra\\Repositories\\WeaponRepository.cs",
-              "RelativeToolTip": "RPGManager.Desktop.Infra\\Repositories\\WeaponRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T12:59:35.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WeaponService.cs",
-              "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\WeaponService.cs",
-              "RelativeDocumentMoniker": "RPGManager.Desktop.Application\\Services\\WeaponService.cs",
-              "ToolTip": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Application\\Services\\WeaponService.cs",
-              "RelativeToolTip": "RPGManager.Desktop.Application\\Services\\WeaponService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T00:10:49.692Z"
             }
           ]
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WeaponEntityMapper.cs",
-              "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Infra\\Db\\EntityMappers\\WeaponMappers\\WeaponEntityMapper.cs",
-              "RelativeDocumentMoniker": "RPGManager.Desktop.Infra\\Db\\EntityMappers\\WeaponMappers\\WeaponEntityMapper.cs",
-              "ToolTip": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Infra\\Db\\EntityMappers\\WeaponMappers\\WeaponEntityMapper.cs",
-              "RelativeToolTip": "RPGManager.Desktop.Infra\\Db\\EntityMappers\\WeaponMappers\\WeaponEntityMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAACrAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T17:10:36.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Weapon.cs",
-              "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Entities\\ItemsEntities\\WeaponEntities\\Weapon.cs",
-              "RelativeDocumentMoniker": "RPGManager.Desktop.Domain\\Entities\\ItemsEntities\\WeaponEntities\\Weapon.cs",
-              "ToolTip": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Entities\\ItemsEntities\\WeaponEntities\\Weapon.cs",
-              "RelativeToolTip": "RPGManager.Desktop.Domain\\Entities\\ItemsEntities\\WeaponEntities\\Weapon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T17:06:20.783Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AbilityScore.cs",
-              "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Entities\\AbilityScore.cs",
-              "RelativeDocumentMoniker": "RPGManager.Desktop.Domain\\Entities\\AbilityScore.cs",
-              "ToolTip": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Entities\\AbilityScore.cs",
-              "RelativeToolTip": "RPGManager.Desktop.Domain\\Entities\\AbilityScore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T17:05:06.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WeaponProperty.cs",
-              "DocumentMoniker": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Entities\\ItemsEntities\\WeaponEntities\\WeaponProperty.cs",
-              "RelativeDocumentMoniker": "RPGManager.Desktop.Domain\\Entities\\ItemsEntities\\WeaponEntities\\WeaponProperty.cs",
-              "ToolTip": "D:\\Projetos\\RPGManager\\RPGManager.Desktop\\RPGManager.Desktop.Domain\\Entities\\ItemsEntities\\WeaponEntities\\WeaponProperty.cs",
-              "RelativeToolTip": "RPGManager.Desktop.Domain\\Entities\\ItemsEntities\\WeaponEntities\\WeaponProperty.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T13:37:49.333Z",
-              "EditorCaption": ""
             }
           ]
         }
