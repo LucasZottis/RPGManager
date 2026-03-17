@@ -1,0 +1,9 @@
+<div class="input-group">
+    @if (label() !== "") {
+    <label [for]="'txt-' + id()" class="input-label">
+        {{label()}}
+    </label>
+    }
+
+    <input type="text" name="" [id]="'txt-' + id()" />
+</div>
