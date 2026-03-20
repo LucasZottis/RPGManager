@@ -1,5 +1,5 @@
 export interface RaceCharacterSheetModel {
-    raceId: string;
+    id: string;
     name: string;
     description: string;
 }

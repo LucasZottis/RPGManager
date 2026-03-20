@@ -8,7 +8,7 @@ public class ConnectionStrings
 
     public string SqLite { get; set; }
 
-    public string PostegreSql { get; set; }
+    public string PostgreSql { get; set; }
 
     public string SqlServer { get; set; }
     public string MySql { get; set; }

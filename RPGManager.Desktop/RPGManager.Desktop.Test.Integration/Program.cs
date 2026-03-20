@@ -10,7 +10,7 @@ internal class Program
     {
         return new Dictionary<string, string?>
         {
-            { "ApiUrl", "http://localhost:5000/api/" },
+            { "ApiUrl", "http://localhost:5001/api/" },
             //{ "ApiExe", @"D:\Projetos\RPGManager\RpgContentCreator\RpgContentCreator.Api\bin\Debug\net10.0\RpgContentCreator.Api.exe" },
         };
     }

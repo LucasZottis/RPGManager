@@ -1,5 +1,4 @@
-﻿using DevToolz.Library.Extensions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using RPGManager.Desktop.Infra.Db.Contexts;
 using System.Linq.Expressions;
@@ -90,14 +89,20 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
         return await GetEntity( e => e.Id == id );
     }
 
-    public virtual async Task<TEntity?> GetByGuid(Guid guid)
-        => await GetEntity(e => e.Id == guid);
-
     public virtual async Task<IEnumerable<TEntity>> GetAll()
         => await Context.Set<TEntity>().AsNoTracking().IgnoreQueryFilters().ToListAsync();
 
     public async Task SaveChanges()
     {
         Context.SaveChanges();
+    }
+
+    public virtual async Task<IEnumerable<TEntity>> GetByGameSystemId( Guid gameSystemId )
+    {
+        return await Context.Set<TEntity>()
+            .Where( e => EF.Property<Guid>( e, "GameSystemId" ) == gameSystemId )
+            .AsNoTracking()
+            .IgnoreQueryFilters()
+            .ToListAsync();
     }
 }

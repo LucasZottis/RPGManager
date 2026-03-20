@@ -11,15 +11,15 @@ public class RaceModel
     public string Description { get; set; }
     public float Speed { get; set; }
 
-    public ICollection<RaceAbilitiesScoreModel> RaceAbilitiesScores { get; set; }
+    //public ICollection<RaceAbilitiesScoreModel> RaceAbilitiesScores { get; set; }
 
-    public ICollection<RaceFeatureModel> RaceFeatures { get; set; }
+    //public ICollection<RaceFeatureModel> RaceFeatures { get; set; }
 
-    public ICollection<RaceLanguageModel> RaceLanguages { get; set; }
+    //public ICollection<RaceLanguageModel> RaceLanguages { get; set; }
 
-    public ICollection<RaceSkillProficiencyModel> SkillProficiencies { get; set; }
+    //public ICollection<RaceSkillProficiencyModel> SkillProficiencies { get; set; }
 
-    public ICollection<RaceWeaponProficiencyModel> WeaponProficiencies { get; set; }
+    //public ICollection<RaceWeaponProficiencyModel> WeaponProficiencies { get; set; }
 
-    public ICollection<RaceWeaponGroupProficiency> WeaponGroupProficiencies { get; set; }
+    //public ICollection<RaceWeaponGroupProficiency> WeaponGroupProficiencies { get; set; }
 }

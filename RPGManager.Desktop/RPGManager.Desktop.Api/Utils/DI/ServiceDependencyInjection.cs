@@ -1,4 +1,5 @@
 ﻿using RPGManager.Desktop.Application.Services;
+using RPGManager.Desktop.Application.Services.Interfaces;
 using System.Reflection;
 
 namespace RPGManager.Desktop.Api.Utils.DI;
@@ -10,12 +11,15 @@ public static class ServiceDependencyInjection
         params Assembly[] assemblies )
     {
         var allTypes = assemblies.SelectMany( a => a.GetTypes() );
-            //.Where( t => !t.IsAbstract && !t.IsInterface );
+        //.Where( t => !t.IsAbstract && !t.IsInterface );
 
         var serviceImplementations = allTypes
             .Where( t =>
             {
-                return IsSubclassOfRawGeneric( typeof( ServiceBase<,> ), t );
+                //return IsSubclassOfRawGeneric( typeof( ServiceBase<,> ), t )
+                    //|| IsSubclassOfRawGeneric( typeof( CrudServiceBase<,,> ), t );
+
+                return IsSubclassOfRawGeneric( typeof( CrudServiceBase<,,> ), t );
             } );
 
         foreach ( var implementation in serviceImplementations )
@@ -27,8 +31,13 @@ public static class ServiceDependencyInjection
                     return i.IsInterface
                         && i.GetInterfaces().Any( parent =>
                         {
+                            //var isImplementation = parent.GetGenericTypeDefinition() == typeof( IServiceBase<,> )
+                            //    || parent.GetGenericTypeDefinition() == typeof( ICrudServiceBase<,,> );
+
+                            var isImplementation = parent.GetGenericTypeDefinition() == typeof( ICrudServiceBase<,,> );
+
                             return parent.IsGenericType
-                                && parent.GetGenericTypeDefinition() == typeof( IServiceBase<,> );
+                                && isImplementation;
                         } );
                 } );
 

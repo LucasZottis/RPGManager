@@ -1,0 +1,10 @@
+﻿using RPGManager.Desktop.Infra.Db.Contexts;
+
+namespace RPGManager.Desktop.Infra.Repositories;
+
+public class ClassRepository : RepositoryBase<Class>, IClassRepository
+{
+    public ClassRepository( Context context ) : base( context )
+    {
+    }
+}

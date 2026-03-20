@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Mvc;
 
-namespace RPGManager.Desktop.Api.Controllers;
+//namespace RPGManager.Desktop.Api.Controllers;
 
-[Route( "api/ability-score" )]
-public class AbilityScoreController : CrudController<AbilityScore, AbilityScoreModel>
-{
-    public AbilityScoreController( IAbilityScoreService service ) : base( service )
-    {
-    }
-}
+//[Route( "api/ability-score" )]
+//public class AbilityScoreController : CrudController<AbilityScore, AbilityScoreModel>
+//{
+//    public AbilityScoreController( IAbilityScoreService service ) : base( service )
+//    {
+//    }
+//}

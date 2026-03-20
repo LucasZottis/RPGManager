@@ -7,4 +7,9 @@ public class GameSystemRepository : RepositoryBase<GameSystem>, IGameSystemRepos
     public GameSystemRepository( Context context ) : base( context )
     {
     }
+
+    public override async Task<IEnumerable<GameSystem>> GetByGameSystemId( Guid gameSystemId )
+    {
+        return await base.GetEntityList( g => g.Id == gameSystemId );
+    }
 }

@@ -16,7 +16,8 @@ public static class MapperDependencyInjection
             .Where( t =>
                 !t.IsAbstract &&
                 !t.IsInterface &&
-                IsSubclassOfRawGeneric( typeof( Mapper<,> ), t ) );
+                //IsSubclassOfRawGeneric( typeof( Mapper<,> ), t ) );
+                IsSubclassOfRawGeneric( typeof( MapperTwo<> ), t ) );
 
         foreach ( var implementation in mapperImplementations )
         {
@@ -26,7 +27,8 @@ public static class MapperDependencyInjection
                     i.IsInterface &&
                     i.GetInterfaces().Any( parent =>
                         parent.IsGenericType &&
-                        parent.GetGenericTypeDefinition() == typeof( IMapper<,> )
+                        //parent.GetGenericTypeDefinition() == typeof( IMapper<,> )
+                        parent.GetGenericTypeDefinition() == typeof( IMapperTwo<> )
                     ) );
 
             foreach ( var service in specificInterfaces )

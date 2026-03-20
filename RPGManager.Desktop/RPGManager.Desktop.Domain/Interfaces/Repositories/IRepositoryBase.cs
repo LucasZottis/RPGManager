@@ -18,7 +18,9 @@ public interface IRepositoryBase<TEntity>
 
     Task<IEnumerable<TEntity>> GetAll();
 
-    Task<TEntity?> GetByGuid( Guid guid );
+    Task<IEnumerable<TEntity>> GetByGameSystemId( Guid gameSystemId );
+
+    Task<TEntity?> GetById( Guid id );
 
     Task SaveChanges();
 }

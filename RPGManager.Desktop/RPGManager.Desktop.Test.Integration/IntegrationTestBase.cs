@@ -1,6 +1,4 @@
-﻿using RPGManager.Desktop.Test.Integration.Attributes;
-
-using RPGManager.Desktop.Test.Integration.Rules.RulesCollections;
+﻿using RPGManager.Desktop.Test.Integration.Rules.RulesCollections;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
@@ -31,8 +29,11 @@ public abstract class IntegrationTestBase<TModel>
         var typeName = typeof( TModel ).Name;
 
         // 2. Opcional: remover sufixos comuns
-        if ( typeName.EndsWith( "Model" ) )
-            typeName = typeName[ ..^"Model".Length ];
+        if ( typeName.EndsWith( "QueryDto" ) )
+            typeName = typeName[ ..^"QueryDto".Length ];
+
+        if ( typeName.EndsWith( "RegisterDto" ) )
+            typeName = typeName[ ..^"RegisterDto".Length ];
 
         // 3. PascalCase -> kebab-case
         _route = Regex

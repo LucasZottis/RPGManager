@@ -1,8 +1,9 @@
-﻿using RPGManager.Desktop.Application.Interfaces;
+﻿using RPGManager.Desktop.Application.DTOs.Races;
+using RPGManager.Desktop.Application.Services.Interfaces;
 
 namespace RPGManager.Desktop.Application.Services;
 
-public class RaceService : ServiceBase<Race, RaceModel>, IRaceService
+public class RaceService : CrudServiceBase<Race, RaceRegisterDto, RaceQueryDto>, IRaceService
 {
     public RaceService( IRaceRepository repository, IRaceMapper mapper ) : base( repository, mapper )
     {

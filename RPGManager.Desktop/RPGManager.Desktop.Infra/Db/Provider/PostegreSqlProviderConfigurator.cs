@@ -13,7 +13,7 @@ public class PostegreSqlProviderConfigurator : ProviderConfigurator, IProviderCo
     public void Configure( DbContextOptionsBuilder builder )
     {
         var migrationAssembly = GetMigrationAssembly();
-        var connectionString = DataBaseSettings.ConnectionStrings.PostegreSql;
+        var connectionString = DataBaseSettings.ConnectionStrings.PostgreSql;
 
         builder.UseNpgsql( connectionString, options => options.MigrationsAssembly( migrationAssembly ) );
     }

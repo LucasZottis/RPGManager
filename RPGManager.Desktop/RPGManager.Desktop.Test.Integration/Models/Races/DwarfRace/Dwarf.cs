@@ -1,7 +1,7 @@
 ﻿namespace RPGManager.Desktop.Test.Integration.Models.Races.DwarfRace;
 
 [DictionaryKey( RaceKey.DWARF )]
-public class Dwarf : RaceModel
+public class Dwarf : RaceQueryDto
 {
     public Dwarf( Dictionaries rules )
     {
@@ -9,11 +9,11 @@ public class Dwarf : RaceModel
         Name = "Anão";
         Speed = 7.5f;
         Description = GetDescription();
-        RaceFeatures = GetFeatures();
-        RaceAbilitiesScores = GetRaceAbilitiesScores( rules );
-        WeaponProficiencies = GetWeaponProficiencies( rules );
-        SkillProficiencies = GetSkillsProficiencies( rules );
-        RaceLanguages = GetRaceLanguages( rules );
+        //RaceFeatures = GetFeatures();
+        //RaceAbilitiesScores = GetRaceAbilitiesScores( rules );
+        //WeaponProficiencies = GetWeaponProficiencies( rules );
+        //SkillProficiencies = GetSkillsProficiencies( rules );
+        //RaceLanguages = GetRaceLanguages( rules );
     }
 
     private string GetDescription()

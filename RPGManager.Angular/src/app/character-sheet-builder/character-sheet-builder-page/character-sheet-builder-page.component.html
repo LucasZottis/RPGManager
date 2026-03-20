@@ -1,51 +1,40 @@
 <div class="page">
-    <div class="character-sheet-container">
+    <form class="character-sheet-container" [formGroup]="sheet">
         <div class="character-sheet-header">
             <rpg-text-input id="characters-name" label="Nome do personagem" />
         </div>
 
         <div class="character-sheet-content">
-            <div id="txt-barbarian" class="character-class-card"
-                [class.character-class-card-opened]="this.selectedClassCardId == 'txt-barbarian'">
-                <div class="character-class-card-header">
-                    <span class="character-class-card-title">
-                        Bárbaro
-                    </span>
-                    <i class="character-class-card-icon" (click)="onClickClassCard('txt-barbarian')">
-                        <img alt="">
-                    </i>
-                </div>
+            <select id="cbo-game-system" style="width: 100%;" formControlName="gameSystemId">
+                <option [value]="''" selected>-- Selecione um sistema --</option>
+                @for(gameSystem of gameSystems; track gameSystem.id) {
+                <option [value]="gameSystem.id">
+                    {{gameSystem.name}}
+                </option>
+                }
+            </select>
 
-                <div class="character-card-body"
-                    [class.character-card-body--show]="this.selectedClassCardId == 'txt-barbarian'">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at nisl a diam mollis aliquam
-                        vitae vitae nunc. Curabitur
-                        sollicitudin vestibulum eros, at congue dui vehicula nec. Nam a auctor urna. Duis sed est sem.
-                        Duis lectus orci, cursus
-                        pellentesque nulla sed, fringilla tincidunt nulla. Aliquam non lorem vitae massa vulputate
-                        ultrices. Morbi ut ipsum
-                        molestie ex consectetur euismod at at dolor.
-                    </p>
+            @if (isGameSystemIdSet) {
+            <select id="cbo-race" style="width: 100%;" formControlName="raceId">
+                <option [value]="''" selected>-- Selecione uma raça --</option>
+                @for(race of races; track race.id) {
+                <option [value]="race.id">
+                    {{race.name}}
+                </option>
+                }
+            </select>
+            }
 
-                    <p>
-                        Proin ut facilisis est. Phasellus ac lacus nec neque vulputate euismod ac sed nisl. Donec et
-                        felis tincidunt, maximus
-                        diam a, posuere est. Proin non condimentum magna. Phasellus placerat rhoncus neque et tempor. Ut
-                        luctus sem et elit
-                        laoreet, et ullamcorper tortor sagittis. Curabitur pellentesque accumsan nulla, vitae pulvinar
-                        enim. Donec condimentum
-                        magna id lobortis tincidunt. Nulla nec interdum est. Vestibulum lacus felis, interdum eget
-                        condimentum nec, fermentum
-                        hendrerit mi. Aenean eu ipsum eleifend lacus commodo cursus eget in nunc. Mauris dignissim neque
-                        leo, sit amet imperdiet
-                        libero tempus a. Ut sodales venenatis elit, nec interdum augue luctus at. Sed quis gravida sem,
-                        vitae congue ligula.
-                        Mauris finibus sem et risus commodo venenatis. Duis semper nulla non ante tincidunt, vitae
-                        ornare ante tempor.
-                    </p>
-                </div>
-            </div>
+            @if (isRaceIdSet) {
+            <select id="cbo-class" style="width: 100%;" formControlName="raceId">
+                <option [value]="''" selected>-- Selecione uma raça --</option>
+                @for(race of races; track race.id) {
+                <option [value]="race.id">
+                    {{race.name}}
+                </option>
+                }
+            </select>
+            }
         </div>
-    </div>
+    </form>
 </div>

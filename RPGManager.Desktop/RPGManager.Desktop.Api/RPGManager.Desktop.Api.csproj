@@ -18,6 +18,7 @@
     <ProjectReference Include="..\RPGManager.Desktop.Application\RPGManager.Desktop.Application.csproj" />
     <ProjectReference Include="..\RPGManager.Desktop.Domain\RPGManager.Desktop.Domain.csproj" />
     <ProjectReference Include="..\RPGManager.Desktop.Infra\RPGManager.Desktop.Infra.csproj" />
+    <ProjectReference Include="..\RPGManager.Desktop.Migration.PostegreSql\RPGManager.Desktop.PostgreSql.csproj" />
     <ProjectReference Include="..\RPGManager.Desktop.Migration.SqLite\RPGManager.Desktop.SqLite.csproj" />
   </ItemGroup>
 

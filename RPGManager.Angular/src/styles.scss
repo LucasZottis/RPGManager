@@ -1,19 +1,37 @@
- *,
- *::before,
- *::after {
-     box-sizing: border-box;
-     font-family: "Roboto", Helvetica, sans-serif !important;
-     margin: 0;
-     outline: 0;
-     padding: 0;
- }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "Roboto", Helvetica, sans-serif !important;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
 
- //  html,
- //  body {
- //      //  display: flex;
- //      //  flex: 0;
- //  }
+//  html,
+//  body {
+//      //  display: flex;
+//      //  flex: 0;
+//  }
 
- .page {
-     padding: 0.5rem;
- }
+.page {
+    padding: 0.5rem;
+}
+
+.stack {
+    display: flex;
+    gap: 10px;
+}
+
+$alignments: center;
+
+@each $alignment in $alignments {
+    .align-#{$alignment} {
+        align-items: $alignment;
+    }
+}
+
+
+// .align-center {
+//     align-items: center;
+// }

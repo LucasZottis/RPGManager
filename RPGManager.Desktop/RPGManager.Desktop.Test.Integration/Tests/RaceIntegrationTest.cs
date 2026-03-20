@@ -1,19 +1,10 @@
-﻿//namespace RpgContentCreator.IntegrationTest.Tests;
+﻿using RPGManager.Desktop.Test.Integration;
 
-//internal class RaceIntegrationTest : IntegrationTestBase
-//{
-//    public RaceIntegrationTest( Dictionaries rules, HttpClient client ) : base( rules, client )
-//    {
-//    }
+namespace RPGManager.Desktop.Test.Integration.Tests;
 
-//    private void AddDwarfs()
-//    {
-//        //var dwarfBase = new Dwarf(GameSystemStatic.GameSystem);
-//        //var hillDwarf = new HillDwarf(GameSystemStatic.GameSystem);
-//    }
-
-//    public override Task Execute()
-//    {
-//        throw new NotImplementedException();
-//    }
-//}
+internal class RaceIntegrationTest : IntegrationTestBase<RaceQueryDto>
+{
+    public RaceIntegrationTest( Dictionaries rules, HttpClient client ) : base( rules, client )
+    {
+    }
+}
