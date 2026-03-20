@@ -16,4 +16,5 @@ public class Dictionaries
     public CurrencyTypeRuleCollection CurrencyTypes { get; private set; } = new();
     public WeaponRuleColllection Weapons { get; private set; } = new();
     public RaceRuleCollection Race { get; private set; } = new();
+    public ClassRuleCollection Class { get; private set; } = new();
 }

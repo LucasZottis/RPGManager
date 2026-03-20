@@ -1,5 +1,5 @@
 ﻿using RPGManager.Desktop.Application.Mappers;
-using RPGManager.Desktop.Domain.Interfaces.Mappers;
+using RPGManager.Desktop.Application.Mappers.Interfaces;
 using System.Reflection;
 
 namespace RPGManager.Desktop.Api.Utils.DI;

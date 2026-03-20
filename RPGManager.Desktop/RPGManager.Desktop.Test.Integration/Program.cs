@@ -162,6 +162,8 @@ internal class Program
         {
             foreach ( var test in orderedList )
             {
+                Thread.Sleep( 5 * 1000 );
+
                 try
                 {
                     var instance = CreateTestInstance( test, rules, client );

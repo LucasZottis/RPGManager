@@ -1,4 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Models.GemSystems;
+﻿using RPGManager.Desktop.Application.DTOs.GameSystems;
 
 namespace RPGManager.Desktop.Test.Integration.Rules.RulesCollections;
 

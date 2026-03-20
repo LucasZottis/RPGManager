@@ -12,18 +12,6 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "class",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    name = table.Column<string>(type: "varchar", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("p_k_class", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "game_system",
                 columns: table => new
                 {
@@ -70,6 +58,25 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                     table.PrimaryKey("p_k_alignment", x => x.id);
                     table.ForeignKey(
                         name: "f_k_alignment__game_system_game_system_id",
+                        column: x => x.game_system_id,
+                        principalTable: "game_system",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "class",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uuid", nullable: false),
+                    game_system_id = table.Column<Guid>(type: "uuid", nullable: false),
+                    name = table.Column<string>(type: "varchar", maxLength: 30, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("p_k_class", x => x.id);
+                    table.ForeignKey(
+                        name: "f_k_class__game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -142,7 +149,7 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                     id = table.Column<Guid>(type: "uuid", nullable: false),
                     game_system_id = table.Column<Guid>(type: "uuid", nullable: false),
                     parent_race_id = table.Column<Guid>(type: "uuid", nullable: true),
-                    name = table.Column<string>(type: "varchar", nullable: false),
+                    name = table.Column<string>(type: "varchar", maxLength: 30, nullable: false),
                     description = table.Column<string>(type: "varchar", nullable: true),
                     speed = table.Column<float>(type: "real", nullable: false)
                 },
@@ -337,6 +344,11 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_alignment_game_system_id",
                 table: "alignment",
+                column: "game_system_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_class_game_system_id",
+                table: "class",
                 column: "game_system_id");
 
             migrationBuilder.CreateIndex(

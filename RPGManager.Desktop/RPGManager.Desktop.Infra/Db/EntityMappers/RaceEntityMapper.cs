@@ -1,0 +1,25 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using RPGManager.Desktop.Domain.Entities.RaceEntities;
+
+namespace RPGManager.Desktop.Infra.Db.EntityMappers;
+
+public class RaceEntityMapper : EntityBaseEntityMapper<Race>
+{
+    protected override void Map( EntityTypeBuilder<Race> builder )
+    {
+        builder.Property( e => e.GameSystemId ).IsRequired();
+        builder.Property( e => e.ParentRaceId ).IsRequired( false );
+        builder.Property( e => e.Name ).IsRequired().HasMaxLength( MaxLength.ShortName );
+        builder.Property( e => e.Description ).IsRequired( false );
+        builder.Property( e => e.Speed ).IsRequired();
+
+        builder.HasOne( e => e.GameSystem )
+            .WithMany( e => e.Races )
+            .HasForeignKey( e => e.GameSystemId );
+
+        builder.HasOne( e => e.ParentRace )
+            .WithMany( e => e.ChildRaces )
+            .HasForeignKey( e => e.ParentRaceId );
+    }
+}

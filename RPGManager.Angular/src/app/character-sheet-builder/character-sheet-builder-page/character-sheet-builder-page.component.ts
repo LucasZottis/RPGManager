@@ -8,6 +8,8 @@ import { GameSystemQueryDto } from '../../shared/DTOs/game-systems/game-system-q
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RaceQueryDto } from '../../shared/DTOs/races/race-query.dto';
 import { flatMap } from 'rxjs';
+import { ClassQueryDto } from '../../shared/DTOs/class/class-query.dto';
+import { ClassService } from '../../shared/Services/class/class.service';
 
 @Component({
   selector: 'rpg-character-sheet-builder-page',
@@ -17,22 +19,15 @@ import { flatMap } from 'rxjs';
   styleUrl: './character-sheet-builder-page.component.scss'
 })
 export class CharacterSheetBuilderPageComponent implements OnInit {
+  private _formBuilder: FormBuilder = inject(FormBuilder);
   private _gameSystemService: GameSystemService = inject(GameSystemService);
   private _raceService: RaceService = inject(RaceService);
-  private _formBuilder: FormBuilder = inject(FormBuilder);
+  private _classService: ClassService = inject(ClassService);
 
   protected sheet!: FormGroup;
-
   protected gameSystems: GameSystemQueryDto[] = [];
   protected races: RaceQueryDto[] = [];
-  // protected selectedClassCardId: string = "";
-
-  // onClickClassCard(classCardId: string): void {
-  //   if (this.selectedClassCardId == classCardId)
-  //     this.selectedClassCardId = '';
-  //   else
-  //     this.selectedClassCardId = classCardId;
-  // }
+  protected classes: ClassQueryDto[] = [];
 
   get gameSystemId(): AbstractControl | null {
     return this.sheet.get("gameSystemId");
@@ -60,6 +55,7 @@ export class CharacterSheetBuilderPageComponent implements OnInit {
     this.sheet = this._formBuilder.group({
       gameSystemId: [''],
       raceId: [''],
+      classId: [''],
     });
 
     this._setListeners();
@@ -68,6 +64,10 @@ export class CharacterSheetBuilderPageComponent implements OnInit {
   private _setListeners(): void {
     this.gameSystemId?.valueChanges.subscribe({
       next: (value) => this._getRaces(value),
+    });
+
+    this.raceId?.valueChanges.subscribe({
+      next: (value) => this._getClasses(value),
     });
   }
 
@@ -86,6 +86,15 @@ export class CharacterSheetBuilderPageComponent implements OnInit {
       next: (result) => this.races = result,
       error: console.error,
       complete: () => console.info("Raças carregadas"),
+    })
+  }
+
+  private _getClasses(gameSystemId: string): void {
+    console.info("Carregando classes");
+    this._classService.recoverByGameSystemId(gameSystemId).subscribe({
+      next: (result) => this.classes = result,
+      error: console.error,
+      complete: () => console.info("Classes carregadas"),
     })
   }
 

@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RPGManager.Desktop.Application\RPGManager.Desktop.Application.csproj" />
     <ProjectReference Include="..\RPGManager.Desktop.Domain\RPGManager.Desktop.Domain.csproj" />
   </ItemGroup>
 

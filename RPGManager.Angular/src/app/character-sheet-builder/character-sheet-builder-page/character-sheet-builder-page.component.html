@@ -26,11 +26,11 @@
             }
 
             @if (isRaceIdSet) {
-            <select id="cbo-class" style="width: 100%;" formControlName="raceId">
-                <option [value]="''" selected>-- Selecione uma raça --</option>
-                @for(race of races; track race.id) {
-                <option [value]="race.id">
-                    {{race.name}}
+            <select id="cbo-class" style="width: 100%;" formControlName="classId">
+                <option [value]="''" selected>-- Selecione uma classe --</option>
+                @for(class of classes; track class.id) {
+                <option [value]="class.id">
+                    {{class.name}}
                 </option>
                 }
             </select>

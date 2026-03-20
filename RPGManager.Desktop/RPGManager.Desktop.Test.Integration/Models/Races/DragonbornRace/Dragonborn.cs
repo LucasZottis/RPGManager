@@ -1,5 +1,8 @@
-﻿namespace RPGManager.Desktop.Test.Integration.Models.Races.DragonbornRace;
+﻿using RPGManager.Desktop.Application.DTOs.Races;
 
+namespace RPGManager.Desktop.Test.Integration.Models.Races.DragonbornRace;
+
+[DictionaryKey( RaceKey.DRAGONBORN )]
 public class Dragonborn : RaceQueryDto
 {
     public Dragonborn( Dictionaries rules )

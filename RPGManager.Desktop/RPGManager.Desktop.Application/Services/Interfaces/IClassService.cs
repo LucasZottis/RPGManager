@@ -1,4 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Models.Classes;
+﻿using RPGManager.Desktop.Application.DTOs.Classes;
 
 namespace RPGManager.Desktop.Application.Services.Interfaces;
 

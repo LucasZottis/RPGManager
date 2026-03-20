@@ -1,4 +1,6 @@
-﻿namespace RPGManager.Desktop.Test.Integration.Models.Races.DwarfRace;
+﻿using RPGManager.Desktop.Application.DTOs.Races;
+
+namespace RPGManager.Desktop.Test.Integration.Models.Races.DwarfRace;
 
 [DictionaryKey( RaceKey.DWARF )]
 public class Dwarf : RaceQueryDto

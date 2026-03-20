@@ -12,7 +12,7 @@ using RPGManager.Desktop.Infra.Db.Contexts;
 namespace RPGManager.Desktop.PostgreSql.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20260320010127_PostgreSql_v1_0_0_0")]
+    [Migration("20260320024913_PostgreSql_v1_0_0_0")]
     partial class PostgreSql_v1_0_0_0
     {
         /// <inheritdoc />
@@ -96,13 +96,20 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("id");
 
+                    b.Property<Guid>("GameSystemId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("game_system_id");
+
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("varchar")
                         .HasColumnName("name");
 
                     b.HasKey("Id")
                         .HasName("p_k_class");
+
+                    b.HasIndex("GameSystemId");
 
                     b.ToTable("class");
                 });
@@ -407,6 +414,7 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("varchar")
                         .HasColumnName("name");
 
@@ -484,6 +492,18 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("f_k_alignment__game_system_game_system_id");
+
+                    b.Navigation("GameSystem");
+                });
+
+            modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.Class", b =>
+                {
+                    b.HasOne("RPGManager.Desktop.Domain.Entities.GameSystem", "GameSystem")
+                        .WithMany()
+                        .HasForeignKey("GameSystemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("f_k_class__game_system_game_system_id");
 
                     b.Navigation("GameSystem");
                 });
@@ -637,14 +657,14 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.RaceEntities.Race", b =>
                 {
                     b.HasOne("RPGManager.Desktop.Domain.Entities.GameSystem", "GameSystem")
-                        .WithMany()
+                        .WithMany("Races")
                         .HasForeignKey("GameSystemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("f_k_race_game_system_game_system_id");
 
                     b.HasOne("RPGManager.Desktop.Domain.Entities.RaceEntities.Race", "ParentRace")
-                        .WithMany()
+                        .WithMany("ChildRaces")
                         .HasForeignKey("ParentRaceId")
                         .HasConstraintName("f_k_race_race_parent_race_id");
 
@@ -700,6 +720,8 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
 
                     b.Navigation("Languages");
 
+                    b.Navigation("Races");
+
                     b.Navigation("Skills");
 
                     b.Navigation("WeaponCategories");
@@ -729,6 +751,11 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
             modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities.WeaponType", b =>
                 {
                     b.Navigation("Weapons");
+                });
+
+            modelBuilder.Entity("RPGManager.Desktop.Domain.Entities.RaceEntities.Race", b =>
+                {
+                    b.Navigation("ChildRaces");
                 });
 #pragma warning restore 612, 618
         }

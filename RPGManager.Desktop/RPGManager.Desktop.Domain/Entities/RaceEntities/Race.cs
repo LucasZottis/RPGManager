@@ -8,6 +8,7 @@ public class Race : EntityBase
     public string? Description { get; set; }
     public float Speed { get; set; }
 
+    public ICollection<Race> ChildRaces { get; set; }
     //public ICollection<RaceAbilityScore> AbilityScores { get; set; }
     //public ICollection<RaceFeature> Features { get; set; }
     //public ICollection<RaceLanguage> Languages { get; set; }
@@ -19,4 +20,5 @@ public class Race : EntityBase
 
     public GameSystem GameSystem { get; set; }
     public Race ParentRace { get; set; }
+
 }
