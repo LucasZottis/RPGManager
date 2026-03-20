@@ -1,6 +1,6 @@
-﻿using RPGManager.Desktop.Application.DTOs.Races;
+﻿using RPGManager.Desktop.Domain.Models.Races;
 
-namespace RPGManager.Desktop.Application.DTOs.GameSystems;
+namespace RPGManager.Desktop.Domain.Models.GameSystems;
 
 public class GameSystemQueryDto
 {

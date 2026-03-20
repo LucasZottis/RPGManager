@@ -7,5 +7,5 @@ public class RaceAbilityScore : EntityBase
     public int Increase { get; set; } = 1;
 
     public Race Race { get; set; }
-    public AbilityScore AbilityScore { get; set; }
+    public Background AbilityScore { get; set; }
 }

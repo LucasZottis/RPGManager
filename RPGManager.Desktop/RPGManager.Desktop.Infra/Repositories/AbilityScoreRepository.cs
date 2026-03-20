@@ -2,7 +2,7 @@
 
 namespace RPGManager.Desktop.Infra.Repositories;
 
-public class AbilityScoreRepository : RepositoryBase<AbilityScore>, IAbilityScoreRepository
+public class AbilityScoreRepository : RepositoryBase<Background>, IAbilityScoreRepository
 {
     public AbilityScoreRepository( Context context ) : base( context )
     {

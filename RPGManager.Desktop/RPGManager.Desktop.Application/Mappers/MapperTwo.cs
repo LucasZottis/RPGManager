@@ -1,5 +1,4 @@
-﻿using RPGManager.Desktop.Application.Mappers.Interfaces;
-using System.Text.Json;
+﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace RPGManager.Desktop.Application.Mappers;

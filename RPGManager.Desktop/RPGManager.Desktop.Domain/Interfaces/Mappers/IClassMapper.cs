@@ -1,6 +1,6 @@
 ﻿using RPGManager.Desktop.Domain.Entities;
 
-namespace RPGManager.Desktop.Application.Mappers.Interfaces;
+namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
 public interface IClassMapper : IMapperTwo<Class>
 {

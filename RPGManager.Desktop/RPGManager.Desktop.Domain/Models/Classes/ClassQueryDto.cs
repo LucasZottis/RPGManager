@@ -1,4 +1,4 @@
-﻿namespace RPGManager.Desktop.Application.DTOs.Classes;
+﻿namespace RPGManager.Desktop.Domain.Models.Classes;
 
 public class ClassQueryDto
 {

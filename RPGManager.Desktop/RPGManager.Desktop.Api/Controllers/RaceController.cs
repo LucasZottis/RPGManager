@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RPGManager.Desktop.Application.DTOs.Races;
-using RPGManager.Desktop.Application.Services.Interfaces;
 using RPGManager.Desktop.Domain.Entities.RaceEntities;
+using RPGManager.Desktop.Domain.Models.Races;
 
 namespace RPGManager.Desktop.Api.Controllers
 {

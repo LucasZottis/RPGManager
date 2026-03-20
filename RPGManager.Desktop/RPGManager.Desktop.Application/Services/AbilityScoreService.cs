@@ -2,7 +2,7 @@
 
 namespace RPGManager.Desktop.Application.Services;
 
-public class AbilityScoreService : ServiceBase<AbilityScore, AbilityScoreModel>, IAbilityScoreService
+public class AbilityScoreService : ServiceBase<Background, AbilityScoreModel>, IAbilityScoreService
 {
     //private readonly IAbilityScoreRepository _repository;
 

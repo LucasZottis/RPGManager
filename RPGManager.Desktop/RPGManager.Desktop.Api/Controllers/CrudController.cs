@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RPGManager.Desktop.Application.Services.Interfaces;
 
 namespace RPGManager.Desktop.Api.Controllers;
 

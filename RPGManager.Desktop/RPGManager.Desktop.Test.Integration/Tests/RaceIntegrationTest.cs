@@ -1,6 +1,4 @@
-﻿using RPGManager.Desktop.Application.DTOs.Races;
-
-namespace RPGManager.Desktop.Test.Integration.Tests;
+﻿namespace RPGManager.Desktop.Test.Integration.Tests;
 
 [DependsOn( typeof( GameSystemIntegrationTest ) )]
 internal class RaceIntegrationTest : IntegrationTestBase<RaceQueryDto>

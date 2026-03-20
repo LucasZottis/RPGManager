@@ -13,6 +13,7 @@ public class Context : ContextBase
     internal DbSet<GameSystem> GameSystem { get; set; }
     internal DbSet<Race> Race { get; set; }
     internal DbSet<Class> Class { get; set; }
+    internal DbSet<Background> Background { get; set; }
     //internal DbSet<AbilityScore> AbilityScore { get; set; }
     //internal DbSet<Language> Language { get; set; }
     //internal DbSet<Alignment> Alignment { get; set; }

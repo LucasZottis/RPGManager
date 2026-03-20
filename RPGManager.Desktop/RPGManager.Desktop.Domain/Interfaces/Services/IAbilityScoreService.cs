@@ -3,6 +3,6 @@ using RPGManager.Desktop.Domain.Models;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Services;
 
-public interface IAbilityScoreService : IServiceBase<AbilityScore, AbilityScoreModel>
+public interface IAbilityScoreService : IServiceBase<Background, AbilityScoreModel>
 {
 }

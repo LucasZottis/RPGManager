@@ -1,4 +1,4 @@
-﻿using RPGManager.Desktop.Application.DTOs.GameSystems;
+﻿using RPGManager.Desktop.Domain.Models.GameSystems;
 
 namespace RPGManager.Desktop.Test.Integration.Tests;
 

@@ -1,4 +1,4 @@
-﻿namespace RPGManager.Desktop.Application.Mappers.Interfaces;
+﻿namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
 public interface IMapperTwo<TEntity>
 {

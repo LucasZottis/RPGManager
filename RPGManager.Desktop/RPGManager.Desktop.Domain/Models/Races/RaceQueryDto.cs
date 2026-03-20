@@ -1,9 +1,10 @@
-﻿namespace RPGManager.Desktop.Application.DTOs.Races;
+﻿namespace RPGManager.Desktop.Domain.Models.Races;
 
-public class RaceRegisterDto
+public class RaceQueryDto
 {
+    public Guid Id { get; set; }
     public Guid GameSystemId { get; set; }
-    public Guid? ParentRaceId { get; set; } = null;
+    public Guid? ParentRaceId { get; set; }
     public string Name { get; set; }
     public string? Description { get; set; }
     public float Speed { get; set; }

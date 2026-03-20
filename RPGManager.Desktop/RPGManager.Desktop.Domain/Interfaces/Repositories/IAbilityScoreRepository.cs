@@ -2,7 +2,7 @@
 
 namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IAbilityScoreRepository : IRepositoryBase<AbilityScore>
+public interface IAbilityScoreRepository : IRepositoryBase<Background>
 {
 
 }

@@ -4,7 +4,7 @@ namespace RPGManager.Desktop.Infra.Db.EntityMappers;
 
 public class AbilityScoreEntityMapper : EntityBaseEntityMapper<AbilityScore>
 {
-    protected override void Map( EntityTypeBuilder<AbilityScore> builder )
+    protected override void Map( EntityTypeBuilder<Background> builder )
     {
         builder.Property( e => e.GameSystemId ).IsRequired();
         builder.Property( e => e.Name ).IsRequired().HasMaxLength( MaxLength.ShortName );

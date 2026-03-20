@@ -18,7 +18,7 @@ public class Weapon : EntityBase
     public GameSystem GameSystem { get; set; } = null!;
     public WeaponCategory WeaponCategory { get; set; } = null!;
     public WeaponType WeaponType { get; set; } = null!;
-    public AbilityScore BaseAbilityScore { get; set; } = null!;
+    public Background BaseAbilityScore { get; set; } = null!;
     //public AbilityScore? AlternativeAbilityScore { get; set; }
     public CurrencyType? CurrencyType { get; set; }
 

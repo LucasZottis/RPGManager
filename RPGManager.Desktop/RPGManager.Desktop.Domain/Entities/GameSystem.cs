@@ -8,7 +8,7 @@ public class GameSystem : EntityBase
     public string Name { get; set; }
 
     public ICollection<Race> Races { get; set; }
-    public ICollection<AbilityScore> AbilityScores { get; set; }
+    public ICollection<Background> AbilityScores { get; set; }
     public ICollection<Alignment> Alignments { get; set; }
     public ICollection<CurrencyType> CurrencyTypes { get; set; }
     public ICollection<DamageType> DamageTypes { get; set; }

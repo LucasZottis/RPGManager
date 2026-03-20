@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RPGManager.Desktop.Application.DTOs.Classes;
-using RPGManager.Desktop.Application.Services.Interfaces;
+using RPGManager.Desktop.Domain.Models.Classes;
 
 namespace RPGManager.Desktop.Api.Controllers;
 

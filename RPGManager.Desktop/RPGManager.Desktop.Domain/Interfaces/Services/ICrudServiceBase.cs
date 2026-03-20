@@ -1,6 +1,6 @@
 ﻿using RPGManager.Desktop.Domain.Entities;
 
-namespace RPGManager.Desktop.Application.Services.Interfaces;
+namespace RPGManager.Desktop.Domain.Interfaces.Services;
 
 public interface ICrudServiceBase<TEntity, TRegister, TQuery>
     where TEntity : EntityBase

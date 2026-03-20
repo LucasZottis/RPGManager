@@ -1,4 +1,4 @@
-﻿namespace RPGManager.Desktop.Application.DTOs.GameSystems;
+﻿namespace RPGManager.Desktop.Domain.Models.GameSystems;
 
 public class GameSystemRegisterDto
 {

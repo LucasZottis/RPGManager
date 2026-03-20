@@ -1,6 +1,6 @@
 ﻿namespace RPGManager.Desktop.Application.Mappers;
 
-public class AbilityScoreMapper : Mapper<AbilityScore, AbilityScoreModel>, IAbilityScoreMapper
+public class AbilityScoreMapper : Mapper<Background, AbilityScoreModel>, IAbilityScoreMapper
 {
     ////private readonly GameSystemMapper _gameSystemMapper;
     //private readonly SkillMapper _skillMapper;
