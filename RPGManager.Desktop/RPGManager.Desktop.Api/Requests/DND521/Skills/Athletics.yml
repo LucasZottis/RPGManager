@@ -1,0 +1,23 @@
+info:
+  name: Athletics
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Strength}}",
+        "Name": "Atletismo",
+        "Description": "Seu teste de Força (Atletismo) abrange situações difíceis que você encontra ao escalar, pular ou nadar."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

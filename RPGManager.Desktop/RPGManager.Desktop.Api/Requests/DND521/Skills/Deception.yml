@@ -1,0 +1,23 @@
+info:
+  name: Deception
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Charisma}}",
+        "Name": "Enganação",
+        "Description": "Seu teste de Carisma (Enganação) determina se você consegue esconder a verdade de forma convincente, seja verbalmente ou por meio de suas ações. Essa enganação pode abranger tudo, desde induzir os outros ao erro por meio de ambiguidade até contar mentiras descaradas. Situações típicas incluem tentar persuadir um guarda com lábia, ludibriar um comerciante, ganhar dinheiro com jogos de azar, se passar por outra pessoa disfarçada, dissipar as suspeitas de alguém com falsas garantias ou manter a compostura enquanto conta uma mentira flagrante."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

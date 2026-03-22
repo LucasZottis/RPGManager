@@ -1,0 +1,24 @@
+info:
+  name: Strength
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/ability-score/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Força",
+        "Abbreviation": "FOR",
+        "Description": "A força mede a potência corporal, o treinamento atlético e a extensão em que você consegue exercer força física bruta. Um teste de Força pode simular qualquer tentativa de levantar, empurrar, puxar ou quebrar algo, forçar o corpo através de um espaço ou aplicar força bruta a uma situação. A perícia Atletismo reflete aptidão em certos tipos de testes de Força."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

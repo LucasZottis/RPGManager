@@ -1,0 +1,21 @@
+info:
+  name: Martial
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: weapon-category/create
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Martial"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: Constitution
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/ability-score/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Constituição",
+        "Abbreviation": "CON",
+        "Description": "Constituição mede saúde, resistência e força vital. Testes de Constituição são incomuns e nenhuma perícia se aplica a eles, pois a resistência representada por essa habilidade é em grande parte passiva, sem envolver um esforço específico por parte do personagem ou monstro."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

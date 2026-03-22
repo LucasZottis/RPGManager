@@ -1,0 +1,23 @@
+info:
+  name: Animal Handling
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Wisdom}}",
+        "Name": "Adestramento de Animais",
+        "Description": "Quando houver qualquer dúvida sobre se você consegue acalmar um animal doméstico, impedir que uma montaria se assuste ou intuir as intenções de um animal, o Mestre pode solicitar um teste de Sabedoria (Adestramento de Animais). Você também faz um teste de Sabedoria (Adestramento de Animais) para controlar sua montaria ao tentar uma manobra arriscada."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,11 +1,12 @@
-﻿namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
+﻿using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 
-public class WeaponCategory : EntityBase
+namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
+
+public class WeaponCategory : GameSystemEntityBase
 {
-    public Guid GameSystemId { get; set; }
     public string Name { get; set; }
 
-    public GameSystem GameSystem { get; set; }
-
     public ICollection<Weapon> Weapons { get; set; }
+    public ICollection<ClassWeaponCategoryProficiency> ClassWeaponCategoryProficiencies { get; set; }
+    public ICollection<ClassWeaponCategoryProficiencyCondition> ClassWeaponCategoryProficiencyConditions { get; set; }
 }

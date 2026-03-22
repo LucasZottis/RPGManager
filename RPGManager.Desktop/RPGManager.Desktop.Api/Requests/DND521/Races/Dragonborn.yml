@@ -1,0 +1,25 @@
+info:
+  name: Dragonborn
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/race/create"
+  body:
+    type: json
+    data: |-
+      {
+        "gameSystemId": "{{GameSystemId}}",
+        "parentRaceId": null,
+        "name": "Dragonborn",
+        "description": null,
+        "speed": 9
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

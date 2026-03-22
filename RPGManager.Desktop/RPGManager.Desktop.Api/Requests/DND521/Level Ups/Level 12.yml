@@ -1,0 +1,24 @@
+info:
+  name: Level 12
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{url}}/level-up/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "LevelNumber": 12,
+        "ExperiencePoints": 100000,
+        "ProficiencyBonus": 4
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

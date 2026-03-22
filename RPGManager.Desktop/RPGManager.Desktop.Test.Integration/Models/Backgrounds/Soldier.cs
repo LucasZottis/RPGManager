@@ -8,6 +8,6 @@ public class Soldier : BackgroundQueryDto
     public Soldier( Dictionaries dictionaries )
     {
         GameSystemId = dictionaries.GamaSystem.Get( GameSystemKey.DND521E ).Id;
-        Name = "Soldade";
+        Name = "Soldado";
     }
 }

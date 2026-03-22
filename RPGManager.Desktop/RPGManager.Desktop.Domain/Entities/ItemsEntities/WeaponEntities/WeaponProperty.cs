@@ -9,7 +9,7 @@ public class WeaponProperty : EntityBase
     public bool HasAlternativeDiceTypeDamage { get; set; }
 
     public GameSystem GameSystem { get; set; } = null!;
-    public Background? AlternativeAbilityScore { get; set; }
+    public AbilityScore? AlternativeAbilityScore { get; set; }
 
     public ICollection<WeaponProperties> Weapons { get; set; }
 }

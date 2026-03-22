@@ -1,0 +1,24 @@
+info:
+  name: Dexterity
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/ability-score/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Destreza",
+        "Abbreviation": "DES",
+          "Description": "A destreza mede agilidade, reflexos e equilíbrio. Um teste de Destreza pode simular qualquer tentativa de se mover com agilidade, rapidez ou silêncio, ou de evitar cair em terreno irregular. As perícias Acrobacia, Prestidigitação e Furtividade refletem aptidão em certos tipos de testes de Destreza."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+info:
+  name: Stealth
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Dexterity}}",
+        "Name": "Furtividade",
+        "Description": "Faça um teste de Destreza (Furtividade) quando tentar se esconder dos inimigos, passar sorrateiramente pelos guardas, escapar sem ser notado ou surpreender alguém sem ser visto ou ouvido."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

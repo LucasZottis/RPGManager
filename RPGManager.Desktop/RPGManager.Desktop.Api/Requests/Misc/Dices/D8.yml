@@ -1,0 +1,22 @@
+info:
+  name: D8
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/dice-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "D8",
+        "sides": 8
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

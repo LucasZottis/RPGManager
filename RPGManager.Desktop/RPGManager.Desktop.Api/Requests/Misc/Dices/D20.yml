@@ -1,0 +1,22 @@
+info:
+  name: D20
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/dice-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "D20",
+        "sides": 20
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

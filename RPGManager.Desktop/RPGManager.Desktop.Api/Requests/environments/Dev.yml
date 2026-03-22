@@ -1,0 +1,20 @@
+name: Dev
+variables:
+  - name: url
+    value: http://localhost:5001/api
+  - name: D2
+    value: ""
+  - name: D4
+    value: ""
+  - name: D6
+    value: ""
+  - name: D8
+    value: ""
+  - name: D10
+    value: ""
+  - name: D12
+    value: ""
+  - name: D100
+    value: ""
+  - name: D20
+    value: ""

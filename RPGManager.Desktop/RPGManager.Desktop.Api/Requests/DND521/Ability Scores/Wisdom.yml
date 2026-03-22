@@ -1,0 +1,24 @@
+info:
+  name: Wisdom
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/ability-score/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Sabedoria",
+        "Abbreviation": "SAB",
+        "Description": "Sabedoria reflete o quão sintonizado você está com o mundo ao seu redor e representa percepção e intuição. Um teste de Sabedoria pode refletir um esforço para ler a linguagem corporal, entender os sentimentos de alguém, perceber detalhes do ambiente ou cuidar de uma pessoa ferida. As perícias Lidar com Animais, Intuição, Medicina, Percepção e Sobrevivência refletem aptidão em certos tipos de testes de Sabedoria."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

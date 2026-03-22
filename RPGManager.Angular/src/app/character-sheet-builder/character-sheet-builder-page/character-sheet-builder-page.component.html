@@ -35,6 +35,17 @@
                 }
             </select>
             }
+
+            @if (isClassIdSet) {
+            <select id="cbo-background" style="width: 100%;" formControlName="backgroundId">
+                <option [value]="''" selected>-- Selecione um passado --</option>
+                @for(background of backgrounds; track background.id) {
+                <option [value]="background.id">
+                    {{background.name}}
+                </option>
+                }
+            </select>
+            }
         </div>
     </form>
 </div>

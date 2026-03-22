@@ -5,5 +5,4 @@
   <Project Path="RPGManager.Desktop.Infra/RPGManager.Desktop.Infra.csproj" />
   <Project Path="RPGManager.Desktop.Migration.PostegreSql/RPGManager.Desktop.PostgreSql.csproj" />
   <Project Path="RPGManager.Desktop.Migration.SqLite/RPGManager.Desktop.SqLite.csproj" />
-  <Project Path="RPGManager.Desktop.Test.Integration/RPGManager.Desktop.Test.Integration.csproj" />
 </Solution>

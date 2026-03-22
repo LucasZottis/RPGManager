@@ -1,0 +1,23 @@
+info:
+  name: Persuasion
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Charisma}}",
+        "Name": "Persuasão",
+        "Description": "Quando você tenta influenciar alguém ou um grupo de pessoas com tato, gentileza ou bom caráter, o Mestre pode pedir que você faça um teste de Carisma (Persuasão). Normalmente, você usa a persuasão quando age de boa fé, para cultivar amizades, fazer pedidos cordiais ou demonstrar a etiqueta adequada. Exemplos de como persuadir os outros incluem convencer um camareiro a deixar seu grupo ver o rei, negociar a paz entre tribos em guerra ou inspirar uma multidão de moradores da cidade."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

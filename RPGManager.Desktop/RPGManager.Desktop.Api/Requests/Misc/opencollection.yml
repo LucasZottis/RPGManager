@@ -1,0 +1,29 @@
+opencollection: 1.0.0
+
+info:
+  name: Misc
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  scripts:
+    - type: tests
+      code: |-
+        test("Deve voltar sucesso", function () {
+          expect(res.getStatus()).to.equal(200);
+        });
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

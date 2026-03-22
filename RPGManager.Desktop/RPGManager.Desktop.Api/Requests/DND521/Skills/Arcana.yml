@@ -1,0 +1,23 @@
+info:
+  name: Arcana
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Intelligence}}",
+        "Name": "Arcanismo",
+        "Description": "Seu teste de Inteligência (Arcanismo) mede sua capacidade de recordar conhecimentos sobre magias, itens mágicos, símbolos arcanos, tradições mágicas, os planos de existência e os habitantes desses planos."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

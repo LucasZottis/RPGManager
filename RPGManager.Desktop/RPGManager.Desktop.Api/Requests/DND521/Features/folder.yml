@@ -1,0 +1,18 @@
+info:
+  name: Features
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit
+  scripts:
+    - type: after-response
+      code: |-
+        if (res.getStatus() === 200) {
+          const name = req.body.name;
+          const id = res.body;  
+          const varName = `${name}_Feature`
+          
+          console.log(`${name}: ${id}`);
+          bru.setVar(varName, id);
+        }

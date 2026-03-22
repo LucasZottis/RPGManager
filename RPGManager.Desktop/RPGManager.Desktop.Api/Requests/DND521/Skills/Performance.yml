@@ -1,0 +1,23 @@
+info:
+  name: Performance
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Charisma}}",
+        "Name": "Atuação",
+        "Description": "Seu teste de Carisma (Atuação) determina o quão bem você consegue encantar uma plateia com música, dança, atuação, contação de histórias ou alguma outra forma de entretenimento."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

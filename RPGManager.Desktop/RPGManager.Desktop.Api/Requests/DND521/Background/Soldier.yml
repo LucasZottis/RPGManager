@@ -1,0 +1,23 @@
+info:
+  name: Soldier
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/background/create"
+  body:
+    type: json
+    data: |-
+      {
+        "gameSystemId": "{{GameSystemId}}",
+        "name": "Soldado",
+        "description": null
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,140 @@
+opencollection: 1.0.0
+
+info:
+  name: DND521
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: GameSystem
+      value: ""
+    - name: Strength
+      value: ""
+    - name: Dexterity
+      value: ""
+    - name: Constitution
+      value: ""
+    - name: Intelligence
+      value: ""
+    - name: Wisdom
+      value: ""
+    - name: Charisma
+      value: ""
+    - name: Acrobatics
+      value: ""
+    - name: Animal_Handling
+      value: ""
+    - name: Arcana
+      value: ""
+    - name: Athletics
+      value: ""
+    - name: Deception
+      value: ""
+    - name: History
+      value: ""
+    - name: Insight
+      value: ""
+    - name: Intimidation
+      value: ""
+    - name: Investigation
+      value: ""
+    - name: Medicine
+      value: ""
+    - name: Nature
+      value: ""
+    - name: Perception
+      value: ""
+    - name: Performance
+      value: ""
+    - name: Persuasion
+      value: ""
+    - name: Religion
+      value: ""
+    - name: Sleight_of_Hand
+      value: ""
+    - name: Stealth
+      value: ""
+    - name: Survival
+      value: ""
+    - name: Level_01
+      value: ""
+    - name: Level_02
+      value: ""
+    - name: Level_03
+      value: ""
+    - name: Level_04
+      value: ""
+    - name: Level_05
+      value: ""
+    - name: Level_06
+      value: ""
+    - name: Level_07
+      value: ""
+    - name: Level_08
+      value: ""
+    - name: Level_09
+      value: ""
+    - name: Level_10
+      value: ""
+    - name: Level_11
+      value: ""
+    - name: Level_12
+      value: ""
+    - name: Level_13
+      value: ""
+    - name: Level_14
+      value: ""
+    - name: Level_15
+      value: ""
+    - name: Level_16
+      value: ""
+    - name: Level_17
+      value: ""
+    - name: Level_18
+      value: ""
+    - name: Level_19
+      value: ""
+    - name: Level_20
+      value: ""
+    - name: Simple_Weapon
+      value: ""
+    - name: Martial_Weapon
+      value: ""
+  scripts:
+    - type: before-request
+      code: |-
+        const reqName = req.getName();
+
+        if (reqName !== "Create Game System") {
+          console.log(`Executando requisição: ${reqName}`);
+          
+          const gameSystemId = bru.getVar("DND521Id");
+          console.log(`Game System ID: ${gameSystemId}`);
+
+          if (gameSystemId === "") {
+              console.log("Criando sistema antes...");
+              const response = bru.runRequest('DND521/Create Game System');
+              console.log(response.status);
+          } 
+        }
+    - type: tests
+      code: |-
+        test("Deve voltar sucesso", function () {
+          expect(res.getStatus()).to.equal(200);
+        });
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

@@ -1,0 +1,37 @@
+info:
+  name: Create Game System
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/game-system/create"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "D&D 5.2.1e",
+        "LevelLimit": 20
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const varName = "DND521Id";
+
+        if (res.status === 200) {
+          const id = res.body;
+          
+          if (bru.hasVar(varName))
+            console.log(`Existe a variável ${varName}`);
+          
+          bru.setVar(varName, id);
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

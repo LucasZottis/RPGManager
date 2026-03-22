@@ -1,0 +1,24 @@
+info:
+  name: Charisma
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/ability-score/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Carisma",
+        "Abbreviation": "CAR",
+        "Description": "Carisma mede sua capacidade de interagir efetivamente com os outros. Inclui fatores como confiança e eloquência, e pode representar uma personalidade encantadora ou imponente. Um teste de Carisma pode surgir quando você tenta influenciar ou entreter os outros, quando tenta causar uma boa impressão ou contar uma mentira convincente, ou quando está lidando com uma situação social delicada. As habilidades de Enganação, Intimidação, Performance e Persuasão refletem aptidão em certos tipos de testes de Carisma."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

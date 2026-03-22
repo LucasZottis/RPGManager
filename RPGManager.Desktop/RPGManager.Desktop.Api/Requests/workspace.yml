@@ -1,0 +1,18 @@
+opencollection: 1.0.0
+info:
+  name: "RPGManager"
+  type: workspace
+
+collections:
+  - name: "DND521"
+    path: "collections/DND521"
+  - name: "Misc"
+    path: "D:/Projetos/RPGManager/RPGManager.Desktop/RPGManager.Desktop.Api/Requests/Misc"
+  - name: "DND521"
+    path: "D:/Projetos/RPGManager/RPGManager.Desktop/RPGManager.Desktop.Api/Requests/DND521"
+
+specs:
+
+docs: ''
+
+activeEnvironmentUid: 1qn8ygl00000000000000

@@ -12,6 +12,6 @@ public class SkillEntityMapper : EntityBaseEntityMapper<Skill>
         builder.Property( e => e.Description );
 
         builder.HasOne( e => e.GameSystem ).WithMany( e => e.Skills ).HasForeignKey( e => e.GameSystemId );
-        builder.HasOne( e => e.BaseAbilityScore ).WithMany( e => e.Skills ).HasForeignKey( e => e.BaseAbilityScoreId );
+        builder.HasOne( e => e.BaseAbilityScore ).WithMany( e => e.SkillsBaseAbilityScore ).HasForeignKey( e => e.BaseAbilityScoreId );
     }
 }

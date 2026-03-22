@@ -1,0 +1,61 @@
+info:
+  name: Barbarian
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/class/create"
+  body:
+    type: json
+    data: |-
+      {
+        "gameSystemId": "{{GameSystem}}",
+        "HitDiceTypeId": "{{D12}}",
+        "PrimaryAbilityScoreId": "{{Strength}}",
+        "Name": "Bárbaro",
+        "SkillProficiencyAmount": 2,
+        "SavingThrowProficiencies": [
+          {
+            "AbilityScoreId": "{{Strength}}"
+          },
+          {
+            "AbilityScoreId": "{{Constitution}}"
+          }
+        ],
+        "SkillProficiencies": [
+          {
+            "SkillId": "{{Animal_Handling}}"
+          },
+          {
+            "SkillId": "{{Athletics}}"
+          },
+          {
+            "SkillId": "{{Intimidation}}"
+          },
+          {
+            "SkillId": "{{Nature}}"
+          },
+          {
+            "SkillId": "{{Perception}}"
+          },
+          {
+            "SkillId": "{{Survival}}"
+          }
+        ],
+        "WeaponCategoryProficiencies": [
+          {
+            "WeaponCategoryId": "{{Simple_Weapon}}"
+          },
+          {
+            "WeaponCategoryId": "{{Martial_Weapon}}"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

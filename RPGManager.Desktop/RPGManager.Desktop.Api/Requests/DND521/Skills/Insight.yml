@@ -1,0 +1,23 @@
+info:
+  name: Insight
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Wisdom}}",
+        "Name": "Intuição",
+        "Description": "Seu teste de Sabedoria (Intuição) determina se você consegue discernir as verdadeiras intenções de uma criatura, como ao desvendar uma mentira ou prever o próximo passo de alguém. Para isso, você precisa captar pistas da linguagem corporal, dos hábitos de fala e das mudanças de comportamento."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

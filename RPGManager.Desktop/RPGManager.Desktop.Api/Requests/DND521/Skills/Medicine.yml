@@ -1,0 +1,23 @@
+info:
+  name: Medicine
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Wisdom}}",
+        "Name": "Medicina",
+        "Description": "Um teste de Sabedoria (Medicina) permite que você tente estabilizar um companheiro moribundo ou diagnosticar uma doença."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

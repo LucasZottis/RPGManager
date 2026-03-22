@@ -1,0 +1,23 @@
+info:
+  name: Investigation
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Intelligence}}",
+        "Name": "Investigação",
+        "Description": "Ao procurar pistas e fazer deduções com base nelas, você realiza um teste de Inteligência (Investigação). Você pode deduzir a localização de um objeto escondido, discernir pela aparência de um ferimento que tipo de arma o causou ou determinar o ponto mais frágil de um túnel que poderia causar seu desabamento. Analisar pergaminhos antigos em busca de um fragmento oculto de conhecimento também pode exigir um teste de Inteligência (Investigação)."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,29 @@
+info:
+  name: DND521
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+  scripts:
+    - type: before-request
+      code: |-
+        const reqName = req.getName();
+
+        if (reqName !== "Create Game System") {
+          console.log(`Executando requisição: ${reqName}`);
+          
+          const gameSystemId = bru.getVar("DND521Id");
+          console.log(`Game System ID: ${gameSystemId}`);
+
+          if (gameSystemId === "") {
+              console.log("Criando sistema antes...");
+              const response = bru.runRequest('DND521/Create Game System');
+              console.log(response.status);
+          } 
+        }
+    - type: tests
+      code: |-
+        test(req.getName(), function () {
+          expect(res.getStatus()).to.equal(200);
+        });

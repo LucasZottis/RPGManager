@@ -12,6 +12,19 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "dice_type",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uuid", nullable: false),
+                    name = table.Column<string>(type: "varchar", maxLength: 30, nullable: false),
+                    sides = table.Column<byte>(type: "smallint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_dice_type", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "game_system",
                 columns: table => new
                 {
@@ -20,7 +33,7 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_game_system", x => x.id);
+                    table.PrimaryKey("pk_game_system", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -35,9 +48,9 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_ability_score", x => x.id);
+                    table.PrimaryKey("pk_ability_score", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_ability_score__game_system_game_system_id",
+                        name: "fk_ability_score_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -55,9 +68,29 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_alignment", x => x.id);
+                    table.PrimaryKey("pk_alignment", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_alignment__game_system_game_system_id",
+                        name: "fk_alignment_game_system_game_system_id",
+                        column: x => x.game_system_id,
+                        principalTable: "game_system",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "background",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uuid", nullable: false),
+                    game_system_id = table.Column<Guid>(type: "uuid", nullable: false),
+                    name = table.Column<string>(type: "varchar", maxLength: 30, nullable: false),
+                    description = table.Column<string>(type: "varchar", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_background", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_background_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -74,9 +107,9 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_class", x => x.id);
+                    table.PrimaryKey("pk_class", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_class__game_system_game_system_id",
+                        name: "fk_class_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -94,9 +127,9 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_currency_type", x => x.id);
+                    table.PrimaryKey("pk_currency_type", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_currency_type__game_system_game_system_id",
+                        name: "fk_currency_type_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -113,9 +146,9 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_damage_type", x => x.id);
+                    table.PrimaryKey("pk_damage_type", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_damage_type__game_system_game_system_id",
+                        name: "fk_damage_type_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -133,9 +166,9 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_language", x => x.id);
+                    table.PrimaryKey("pk_language", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_language_game_system_game_system_id",
+                        name: "fk_language_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -155,15 +188,15 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_race", x => x.id);
+                    table.PrimaryKey("pk_race", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_race_game_system_game_system_id",
+                        name: "fk_race_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "f_k_race_race_parent_race_id",
+                        name: "fk_race_race_parent_race_id",
                         column: x => x.parent_race_id,
                         principalTable: "race",
                         principalColumn: "id");
@@ -179,9 +212,9 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_weapon_category", x => x.id);
+                    table.PrimaryKey("pk_weapon_category", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_weapon_category_game_system_game_system_id",
+                        name: "fk_weapon_category_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -198,9 +231,9 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_weapon_type", x => x.id);
+                    table.PrimaryKey("pk_weapon_type", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_weapon_type_game_system_game_system_id",
+                        name: "fk_weapon_type_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -219,15 +252,15 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_skill", x => x.id);
+                    table.PrimaryKey("pk_skill", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_skill_ability_score_base_ability_score_id",
+                        name: "fk_skill_ability_score_base_ability_score_id",
                         column: x => x.base_ability_score_id,
                         principalTable: "ability_score",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "f_k_skill_game_system_game_system_id",
+                        name: "fk_skill_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -247,14 +280,14 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_weapon_property", x => x.id);
+                    table.PrimaryKey("pk_weapon_property", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_weapon_property_ability_score_alternative_ability_score_id",
+                        name: "fk_weapon_property_ability_score_alternative_ability_score_id",
                         column: x => x.alternative_ability_score_id,
                         principalTable: "ability_score",
                         principalColumn: "id");
                     table.ForeignKey(
-                        name: "f_k_weapon_property_game_system_game_system_id",
+                        name: "fk_weapon_property_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
                         principalColumn: "id",
@@ -280,34 +313,34 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_weapon", x => x.id);
+                    table.PrimaryKey("pk_weapon", x => x.id);
                     table.ForeignKey(
-                        name: "f_k_weapon__weapon_category_weapon_category_id",
-                        column: x => x.weapon_category_id,
-                        principalTable: "weapon_category",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "f_k_weapon__weapon_type_weapon_type_id",
-                        column: x => x.weapon_type_id,
-                        principalTable: "weapon_type",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "f_k_weapon_ability_score_base_ability_score_id",
+                        name: "fk_weapon_ability_score_base_ability_score_id",
                         column: x => x.base_ability_score_id,
                         principalTable: "ability_score",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "f_k_weapon_currency_type_currency_type_id",
+                        name: "fk_weapon_currency_type_currency_type_id",
                         column: x => x.currency_type_id,
                         principalTable: "currency_type",
                         principalColumn: "id");
                     table.ForeignKey(
-                        name: "f_k_weapon_game_system_game_system_id",
+                        name: "fk_weapon_game_system_game_system_id",
                         column: x => x.game_system_id,
                         principalTable: "game_system",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "fk_weapon_weapon_category_weapon_category_id",
+                        column: x => x.weapon_category_id,
+                        principalTable: "weapon_category",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "fk_weapon_weapon_type_weapon_type_id",
+                        column: x => x.weapon_type_id,
+                        principalTable: "weapon_type",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -321,15 +354,15 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("p_k_weapon_properties", x => new { x.weapon_property_id, x.weapon_id });
+                    table.PrimaryKey("pk_weapon_properties", x => new { x.weapon_property_id, x.weapon_id });
                     table.ForeignKey(
-                        name: "f_k_weapon_properties__weapon_property_weapon_property_id",
+                        name: "fk_weapon_properties_weapon_property_weapon_property_id",
                         column: x => x.weapon_property_id,
                         principalTable: "weapon_property",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "f_k_weapon_properties_weapon_weapon_id",
+                        name: "fk_weapon_properties_weapon_weapon_id",
                         column: x => x.weapon_id,
                         principalTable: "weapon",
                         principalColumn: "id",
@@ -344,6 +377,11 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_alignment_game_system_id",
                 table: "alignment",
+                column: "game_system_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_background_game_system_id",
+                table: "background",
                 column: "game_system_id");
 
             migrationBuilder.CreateIndex(
@@ -444,10 +482,16 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 name: "alignment");
 
             migrationBuilder.DropTable(
+                name: "background");
+
+            migrationBuilder.DropTable(
                 name: "class");
 
             migrationBuilder.DropTable(
                 name: "damage_type");
+
+            migrationBuilder.DropTable(
+                name: "dice_type");
 
             migrationBuilder.DropTable(
                 name: "language");
@@ -468,16 +512,16 @@ namespace RPGManager.Desktop.PostgreSql.Migrations
                 name: "weapon");
 
             migrationBuilder.DropTable(
-                name: "weapon_category");
-
-            migrationBuilder.DropTable(
-                name: "weapon_type");
-
-            migrationBuilder.DropTable(
                 name: "ability_score");
 
             migrationBuilder.DropTable(
                 name: "currency_type");
+
+            migrationBuilder.DropTable(
+                name: "weapon_category");
+
+            migrationBuilder.DropTable(
+                name: "weapon_type");
 
             migrationBuilder.DropTable(
                 name: "game_system");

@@ -1,0 +1,23 @@
+info:
+  name: Sleight of Hand
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Dexterity}}",
+        "Name": "Prestidigitação",
+        "Description": "Sempre que você tentar um ato de prestidigitação ou truque manual, como plantar algo em alguém ou esconder um objeto consigo, faça um teste de Destreza (Prestidigitação). O Mestre também pode exigir um teste de Destreza (Prestidigitação) para determinar se você consegue pegar uma carteira de moedas de outra pessoa ou retirar algo do bolso dela."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

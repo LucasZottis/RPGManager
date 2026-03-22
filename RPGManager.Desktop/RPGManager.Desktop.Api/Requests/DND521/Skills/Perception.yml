@@ -1,0 +1,23 @@
+info:
+  name: Perception
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Wisdom}}",
+        "Name": "Percepção",
+        "Description": "Seu teste de Sabedoria (Percepção) permite que você veja, ouça ou detecte a presença de algo. Ele mede sua percepção geral do ambiente ao seu redor e a acuidade dos seus sentidos. Por exemplo, você pode tentar ouvir uma conversa através de uma porta fechada, espionar por baixo de uma janela aberta ou ouvir monstros se movendo furtivamente na floresta. Ou você pode tentar detectar coisas que estão escondidas ou que são fáceis de passar despercebidas, sejam orcs emboscados em uma estrada, bandidos escondidos nas sombras de um beco ou a luz de velas sob uma porta secreta fechada."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

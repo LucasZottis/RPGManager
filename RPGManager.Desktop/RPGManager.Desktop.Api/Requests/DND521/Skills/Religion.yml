@@ -1,0 +1,23 @@
+info:
+  name: Religion
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Intelligence}}",
+        "Name": "Religião",
+        "Description": "Seu teste de Inteligência (Religião) mede sua capacidade de recordar conhecimentos sobre divindades, ritos e orações, hierarquias religiosas, símbolos sagrados e as práticas de cultos secretos."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

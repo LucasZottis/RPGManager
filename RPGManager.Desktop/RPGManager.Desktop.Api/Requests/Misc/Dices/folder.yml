@@ -1,0 +1,19 @@
+info:
+  name: Dices
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+  scripts:
+    - type: after-response
+      code: |-
+        if (res.getStatus() === 200) {
+          const name = req.body.name;
+          //const varName = `${name}`;
+          const id = res.body;
+          
+          console.log(`${name}: ${id}`);
+          
+          bru.setGlobalEnvVar(name, id);
+        }

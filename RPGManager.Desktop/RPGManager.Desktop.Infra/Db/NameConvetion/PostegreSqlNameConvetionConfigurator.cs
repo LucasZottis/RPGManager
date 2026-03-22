@@ -6,8 +6,7 @@ namespace RPGManager.Desktop.Infra.Db.NameConvetion;
 
 public class PostegreSqlNameConvetionConfigurator : NameConvetionConfigurator
 {
-    private readonly Regex _regex =
-    new Regex( "(?<!^)([A-Z])", RegexOptions.Compiled );
+    private readonly Regex _regex = new Regex( "(?<=[a-z0-9])([A-Z])", RegexOptions.Compiled );
 
     public string ToSnakeCase( string input )
         => _regex.Replace( input, "_$1" ).ToLowerInvariant();

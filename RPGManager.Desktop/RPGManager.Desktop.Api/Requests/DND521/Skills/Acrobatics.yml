@@ -1,0 +1,23 @@
+info:
+  name: Acrobatics
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Dexterity}}",
+        "Name": "Acrobacia",
+        "Description": "Seu teste de Destreza (Acrobacias) avalia sua capacidade de se manter em pé em situações complicadas, como correr sobre uma placa de gelo, equilibrar-se em uma corda bamba ou permanecer ereto no convés de um navio balançando. O Mestre também pode solicitar um teste de Destreza (Acrobacias) para verificar se você consegue realizar acrobacias, incluindo mergulhos, rolamentos, cambalhotas e piruetas."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

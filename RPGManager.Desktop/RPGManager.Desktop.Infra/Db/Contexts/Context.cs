@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 using RPGManager.Desktop.Domain.Entities.RaceEntities;
 using RPGManager.Desktop.Infra.Db.Interfaces;
 
@@ -10,6 +11,7 @@ public class Context : ContextBase
     {
     }
 
+    internal DbSet<DiceType> DiceType { get; set; }
     internal DbSet<GameSystem> GameSystem { get; set; }
     internal DbSet<Race> Race { get; set; }
     internal DbSet<Class> Class { get; set; }

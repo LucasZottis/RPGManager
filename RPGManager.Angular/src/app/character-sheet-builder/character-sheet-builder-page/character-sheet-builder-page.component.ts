@@ -10,6 +10,8 @@ import { RaceQueryDto } from '../../shared/DTOs/races/race-query.dto';
 import { flatMap } from 'rxjs';
 import { ClassQueryDto } from '../../shared/DTOs/class/class-query.dto';
 import { ClassService } from '../../shared/Services/class/class.service';
+import { BackgroundQueryDto } from '../../shared/DTOs/baclground/background-query.dto';
+import { BackgroundService } from '../../shared/Services/background/background.service';
 
 @Component({
   selector: 'rpg-character-sheet-builder-page',
@@ -23,11 +25,13 @@ export class CharacterSheetBuilderPageComponent implements OnInit {
   private _gameSystemService: GameSystemService = inject(GameSystemService);
   private _raceService: RaceService = inject(RaceService);
   private _classService: ClassService = inject(ClassService);
+  private _backgroundService: BackgroundService = inject(BackgroundService);
 
   protected sheet!: FormGroup;
   protected gameSystems: GameSystemQueryDto[] = [];
   protected races: RaceQueryDto[] = [];
   protected classes: ClassQueryDto[] = [];
+  protected backgrounds: BackgroundQueryDto[] = [];
 
   get gameSystemId(): AbstractControl | null {
     return this.sheet.get("gameSystemId");
@@ -35,6 +39,10 @@ export class CharacterSheetBuilderPageComponent implements OnInit {
 
   get raceId(): AbstractControl | null {
     return this.sheet.get("raceId");
+  }
+
+  get classId(): AbstractControl | null {
+    return this.sheet.get("classId");
   }
 
   get isGameSystemIdSet(): boolean {
@@ -51,11 +59,19 @@ export class CharacterSheetBuilderPageComponent implements OnInit {
     return false;
   }
 
+  get isClassIdSet(): boolean {
+    if (this.classId)
+      return this.classId.value !== "";
+
+    return false;
+  }
+
   private _createSheet(): void {
     this.sheet = this._formBuilder.group({
       gameSystemId: [''],
       raceId: [''],
       classId: [''],
+      backgroundId: [''],
     });
 
     this._setListeners();
@@ -68,6 +84,10 @@ export class CharacterSheetBuilderPageComponent implements OnInit {
 
     this.raceId?.valueChanges.subscribe({
       next: (value) => this._getClasses(value),
+    });
+
+    this.classId?.valueChanges.subscribe({
+      next: (value) => this._getBackgrounds(value),
     });
   }
 
@@ -95,6 +115,15 @@ export class CharacterSheetBuilderPageComponent implements OnInit {
       next: (result) => this.classes = result,
       error: console.error,
       complete: () => console.info("Classes carregadas"),
+    })
+  }
+
+  private _getBackgrounds(gameSystemId: string): void {
+    console.info("Carregando passados");
+    this._backgroundService.recoverByGameSystemId(gameSystemId).subscribe({
+      next: (result) => this.backgrounds = result,
+      error: console.error,
+      complete: () => console.info("Passados carregadas"),
     })
   }
 

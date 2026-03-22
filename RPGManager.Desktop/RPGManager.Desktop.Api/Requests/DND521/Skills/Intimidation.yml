@@ -1,0 +1,23 @@
+info:
+  name: Intimidation
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Charisma}}",
+        "Name": "Intimidação",
+        "Description": "Quando você tenta influenciar alguém por meio de ameaças explícitas, ações hostis e violência física, o Mestre pode pedir que você faça um teste de Carisma (Intimidação). Exemplos incluem tentar arrancar informações de um prisioneiro, convencer bandidos de rua a recuar de um confronto ou usar a borda de uma garrafa quebrada para convencer um vizir arrogante a reconsiderar uma decisão."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

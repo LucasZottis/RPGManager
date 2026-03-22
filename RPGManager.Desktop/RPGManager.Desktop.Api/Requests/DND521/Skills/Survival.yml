@@ -1,0 +1,23 @@
+info:
+  name: Survival
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Wisdom}}",
+        "Name": "Sobrevivência",
+        "Description": "O Mestre pode pedir que você faça um teste de Sabedoria (Sobrevivência) para seguir rastros, caçar animais selvagens, guiar seu grupo por terras congeladas, identificar sinais de que corujas-urso vivem por perto, prever o tempo ou evitar areia movediça e outros perigos naturais."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: Intelligence
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/ability-score/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Inteligência",
+        "Abbreviation": "INT",
+        "Description": "A inteligência mede a acuidade mental, a precisão da memória e a capacidade de raciocínio. Um teste de Inteligência entra em jogo quando você precisa recorrer à lógica, à educação, à memória ou ao raciocínio dedutivo. As perícias Arcanismo, História, Investigação, Natureza e Religião refletem aptidão em certos tipos de testes de Inteligência."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

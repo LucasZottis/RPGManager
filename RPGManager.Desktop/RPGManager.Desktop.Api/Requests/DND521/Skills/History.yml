@@ -1,0 +1,23 @@
+info:
+  name: History
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/skill/create"
+  body:
+    type: json
+    data: |-
+      {
+        "BaseAbilityScoreId": "{{Intelligence}}",
+        "Name": "História",
+        "Description": "Seu teste de Inteligência (História) mede sua capacidade de recordar informações sobre eventos históricos, personagens lendários, reinos antigos, disputas passadas, guerras recentes e civilizações perdidas."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
