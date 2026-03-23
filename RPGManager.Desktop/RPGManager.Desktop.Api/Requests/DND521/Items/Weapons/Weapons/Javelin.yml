@@ -1,0 +1,46 @@
+info:
+  name: Javelin
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Silver_Piece_Currency_Type}}",
+        "Name": "Azagaia",
+        "Cost": 5,
+        "Weight": 0.9,
+        "WeaponCategoryId": "{{Simple_Weapon_Category}}",
+        "WeaponTypeId": "{{Melee_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Slow_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Strength}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Thrown_Weapon_Property}}",
+            "NormalRange": 9,
+            "LongRange": 36
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Piercing_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D6}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

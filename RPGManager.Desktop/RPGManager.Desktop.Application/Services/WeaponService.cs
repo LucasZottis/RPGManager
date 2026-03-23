@@ -19,7 +19,7 @@ public class WeaponService : ServiceBase<Weapon, WeaponModel>, IWeaponService
             if ( entity.WeaponProperties == null )
                 entity.WeaponProperties = [];
 
-            entity.WeaponProperties.Add( new WeaponProperties
+            entity.WeaponProperties.Add( new WeaponPropertyAttribute
             {
                 //WeaponId = entity.Id,
                 WeaponPropertyId = m.Id,

@@ -1,0 +1,27 @@
+info:
+  name: Sling Bullet
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/ammunition-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Copper_Piece_Currency_Type}}",
+        "Name": "Projéteis de Estilingue",
+        "Amount": 20,
+        "Storage": "Algibeira",
+        "Weight": 0.68,
+        "Cost": 4
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

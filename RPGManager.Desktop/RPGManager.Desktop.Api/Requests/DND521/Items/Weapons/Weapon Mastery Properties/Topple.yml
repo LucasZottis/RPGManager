@@ -1,0 +1,22 @@
+info:
+  name: Topple
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/weapon-mastery-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Topple",
+        "Description": "Se você acertar uma criatura com esta arma, você pode forçá-la a fazer um teste de resistência de Constituição (CD 8 mais o modificador de habilidade usado para fazer a jogada de ataque e seu bônus de proficiência). Em caso de falha, a criatura fica caída."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

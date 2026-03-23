@@ -1,0 +1,30 @@
+info:
+  name: Platinum
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/currency-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Platina",
+        "Abbreviation": "PP",
+        "IsBaseCurrency": false,
+        "Rates": [
+          { "ToCurrencyId": "{{Copper_Piece_Currency_Type}}", "Rate": 0.001 },
+          { "ToCurrencyId": "{{Silver_Piece_Currency_Type}}", "Rate": 0.01 },
+          { "ToCurrencyId": "{{Electrum_Piece_Currency_Type}}", "Rate": 0.05 },
+          { "ToCurrencyId": "{{Gold_Piece_Currency_Type}}", "Rate": 0.1 }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,42 @@
+info:
+  name: Copper
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/currency-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Cobre",
+        "Abbreviation": "CP",
+        "IsBaseCurrency": false,
+        "Rates": [
+          { 
+            "ToCurrencyId": "{{Silver_Piece_Currency_Type}}", 
+            "Rate": 10 
+          },
+          { 
+            "ToCurrencyId": "{{Electrum_Piece_Currency_Type}}", 
+            "Rate": 50 
+          },
+          { 
+            "ToCurrencyId": "{{Gold_Piece_Currency_Type}}", 
+            "Rate": 100 
+          },
+          { 
+            "ToCurrencyId": "{{Platinum_Piece_Currency_Type}}", 
+            "Rate": 1000 
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

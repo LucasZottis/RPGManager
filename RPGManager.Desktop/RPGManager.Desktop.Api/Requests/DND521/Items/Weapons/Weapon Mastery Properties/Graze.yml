@@ -1,0 +1,22 @@
+info:
+  name: Graze
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/weapon-mastery-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Graze",
+        "Description": "Se o seu rolagem de ataque com esta arma errar uma criatura, você pode causar dano a essa criatura igual ao modificador de habilidade usado no teste de ataque. Esse dano é do mesmo tipo causado pela arma e só pode ser aumentado aumentando o modificador de habilidade."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

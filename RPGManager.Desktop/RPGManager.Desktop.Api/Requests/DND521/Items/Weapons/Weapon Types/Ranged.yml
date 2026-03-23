@@ -1,0 +1,21 @@
+info:
+  name: Ranged
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: weapon-type/create
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "À Distância"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,46 @@
+info:
+  name: Rapier
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Rapieira",
+        "Cost": 25,
+        "Weight": 0.9,
+        "WeaponCategoryId": "{{Martial_Weapon_Category}}",
+        "WeaponTypeId": "{{Melee_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Vex_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Strength}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Finesse_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Piercing_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D8}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

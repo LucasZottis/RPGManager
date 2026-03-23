@@ -1,0 +1,23 @@
+info:
+  name: Shield
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/armor-category/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Escudo",
+        "Description": "Você só obtém o benefício de Classe de Armadura de um Escudo se tiver treinamento com ele."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

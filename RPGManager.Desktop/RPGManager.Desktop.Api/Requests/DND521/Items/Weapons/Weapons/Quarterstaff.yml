@@ -1,0 +1,50 @@
+info:
+  name: Quarterstaff
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Silver_Piece_Currency_Type}}",
+        "Name": "Bastão",
+        "Cost": 2,
+        "Weight": 1.8,
+        "WeaponCategoryId": "{{Simple_Weapon_Category}}",
+        "WeaponTypeId": "{{Melee_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Topple_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Strength}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Versatile_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Bludgeoning_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D6}}",
+                "Quantity": 1
+              },
+                {
+                "DiceTypeId": "{{D8}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

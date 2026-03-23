@@ -4,9 +4,9 @@ using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RPGManager.Desktop.Infra.Db.EntityMappers.WeaponMappers;
 
-public class WeaponPropertiesWeaponsEntityMapper : IEntityTypeConfiguration<WeaponProperties>
+public class WeaponPropertiesWeaponsEntityMapper : IEntityTypeConfiguration<WeaponPropertyAttribute>
 {
-    public void Configure( EntityTypeBuilder<WeaponProperties> builder )
+    public void Configure( EntityTypeBuilder<WeaponPropertyAttribute> builder )
     {
         builder.Property( e => e.WeaponPropertyId ).IsRequired().ValueGeneratedNever();
         builder.Property( e => e.WeaponId ).IsRequired().ValueGeneratedNever();

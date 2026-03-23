@@ -1,0 +1,18 @@
+info:
+  name: Weapon Categories
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+  scripts:
+    - type: after-response
+      code: |-
+        if (res.getStatus() === 200) {
+          const name = req.getName().replace(" ", "_");
+          const id = res.body;  
+          const varName = `${name}_Weapon_Category`
+          
+          console.log(`${name}: ${id}`);
+          bru.setVar(varName, id);
+        }

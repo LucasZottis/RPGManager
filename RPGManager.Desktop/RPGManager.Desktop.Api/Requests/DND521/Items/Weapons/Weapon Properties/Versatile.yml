@@ -1,0 +1,24 @@
+info:
+  name: Versatile
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Versátil",
+        "Description": "Uma arma versátil pode ser usada com uma ou duas mãos. Um valor de dano entre parênteses aparece junto à propriedade. A arma causa esse dano quando usada com as duas mãos para realizar um ataque corpo a corpo.",
+        "HasAlternativeDiceTypeDamage": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

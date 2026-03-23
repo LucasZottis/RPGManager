@@ -1,0 +1,24 @@
+info:
+  name: Finesse
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": "{{Dexterity}}",
+        "Name": "Acuidade",
+        "Description": "Ao realizar um ataque com uma arma de precisão, use o modificador de Força ou Destreza de sua escolha para as jogadas de ataque e dano. Você deve usar o mesmo modificador para ambas as jogadas.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Nick
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/weapon-mastery-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Nick",
+        "Description": "Ao realizar o ataque extra de uma arma com a propriedade Leve, você pode fazê-lo como parte da ação Atacar, em vez de como uma Ação Bônus. Você só pode realizar este ataque extra uma vez por turno."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: Gold
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/currency-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Ouro",
+        "Abbreviation": "GP",
+        "IsBaseCurrency": true,
+        "Rates": [
+          { "ToCurrencyId": "{{Copper_Piece_Currency_Type}}", "Rate": 0.01 },
+          { "ToCurrencyId": "{{Silver_Piece_Currency_Type}}", "Rate": 0.1 },
+          { "ToCurrencyId": "{{Electrum_Piece_Currency_Type}}", "Rate": 0.5 },
+          { "ToCurrencyId": "{{Platinum_Piece_Currency_Type}}", "Rate": 10 }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

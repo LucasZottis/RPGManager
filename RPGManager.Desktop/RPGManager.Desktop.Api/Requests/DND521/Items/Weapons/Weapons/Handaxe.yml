@@ -1,0 +1,51 @@
+info:
+  name: Handaxe
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Machadinha",
+        "Cost": 5,
+        "Weight": 0.9,
+        "WeaponCategoryId": "{{Simple_Weapon_Category}}",
+        "WeaponTypeId": "{{Melee_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Vex_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Strength}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Light_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          },
+          {
+            "WeaponPropertyId": "{{Thrown_Weapon_Property}}",
+            "NormalRange": 6,
+            "LongRange": 18
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Slashing_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D6}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

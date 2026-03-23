@@ -1,0 +1,22 @@
+info:
+  name: Cleave
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/weapon-mastery-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Cleave",
+        "Description": "Se você acertar uma criatura com uma jogada de ataque corpo a corpo usando esta arma, você pode fazer uma jogada de ataque corpo a corpo com a arma contra uma segunda criatura a até 1,5 metro da primeira que também esteja ao seu alcance. Se acertar, a segunda criatura sofre o dano da arma, mas não adicione seu modificador de habilidade a esse dano, a menos que esse modificador seja negativo. Você só pode fazer este ataque extra uma vez por turno."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

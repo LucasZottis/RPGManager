@@ -1,0 +1,56 @@
+info:
+  name: Pike
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Pique",
+        "Cost": 5,
+        "Weight": 8.1,
+        "WeaponCategoryId": "{{Martial_Weapon_Category}}",
+        "WeaponTypeId": "{{Melee_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Push_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Strength}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Heavy_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          },
+          {
+            "WeaponPropertyId": "{{Reach_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          },
+          {
+            "WeaponPropertyId": "{{Two-Handed_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Piercing_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D10}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: Light
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Leve",
+        "Description": "Quando você usa a ação Atacar no seu turno e ataca com uma arma leve, você pode fazer um ataque extra como uma Ação Bônus mais tarde no mesmo turno. Esse ataque extra deve ser feito com uma arma leve diferente, e você não adiciona seu modificador de habilidade ao dano do ataque extra, a menos que esse modificador seja negativo. Por exemplo, você pode atacar com uma espada curta em uma mão e uma adaga na outra usando a ação Atacar e uma Ação Bônus, mas você não adiciona seu modificador de Força ou Destreza à rolagem de dano da Ação Bônus, a menos que esse modificador seja negativo.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

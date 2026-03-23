@@ -106,9 +106,83 @@ request:
       value: ""
     - name: Level_20
       value: ""
-    - name: Simple_Weapon
+    - name: Simple_Weapon_Category
       value: ""
-    - name: Martial_Weapon
+    - name: Martial_Weapon_Category
+      value: ""
+    - name: Ammunition_Weapon_Property
+      value: ""
+    - name: Finesse_Weapon_Property
+      value: ""
+    - name: Heavy_Weapon_Property
+      value: ""
+    - name: Light_Weapon_Property
+      value: ""
+    - name: Loading_Weapon_Property
+      value: ""
+    - name: Range_Weapon_Property
+      value: ""
+    - name: Reach_Weapon_Property
+      value: ""
+    - name: Thrown_Weapon_Property
+      value: ""
+    - name: Two-Handed_Weapon_Property
+      value: ""
+    - name: Versatile_Weapon_Property
+      value: ""
+    - name: Light_Armor_Category
+      value: ""
+    - name: Medium_Armor_Category
+      value: ""
+    - name: Heavy_Armor_Category
+      value: ""
+    - name: Shield_Armor_Category
+      value: ""
+    - name: Copper_Piece_Currency_Type
+      value: ""
+    - name: Silver_Piece_Currency_Type
+      value: ""
+    - name: Electrum_Piece_Currency_Type
+      value: ""
+    - name: Gold_Piece_Currency_Type
+      value: ""
+    - name: Platinum_Piece_Currency_Type
+      value: ""
+    - name: Melee_Weapon_Type
+      value: ""
+    - name: Ranged_Weapon_Type
+      value: ""
+    - name: Cleave_Weapon_mastery_property
+      value: ""
+    - name: Graze_Weapon_mastery_property
+      value: ""
+    - name: Nick_Weapon_mastery_property
+      value: ""
+    - name: Push_Weapon_mastery_property
+      value: ""
+    - name: Sap_Weapon_mastery_property
+      value: ""
+    - name: Slow_Weapon_mastery_property
+      value: ""
+    - name: Topple_Weapon_mastery_property
+      value: ""
+    - name: Vex_Weapon_mastery_property
+      value: ""
+    - name: Bludgeoning_Damage_Type
+      value: ""
+    - name: Piercing_Damage_Type
+      value: ""
+    - name: Slashing_Damage_Type
+      value: ""
+    - name: Arrows_Ammunition_Type
+      value: ""
+    - name: Bolts_Ammunition_Type
+      value: ""
+    - name: Firearm_Bullet_Ammunition_Type
+      value: ""
+    - name: Sling_Bullet_Ammunition_Type
+      value: ""
+    - name: Needles_Ammunition_Type
       value: ""
   scripts:
     - type: before-request

@@ -1,0 +1,23 @@
+info:
+  name: Light
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/armor-category/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Leve",
+        "Description": "1 minuto para vestir ou despir"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

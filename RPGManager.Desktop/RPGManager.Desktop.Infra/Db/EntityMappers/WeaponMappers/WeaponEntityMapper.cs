@@ -17,8 +17,8 @@ public class WeaponEntityMapper : EntityBaseEntityMapper<Weapon>
         builder.Property( e => e.Description );
         builder.Property( e => e.Price ).IsRequired();
         builder.Property( e => e.Weight ).IsRequired();
-        builder.Property( e => e.RangeNormal );
-        builder.Property( e => e.RangeLong );
+        builder.Property( e => e.NormalRange );
+        builder.Property( e => e.LongRange );
 
         builder.HasOne( e => e.GameSystem ).WithMany( e => e.Weapons ).HasForeignKey( e => e.GameSystemId );
         builder.HasOne( e => e.WeaponCategory ).WithMany( e => e.Weapons ).HasForeignKey( e => e.WeaponCategoryId );

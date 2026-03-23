@@ -1,0 +1,24 @@
+info:
+  name: Ammunition
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Munição",
+        "Description": "Você pode usar uma arma que tenha a propriedade Munição para fazer um ataque à distância somente se tiver munição para disparar com ela. O tipo de munição necessária é especificado junto com o alcance da arma. Cada ataque consome uma peça de munição. Sacar a munição faz parte do ataque (você precisa de uma mão livre para carregar uma arma de uma mão). Após um combate, você pode gastar 1 minuto para recuperar metade da munição (arredondando para baixo) que usou no combate; o restante é perdido.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

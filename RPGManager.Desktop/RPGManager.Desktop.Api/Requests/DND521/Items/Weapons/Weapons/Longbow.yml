@@ -1,0 +1,57 @@
+info:
+  name: Longbow
+  type: http
+  seq: 36
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "arco Longo",
+        "Cost": 50,
+        "Weight": 0.9,
+        "WeaponCategoryId": "{{Martial_Weapon_Category}}",
+        "WeaponTypeId": "{{Ranged_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Slow_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Dexterity}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Ammunition_Weapon_Property}}",
+            "NormalRange": 45,
+            "LongRange": 180,
+            "AmmunitionTypeId": "{{Arrows_Ammunition_Type}}"
+          },
+          {
+            "WeaponPropertyId": "{{Heavy_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          },
+          {
+            "WeaponPropertyId": "{{Two-Handed_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Piercing_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D8}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

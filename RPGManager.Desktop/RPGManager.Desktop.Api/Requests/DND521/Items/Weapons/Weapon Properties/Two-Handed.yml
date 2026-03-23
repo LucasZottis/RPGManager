@@ -1,0 +1,24 @@
+info:
+  name: Two-Handed
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Duas Mãos",
+        "Description": "Uma arma de duas mãos exige o uso das duas mãos para atacar.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

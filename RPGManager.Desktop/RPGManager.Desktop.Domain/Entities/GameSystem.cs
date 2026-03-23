@@ -1,4 +1,5 @@
 ﻿using RPGManager.Desktop.Domain.Entities.ClassesEntities;
+using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 using RPGManager.Desktop.Domain.Entities.RaceEntities;
 
@@ -12,7 +13,7 @@ public class GameSystem : EntityBase
     public ICollection<Race> Races { get; set; }
     public ICollection<Class> Classes { get; set; }
     public ICollection<Background> Backgrounds { get; set; }
-    public ICollection<LevelUp> LevelUps { get; set; }
+    public ICollection<Level> LevelUps { get; set; }
 
     public ICollection<AbilityScore> AbilityScores { get; set; }
     public ICollection<Alignment> Alignments { get; set; }

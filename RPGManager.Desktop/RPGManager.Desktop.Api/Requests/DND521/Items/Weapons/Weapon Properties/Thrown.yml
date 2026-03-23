@@ -1,0 +1,24 @@
+info:
+  name: Thrown
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Arremessável",
+        "Description": "Se uma arma tiver a propriedade Arremessável, você pode arremessá-la para fazer um ataque à distância e pode sacá-la como parte do ataque. Se a arma for uma arma corpo a corpo, use o mesmo modificador de habilidade para as jogadas de ataque e dano que você usa para um ataque corpo a corpo com essa arma.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

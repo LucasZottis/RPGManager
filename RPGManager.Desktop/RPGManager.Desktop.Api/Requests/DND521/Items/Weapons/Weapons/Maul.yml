@@ -1,0 +1,51 @@
+info:
+  name: Maul
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Maul",
+        "Cost": 10,
+        "Weight": 4.5,
+        "WeaponCategoryId": "{{Martial_Weapon_Category}}",
+        "WeaponTypeId": "{{Melee_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Topple_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Strength}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Heavy_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          },
+          {
+            "WeaponPropertyId": "{{Two-Handed_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Bludgeoning_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D6}}",
+                "Quantity": 2
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

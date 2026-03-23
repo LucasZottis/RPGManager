@@ -1,0 +1,24 @@
+info:
+  name: Loading
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Recarga",
+        "Description": "Você só pode disparar uma munição de uma arma de Carregamento quando usa uma ação, uma ação bônus ou uma reação para dispará-la, independentemente do número de ataques que você normalmente pode fazer.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

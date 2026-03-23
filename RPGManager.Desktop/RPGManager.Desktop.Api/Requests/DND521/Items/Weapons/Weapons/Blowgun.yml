@@ -1,0 +1,52 @@
+info:
+  name: Blowgun
+  type: http
+  seq: 33
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Zarabatana",
+        "Cost": 10,
+        "Weight": 0.45,
+        "WeaponCategoryId": "{{Martial_Weapon_Category}}",
+        "WeaponTypeId": "{{Ranged_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Vex_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Dexterity}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Ammunition_Weapon_Property}}",
+            "NormalRange": 7.5,
+            "LongRange": 30,
+            "AmmunitionTypeId": "{{Needles_Ammunition_Type}}"
+          },
+          {
+            "WeaponPropertyId": "{{Loading_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Piercing_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D1}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,4 +1,5 @@
 ﻿using RPGManager.Desktop.Domain.Entities.ClassesEntities;
+using RPGManager.Desktop.Domain.Entities.ClassesEntities.Proficiencies;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RPGManager.Desktop.Domain.Entities;

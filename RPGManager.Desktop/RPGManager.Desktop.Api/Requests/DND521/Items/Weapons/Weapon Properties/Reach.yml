@@ -1,0 +1,24 @@
+info:
+  name: Reach
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Alcance",
+        "Description": "Uma arma de Alcance adiciona 1,5 metro ao seu alcance quando você ataca com ela, bem como ao determinar seu alcance para Ataques de Oportunidade com ela.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

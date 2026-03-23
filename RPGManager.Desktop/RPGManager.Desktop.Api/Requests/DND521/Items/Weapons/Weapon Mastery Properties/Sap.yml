@@ -1,0 +1,22 @@
+info:
+  name: Sap
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/weapon-mastery-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Sap",
+        "Description": "Se você acertar uma criatura com esta arma, essa criatura terá Desvantagem em sua próxima jogada de ataque antes do início do seu próximo turno."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

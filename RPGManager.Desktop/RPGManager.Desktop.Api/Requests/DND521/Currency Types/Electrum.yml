@@ -1,0 +1,30 @@
+info:
+  name: Electrum
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/currency-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Electrum",
+        "Abbreviation": "EP",
+        "IsBaseCurrency": false,
+        "Rates": [
+          { "ToCurrencyId": "{{Copper_Piece_Currency_Type}}", "Rate": 0.02 },
+          { "ToCurrencyId": "{{Silver_Piece_Currency_Type}}", "Rate": 0.2 },
+          { "ToCurrencyId": "{{Gold_Piece_Currency_Type}}", "Rate": 2 },
+          { "ToCurrencyId": "{{Platinum_Piece_Currency_Type}}", "Rate": 20 }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

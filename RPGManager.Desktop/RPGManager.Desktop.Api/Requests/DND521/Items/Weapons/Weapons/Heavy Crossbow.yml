@@ -1,0 +1,62 @@
+info:
+  name: Heavy Crossbow
+  type: http
+  seq: 35
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Besta Pesada",
+        "Cost": 50,
+        "Weight": 8.1,
+        "WeaponCategoryId": "{{Martial_Weapon_Category}}",
+        "WeaponTypeId": "{{Ranged_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Push_Weapon_mastery_property}}",
+        "BaseAbilityScoreId": "{{Dexterity}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Ammunition_Weapon_Property}}",
+            "NormalRange": 30,
+            "LongRange": 120,
+            "AmmunitionTypeId": "{{Bolts_Ammunition_Type}}"
+          },
+          {
+            "WeaponPropertyId": "{{Heavy_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          },
+          {
+            "WeaponPropertyId": "{{Loading_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          },
+          {
+            "WeaponPropertyId": "{{Two-Handed_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Piercing_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D10}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: Arrow
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/ammunition-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Flechas",
+        "Amount": 20,
+        "Storage": "Aljava",
+        "Weight": 0.45,
+        "Cost": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

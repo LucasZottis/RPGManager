@@ -1,0 +1,24 @@
+info:
+  name: Range
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Distância",
+        "Description": "Uma arma de longo alcance tem seu alcance entre parênteses após a propriedade Munição ou Arremesso. O alcance lista dois números. O primeiro é o alcance normal da arma em pés, e o segundo é o alcance máximo da arma. Ao atacar um alvo além do alcance normal, você tem Desvantagem na jogada de ataque. Você não pode atacar um alvo além do alcance máximo.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

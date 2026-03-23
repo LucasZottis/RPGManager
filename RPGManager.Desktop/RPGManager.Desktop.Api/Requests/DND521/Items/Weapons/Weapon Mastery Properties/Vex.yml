@@ -1,0 +1,22 @@
+info:
+  name: Vex
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/weapon-mastery-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Vex",
+        "Description": "Se você acertar uma criatura com esta arma e causar dano a ela, você terá vantagem na sua próxima jogada de ataque contra essa criatura antes do final do seu próximo turno."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

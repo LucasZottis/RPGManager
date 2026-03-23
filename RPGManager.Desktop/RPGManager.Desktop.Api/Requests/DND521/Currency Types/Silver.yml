@@ -1,0 +1,30 @@
+info:
+  name: Silver
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/currency-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "Name": "Prata",
+        "Abbreviation": "SP",
+        "IsBaseCurrency": false,
+        "Rates": [
+          { "ToCurrencyId": "{{Copper_Piece_Currency_Type}}", "Rate": 0.1 },
+          { "ToCurrencyId": "{{Electrum_Piece_Currency_Type}}", "Rate": 5 },
+          { "ToCurrencyId": "{{Gold_Piece_Currency_Type}}", "Rate": 10 },
+          { "ToCurrencyId": "{{Platinum_Piece_Currency_Type}}", "Rate": 100 }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

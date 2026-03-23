@@ -1,0 +1,27 @@
+info:
+  name: Bolt
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/ammunition-type/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Virotes",
+        "Amount": 20,
+        "Storage": "Estojo",
+        "Weight": 0.68,
+        "Cost": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

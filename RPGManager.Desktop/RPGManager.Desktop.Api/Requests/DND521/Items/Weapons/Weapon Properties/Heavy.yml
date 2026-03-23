@@ -1,0 +1,24 @@
+info:
+  name: Heavy
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/weapon-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "AlternativeAbilityScoreId": null,
+        "Name": "Pesada",
+        "Description": "Você tem desvantagem nas jogadas de ataque com uma arma pesada se for uma arma de combate corpo a corpo e sua Força não for de pelo menos 13, ou se for uma arma de ataque à distância e sua Destreza não for de pelo menos 13.",
+        "HasAlternativeDiceTypeDamage": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

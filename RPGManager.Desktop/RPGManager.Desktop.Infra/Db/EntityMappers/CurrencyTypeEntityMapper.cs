@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 
 namespace RPGManager.Desktop.Infra.Db.EntityMappers;
 

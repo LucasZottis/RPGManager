@@ -10,11 +10,11 @@ http:
     type: json
     data: |-
       {
-        "gameSystemId": "{{GameSystem}}",
-        "HitDiceTypeId": "{{D12}}",
+        "GameSystemId": "{{GameSystem}}",
         "PrimaryAbilityScoreId": "{{Strength}}",
+        "HitDiceTypeId": "{{D12}}",
         "Name": "Bárbaro",
-        "SkillProficiencyAmount": 2,
+        "MaxChoicesSkillProficiency": 2,
         "SavingThrowProficiencies": [
           {
             "AbilityScoreId": "{{Strength}}"
@@ -23,7 +23,7 @@ http:
             "AbilityScoreId": "{{Constitution}}"
           }
         ],
-        "SkillProficiencies": [
+        "SkillProficiencyOptions": [
           {
             "SkillId": "{{Animal_Handling}}"
           },
@@ -43,12 +43,552 @@ http:
             "SkillId": "{{Survival}}"
           }
         ],
-        "WeaponCategoryProficiencies": [
+        "WeaponProficiencies": [
           {
-            "WeaponCategoryId": "{{Simple_Weapon}}"
+            "WeaponCategoryId": "{{Simple_Weapon_Category}}",
+            "Conditions": null
           },
           {
-            "WeaponCategoryId": "{{Martial_Weapon}}"
+            "WeaponCategoryId": "{{Martial_Weapon_Category}}",
+            "Conditions": null
+          }
+        ],
+        "ArmorTraining": [
+          {
+            "ArmorCategoryId": "{{Light_Armor_Category}}"
+          },
+          {
+            "ArmorCategoryId": "{{Medium_Armor_Category}}"
+          },
+          {
+            "ArmorCategoryId": "{{Shield_Armor_Category}}"
+          }
+        ],
+        "StartingEquipmentOptions": [
+          {
+            "OptionOrder": 1,
+            "Items": [
+              {
+                "ItemId": "{{Greataxe_Weapon}}",
+                "CurrencyTypeId": null,
+                "Quantity": 1
+              },
+              {
+                "ItemId": "{{Handaxe_Weapon}}",
+                "CurrencyTypeId": null,
+                "Quantity": 4
+              },
+              {
+                "ItemId": "{{Explorers_Pack_Gear}}",
+                "CurrencyTypeId": null,
+                "Quantity": 1
+              },
+              {
+                "ItemId": null,
+                "CurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+                "Quantity": 15
+              }
+            ]
+          },
+          {
+            "OptionOrder": 2,
+            "Items": [
+              {
+                "ItemId": null,
+                "CurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+                "Quantity": 75
+              }
+            ]
+          }
+        ],
+        "Levels": [
+          {
+            "LevelId": "{{Level_01}}",
+            "ProficiencyBonus": 2,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Fúria",
+                "Description": "Você pode se imbuir de um poder primordial chamado Fúria, uma força que lhe concede poder e resistência extraordinários. Você pode acessá-la como uma Ação Bônus se não estiver usando armadura pesada. Você pode inserir sua Fúria o número de vezes mostrado para o seu nível de Bárbaro na coluna Fúrias da tabela de Características do Bárbaro. Você recupera um uso gasto ao terminar um Descanso Curto e recupera todos os usos gastos ao terminar um Descanso Longo. Enquanto estiver ativa, sua Fúria segue as regras abaixo. Resistência a Dano. Você tem resistência a dano de concussão, perfuração e corte. Dano de Fúria. Quando você realiza um ataque usando Força — seja com uma arma ou um ataque desarmado — e causa dano ao alvo, você recebe um bônus de dano que aumenta conforme você sobe de nível como Bárbaro, conforme mostrado na coluna Dano de Fúria da tabela de Características do Bárbaro. Vantagem em Força. Você tem vantagem em testes de Força e em testes de resistência de Força. Sem Concentração ou Magias. Você não pode manter a Concentração e não pode conjurar magias. Duração. A Fúria dura até o final do seu próximo turno e termina mais cedo se você vestir armadura pesada ou estiver incapacitado. Se sua Fúria ainda estiver ativa no seu próximo turno, você pode estendê-la por mais uma rodada fazendo uma das seguintes ações: • Realizar uma jogada de ataque contra um inimigo. • Forçar um inimigo a fazer um teste de resistência. • Usar uma Ação Bônus para estender sua Fúria. Cada vez que a Fúria é estendida, ela dura até o final do seu próximo turno. Você pode manter a Fúria por até 10 minutos.",
+                "Attributes": [
+              {
+                "Name": "Usos",
+                "AttributeLevels": [
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                               {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 5
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 5
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 5
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 5
+                   },
+                               {
+                     "ClassLevelId": "",
+                     "Value": 5
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 6
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 6
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 6
+                   },
+                  {
+                     "ClassLevelId": "",
+                     "Value": 6
+                   },
+                ]
+              },
+              {
+                "Name": "Dano",
+                "AttributeLevels": [
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 2
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 3
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                   {
+                     "ClassLevelId": "",
+                     "Value": 4
+                   },
+                ]
+              },
+            ]
+              },
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Defesa Sem Armadura",
+                "Description": "Enquanto você não estiver usando armadura, sua Classe de Armadura base será igual a 10 mais seus modificadores de Destreza e Constituição. Você pode usar um escudo e ainda assim obter esse benefício."
+              },
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Domínio de Armas",
+                "Description": "Seu treinamento com armas permite que você use as propriedades de maestria de dois tipos de armas de combate corpo a corpo simples ou marciais à sua escolha, como machados grandes e machados de mão. Sempre que você terminar um descanso longo, poderá praticar exercícios com armas e trocar uma dessas opções de arma. Ao atingir certos níveis de Bárbaro, você adquire a habilidade de usar as propriedades de maestria de mais tipos de armas, conforme mostrado na coluna Maestria em Armas da tabela de Características de Bárbaro.",
+                "Attributes": [
+                  {
+                    "Name": "Quantidade de tipo de armas",
+                    "AttributeLevels": [
+                      {
+                       "ClassLevelId": "",
+                       "Value": 2
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 2
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 2
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 3
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 3
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 3
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 3
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 3
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 3
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                       "ClassLevelId": "",
+                       "Value": 4
+                      },
+                      {
+                     "ClassLevelId": "",
+                     "Value": 4
+                    },
+                    ]
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_02}}",
+            "ProficiencyBonus": 2,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Sentido de Perigo",
+                "Description": "Você desenvolve uma percepção extraordinária de quando as coisas não estão como deveriam, o que lhe dá vantagem ao se esquivar de perigos. Você tem vantagem em testes de resistência de Destreza, a menos que esteja incapacitado."          
+              },
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Ataque Descuidado",
+                "Description": "Você pode deixar de lado toda a preocupação com a defesa para atacar com ferocidade renovada. Ao realizar sua primeira jogada de ataque no seu turno, você pode optar por atacar de forma imprudente. Fazer isso lhe concede vantagem em jogadas de ataque usando Força até o início do seu próximo turno, mas as jogadas de ataque contra você terão vantagem durante esse período."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_03}}",
+            "ProficiencyBonus": 2,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Subclasse",
+                "Description": "Você ganha uma subclasse de Bárbaro à sua escolha. Uma subclasse é uma especialização que lhe concede características em certos níveis de Bárbaro. Pelo resto da sua carreira, você ganha todas as características da sua subclasse que sejam do seu nível de Bárbaro ou inferior."          
+              },
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Primal Knowledge",
+                "Description": "Você ganha proficiência em outra perícia à sua escolha da lista de perícias disponíveis para Bárbaros no nível 1. Além disso, enquanto sua Fúria estiver ativa, você pode canalizar poder primal ao tentar realizar certas tarefas; sempre que fizer um teste de habilidade usando uma das seguintes perícias, você pode fazê-lo como um teste de Força, mesmo que normalmente use uma perícia diferente: Acrobacia, Intimidação, Percepção, Furtividade ou Sobrevivência. Quando você usa essa habilidade, sua Força representa o poder primal percorrendo seu corpo, aprimorando sua agilidade, postura e sentidos."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_04}}",
+            "ProficiencyBonus": 2,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Incremento no Valor de Habilidade",
+                "Description": "Você ganha o talento Aprimoramento de Atributo ou outro talento à sua escolha para o qual você se qualifique."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_05}}",
+            "ProficiencyBonus": 3,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Ataque Extra",
+                "Description": "Você pode atacar duas vezes em vez de uma sempre que usar a ação Atacar no seu turno."          
+              },
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Movimento Rápido",
+                "Description": "Sua velocidade aumenta em 3 metros (10 pés) quando você não está usando armadura pesada."      
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_06}}",
+            "ProficiencyBonus": 3
+          },
+          {
+            "LevelId": "{{Level_07}}",
+            "ProficiencyBonus": 3,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Instinto Selvagem",
+                "Description": "Seus instintos são tão apurados que você tem vantagem nos testes de iniciativa."          
+              },
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Ataque instintivo",
+                "Description": "Como parte da Ação Bônus que você realiza para entrar em seu Estado de Fúria, você pode se mover até metade da sua Velocidade."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_08}}",
+            "ProficiencyBonus": 3,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Incremento no Valor de Habilidade",
+                "Description": "Você ganha o talento Aprimoramento de Atributo ou outro talento à sua escolha para o qual você se qualifique."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_09}}",
+            "ProficiencyBonus": 4,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Golpe Brutal",
+                "Description": "Se você usar Ataque Impetuoso, pode abrir mão de qualquer Vantagem em uma jogada de ataque baseada em Força à sua escolha no seu turno. A jogada de ataque escolhida não pode ter Desvantagem. Se a jogada de ataque escolhida acertar, o alvo sofre 1d10 de dano extra do mesmo tipo causado pela arma ou Ataque Desarmado, e você pode causar um efeito de Golpe Brutal à sua escolha. Você tem as seguintes opções de efeito. Golpe Poderoso. O alvo é empurrado 4,5 metros (15 pés) para longe de você. Você pode então se mover até metade do seu Deslocamento em linha reta em direção ao alvo sem provocar Ataques de Oportunidade. Golpe na Coxa. O Deslocamento do alvo é reduzido em 4,5 metros (15 pés) até o início do seu próximo turno. Um alvo só pode ser afetado por um Golpe na Coxa por vez, sendo o mais recente o mais afetado."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_10}}",
+            "ProficiencyBonus": 4
+          },
+          {
+            "LevelId": "{{Level_11}}",
+            "ProficiencyBonus": 4,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Fúria implacável",
+                "Description": "Sua Fúria permite que você continue lutando mesmo com ferimentos graves. Se seus Pontos de Vida chegarem a 0 enquanto sua Fúria estiver ativa e você não morrer imediatamente, você pode fazer um teste de resistência de Constituição CD 10. Se você for bem-sucedido, seus Pontos de Vida mudam para um número igual ao dobro do seu nível de Bárbaro. Cada vez que você usar esta habilidade após a primeira, a CD aumenta em 5. Ao terminar um Descanso Curto ou Longo, a CD retorna a 10."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_12}}",
+            "ProficiencyBonus": 4,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Incremento no Valor de Habilidade",
+                "Description": "Você ganha o talento Aprimoramento de Atributo ou outro talento à sua escolha para o qual você se qualifique."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_13}}",
+            "ProficiencyBonus": 5,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Golpe Brutal Aprimorado",
+                "Description": "Você aprimorou novas maneiras de atacar furiosamente. Os seguintes efeitos agora estão entre suas opções de Golpe Brutal. Golpe Atordoante. O alvo tem Desvantagem na próxima jogada de resistência que fizer e não pode fazer Ataques de Oportunidade até o início do seu próximo turno. Golpe Dilacerante. Antes do início do seu próximo turno, a próxima jogada de ataque feita por outra criatura contra o alvo recebe um bônus de +5 na jogada. Uma jogada de ataque pode receber apenas um bônus de Golpe Dilacerante."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_14}}",
+            "ProficiencyBonus": 5
+          },
+          {
+            "LevelId": "{{Level_15}}",
+            "ProficiencyBonus": 5,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Raiva persistente",
+                "Description": "Ao rolar a Iniciativa, você pode recuperar todos os usos pendentes de Fúria. Depois de recuperar usos de Fúria dessa forma, você não poderá fazê-lo novamente até terminar um Descanso Longo. Além disso, sua Fúria é tão intensa que agora dura 10 minutos sem que você precise fazer nada para estendê-la de uma rodada para outra. Sua Fúria termina mais cedo se você estiver na condição Inconsciente (não apenas na condição Incapacitado) ou estiver vestindo armadura pesada."
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_16}}",
+            "ProficiencyBonus": 5,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Incremento no Valor de Habilidade",
+                "Description": "Você ganha o talento Aprimoramento de Atributo ou outro talento à sua escolha para o qual você se qualifique."          
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_17}}",
+            "ProficiencyBonus": 6,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Golpe Brutal Aprimorado",
+                "Description": "O dano extra do seu Golpe Brutal aumenta para 2d10. Além disso, você pode usar dois efeitos diferentes de Golpe Brutal sempre que usar sua habilidade Golpe Brutal."
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_18}}",
+            "ProficiencyBonus": 6,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Poder Indomável",
+                "Description": "Se o seu resultado total em um teste de Força ou em um teste de resistência de Força for menor que o seu valor de Força, você pode usar esse valor em vez do total."
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_19}}",
+            "ProficiencyBonus": 6,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Dádiva Épica",
+                "Description": "Você ganha um talento Dádiva Épica ou outro talento à sua escolha para o qual você se qualifique. Dádiva do Ataque Irresistível é recomendada."
+              }
+            ]
+          },
+          {
+            "LevelId": "{{Level_20}}",
+            "ProficiencyBonus": 6,
+            "Features": [
+              {
+                "ParentClassFeatureId": null,
+                "Name": "Campeão Primordial",
+                "Description": "Você personifica o poder primordial. Seus valores de Força e Constituição aumentam em 4, até um máximo de 25."
+              }
+            ]
           }
         ]
       }

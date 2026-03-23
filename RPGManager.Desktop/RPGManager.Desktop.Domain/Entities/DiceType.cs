@@ -1,4 +1,5 @@
 ﻿using RPGManager.Desktop.Domain.Entities.ClassesEntities;
+using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RPGManager.Desktop.Domain.Entities;
 
@@ -9,4 +10,5 @@ public class DiceType : EntityBase
     public byte Sides { get; set; }
 
     public ICollection<Class> HitDiceClasses { get; set; }
+    public ICollection<WeaponDamageDiceType> WeaponsDamages { get; set; }
 }

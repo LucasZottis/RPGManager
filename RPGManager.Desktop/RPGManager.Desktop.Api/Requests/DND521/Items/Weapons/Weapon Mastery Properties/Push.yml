@@ -1,0 +1,22 @@
+info:
+  name: Push
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/weapon-mastery-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Empurrar",
+        "Description": "Se você atingir uma criatura com esta arma, poderá empurrá-la até 3 metros para longe de si, caso ela seja Grande ou menor."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

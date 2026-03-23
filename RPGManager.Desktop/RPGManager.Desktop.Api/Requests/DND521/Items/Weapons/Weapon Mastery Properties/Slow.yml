@@ -1,0 +1,22 @@
+info:
+  name: Slow
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/weapon-mastery-property/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "Desacelerar",
+        "Description": "Se você acertar uma criatura com esta arma e causar dano a ela, você pode reduzir sua Velocidade em 3 metros até o início do seu próximo turno. Se a criatura for atingida mais de uma vez por armas que possuem esta propriedade, a redução de Velocidade não excederá 3 metros."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

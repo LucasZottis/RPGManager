@@ -1,0 +1,47 @@
+info:
+  name: Warhammer
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/item/weapon/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Martelo de Guerra",
+        "Cost": 15,
+        "Weight": 2.25,
+        "WeaponCategoryId": "{{Martial_Weapon_Category}}",
+        "WeaponTypeId": "{{Melee_Weapon_Type}}",
+        "WeaponMasteryPropertyId": "{{Push_Weapon_Mastery_Property}}",
+        "BaseAbilityScoreId": "{{Strength}}",
+        "Properties": [
+          {
+            "WeaponPropertyId": "{{Versatile_Weapon_Property}}",
+            "NormalRange": null,
+            "LongRange": null,
+            "VersatileDiceTypeId": "{{D10}}"
+          }
+        ],
+        "Damages": [
+          {
+            "DamageTypeId": "{{Bludgeoning_Damage_Type}}",
+            "DamageDiceTypes": [
+              {
+                "DiceTypeId": "{{D8}}",
+                "Quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
