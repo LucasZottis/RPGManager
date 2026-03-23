@@ -1,0 +1,24 @@
+info:
+  name: Spell Scroll (Level 1)
+  type: http
+  seq: 81
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Pergaminho de Magia (Nível 1)",
+        "Description": "Um Pergaminho de Magia (Nível 1) é um item mágico que contém as palavras de um feitiço de nível 1 determinado pelo criador do pergaminho. Se o feitiço estiver na lista de feitiços da sua classe, você pode ler o pergaminho e conjurar o feitiço usando seu tempo de conjuração normal e sem fornecer Componentes Materiais. A CD de resistência é 13 e o bônus de ataque é +5. O pergaminho se desintegra quando a conjuração é concluída.",
+        "Cost": 50,
+        "Weight": 0
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

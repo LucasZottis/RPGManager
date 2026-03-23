@@ -1,0 +1,24 @@
+info:
+  name: Priest's Pack
+  type: http
+  seq: 70
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Kit do Sacerdote",
+        "Description": "Um Kit do Sacerdote contém os seguintes itens: Mochila, Cobertor, Água Benta, Lamparina, 7 dias de Rações, Robe e Isca e Pederneira.",
+        "Cost": 33,
+        "Weight": 13.1542
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

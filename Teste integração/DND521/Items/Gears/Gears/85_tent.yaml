@@ -1,0 +1,24 @@
+info:
+  name: Tent
+  type: http
+  seq: 85
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Tenda",
+        "Description": "Uma Tenda acomoda até duas criaturas Pequenas ou Médias.",
+        "Cost": 2,
+        "Weight": 9.0718
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

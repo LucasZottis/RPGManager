@@ -1,0 +1,24 @@
+info:
+  name: Lantern, Hooded
+  type: http
+  seq: 54
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Lanterna com Capuz",
+        "Description": "Uma Lanterna com Capuz queima Óleo como combustível para emitir Luz Brilhante em um raio de 9 metros e Luz Fraca por mais 9 metros. Como uma Ação Bônus, você pode baixar o capuz, reduzindo a luz para Luz Fraca em um raio de 1,5 metros, ou erguê-lo novamente.",
+        "Cost": 5,
+        "Weight": 0.9072
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

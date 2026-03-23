@@ -10,6 +10,10 @@ collections:
     path: "D:/Projetos/RPGManager/RPGManager.Desktop/RPGManager.Desktop.Api/Requests/Misc"
   - name: "DND521"
     path: "D:/Projetos/RPGManager/RPGManager.Desktop/RPGManager.Desktop.Api/Requests/DND521"
+  - name: "DND521"
+    path: "DND521"
+  - name: "Misc"
+    path: "Misc"
 
 specs:
 

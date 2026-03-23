@@ -1,0 +1,24 @@
+info:
+  name: Scholar's Pack
+  type: http
+  seq: 77
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Kit do Estudioso",
+        "Description": "Um Kit do Estudioso contém os seguintes itens: Mochila, Livro, Tinta, Pena de Escrever, Lamparina, 10 frascos de Óleo, 10 folhas de Pergaminho e Isca e Pederneira.",
+        "Cost": 40,
+        "Weight": 9.979
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

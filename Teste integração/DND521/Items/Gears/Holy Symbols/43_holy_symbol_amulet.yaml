@@ -1,0 +1,24 @@
+info:
+  name: Holy Symbol (Amulet)
+  type: http
+  seq: 43
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Símbolo Sagrado (Amuleto)",
+        "Description": "Um Símbolo Sagrado em forma de amuleto (vestido ou segurado), adornado com joias ou pintado para canalizar magia divina. Um Clérigo ou Paladino pode usar um Símbolo Sagrado como Foco de Conjuração.",
+        "Cost": 5,
+        "Weight": 0.4536
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

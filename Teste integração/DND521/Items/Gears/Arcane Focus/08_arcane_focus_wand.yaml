@@ -1,0 +1,24 @@
+info:
+  name: Arcane Focus (Wand)
+  type: http
+  seq: 8
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Foco Arcano (Varinha)",
+        "Description": "Um Foco Arcano em forma de varinha, adornado com joias ou entalhado para canalizar magia arcana. Um Feiticeiro, Bruxo ou Mago pode usar este item como Foco de Conjuração.",
+        "Cost": 10,
+        "Weight": 0.4536
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

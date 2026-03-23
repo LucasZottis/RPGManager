@@ -1,0 +1,24 @@
+info:
+  name: Spell Scroll (Cantrip)
+  type: http
+  seq: 80
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Pergaminho de Magia (Truque)",
+        "Description": "Um Pergaminho de Magia (Truque) é um item mágico que contém as palavras de um truque determinado pelo criador do pergaminho. Se o feitiço estiver na lista de feitiços da sua classe, você pode ler o pergaminho e conjurar o feitiço usando seu tempo de conjuração normal e sem fornecer Componentes Materiais. O pergaminho se desintegra quando a conjuração é concluída.",
+        "Cost": 30,
+        "Weight": 0
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: Manacles
+  type: http
+  seq: 57
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Algemas",
+        "Description": "Como uma ação de Utilizar, você pode usar Algemas para prender uma criatura Pequena ou Média resistente dentro de 1,5 metros de você que tenha a condição de Agarrado, Incapacitado ou Contido, se você for bem-sucedido em um teste de Destreza (Prestidigitação) CD 13. Cada conjunto de Algemas vem com uma chave. Sem a chave, uma criatura pode usar Ferramentas de Ladrão para abrir as Algemas com um teste de Destreza (Prestidigitação) CD 15 bem-sucedido.",
+        "Cost": 2,
+        "Weight": 2.7216
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
