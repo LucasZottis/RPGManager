@@ -1,0 +1,26 @@
+info:
+  name: Block and Tackle
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Aparelho de Polia",
+        "Description": "Um sistema de polias permite içar até quatro vezes o peso que você normalmente conseguiria levantar.",
+        "Cost": 1,
+        "Weight": 2.27
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

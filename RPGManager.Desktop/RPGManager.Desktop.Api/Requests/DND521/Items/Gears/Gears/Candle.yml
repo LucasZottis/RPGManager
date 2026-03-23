@@ -1,22 +1,21 @@
 info:
-  name: Sling Bullet
+  name: Candle
   type: http
-  seq: 4
+  seq: 16
 
 http:
   method: POST
-  url: "{{url}}/ammunition-type/create"
+  url: "{{url}}/{{gear_partial_url}}/create"
   body:
     type: json
     data: |-
       {
         "GameSystemId": "{{GameSystem}}",
         "CostCurrencyTypeId": "{{Copper_Piece_Currency_Type}}",
-        "Name": "Projéteis de Estilingue",
-        "Amount": 20,
-        "Storage": "Algibeira",
-        "Weight": 0.68,
-        "Cost": 4
+        "Name": "Vela",
+        "Description": "Por 1 hora, uma vela emite luz brilhante em um raio de 1,5 metro e penumbra por mais 1,5 metro.",
+        "Cost": 1,
+        "Weight": 0
       }
   auth: inherit
 

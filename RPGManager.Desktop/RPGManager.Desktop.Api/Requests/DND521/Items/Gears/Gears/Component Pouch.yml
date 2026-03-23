@@ -1,0 +1,26 @@
+info:
+  name: Component Pouch
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Bolsa de Componentes",
+        "Description": "Uma Bolsa de Componentes é à prova d'água e repleta de compartimentos que armazenam todos os componentes materiais gratuitos de suas magias.",
+        "Cost": 25,
+        "Weight": 0.91
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

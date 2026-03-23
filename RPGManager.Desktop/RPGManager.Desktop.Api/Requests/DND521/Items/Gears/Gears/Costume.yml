@@ -1,0 +1,26 @@
+info:
+  name: Costume
+  type: http
+  seq: 25
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Fantasia",
+        "Description": "Enquanto estiver usando uma fantasia, você tem vantagem em qualquer teste de habilidade que fizer para se passar pela pessoa ou tipo de pessoa que ela representa.",
+        "Cost": 5,
+        "Weight": 1.81
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

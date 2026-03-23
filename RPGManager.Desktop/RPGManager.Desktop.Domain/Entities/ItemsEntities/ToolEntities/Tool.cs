@@ -1,11 +1,12 @@
 ﻿namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.ToolEntities;
 
-public class Tool : EntityBase
+public class Tool : Item
 {
-    public Guid GameSystemId { get; set; }
-    public Guid? ToolCategoryId { get; set; }
+    //public Guid? ToolCategoryId { get; set; }
+    public Guid? CheckAbilityScoreId { get; set; }
+
     public string Name { get; set; }
     public string? Description { get; set; }
 
-    public GameSystem GameSystem { get; set; }
+    public AbilityScore Ability { get; set; }
 }

@@ -1,0 +1,26 @@
+info:
+  name: Caltrops
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Caltropos",
+        "Description": "Como uma ação de Utilizar, você pode espalhar Caltrops da sua bolsa para cobrir uma área de 1,5 metro quadrado a até 1,5 metro de você. Uma criatura que entrar nessa área pela primeira vez em um turno deve ser bem-sucedida em um teste de resistência de Destreza CD 15 ou sofrerá 1 ponto de dano Perfurante e terá sua Velocidade reduzida a 0 até o início do seu próximo turno. Leva 10 minutos para recuperar os Caltrops.",
+        "Cost": 1,
+        "Weight": 0.91
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

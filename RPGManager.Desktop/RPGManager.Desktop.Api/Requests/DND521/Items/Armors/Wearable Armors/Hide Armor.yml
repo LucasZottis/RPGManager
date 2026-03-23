@@ -1,0 +1,34 @@
+info:
+  name: Hide Armor
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/armor/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "ArmorCategoryId": "{{Medium_Armor_Category}}",
+        "ArmorClassAbilityScoreModifierId": "{{Dexterity}}",
+        "RequiredAbilityScoreId": null,
+
+        "Name": "Armadura de Pele",
+        "BaseArmorClass": 12,
+        "AppliesAbilityModifier": true,
+        "MaxAbilityModifier": 2,
+        "RequiredAbilityScoreMinimum": null,
+        "DisadvantageOnStealth": false,
+        "ArmorClassBonus": 0,
+        "Weight": 5.44,
+        "Cost": 10
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

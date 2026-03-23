@@ -1,17 +1,20 @@
 info:
-  name: Damage Types
+  name: Ammunition Type
   type: folder
-  seq: 2
+  seq: 1
 
 request:
   auth: inherit
+  variables:
+    - name: partial_url
+      value: "{{gear_partial_url}}/ammunition-type"
   scripts:
     - type: after-response
       code: |-
         if (res.getStatus() === 200) {
           const name = req.getName().replace(" ", "_");
           const id = res.body;  
-          const varName = `${name}_Damage_Type`
+          const varName = `${name}_Ammunition_Type`
           
           console.log(`${name}: ${id}`);
           bru.setVar(varName, id);

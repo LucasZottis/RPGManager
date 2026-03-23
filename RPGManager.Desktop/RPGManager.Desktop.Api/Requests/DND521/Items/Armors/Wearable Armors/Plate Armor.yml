@@ -1,0 +1,34 @@
+info:
+  name: Plate Armor
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{url}}/armor/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "ArmorCategoryId": "{{Heavy_Armor_Category}}",
+        "ArmorClassAbilityScoreModifierId": null,
+        "RequiredAbilityScoreId": "{{Strength}}",
+
+        "Name": "Armadura de Placas",
+        "BaseArmorClass": 18,
+        "AppliesAbilityModifier": false,
+        "MaxAbilityModifier": null,
+        "RequiredAbilityScoreMinimum": 15,
+        "DisadvantageOnStealth": true,
+        "ArmorClassBonus": 0,
+        "Weight": 29.48,
+        "Cost": 1500
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

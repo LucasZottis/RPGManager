@@ -1,22 +1,21 @@
 info:
-  name: Needles
+  name: Bell
   type: http
-  seq: 5
+  seq: 9
 
 http:
   method: POST
-  url: "{{url}}/ammunition-type/create"
+  url: "{{url}}/{{gear_partial_url}}/create"
   body:
     type: json
     data: |-
       {
         "GameSystemId": "{{GameSystem}}",
         "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
-        "Name": "Agulhas",
-        "Amount": 50,
-        "Storage": "Algibeira",
-        "Weight": 0.45,
-        "Cost": 1
+        "Name": "Sino",
+        "Description": "Quando tocado como uma ação de utilização, um sino produz um som que pode ser ouvido a até 60 pés de distância.",
+        "Cost": 1,
+        "Weight": 0
       }
   auth: inherit
 

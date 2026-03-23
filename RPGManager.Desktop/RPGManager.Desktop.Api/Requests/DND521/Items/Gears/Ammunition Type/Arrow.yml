@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{url}}/ammunition-type/create"
+  url: "{{url}}/{{partial_url}}/create"
   body:
     type: json
     data: |-
@@ -13,6 +13,7 @@ http:
         "GameSystemId": "{{GameSystem}}",
         "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
         "Name": "Flechas",
+        "Description": "Munição é um requisito para armas que possuem a propriedade Munição. A descrição da arma especifica o tipo de munição que ela utiliza. A tabela de Munição lista os diferentes tipos e a quantidade obtida ao comprá-los. A tabela também lista o item normalmente usado para armazenar cada tipo; o armazenamento deve ser adquirido separadamente.",
         "Amount": 20,
         "Storage": "Aljava",
         "Weight": 0.45,

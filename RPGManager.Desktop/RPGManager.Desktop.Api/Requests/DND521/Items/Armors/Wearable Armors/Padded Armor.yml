@@ -1,0 +1,33 @@
+info:
+  name: Padded Armor
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/armor/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "ArmorCategoryId": "{{Light_Armor_Category}}",
+        "ArmorClassAbilityScoreModifierId": "{{Dexterity}}",
+        "RequiredAbilityScoreId": null,
+
+        "Name": "Armadura Acolchoada",
+        "BaseArmorClass": 11,
+        "AppliesAbilityModifier": true,
+        "MaxAbilityModifier": null,
+        "RequiredAbilityScoreMinimum": null,
+        "DisadvantageOnStealth": true,
+        "Weight": 3.62,
+        "Cost": 5
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

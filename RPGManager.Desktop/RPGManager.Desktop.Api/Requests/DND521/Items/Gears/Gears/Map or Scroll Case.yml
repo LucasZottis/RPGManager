@@ -1,0 +1,26 @@
+info:
+  name: Map or Scroll Case
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Estojo para Mapas ou Pergaminhos",
+        "Description": "Um estojo para mapas ou pergaminhos comporta até 10 folhas de papel ou 5 folhas de pergaminho.",
+        "Cost": 1,
+        "Weight": 0.45
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

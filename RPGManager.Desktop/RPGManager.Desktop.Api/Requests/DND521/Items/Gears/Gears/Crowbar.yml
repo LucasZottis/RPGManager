@@ -1,0 +1,26 @@
+info:
+  name: Crowbar
+  type: http
+  seq: 26
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Pé de Cabra",
+        "Description": "Usar um pé de cabra concede vantagem em testes de Força onde a alavanca do pé de cabra pode ser aplicada.",
+        "Cost": 2,
+        "Weight": 2.27
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

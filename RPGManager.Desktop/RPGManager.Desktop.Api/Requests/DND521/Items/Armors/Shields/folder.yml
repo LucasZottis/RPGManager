@@ -1,7 +1,7 @@
 info:
-  name: Damage Types
+  name: Shields
   type: folder
-  seq: 2
+  seq: 1
 
 request:
   auth: inherit
@@ -11,7 +11,7 @@ request:
         if (res.getStatus() === 200) {
           const name = req.getName().replace(" ", "_");
           const id = res.body;  
-          const varName = `${name}_Damage_Type`
+          const varName = `${name}_Shield`
           
           console.log(`${name}: ${id}`);
           bru.setVar(varName, id);

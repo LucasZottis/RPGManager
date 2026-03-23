@@ -1,0 +1,28 @@
+info:
+  name: Bolt
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/{{partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Virotes",
+        "Description": "Munição é um requisito para armas que possuem a propriedade Munição. A descrição da arma especifica o tipo de munição que ela utiliza. A tabela de Munição lista os diferentes tipos e a quantidade obtida ao comprá-los. A tabela também lista o item normalmente usado para armazenar cada tipo; o armazenamento deve ser adquirido separadamente.",
+        "Amount": 20,
+        "Storage": "Estojo",
+        "Weight": 0.68,
+        "Cost": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

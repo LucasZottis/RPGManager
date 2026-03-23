@@ -1,0 +1,26 @@
+info:
+  name: Blanket
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Silver_Piece_Currency_Type}}",
+        "Name": "Cobertor",
+        "Description": "Enquanto estiver enrolado em um cobertor, você terá vantagem em testes de resistência contra frio extremo (consulte \"Caixa de Ferramentas de Jogo\").",
+        "Cost": 5,
+        "Weight": 1.36
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

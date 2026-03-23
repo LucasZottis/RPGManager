@@ -1,22 +1,21 @@
 info:
-  name: Bolt
+  name: Crossbow Bolt Case
   type: http
-  seq: 2
+  seq: 17
 
 http:
   method: POST
-  url: "{{url}}/ammunition-type/create"
+  url: "{{url}}/{{gear_partial_url}}/create"
   body:
     type: json
     data: |-
       {
         "GameSystemId": "{{GameSystem}}",
         "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
-        "Name": "Virotes",
-        "Amount": 20,
-        "Storage": "Estojo",
-        "Weight": 0.68,
-        "Cost": 1
+        "Name": "Estojo de Virotes de Besta",
+        "Description": "Este Estojo de Virotes de Besta pode conter até 20 virotes de besta.",
+        "Cost": 1,
+        "Weight": 0.45
       }
   auth: inherit
 

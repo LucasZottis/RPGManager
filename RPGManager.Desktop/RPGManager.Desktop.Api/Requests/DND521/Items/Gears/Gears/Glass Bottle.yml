@@ -1,0 +1,26 @@
+info:
+  name: Glass Bottle
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Garrafa de Vidro",
+        "Description": "Uma garrafa de vidro pode conter até 1,5 litros de líquido.",
+        "Cost": 2,
+        "Weight": 0.91
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

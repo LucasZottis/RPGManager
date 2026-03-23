@@ -1,22 +1,21 @@
 info:
-  name: Firearm Bullet
+  name: Backpack
   type: http
-  seq: 3
+  seq: 4
 
 http:
   method: POST
-  url: "{{url}}/ammunition-type/create"
+  url: "{{url}}/{{gear_partial_url}}/create"
   body:
     type: json
     data: |-
       {
         "GameSystemId": "{{GameSystem}}",
         "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
-        "Name": "Projéteis de Arma de Fogo",
-        "Amount": 10,
-        "Storage": "Algibeira",
-        "Weight": 0.90,
-        "Cost": 3
+        "Name": "Mochila",
+        "Description": "Uma mochila comporta até 13,6 kg (30 libras) em um volume de 0,028 m³ (1 pé cúbico). Ela também pode ser usada como alforje.",
+        "Cost": 2,
+        "Weight": 2.27
       }
   auth: inherit
 

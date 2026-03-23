@@ -1,0 +1,26 @@
+info:
+  name: Chain
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Corrente",
+        "Description": "Como uma ação de Utilizar, você pode envolver uma Corrente em torno de uma criatura relutante a até 1,5 metro de você que esteja sob as condições Agarrada, Incapacitada ou Imobilizada, caso obtenha sucesso em um teste de Força (Atletismo) CD 13. Se as pernas da criatura estiverem amarradas, ela permanecerá sob a condição Imobilizada até conseguir escapar. Para escapar da Corrente, a criatura precisa realizar um teste de Destreza (Acrobacia) CD 18 bem-sucedido como uma ação. Para romper a Corrente, é necessário realizar um teste de Força (Atletismo) CD 20 bem-sucedido como uma ação.",
+        "Cost": 5,
+        "Weight": 4.54
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

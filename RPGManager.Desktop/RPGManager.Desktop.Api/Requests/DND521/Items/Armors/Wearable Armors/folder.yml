@@ -1,5 +1,5 @@
 info:
-  name: Ammunition Type
+  name: Wearable Armors
   type: folder
   seq: 1
 
@@ -11,7 +11,7 @@ request:
         if (res.getStatus() === 200) {
           const name = req.getName().replace(" ", "_");
           const id = res.body;  
-          const varName = `${name}_Ammunition_Type`
+          const varName = `${name}_Wearable_Armor`
           
           console.log(`${name}: ${id}`);
           bru.setVar(varName, id);

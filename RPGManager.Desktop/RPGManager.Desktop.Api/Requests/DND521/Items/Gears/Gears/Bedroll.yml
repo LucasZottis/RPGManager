@@ -1,0 +1,26 @@
+info:
+  name: Bedroll
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Rolo de Cama",
+        "Description": "Um saco de dormir acomoda uma criatura Pequena ou Média. Enquanto estiver em um saco de dormir, você automaticamente obtém sucesso em testes de resistência contra frio extremo (veja 'Ferramentas de Jogo').",
+        "Cost": 1,
+        "Weight": 3.18
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

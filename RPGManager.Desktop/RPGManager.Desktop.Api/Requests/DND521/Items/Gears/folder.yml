@@ -1,0 +1,10 @@
+info:
+  name: Gears
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+  variables:
+    - name: gear_partial_url
+      value: "{{item_partial_url}}/gear"

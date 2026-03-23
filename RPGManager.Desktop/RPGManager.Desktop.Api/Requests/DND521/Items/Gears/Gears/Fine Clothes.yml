@@ -1,0 +1,26 @@
+info:
+  name: Fine Clothes
+  type: http
+  seq: 22
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Roupas Elegantes",
+        "Description": "Roupas Elegantes são feitas de tecidos caros e adornadas com detalhes habilmente trabalhados. Alguns eventos e locais admitem apenas pessoas vestindo essas roupas.",
+        "Cost": 15,
+        "Weight": 2.72
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

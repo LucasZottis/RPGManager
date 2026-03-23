@@ -1,7 +1,10 @@
 info:
   name: Items
   type: folder
-  seq: 9
+  seq: 1
 
 request:
   auth: inherit
+  variables:
+    - name: item_partial_url
+      value: item

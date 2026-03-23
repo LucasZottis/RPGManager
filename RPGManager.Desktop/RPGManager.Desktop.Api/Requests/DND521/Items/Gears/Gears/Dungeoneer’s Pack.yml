@@ -1,0 +1,26 @@
+info:
+  name: Dungeoneer’s Pack
+  type: http
+  seq: 28
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Kit do Explorador de Masmorras",
+        "Description": "Um Pacote de Aventureiro contém os seguintes itens: Mochila, Caltrops, Pé de Cabra, 2 frascos de Óleo, 10 dias de rações, corda, isqueiro, 10 tochas e cantil.",
+        "Cost": 12,
+        "Weight": 24.95
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

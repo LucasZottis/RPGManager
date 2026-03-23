@@ -1,0 +1,26 @@
+info:
+  name: Antitoxin
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Antídoto",
+        "Description": "Como uma Ação Bônus, você pode beber um frasco de Antitoxina para obter Vantagem em testes de resistência para evitar ou encerrar a condição Envenenado por 1 hora.",
+        "Cost": 50,
+        "Weight": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

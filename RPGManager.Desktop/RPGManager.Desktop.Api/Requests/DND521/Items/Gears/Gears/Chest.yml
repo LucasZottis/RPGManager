@@ -1,0 +1,26 @@
+info:
+  name: Chest
+  type: http
+  seq: 20
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Baú",
+        "Description": "Um baú pode conter até 12 pés cúbicos ou 300 libras de equipamento.",
+        "Cost": 5,
+        "Weight": 11.34
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

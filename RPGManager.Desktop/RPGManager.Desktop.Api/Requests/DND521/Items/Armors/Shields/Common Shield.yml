@@ -1,0 +1,30 @@
+info:
+  name: Common Shield
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/armor/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "ArmorCategoryId": "{{Shield_Category}}",
+        "ArmorClassAbilityScoreModifierId": null,
+        "RequiredAbilityScoreId": null,
+
+        "Name": "Escudo",
+        "ArmorClassBonus": 2,
+        "DisadvantageOnStealth": false,
+        "Weight": 2.72,
+        "Cost": 10
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

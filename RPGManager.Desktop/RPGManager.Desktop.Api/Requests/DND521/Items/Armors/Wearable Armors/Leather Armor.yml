@@ -1,0 +1,33 @@
+info:
+  name: Leather Armor
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/armor/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "ArmorCategoryId": "{{Light_Armor_Category}}",
+        "ArmorClassAbilityScoreModifierId": "{{Dexterity}}",
+        "RequiredAbilityScoreId": null,
+
+        "Name": "Armadura de Couro",
+        "BaseArmorClass": 11,
+        "AppliesAbilityModifier": true,
+        "MaxAbilityModifier": null,
+        "RequiredAbilityScoreMinimum": null,
+        "DisadvantageOnStealth": false,
+        "Weight": 4.54,
+        "Cost": 10
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

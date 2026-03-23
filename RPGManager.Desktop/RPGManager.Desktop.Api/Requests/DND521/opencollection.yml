@@ -184,6 +184,108 @@ request:
       value: ""
     - name: Needles_Ammunition_Type
       value: ""
+    - name: Club_Weapon
+      value: ""
+    - name: Dagger_Weapon
+      value: ""
+    - name: Greatclub_Weapon
+      value: ""
+    - name: Handaxe_Weapon
+      value: ""
+    - name: Javelin_Weapon
+      value: ""
+    - name: Light_Hammer_Weapon
+      value: ""
+    - name: Mace_Weapon
+      value: ""
+    - name: Quarterstaff_Weapon
+      value: ""
+    - name: Sickle_Weapon
+      value: ""
+    - name: Spear_Weapon
+      value: ""
+    - name: Dart_Weapon
+      value: ""
+    - name: Light_Crossbow_Weapon
+      value: ""
+    - name: Shortbow_Weapon
+      value: ""
+    - name: Sling_Weapon
+      value: ""
+    - name: Battleaxe_Weapon
+      value: ""
+    - name: Flail_Weapon
+      value: ""
+    - name: Glaive_Weapon
+      value: ""
+    - name: Greataxe_Weapon
+      value: ""
+    - name: Greatsword_Weapon
+      value: ""
+    - name: Halberd_Weapon
+      value: ""
+    - name: Lance_Weapon
+      value: ""
+    - name: Longsword_Weapon
+      value: ""
+    - name: Maul_Weapon
+      value: ""
+    - name: Morningstar_Weapon
+      value: ""
+    - name: Pike_Weapon
+      value: ""
+    - name: Rapier_Weapon
+      value: ""
+    - name: Scimitar_Weapon
+      value: ""
+    - name: Shortsword_Weapon
+      value: ""
+    - name: Trident_Weapon
+      value: ""
+    - name: Warhammer_Weapon
+      value: ""
+    - name: War_Pick_Weapon
+      value: ""
+    - name: Whip_Weapon
+      value: ""
+    - name: Blowgun_Weapon
+      value: ""
+    - name: Hand_Crossbow_Weapon
+      value: ""
+    - name: Heavy_Crossbow_Weapon
+      value: ""
+    - name: Longbow_Weapon
+      value: ""
+    - name: Musket_Weapon
+      value: ""
+    - name: Pistol_Weapon
+      value: ""
+    - name: Padded_Armor_Wearable_Armor
+      value: ""
+    - name: Leather_Armor_Wearable_Armor
+      value: ""
+    - name: Studded_Leather_Armor_Wearable_Armor
+      value: ""
+    - name: Hide_Armor_Wearable_Armor
+      value: ""
+    - name: Chain_Shirt_Wearable_Armor
+      value: ""
+    - name: Scale_Mail_Wearable_Armor
+      value: ""
+    - name: Breastplate_Wearable_Armor
+      value: ""
+    - name: Half_Plate_Armor_Wearable_Armor
+      value: ""
+    - name: Ring_Mail_Wearable_Armor
+      value: ""
+    - name: Chain_Mail_Wearable_Armor
+      value: ""
+    - name: Splint_Armor_Wearable_Armor
+      value: ""
+    - name: Plate_Armor_Wearable_Armor
+      value: ""
+    - name: Common_Shield
+      value: ""
   scripts:
     - type: before-request
       code: |-

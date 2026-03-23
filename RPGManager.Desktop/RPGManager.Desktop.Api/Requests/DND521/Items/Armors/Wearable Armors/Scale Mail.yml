@@ -1,0 +1,34 @@
+info:
+  name: Scale Mail
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/armor/create"
+  body:
+    type: json
+    data: |-
+      {
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "ArmorCategoryId": "{{Medium_Armor_Category}}",
+        "ArmorClassAbilityScoreModifierId": "{{Dexterity}}",
+        "RequiredAbilityScoreId": null,
+
+        "Name": "Cota de Malha",
+        "BaseArmorClass": 14,
+        "AppliesAbilityModifier": true,
+        "MaxAbilityModifier": 2,
+        "RequiredAbilityScoreMinimum": null,
+        "DisadvantageOnStealth": true,
+        "ArmorClassBonus": 0,
+        "Weight": 20.41,
+        "Cost": 50
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

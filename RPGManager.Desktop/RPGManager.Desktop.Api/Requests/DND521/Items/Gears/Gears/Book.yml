@@ -1,0 +1,26 @@
+info:
+  name: Book
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Livro",
+        "Description": "Um livro contém ficção ou não ficção. Se você consultar um livro de não ficção preciso sobre o assunto, você recebe um bônus de +5 em testes de Inteligência (Arcana, História, Natureza ou Religião) que fizer sobre esse assunto.",
+        "Cost": 25,
+        "Weight": 2.27
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

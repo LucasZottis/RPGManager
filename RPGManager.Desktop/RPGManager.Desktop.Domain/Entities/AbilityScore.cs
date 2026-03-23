@@ -1,5 +1,6 @@
 ﻿using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 using RPGManager.Desktop.Domain.Entities.ClassesEntities.Proficiencies;
+using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RPGManager.Desktop.Domain.Entities;
@@ -14,6 +15,8 @@ public class AbilityScore : GameSystemEntityBase
     public ICollection<ClassSavingThrowProficiency> ClassSavingThrowProficiencies { get; set; }
     public ICollection<Skill> SkillsBaseAbilityScore { get; set; }
 
+    public ICollection<Armor> ArmorsRequiredAbilityScoreId { get; set; }
+    public ICollection<WearableArmor> ArmorClassesAbilitycoreModifiers { get; set; }
     public ICollection<Weapon> Weapons { get; set; }
     public ICollection<WeaponProperty> AlternativeAbilityScoreForWeaponProperties { get; set; }
 }

@@ -7,5 +7,6 @@ public class ArmorCategory : GameSystemEntityBase
     public string Name { get; set; }
     public string? Description { get; set; }
 
+    public ICollection<Armor> Armors { get; set; }
     public ICollection<ClassArmorCategoryProficiency> ClassesArmorTraining { get; set; }
 }

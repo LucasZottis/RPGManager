@@ -1,0 +1,26 @@
+info:
+  name: Barrel
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Barril",
+        "Description": "Um barril pode conter até 40 galões de líquido ou 4 pés cúbicos de sólidos.",
+        "Cost": 2,
+        "Weight": 31.75
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
