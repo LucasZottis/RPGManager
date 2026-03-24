@@ -1,0 +1,26 @@
+info:
+  name: Mirror
+  type: http
+  seq: 48
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Espelho",
+        "Description": "Um Espelho de aço portátil é útil para cosméticos pessoais, mas também para espreitar ao virar esquinas e refletir luz como sinal.",
+        "Cost": 5,
+        "Weight": 0.2268
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

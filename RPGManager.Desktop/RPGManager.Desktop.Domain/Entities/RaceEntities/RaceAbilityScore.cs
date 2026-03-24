@@ -1,4 +1,6 @@
-﻿namespace RPGManager.Desktop.Domain.Entities.RaceEntities;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
+
+namespace RPGManager.Desktop.Domain.Entities.RaceEntities;
 
 public class RaceAbilityScore : EntityBase
 {

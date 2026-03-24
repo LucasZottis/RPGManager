@@ -1,4 +1,6 @@
-﻿namespace RPGManager.Desktop.Application.Services;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
+
+namespace RPGManager.Desktop.Application.Services;
 
 public class ServiceBase<TEntity, TModel> : IServiceBase<TEntity, TModel>
     where TEntity : EntityBase

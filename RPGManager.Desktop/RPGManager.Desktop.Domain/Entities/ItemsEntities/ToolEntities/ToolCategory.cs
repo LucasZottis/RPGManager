@@ -1,4 +1,6 @@
-﻿namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.ToolEntities;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
+
+namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.ToolEntities;
 
 public class ToolCategory : EntityBase
 {

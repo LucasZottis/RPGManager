@@ -1,0 +1,26 @@
+info:
+  name: Ink
+  type: http
+  seq: 37
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Tinta",
+        "Description": "A Tinta vem em um frasco de 28ml, que fornece tinta suficiente para escrever aproximadamente 500 páginas.",
+        "Cost": 10,
+        "Weight": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

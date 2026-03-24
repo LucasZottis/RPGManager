@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using RPGManager.Desktop.Domain.Entities.Base;
 using RPGManager.Desktop.Infra.Db.Contexts;
 using System.Linq.Expressions;
 using System.Reflection;

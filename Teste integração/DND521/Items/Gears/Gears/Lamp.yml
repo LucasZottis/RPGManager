@@ -1,0 +1,26 @@
+info:
+  name: Lamp
+  type: http
+  seq: 41
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Silver_Piece_Currency_Type}}",
+        "Name": "Lamparina",
+        "Description": "Uma Lamparina queima Óleo como combustível para emitir Luz Brilhante em um raio de 4,5 metros e Luz Fraca por mais 9 metros.",
+        "Cost": 5,
+        "Weight": 0.4536
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

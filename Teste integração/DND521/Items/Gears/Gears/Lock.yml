@@ -1,0 +1,26 @@
+info:
+  name: Lock
+  type: http
+  seq: 44
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Cadeado",
+        "Description": "Um Cadeado vem com uma chave. Sem a chave, uma criatura pode usar Ferramentas de Ladrão para abrir este Cadeado com um teste de Destreza (Prestidigitação) CD 15 bem-sucedido.",
+        "Cost": 10,
+        "Weight": 0.4536
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

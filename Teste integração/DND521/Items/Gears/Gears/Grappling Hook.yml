@@ -1,0 +1,26 @@
+info:
+  name: Grappling Hook
+  type: http
+  seq: 33
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Gancho de Escalar",
+        "Description": "Como uma ação de Utilizar, você pode arremessar o Gancho de Escalar em uma grade, beirada ou outra pega dentro de 15 metros de você, e o gancho se prende se você for bem-sucedido em um teste de Destreza (Acrobacia) CD 13. Se você amarrou uma Corda ao gancho, poderá escalá-la.",
+        "Cost": 2,
+        "Weight": 1.8144
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

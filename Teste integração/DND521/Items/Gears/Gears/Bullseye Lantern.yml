@@ -1,0 +1,26 @@
+info:
+  name: Bullseye Lantern
+  type: http
+  seq: 42
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Lanterna de Holofote",
+        "Description": "Uma Lanterna de Holofote queima Óleo como combustível para emitir Luz Brilhante em um Cone de 18 metros e Luz Fraca por mais 18 metros.",
+        "Cost": 10,
+        "Weight": 0.9072
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

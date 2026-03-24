@@ -1,0 +1,26 @@
+info:
+  name: Burglars Pack
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{url}}/{{item_partial_url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Kit do Ladrão",
+        "Description": "Um Kit do Ladrão contém os seguintes itens: Mochila, Esferas de Aço, Sino, 10 Velas, Pé de Cabra, Lanterna com Capuz, 7 frascos de Óleo, 5 dias de Rações, Corda, Isca e Pederneira, e Odre.",
+        "Cost": 16,
+        "Weight": 19.0509
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

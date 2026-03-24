@@ -1,0 +1,26 @@
+info:
+  name: Shovel
+  type: http
+  seq: 67
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Pá",
+        "Description": "Trabalhando por 1 hora, você pode usar uma Pá para cavar um buraco de 1,5 metros de cada lado em solo ou material semelhante.",
+        "Cost": 2,
+        "Weight": 2.268
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

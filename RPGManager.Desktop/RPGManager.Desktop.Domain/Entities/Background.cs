@@ -1,4 +1,6 @@
-﻿namespace RPGManager.Desktop.Domain.Entities;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
+
+namespace RPGManager.Desktop.Domain.Entities;
 
 public class Background : EntityBase
 {

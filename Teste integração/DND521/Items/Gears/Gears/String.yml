@@ -1,0 +1,26 @@
+info:
+  name: String
+  type: http
+  seq: 73
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Silver_Piece_Currency_Type}}",
+        "Name": "Barbante",
+        "Description": "O Barbante tem 3 metros de comprimento. Você pode fazer um nó nele como uma ação de Utilizar.",
+        "Cost": 1,
+        "Weight": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

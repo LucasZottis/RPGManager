@@ -1,4 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Entities;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
 using System.Diagnostics.CodeAnalysis;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Repositories;

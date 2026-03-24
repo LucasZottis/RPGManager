@@ -1,0 +1,26 @@
+info:
+  name: Alchemists Fire
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Fogo do Alquimista",
+        "Description": "Ao realizar a ação Atacar, você pode substituir um de seus ataques por arremessar um frasco de Fogo do Alquimista. Escolha uma criatura ou objeto que você possa ver a até 6 metros de distância. O alvo deve ser bem-sucedido em um teste de resistência de Destreza (CD 8 mais seu modificador de Destreza e bônus de proficiência) ou sofrerá 1d4 de dano de Fogo e começará a queimar (consulte o 'Glossário de Regras').",
+        "Cost": 50,
+        "Weight": 0.45
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

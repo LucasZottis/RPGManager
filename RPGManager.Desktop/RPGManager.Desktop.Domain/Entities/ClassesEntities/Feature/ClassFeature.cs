@@ -1,4 +1,6 @@
-﻿namespace RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
+
+namespace RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
 
 public class ClassFeature : EntityBase
 {

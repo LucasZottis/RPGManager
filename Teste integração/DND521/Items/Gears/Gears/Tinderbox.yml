@@ -1,0 +1,26 @@
+info:
+  name: Tinderbox
+  type: http
+  seq: 75
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Silver_Piece_Currency_Type}}",
+        "Name": "Isca e Pederneira",
+        "Description": "Uma Isca e Pederneira é um pequeno recipiente com pederneira, aço e isca usados para acender um fogo. Usá-la para acender uma Vela, Lamparina, Lanterna ou Tocha leva uma Ação Bônus. Acender qualquer outro fogo leva 1 minuto.",
+        "Cost": 5,
+        "Weight": 0.4536
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -19,7 +19,7 @@ public class RaceEntityMapper : EntityBaseEntityMapper<Race>
             .HasForeignKey( e => e.GameSystemId );
 
         builder.HasOne( e => e.ParentRace )
-            .WithMany( e => e.ChildRaces )
+            .WithMany( e => e.SubRaces )
             .HasForeignKey( e => e.ParentRaceId );
     }
 }

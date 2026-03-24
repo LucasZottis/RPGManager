@@ -1,0 +1,26 @@
+info:
+  name: Staff Arcane Focus
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Foco Arcano (Cajado)",
+        "Description": "Um Foco Arcano em forma de cajado (também funciona como um Quarterstaff), adornado com joias ou entalhado para canalizar magia arcana. Um Feiticeiro, Bruxo ou Mago pode usar este item como Foco de Conjuração.",
+        "Cost": 5,
+        "Weight": 1.8144
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

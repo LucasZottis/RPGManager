@@ -1,0 +1,26 @@
+info:
+  name: Basic Poison
+  type: http
+  seq: 54
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Veneno Básico",
+        "Description": "Como uma Ação Bônus, você pode usar uma ampola de Veneno Básico para cobrir uma arma ou até três peças de munição. Uma criatura que sofrer dano Perfurante ou Cortante da arma ou munição envenenada sofre 1d4 extras de dano de Veneno. Uma vez aplicado, o veneno retém potência por 1 minuto ou até que seu dano seja causado, o que ocorrer primeiro.",
+        "Cost": 100,
+        "Weight": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

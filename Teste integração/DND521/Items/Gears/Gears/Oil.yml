@@ -1,0 +1,26 @@
+info:
+  name: Oil
+  type: http
+  seq: 50
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Silver_Piece_Currency_Type}}",
+        "Name": "Óleo",
+        "Description": "Você pode encharcar uma criatura, objeto ou espaço com Óleo ou usá-lo como combustível. Ao encharcar com Óleo, se o alvo sofrer dano de Fogo antes que o óleo seque (após 1 minuto), o alvo sofre 5 extras de dano de Fogo. Um frasco de Óleo queima por 6 horas em uma Lamparina ou Lanterna.",
+        "Cost": 1,
+        "Weight": 0.4536
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

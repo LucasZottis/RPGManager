@@ -1,0 +1,26 @@
+info:
+  name: Explorers Pack
+  type: http
+  seq: 31
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Kit do Explorador de Masmorras",
+        "Description": "Um pacote de explorador contém os seguintes itens: Mochila, Saco de dormir, 2 frascos de óleo, Ração para 10 dias, Corda, Caixa de isqueiro, 10 Tochas e Cantil.",
+        "Cost": 12,
+        "Weight": 24.95
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

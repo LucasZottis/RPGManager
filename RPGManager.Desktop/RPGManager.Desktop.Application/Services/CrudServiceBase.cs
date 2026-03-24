@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
+using System.Diagnostics.CodeAnalysis;
 
 namespace RPGManager.Desktop.Application.Services;
 

@@ -1,0 +1,26 @@
+info:
+  name: Ink Pen
+  type: http
+  seq: 38
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Copper_Piece_Currency_Type}}",
+        "Name": "Pena de Escrever",
+        "Description": "Usando Tinta, uma Pena de Escrever é utilizada para escrever ou desenhar.",
+        "Cost": 2,
+        "Weight": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,7 +1,7 @@
 info:
   name: Chest
   type: http
-  seq: 20
+  seq: 21
 
 http:
   method: POST

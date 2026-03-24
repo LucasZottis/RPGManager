@@ -1,7 +1,7 @@
 info:
   name: Crossbow Bolt Case
   type: http
-  seq: 17
+  seq: 18
 
 http:
   method: POST

@@ -1,0 +1,26 @@
+info:
+  name: Iron Spikes
+  type: http
+  seq: 71
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Estacas de Ferro",
+        "Description": "Estacas de Ferro vêm em pacotes de dez. Como uma ação de Utilizar, você pode usar um objeto contundente para cravar uma estaca em madeira, terra ou material semelhante. Você pode fazer isso para trancar uma porta ou amarrar uma Corda ou Corrente à Estaca.",
+        "Cost": 1,
+        "Weight": 2.268
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,26 @@
+info:
+  name: Hunting Trap
+  type: http
+  seq: 36
+
+http:
+  method: POST
+  url: "{{url}}/{{gear_partial_url}}/create"
+  body:
+    type: json
+    data: |-
+      {
+        "GameSystemId": "{{GameSystem}}",
+        "CostCurrencyTypeId": "{{Gold_Piece_Currency_Type}}",
+        "Name": "Armadilha de Caça",
+        "Description": "Como uma ação de Utilizar, você pode armar uma Armadilha de Caça, que é um anel de aço serrilhado que se fecha quando uma criatura pisa na placa de pressão central. A armadilha fica presa por uma corrente pesada a um objeto imóvel. Uma criatura que pisar na placa deve ser bem-sucedida em um teste de resistência de Destreza CD 13 ou sofrer 1d4 de dano Perfurante e ter seu Deslocamento reduzido a 0 até o início de seu próximo turno.",
+        "Cost": 5,
+        "Weight": 11.3398
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

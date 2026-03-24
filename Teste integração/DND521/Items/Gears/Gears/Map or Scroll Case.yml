@@ -1,7 +1,7 @@
 info:
   name: Map or Scroll Case
   type: http
-  seq: 18
+  seq: 19
 
 http:
   method: POST

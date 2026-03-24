@@ -286,6 +286,184 @@ request:
       value: ""
     - name: Common_Shield
       value: ""
+    - name: Backpack_Gear
+      value: ""
+    - name: Acid_Gear
+      value: ""
+    - name: Alchemists_Fire_Gear
+      value: ""
+    - name: Antitoxin_Gear
+      value: ""
+    - name: Arcane_Focus_Crystal_Gear
+      value: ""
+    - name: Arcane_Focus_Orb_Gear
+      value: ""
+    - name: Arcane_Focus_Rod_Gear
+      value: ""
+    - name: Arcane_Focus_Staff_Gear
+      value: ""
+    - name: Arcane_Focus_Wand_Gear
+      value: ""
+    - name: Ball_Bearings_Gear
+      value: ""
+    - name: Barrel_Gear
+      value: ""
+    - name: Basket_Gear
+      value: ""
+    - name: Bedroll_Gear
+      value: ""
+    - name: Bell_Gear
+      value: ""
+    - name: Blanket_Gear
+      value: ""
+    - name: Block_and_Tackle_Gear
+      value: ""
+    - name: Book_Gear
+      value: ""
+    - name: Bottle_Glass_Gear
+      value: ""
+    - name: Bucket_Gear
+      value: ""
+    - name: Burglars_Pack_Gear
+      value: ""
+    - name: Caltrops_Gear
+      value: ""
+    - name: Candle_Gear
+      value: ""
+    - name: Case_Crossbow_Bolt_Gear
+      value: ""
+    - name: Case_Map_or_Scroll_Gear
+      value: ""
+    - name: Chain_Gear
+      value: ""
+    - name: Chest_Gear
+      value: ""
+    - name: Climbers_Kit_Gear
+      value: ""
+    - name: Clothes_Fine_Gear
+      value: ""
+    - name: Clothes_Travelers_Gear
+      value: ""
+    - name: Component_Pouch_Gear
+      value: ""
+    - name: Costume_Gear
+      value: ""
+    - name: Crowbar_Gear
+      value: ""
+    - name: Diplomats_Pack_Gear
+      value: ""
+    - name: Druidic_Focus_Mistletoe_Gear
+      value: ""
+    - name: Druidic_Focus_Wooden_Staff_Gear
+      value: ""
+    - name: Druidic_Focus_Yew_Wand_Gear
+      value: ""
+    - name: Dungeoneers_Pack_Gear
+      value: ""
+    - name: Entertainers_Pack_Gear
+      value: ""
+    - name: Explorers_Pack_Gear
+      value: ""
+    - name: Flask_Gear
+      value: ""
+    - name: Grappling_Hook_Gear
+      value: ""
+    - name: Healers_Kit_Gear
+      value: ""
+    - name: Holy_Symbol_Amulet_Gear
+      value: ""
+    - name: Holy_Symbol_Emblem_Gear
+      value: ""
+    - name: Holy_Symbol_Reliquary_Gear
+      value: ""
+    - name: Holy_Water_Gear
+      value: ""
+    - name: Hunting_Trap_Gear
+      value: ""
+    - name: Ink_Gear
+      value: ""
+    - name: Ink_Pen_Gear
+      value: ""
+    - name: Jug_Gear
+      value: ""
+    - name: Ladder_Gear
+      value: ""
+    - name: Lamp_Gear
+      value: ""
+    - name: Lantern_Bullseye_Gear
+      value: ""
+    - name: Lantern_Hooded_Gear
+      value: ""
+    - name: Lock_Gear
+      value: ""
+    - name: Magnifying_Glass_Gear
+      value: ""
+    - name: Manacles_Gear
+      value: ""
+    - name: Map_Gear
+      value: ""
+    - name: Mirror_Gear
+      value: ""
+    - name: Net_Gear
+      value: ""
+    - name: Oil_Gear
+      value: ""
+    - name: Paper_Gear
+      value: ""
+    - name: Parchment_Gear
+      value: ""
+    - name: Perfume_Gear
+      value: ""
+    - name: Poison_Basic_Gear
+      value: ""
+    - name: Pole_Gear
+      value: ""
+    - name: Pot_Iron_Gear
+      value: ""
+    - name: Potion_of_Healing_Gear
+      value: ""
+    - name: Pouch_Gear
+      value: ""
+    - name: Priests_Pack_Gear
+      value: ""
+    - name: Quiver_Gear
+      value: ""
+    - name: Ram_Portable_Gear
+      value: ""
+    - name: Rations_Gear
+      value: ""
+    - name: Robe_Gear
+      value: ""
+    - name: Rope_Gear
+      value: ""
+    - name: Sack_Gear
+      value: ""
+    - name: Scholars_Pack_Gear
+      value: ""
+    - name: Shovel_Gear
+      value: ""
+    - name: Signal_Whistle_Gear
+      value: ""
+    - name: Spell_Scroll_Cantrip_Gear
+      value: ""
+    - name: Spell_Scroll_Level1_Gear
+      value: ""
+    - name: Spikes_Iron_Gear
+      value: ""
+    - name: Spyglass_Gear
+      value: ""
+    - name: String_Gear
+      value: ""
+    - name: Tent_Gear
+      value: ""
+    - name: Tinderbox_Gear
+      value: ""
+    - name: Torch_Gear
+      value: ""
+    - name: Vial_Gear
+      value: ""
+    - name: Waterskin_Gear
+      value: ""
   scripts:
     - type: before-request
       code: |-
