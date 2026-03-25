@@ -1,4 +1,5 @@
-﻿using RPGManager.Desktop.Domain.Entities.Base;
+﻿using RPGManager.Desktop.Domain.Entities.Backgrounds;
+using RPGManager.Desktop.Domain.Entities.Base;
 using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;

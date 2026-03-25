@@ -16,7 +16,6 @@ public class Class : ClassBase
     public GameSystem GameSystem { get; set; }
 
     public ICollection<SubClass> SubClasses { get; set; }
-    public ICollection<ClassLevel> Levels { get; set; }
     public ICollection<ClassSavingThrowProficiency> SavingThrowProficiencies { get; set; }
     public ICollection<ClassWeaponCategoryProficiency> WeaponProficiencies { get; set; }
     public ICollection<ClassArmorCategoryProficiency> ArmorTraining { get; set; }

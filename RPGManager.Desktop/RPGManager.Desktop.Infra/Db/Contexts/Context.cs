@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RPGManager.Desktop.Domain.Entities.Backgrounds;
 using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 using RPGManager.Desktop.Domain.Entities.RaceEntities;
 using RPGManager.Desktop.Infra.Db.Interfaces;

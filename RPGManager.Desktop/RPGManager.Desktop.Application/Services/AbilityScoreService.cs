@@ -1,5 +1,7 @@
 ﻿
 
+using RPGManager.Desktop.Domain.Entities.Backgrounds;
+
 namespace RPGManager.Desktop.Application.Services;
 
 public class AbilityScoreService : ServiceBase<Background, AbilityScoreModel>, IAbilityScoreService
