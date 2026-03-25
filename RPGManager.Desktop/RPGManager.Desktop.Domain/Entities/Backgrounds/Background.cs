@@ -11,7 +11,7 @@ public class Background : GameSystemEntityBase
     public string? Description { get; set; }
 
     public BackgroundAbilityScoreChoice AbilityScoreChoice { get; set; }
-    public BackgoundToolProficiency? ToolProficiency { get; set; }
+    public BackgroundToolProficiency? ToolProficiency { get; set; }
     public BackgroundToolProficiencyChoice? ToolProficiencyChoice { get; set; }
 
     public ICollection<BackgroundSkillProficiency> SkillProficiencies { get; set; }

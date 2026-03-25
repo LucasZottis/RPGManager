@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
-namespace RPGManager.Desktop.Infra.Db.EntityMappers.WeaponMappers;
+namespace RPGManager.Desktop.Infra.EntityMappers.WeaponMappers;
 
 public class WeaponPropertiesWeaponsEntityMapper : IEntityTypeConfiguration<WeaponPropertyAttribute>
 {

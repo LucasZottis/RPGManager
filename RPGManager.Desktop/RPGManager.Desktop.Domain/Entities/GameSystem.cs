@@ -16,7 +16,6 @@ public class GameSystem : EntityBase
     public ICollection<Class> Classes { get; set; }
     public ICollection<Background> Backgrounds { get; set; }
     public ICollection<Level> LevelUps { get; set; }
-
     public ICollection<AbilityScore> AbilityScores { get; set; }
     public ICollection<Alignment> Alignments { get; set; }
     public ICollection<CurrencyType> CurrencyTypes { get; set; }

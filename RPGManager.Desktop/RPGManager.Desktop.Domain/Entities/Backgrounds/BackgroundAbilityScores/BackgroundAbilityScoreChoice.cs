@@ -7,4 +7,6 @@ public class BackgroundAbilityScoreChoice : EntityChoiceBase
     public Guid BackgroundId { get; set; }
 
     public Background Background { get; set; }
+
+    public ICollection<BackgroundAbilityScoreOption> Options { get; set; }
 }

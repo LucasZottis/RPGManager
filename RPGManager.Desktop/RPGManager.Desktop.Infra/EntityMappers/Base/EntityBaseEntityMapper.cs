@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RPGManager.Desktop.Domain.Entities.Base;
 
-namespace RPGManager.Desktop.Infra.Db.EntityMappers;
+namespace RPGManager.Desktop.Infra.EntityMappers.Base;
 
 public abstract class EntityBaseEntityMapper<TEntity> : IEntityTypeConfiguration<TEntity>
     where TEntity : EntityBase
@@ -25,7 +25,7 @@ public abstract class EntityBaseEntityMapper<TEntity> : IEntityTypeConfiguration
 
     protected abstract void Map( EntityTypeBuilder<TEntity> builder );
 
-    public void Configure( EntityTypeBuilder<TEntity> builder )
+    public virtual void Configure( EntityTypeBuilder<TEntity> builder )
     {
         InitialConfiguration( builder );
         Map( builder );
