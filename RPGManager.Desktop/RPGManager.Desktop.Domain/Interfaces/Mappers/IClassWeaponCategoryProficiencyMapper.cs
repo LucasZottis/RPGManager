@@ -1,4 +1,4 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities;
+using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 

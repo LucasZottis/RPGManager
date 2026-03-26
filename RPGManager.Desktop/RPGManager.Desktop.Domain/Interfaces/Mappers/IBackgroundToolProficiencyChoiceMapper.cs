@@ -1,4 +1,4 @@
-using RPGManager.Desktop.Domain.Entities.Backgrounds;
+using RPGManager.Desktop.Domain.Entities.Backgrounds.ToolProficiencies;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 

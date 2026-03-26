@@ -1,4 +1,4 @@
-using RPGManager.Desktop.Domain.Entities.Backgrounds;
+using RPGManager.Desktop.Domain.Entities.Backgrounds.BackgroundAbilityScores;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
