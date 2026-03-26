@@ -1,9 +1,8 @@
-﻿using RPGManager.Desktop.Domain.Entities;
-using RPGManager.Desktop.Domain.Models;
+using RPGManager.Desktop.Domain.Entities;
+using RPGManager.Desktop.Domain.Models.Alignments;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Services;
 
-public interface IAlignmentService : IServiceBase<Alignment, AlignmentModel>
+public interface IAlignmentService : ICrudServiceBase<Alignment, AlignmentRegisterDto, AlignmentQueryDto>
 {
-    //Task<AlignmentModel> Add( AlignmentModel model );
 }

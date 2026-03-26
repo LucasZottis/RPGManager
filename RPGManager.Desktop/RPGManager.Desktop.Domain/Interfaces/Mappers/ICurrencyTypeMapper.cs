@@ -1,9 +1,7 @@
-﻿using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
-using RPGManager.Desktop.Domain.Models;
+using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface ICurrencyTypeMapper : IMapper<CurrencyType, CurrencyTypeModel>
+public interface ICurrencyTypeMapper : IMapperTwo<CurrencyType>
 {
-
 }

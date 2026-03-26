@@ -1,9 +1,8 @@
-﻿using RPGManager.Desktop.Domain.Entities;
-using RPGManager.Desktop.Domain.Models;
+using RPGManager.Desktop.Domain.Entities;
+using RPGManager.Desktop.Domain.Models.Languages;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Services;
 
-public interface ILanguageService : IServiceBase<Language, LanguageModel>
+public interface ILanguageService : ICrudServiceBase<Language, LanguageRegisterDto, LanguageQueryDto>
 {
-    //Task<LanguageModel> Add( LanguageModel model );
 }

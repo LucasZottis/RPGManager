@@ -1,9 +1,7 @@
-﻿using RPGManager.Desktop.Domain.Entities;
-using RPGManager.Desktop.Domain.Models;
+using RPGManager.Desktop.Domain.Entities;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IDamageTypeMapper : IMapper<DamageType, DamageTypeModel>
+public interface IDamageTypeMapper : IMapperTwo<DamageType>
 {
-
 }

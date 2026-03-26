@@ -1,9 +1,7 @@
-﻿using RPGManager.Desktop.Domain.Entities;
-using RPGManager.Desktop.Domain.Models;
+using RPGManager.Desktop.Domain.Entities;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface ILanguageMapper : IMapper<Language, LanguageModel>
+public interface ILanguageMapper : IMapperTwo<Language>
 {
-
 }

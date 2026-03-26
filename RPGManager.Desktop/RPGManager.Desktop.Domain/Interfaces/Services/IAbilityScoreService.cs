@@ -1,8 +1,8 @@
-﻿using RPGManager.Desktop.Domain.Entities.Backgrounds;
-using RPGManager.Desktop.Domain.Models;
+using RPGManager.Desktop.Domain.Entities;
+using RPGManager.Desktop.Domain.Models.AbilityScores;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Services;
 
-public interface IAbilityScoreService : IServiceBase<Background, AbilityScoreModel>
+public interface IAbilityScoreService : ICrudServiceBase<AbilityScore, AbilityScoreRegisterDto, AbilityScoreQueryDto>
 {
 }
