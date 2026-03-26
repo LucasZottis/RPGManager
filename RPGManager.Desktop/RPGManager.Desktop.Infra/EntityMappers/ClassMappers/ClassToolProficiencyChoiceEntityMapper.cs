@@ -11,6 +11,6 @@ public class ClassToolProficiencyChoiceEntityMapper : EntityChoiceBaseEntityMapp
     {
         builder.Property( e => e.ClassId ).IsRequired();
 
-        builder.HasOne( e => e.Class ).WithMany().HasForeignKey( e => e.ClassId );
+        builder.HasOne( e => e.Class ).WithMany( e => e.ToolProficiencyChoice ).HasForeignKey( e => e.ClassId );
     }
 }

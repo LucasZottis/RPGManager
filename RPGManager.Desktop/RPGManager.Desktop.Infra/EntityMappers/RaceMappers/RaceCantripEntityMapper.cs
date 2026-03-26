@@ -13,6 +13,7 @@ public class RaceCantripEntityMapper : IEntityTypeConfiguration<RaceCantrip>
 
         builder.HasKey( e => new { e.RaceId, e.SpellId } );
 
-        builder.HasOne( e => e.Race ).WithMany().HasForeignKey( e => e.RaceId );
+        builder.HasOne( e => e.Race ).WithMany( e => e.Cantrips ).HasForeignKey( e => e.RaceId );
+        builder.HasOne( e => e.Spell ).WithMany().HasForeignKey( e => e.SpellId );
     }
 }

@@ -12,7 +12,7 @@ public class RaceAbilityScoreEntityMapper : EntityBaseEntityMapper<RaceAbilitySc
         builder.Property( e => e.AbilityScoreId ).IsRequired();
         builder.Property( e => e.Increase ).IsRequired().HasDefaultValue( 1 );
 
-        builder.HasOne( e => e.Race ).WithMany().HasForeignKey( e => e.RaceId );
+        builder.HasOne( e => e.Race ).WithMany( e => e.AbilityScores ).HasForeignKey( e => e.RaceId );
         builder.HasOne( e => e.AbilityScore ).WithMany().HasForeignKey( e => e.AbilityScoreId );
     }
 }

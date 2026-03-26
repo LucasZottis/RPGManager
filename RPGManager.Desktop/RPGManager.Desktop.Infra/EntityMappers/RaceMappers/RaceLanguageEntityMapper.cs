@@ -12,7 +12,7 @@ public class RaceLanguageEntityMapper : EntityBaseEntityMapper<RaceLanguage>
         builder.Property( e => e.LanguageId );
         builder.Property( e => e.IsChoice ).IsRequired();
 
-        builder.HasOne( e => e.Race ).WithMany().HasForeignKey( e => e.RaceId );
+        builder.HasOne( e => e.Race ).WithMany( e => e.Languages ).HasForeignKey( e => e.RaceId );
         builder.HasOne( e => e.Language ).WithMany().HasForeignKey( e => e.LanguageId );
     }
 }

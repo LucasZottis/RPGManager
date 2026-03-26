@@ -11,4 +11,5 @@ public class RaceTraitSpell : EntityBase
 
     public RaceTrait RaceTrait { get; set; }
     public Spell Spell { get; set; }
+    public ICollection<RaceTraitSpellLevel>? Levels { get; set; }
 }

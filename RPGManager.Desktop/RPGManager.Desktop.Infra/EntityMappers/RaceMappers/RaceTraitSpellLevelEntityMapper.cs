@@ -13,7 +13,7 @@ public class RaceTraitSpellLevelEntityMapper : IEntityTypeConfiguration<RaceTrai
 
         builder.HasKey( e => new { e.RaceTraitSpellId, e.LevelId } );
 
-        builder.HasOne( e => e.RaceTraitSpell ).WithMany().HasForeignKey( e => e.RaceTraitSpellId );
+        builder.HasOne( e => e.RaceTraitSpell ).WithMany( e => e.Levels ).HasForeignKey( e => e.RaceTraitSpellId );
         builder.HasOne( e => e.Level ).WithMany().HasForeignKey( e => e.LevelId );
     }
 }

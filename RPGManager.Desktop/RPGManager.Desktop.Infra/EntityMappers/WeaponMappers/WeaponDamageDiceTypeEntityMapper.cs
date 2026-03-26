@@ -15,6 +15,6 @@ public class WeaponDamageDiceTypeEntityMapper : IEntityTypeConfiguration<WeaponD
         builder.HasKey( e => new { e.WeaponDamageId, e.DiceTypeId } );
 
         builder.HasOne( e => e.WeaponDamage ).WithMany( e => e.DamageDiceTypes ).HasForeignKey( e => e.WeaponDamageId );
-        builder.HasOne( e => e.DiceType ).WithMany().HasForeignKey( e => e.DiceTypeId );
+        builder.HasOne( e => e.DiceType ).WithMany( e => e.WeaponsDamages ).HasForeignKey( e => e.DiceTypeId );
     }
 }

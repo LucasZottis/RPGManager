@@ -14,7 +14,7 @@ public class ClassToolProficiencyOptionEntityMapper : IEntityTypeConfiguration<C
 
         builder.HasKey( e => new { e.ClassToolProficiencyChoiceId, e.ToolId } );
 
-        builder.HasOne( e => e.ClassToolProficiencyChoice ).WithMany().HasForeignKey( e => e.ClassToolProficiencyChoiceId );
+        builder.HasOne( e => e.ClassToolProficiencyChoice ).WithMany( e => e.Options ).HasForeignKey( e => e.ClassToolProficiencyChoiceId );
         builder.HasOne( e => e.Tool ).WithMany().HasForeignKey( e => e.ToolId );
     }
 }

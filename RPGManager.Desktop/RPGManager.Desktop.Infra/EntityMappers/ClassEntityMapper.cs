@@ -15,6 +15,6 @@ public class ClassEntityMapper : EntityBaseEntityMapper<Class>
 
         builder.HasOne( e => e.GameSystem ).WithMany( e => e.Classes ).HasForeignKey( e => e.GameSystemId );
         builder.HasOne( e => e.PrimaryAbilityScore ).WithMany( e => e.PrimaryClassAbilityScore ).HasForeignKey( e => e.PrimaryAbilityScoreId );
-        builder.HasOne( e => e.HitDiceType ).WithMany().HasForeignKey( e => e.HitDiceTypeId );
+        builder.HasOne( e => e.HitDiceType ).WithMany( e => e.HitDiceClasses ).HasForeignKey( e => e.HitDiceTypeId );
     }
 }

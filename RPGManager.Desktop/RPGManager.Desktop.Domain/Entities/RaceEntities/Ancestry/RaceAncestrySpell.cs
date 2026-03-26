@@ -10,5 +10,5 @@ public class RaceAncestrySpell : EntityBase
     public RaceAncestry RaceAncestry { get; set; }
     public Spell Spell { get; set; }
 
-    public RaceAncestrySpellLevel Level { get; set; }
+    public ICollection<RaceAncestrySpellLevel>? Levels { get; set; }
 }
