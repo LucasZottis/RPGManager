@@ -2,7 +2,7 @@
 
 public class BackgroundSkillProficiency
 {
-    public Guid BackgorundId { get; set; }
+    public Guid BackgroundId { get; set; }
     public Guid SkillId { get; set; }
 
     public Background Background { get; set; }

@@ -1,5 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Entities.Backgrounds;
-using RPGManager.Desktop.Domain.Entities.Base;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
 
 namespace RPGManager.Desktop.Domain.Entities.RaceEntities;
 
@@ -10,5 +9,5 @@ public class RaceAbilityScore : EntityBase
     public int Increase { get; set; } = 1;
 
     public Race Race { get; set; }
-    public Background AbilityScore { get; set; }
+    public AbilityScore AbilityScore { get; set; }
 }

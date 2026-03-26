@@ -10,7 +10,8 @@ public class CurrencyTypeEntityMapper : EntityBaseEntityMapper<CurrencyType>
     {
         builder.Property( e => e.GameSystemId ).IsRequired();
         builder.Property( e => e.Name ).IsRequired().HasMaxLength( MaxLength.ShortName );
-        builder.Property( e => e.Abbreviation ).IsRequired().HasMaxLength( 5 );
+        builder.Property( e => e.Abbreviation ).HasMaxLength( 5 );
+        builder.Property( e => e.IsBaseCurrency ).IsRequired().HasDefaultValue( false );
 
         builder.HasOne( e => e.GameSystem ).WithMany( e => e.CurrencyTypes ).HasForeignKey( e => e.GameSystemId );
     }

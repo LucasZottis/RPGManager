@@ -2,9 +2,9 @@
 
 public class ClassSkillProficiencyOption
 {
-    public Guid ClassId { get; set; }
+    public Guid ClassSkillProficiencyChoiceId { get; set; }
     public Guid SkillId { get; set; }
 
-    public Class Class { get; set; }
+    public ClassSkillProficiencyChoice ClassSkillProficiencyChoice { get; set; }
     public Skill Skill { get; set; }
 }

@@ -1,6 +1,8 @@
-﻿namespace RPGManager.Desktop.Domain.Entities;
+﻿using RPGManager.Desktop.Domain.Entities.Base;
 
-public class Spell
+namespace RPGManager.Desktop.Domain.Entities;
+
+public class Spell : EntityBase
 {
 
 }
