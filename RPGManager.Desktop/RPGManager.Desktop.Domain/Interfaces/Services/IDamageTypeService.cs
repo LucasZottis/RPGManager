@@ -1,9 +1,8 @@
-﻿using RPGManager.Desktop.Domain.Entities;
-using RPGManager.Desktop.Domain.Models;
+using RPGManager.Desktop.Domain.Entities;
+using RPGManager.Desktop.Domain.Models.DamageTypes;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Services;
 
-public interface IDamageTypeService : IServiceBase<DamageType, DamageTypeModel>
+public interface IDamageTypeService : ICrudServiceBase<DamageType, DamageTypeRegisterDto, DamageTypeQueryDto>
 {
-    //Task<DamageTypeModel> Create( DamageTypeModel model );
 }

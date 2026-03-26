@@ -1,9 +1,7 @@
-﻿using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
-using RPGManager.Desktop.Domain.Models.Items.Armor;
+using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IArmorCategoryMapper : IMapper<ArmorCategory, ArmorCategoryModel>
+public interface IArmorCategoryMapper : IMapperTwo<ArmorCategory>
 {
-
 }
