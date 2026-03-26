@@ -4,13 +4,10 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.WeaponMappers;
 
-public class WeaponCategoryEntityMapper : EntityBaseEntityMapper<WeaponCategory>
+public class WeaponCategoryEntityMapper : GameSystemVersionBaseEntityMapper<WeaponCategory>
 {
     protected override void Map( EntityTypeBuilder<WeaponCategory> builder )
     {
-        builder.Property( e => e.GameSystemId ).IsRequired();
         builder.Property( e => e.Name ).IsRequired().HasMaxLength( MaxLength.ShortName );
-
-        builder.HasOne( e => e.GameSystem ).WithMany( e => e.WeaponCategories ).HasForeignKey( e => e.GameSystemId );
     }
 }

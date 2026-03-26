@@ -1,4 +1,5 @@
-﻿using RPGManager.Desktop.Infra.Db.Contexts;
+﻿using RPGManager.Desktop.Domain.Entities.GameSystems;
+using RPGManager.Desktop.Infra.Db.Contexts;
 
 namespace RPGManager.Desktop.Infra.Repositories;
 

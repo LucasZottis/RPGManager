@@ -5,7 +5,7 @@ using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RPGManager.Desktop.Domain.Entities;
 
-public class AbilityScore : GameSystemEntityBase
+public class AbilityScore : GameSystemVersionEntityBase
 {
     public string Name { get; set; }
     public string? Abbreviation { get; set; }

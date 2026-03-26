@@ -1,11 +1,10 @@
 ﻿using RPGManager.Desktop.Domain.Entities.Base;
+using RPGManager.Desktop.Domain.Entities.GameSystems;
 
 namespace RPGManager.Desktop.Domain.Entities;
 
-public class Language : EntityBase
-{    public Guid GameSystemId { get; set; }
+public class Language : GameSystemVersionEntityBase
+{    
     public string Name { get; set; }
     public string? Alphabet { get; set; }
-
-    public GameSystem GameSystem { get; set; }
 }

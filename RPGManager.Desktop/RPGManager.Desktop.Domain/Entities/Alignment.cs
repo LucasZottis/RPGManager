@@ -2,7 +2,7 @@
 
 namespace RPGManager.Desktop.Domain.Entities;
 
-public class Alignment : GameSystemEntityBase
+public class Alignment : GameSystemVersionEntityBase
 {
     public string Name { get; set; }
     public string Description { get; set; }

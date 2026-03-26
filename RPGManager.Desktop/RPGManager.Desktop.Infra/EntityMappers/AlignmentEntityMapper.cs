@@ -3,7 +3,7 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers;
 
-public class AlignmentEntityMapper : GameSystemBaseEntityMapper<Alignment>
+public class AlignmentEntityMapper : GameSystemVersionBaseEntityMapper<Alignment>
 {
     protected override void Map( EntityTypeBuilder<Alignment> builder )
     {

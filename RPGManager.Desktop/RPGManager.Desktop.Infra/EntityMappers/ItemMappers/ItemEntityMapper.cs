@@ -5,7 +5,7 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.ItemMappers;
 
-public class ItemEntityMapper : GameSystemBaseEntityMapper<Item>
+public class ItemEntityMapper : GameSystemVersionBaseEntityMapper<Item>
 {
     protected override void Map( EntityTypeBuilder<Item> builder )
     {

@@ -3,7 +3,7 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers;
 
-public class AbilityScoreEntityMapper : GameSystemBaseEntityMapper<AbilityScore>
+public class AbilityScoreEntityMapper : GameSystemVersionBaseEntityMapper<AbilityScore>
 {
     protected override void Map( EntityTypeBuilder<AbilityScore> builder )
     {

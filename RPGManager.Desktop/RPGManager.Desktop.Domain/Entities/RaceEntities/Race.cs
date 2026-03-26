@@ -5,7 +5,7 @@ using RPGManager.Desktop.Domain.Entities.RaceEntities.Trait;
 
 namespace RPGManager.Desktop.Domain.Entities.RaceEntities;
 
-public class Race : GameSystemEntityBase
+public class Race : GameSystemVersionEntityBase
 {
     public Guid? ParentRaceId { get; set; }
 

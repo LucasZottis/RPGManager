@@ -3,7 +3,7 @@ using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
 
 namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
-public class WeaponCategory : GameSystemEntityBase
+public class WeaponCategory : GameSystemVersionEntityBase
 {
     public string Name { get; set; }
 

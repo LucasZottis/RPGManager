@@ -2,7 +2,7 @@
 
 namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
-public class WeaponType : GameSystemEntityBase
+public class WeaponType : GameSystemVersionEntityBase
 {
     public string Name { get; set; }
 

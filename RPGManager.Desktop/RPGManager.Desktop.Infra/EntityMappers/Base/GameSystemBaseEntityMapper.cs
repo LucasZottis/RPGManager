@@ -1,22 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RPGManager.Desktop.Domain.Entities.Base;
+using RPGManager.Desktop.Domain.Entities.GameSystems;
 using System.Linq.Expressions;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.Base;
 
-public abstract class GameSystemBaseEntityMapper<TEntity> : EntityBaseEntityMapper<TEntity>
-    where TEntity : GameSystemEntityBase
+public abstract class GameSystemVersionBaseEntityMapper<TEntity> : EntityBaseEntityMapper<TEntity>
+    where TEntity : GameSystemVersionEntityBase
 {
-    public GameSystemBaseEntityMapper()
+    public GameSystemVersionBaseEntityMapper()
     {
     }
 
     private void ConfigureGameSystem( EntityTypeBuilder<TEntity> builder )
     {
-        builder.Property( e => e.GameSystemId ).IsRequired();
+        builder.Property( e => e.GameSystemVersionId ).IsRequired();
 
         // Busca no GameSystem uma propriedade ICollection<TEntity>
-        var collectionProperty = typeof( GameSystem )
+        var collectionProperty = typeof( GameSystemVersion )
             .GetProperties()
             .FirstOrDefault( p =>
                 p.PropertyType.IsGenericType &&
@@ -27,20 +28,20 @@ public abstract class GameSystemBaseEntityMapper<TEntity> : EntityBaseEntityMapp
         if ( collectionProperty is not null )
         {
             // Monta: gs => gs.NomeDaColeção  (ex: gs => gs.AbilityScores)
-            var gsParam = Expression.Parameter( typeof( GameSystem ), "gs" );
+            var gsParam = Expression.Parameter( typeof( GameSystemVersion ), "gs" );
             var propertyAccess = Expression.Property( gsParam, collectionProperty );
-            var lambda = Expression.Lambda<Func<GameSystem, IEnumerable<TEntity>>>( propertyAccess, gsParam );
+            var lambda = Expression.Lambda<Func<GameSystemVersion, IEnumerable<TEntity>>>( propertyAccess, gsParam );
 
-            builder.HasOne( e => e.GameSystem )
+            builder.HasOne( e => e.GameSystemVersion )
                    .WithMany( lambda )
-                   .HasForeignKey( e => e.GameSystemId );
+                   .HasForeignKey( e => e.GameSystemVersionId );
         }
         else
         {
             // Nenhuma coleção encontrada — sem navegação inversa
-            builder.HasOne( e => e.GameSystem )
+            builder.HasOne( e => e.GameSystemVersion )
                    .WithMany()
-                   .HasForeignKey( e => e.GameSystemId );
+                   .HasForeignKey( e => e.GameSystemVersionId );
         }
     }
 

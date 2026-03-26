@@ -4,7 +4,7 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.WeaponMappers;
 
-public class WeaponMasteryPropertyEntityMapper : GameSystemBaseEntityMapper<WeaponMasteryProperty>
+public class WeaponMasteryPropertyEntityMapper : GameSystemVersionBaseEntityMapper<WeaponMasteryProperty>
 {
     protected override void Map( EntityTypeBuilder<WeaponMasteryProperty> builder )
     {

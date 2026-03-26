@@ -3,7 +3,7 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers;
 
-public class LevelEntityMapper : GameSystemBaseEntityMapper<Level>
+public class LevelEntityMapper : GameSystemVersionBaseEntityMapper<Level>
 {
     protected override void Map( EntityTypeBuilder<Level> builder )
     {

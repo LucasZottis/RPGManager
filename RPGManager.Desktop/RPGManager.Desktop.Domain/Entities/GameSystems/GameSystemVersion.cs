@@ -5,12 +5,16 @@ using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 using RPGManager.Desktop.Domain.Entities.RaceEntities;
 
-namespace RPGManager.Desktop.Domain.Entities;
+namespace RPGManager.Desktop.Domain.Entities.GameSystems;
 
-public class GameSystem : EntityBase
+public class GameSystemVersion : EntityBase
 {
-    public string Name { get; set; }
-    public byte LevelLimit { get; set; }
+    public Guid GameSystemId { get; set; }
+    
+    public string Version { get; set; }
+    public string? LegalInformation { get; set; }
+
+    public GameSystem GameSystem { get; set; }
 
     public ICollection<Race> Races { get; set; }
     public ICollection<Class> Classes { get; set; }

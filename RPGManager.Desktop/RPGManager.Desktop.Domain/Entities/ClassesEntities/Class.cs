@@ -1,11 +1,12 @@
 ﻿using RPGManager.Desktop.Domain.Entities.ClassesEntities.StartingEquipment;
 using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
+using RPGManager.Desktop.Domain.Entities.GameSystems;
 
 namespace RPGManager.Desktop.Domain.Entities.ClassesEntities;
 
 public class Class : ClassBase
 {
-    public Guid GameSystemId { get; set; }
+    public Guid GameSystemVersionId { get; set; }
     public Guid PrimaryAbilityScoreId { get; set; }
     public Guid HitDiceTypeId { get; set; }
 
@@ -13,7 +14,7 @@ public class Class : ClassBase
 
     public DiceType HitDiceType { get; set; }
     public AbilityScore PrimaryAbilityScore { get; set; }
-    public GameSystem GameSystem { get; set; }
+    public GameSystemVersion GameSystemVersion { get; set; }
 
     public ICollection<SubClass> SubClasses { get; set; }
     public ICollection<ClassSavingThrowProficiency> SavingThrowProficiencies { get; set; }

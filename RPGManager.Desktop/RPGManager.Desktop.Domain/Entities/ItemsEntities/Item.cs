@@ -6,7 +6,7 @@ using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RPGManager.Desktop.Domain.Entities.ItemsEntities;
 
-public class Item : GameSystemEntityBase
+public class Item : GameSystemVersionEntityBase
 {
     public Guid? CostCurrencyTypeId { get; set; }
 

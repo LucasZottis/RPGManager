@@ -3,7 +3,7 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers;
 
-public class SizeEntityMapper : GameSystemBaseEntityMapper<Size>
+public class SizeEntityMapper : GameSystemVersionBaseEntityMapper<Size>
 {
     protected override void Map( EntityTypeBuilder<Size> builder )
     {

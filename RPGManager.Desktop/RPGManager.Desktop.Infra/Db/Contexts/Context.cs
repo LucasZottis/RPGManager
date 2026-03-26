@@ -12,6 +12,7 @@ using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
 using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 using RPGManager.Desktop.Domain.Entities.Feats;
 using RPGManager.Desktop.Domain.Entities.Feats.FeatBenefits;
+using RPGManager.Desktop.Domain.Entities.GameSystems;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.Gears;

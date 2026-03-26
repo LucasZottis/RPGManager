@@ -5,7 +5,7 @@ using RPGManager.Desktop.Domain.Entities.Base;
 
 namespace RPGManager.Desktop.Domain.Entities.Backgrounds;
 
-public class Background : GameSystemEntityBase
+public class Background : GameSystemVersionEntityBase
 {
     public string Name { get; set; }
     public string? Description { get; set; }

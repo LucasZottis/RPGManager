@@ -3,13 +3,10 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers;
 
-public class DamageTypeEntityMapper : EntityBaseEntityMapper<DamageType>
+public class DamageTypeEntityMapper : GameSystemVersionBaseEntityMapper<DamageType>
 {
     protected override void Map( EntityTypeBuilder<DamageType> builder )
     {
-        builder.Property( e => e.GameSystemId ).IsRequired();
         builder.Property( e => e.Name ).IsRequired().HasMaxLength( MaxLength.ShortName );
-
-        builder.HasOne( e => e.GameSystem ).WithMany( e => e.DamageTypes ).HasForeignKey( e => e.GameSystemId );
     }
 }

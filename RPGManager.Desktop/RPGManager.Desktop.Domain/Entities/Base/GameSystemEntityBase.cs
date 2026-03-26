@@ -1,8 +1,10 @@
-﻿namespace RPGManager.Desktop.Domain.Entities.Base;
+﻿using RPGManager.Desktop.Domain.Entities.GameSystems;
 
-public class GameSystemEntityBase : EntityBase
+namespace RPGManager.Desktop.Domain.Entities.Base;
+
+public class GameSystemVersionEntityBase : EntityBase
 {
-    public Guid GameSystemId { get; set; }
+    public Guid GameSystemVersionId { get; set; }
 
-    public GameSystem GameSystem { get; set; }
+    public GameSystemVersion GameSystemVersion { get; set; }
 }

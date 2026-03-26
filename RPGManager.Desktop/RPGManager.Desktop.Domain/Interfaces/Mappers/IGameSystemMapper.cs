@@ -1,4 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Entities;
+﻿using RPGManager.Desktop.Domain.Entities.GameSystems;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 

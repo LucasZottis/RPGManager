@@ -4,7 +4,7 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.FeatMappers;
 
-public class FeatEntityMapper : GameSystemBaseEntityMapper<Feat>
+public class FeatEntityMapper : GameSystemVersionBaseEntityMapper<Feat>
 {
     protected override void Map( EntityTypeBuilder<Feat> builder )
     {

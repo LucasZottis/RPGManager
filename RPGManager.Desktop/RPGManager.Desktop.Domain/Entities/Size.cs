@@ -2,7 +2,7 @@
 
 namespace RPGManager.Desktop.Domain.Entities;
 
-public class Size : GameSystemEntityBase
+public class Size : GameSystemVersionEntityBase
 {
     public string Name { get; set; }
 

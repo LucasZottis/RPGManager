@@ -6,7 +6,7 @@ using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 
-public class CurrencyType : GameSystemEntityBase
+public class CurrencyType : GameSystemVersionEntityBase
 {
     public string Name { get; set; }
     public string? Abbreviation { get; set; }

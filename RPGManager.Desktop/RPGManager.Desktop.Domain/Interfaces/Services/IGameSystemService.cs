@@ -1,4 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Entities;
+﻿using RPGManager.Desktop.Domain.Entities.GameSystems;
 using RPGManager.Desktop.Domain.Models.GameSystems;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Services;

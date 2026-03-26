@@ -3,7 +3,7 @@ using RPGManager.Desktop.Domain.Entities.Feats.FeatBenefits;
 
 namespace RPGManager.Desktop.Domain.Entities.Feats;
 
-public class Feat : GameSystemEntityBase
+public class Feat : GameSystemVersionEntityBase
 {
     public Guid FeatCategoryId { get; set; }
 

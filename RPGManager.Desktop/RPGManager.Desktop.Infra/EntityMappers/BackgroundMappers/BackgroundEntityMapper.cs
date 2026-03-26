@@ -6,11 +6,11 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.BackgroundMappers;
 
-public class BackgroundEntityMapper : GameSystemBaseEntityMapper<Background>
+public class BackgroundEntityMapper : GameSystemVersionBaseEntityMapper<Background>
 {
     protected override void Map( EntityTypeBuilder<Background> builder )
     {
-        builder.Property( p => p.GameSystemId );
+        builder.Property( p => p.GameSystemVersionId );
         builder.Property( p => p.Name ).HasMaxLength( MaxLength.ShortName );
         builder.Property( p => p.Description ).IsRequired( false );
 

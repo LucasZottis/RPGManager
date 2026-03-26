@@ -2,7 +2,7 @@
 
 namespace RPGManager.Desktop.Domain.Entities;
 
-public class Monster : GameSystemEntityBase
+public class Monster : GameSystemVersionEntityBase
 {
 
 }

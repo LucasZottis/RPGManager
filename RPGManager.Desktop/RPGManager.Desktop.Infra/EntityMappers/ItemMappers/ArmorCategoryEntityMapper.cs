@@ -4,7 +4,7 @@ using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.ItemMappers;
 
-public class ArmorCategoryEntityMapper : GameSystemBaseEntityMapper<ArmorCategory>
+public class ArmorCategoryEntityMapper : GameSystemVersionBaseEntityMapper<ArmorCategory>
 {
     protected override void Map( EntityTypeBuilder<ArmorCategory> builder )
     {

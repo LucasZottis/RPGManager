@@ -2,7 +2,7 @@
 
 namespace RPGManager.Desktop.Domain.Entities.Feats;
 
-public class FeatCategory : GameSystemEntityBase
+public class FeatCategory : GameSystemVersionEntityBase
 {
     public string Name { get; set; }
 }
