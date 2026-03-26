@@ -1,8 +1,6 @@
-﻿
+namespace RPGManager.Desktop.Application.Mappers;
 
-//namespace RPGManager.Desktop.Application.Mappers;
+public class LanguageMapper : MapperTwo<Language>, ILanguageMapper
+{
 
-//public class LanguageMapper : Mapper<Language, LanguageModel>, ILanguageMapper
-//{
-
-//}
+}

@@ -1,9 +1,6 @@
-﻿using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
-using RPGManager.Desktop.Domain.Models.Items.Weapons;
-
 namespace RPGManager.Desktop.Application.Mappers;
 
-public class WeaponPropertyMapper : Mapper<WeaponProperty, WeaponPropertyModel>, IWeaponPropertyMapper
+public class WeaponPropertyMapper : MapperTwo<WeaponProperty>, IWeaponPropertyMapper
 {
 
 }
