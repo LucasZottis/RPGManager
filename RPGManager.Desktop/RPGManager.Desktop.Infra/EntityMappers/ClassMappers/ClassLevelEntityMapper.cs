@@ -12,9 +12,10 @@ public class ClassLevelEntityMapper : IEntityTypeConfiguration<ClassLevel>
         builder.Property( e => e.LevelId ).IsRequired().ValueGeneratedNever();
         builder.Property( e => e.ProficiencyBonus ).IsRequired();
 
-        builder.HasKey( e => new { e.ClassId, e.LevelId } );
+        builder.HasKey( e => new { e.LevelId, e.ClassId } );
 
         builder.HasOne( e => e.Class ).WithMany( e => e.Levels ).HasForeignKey( e => e.ClassId );
         builder.HasOne( e => e.Level ).WithMany( e => e.ClassesLevels ).HasForeignKey( e => e.LevelId );
+
     }
 }

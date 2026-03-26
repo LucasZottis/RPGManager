@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 using RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
 using RPGManager.Desktop.Infra.EntityMappers.Base;
 

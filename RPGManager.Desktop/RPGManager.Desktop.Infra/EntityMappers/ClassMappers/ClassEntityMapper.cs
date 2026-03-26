@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 using RPGManager.Desktop.Infra.EntityMappers.Base;
 
-namespace RPGManager.Desktop.Infra.EntityMappers;
+namespace RPGManager.Desktop.Infra.EntityMappers.ClassMappers;
 
 public class ClassEntityMapper : EntityBaseEntityMapper<Class>
 {
