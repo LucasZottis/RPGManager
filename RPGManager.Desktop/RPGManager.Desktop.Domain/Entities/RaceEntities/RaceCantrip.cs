@@ -6,4 +6,5 @@ public class RaceCantrip
     public Guid RaceId { get; set; }
 
     public Race Race { get; set; }
+    public Spell? Spell { get; set; }
 }

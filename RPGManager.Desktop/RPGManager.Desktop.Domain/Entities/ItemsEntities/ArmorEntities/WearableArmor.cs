@@ -2,7 +2,7 @@
 
 public class WearableArmor : Armor
 {
-    public Guid? AmorClasscAbilityScoreModifierId { get; set; }
+    public Guid? ArmorClassAbilityScoreModifierId { get; set; }
 
     public byte BaseArmorClass { get; set; }
     public bool AppliesAbilityModifier { get; set; }

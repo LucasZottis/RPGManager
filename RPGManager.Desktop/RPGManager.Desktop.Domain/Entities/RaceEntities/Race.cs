@@ -22,5 +22,8 @@ public class Race : GameSystemEntityBase
     public ICollection<RaceSizeOption>? SizeOptions { get; set; }
     public ICollection<Spell>? Spells { get; set; }
     public ICollection<RaceAncestry>? Ancestries { get; set; }
+    public ICollection<RaceAbilityScore>? AbilityScores { get; set; }
+    public ICollection<RaceLanguage>? Languages { get; set; }
+    public ICollection<RaceCantrip>? Cantrips { get; set; }
 
 }
