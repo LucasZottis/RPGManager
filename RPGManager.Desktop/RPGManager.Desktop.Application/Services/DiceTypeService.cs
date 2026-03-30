@@ -1,4 +1,5 @@
-﻿using RPGManager.Desktop.Domain.Models.Dices;
+﻿using RPGManager.Desktop.Application.Services.Base;
+using RPGManager.Desktop.Domain.DTOs.Dices;
 
 namespace RPGManager.Desktop.Application.Services;
 

@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.RaceEntities;
+//using RPGManager.Desktop.Domain.Entities.RaceEntities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IRaceSizeOptionRepository : IRepositoryBase<RaceSizeOption>
-{
+//public interface IRaceSizeOptionRepository : IRepositoryBase<RaceSizeOption>
+//{
 
-}
+//}

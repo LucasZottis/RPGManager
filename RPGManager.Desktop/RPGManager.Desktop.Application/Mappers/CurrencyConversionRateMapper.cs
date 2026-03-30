@@ -1,7 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
+//using RPGManager.Desktop.Application.Mappers.Base;
+//using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 
-namespace RPGManager.Desktop.Application.Mappers;
+//namespace RPGManager.Desktop.Application.Mappers;
 
-public class CurrencyConversionRateMapper : MapperTwo<CurrencyConversionRate>, ICurrencyConversionRateMapper
-{
-}
+//public class CurrencyConversionRateMapper : MapperTwo<CurrencyConversionRate>, ICurrencyConversionRateMapper
+//{
+//}

@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using RPGManager.Desktop.Domain.Entities.Base;
 using RPGManager.Desktop.Infra.Db.Contexts;
+using RPGManager.Desktop.Infra.Utils;
 using System.Linq.Expressions;
-using System.Reflection;
 
 namespace RPGManager.Desktop.Infra.Repositories;
 
@@ -12,71 +11,44 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
 {
     protected ContextBase Context { get; private set; }
 
-    public RepositoryBase(ContextBase context)
+    public RepositoryBase( ContextBase context )
         => Context = context;
 
-    private bool IsValidProperty(PropertyInfo propertyInfo)
+    protected async Task<TEntity?> GetEntity( Expression<Func<TEntity, bool>> expressao )
     {
-        return !propertyInfo.PropertyType.IsInterface
-            && propertyInfo.PropertyType.BaseType != typeof(EntityBase)
-            && propertyInfo.Name != "RegistrationDate"
-            && propertyInfo.Name != "Guid"
-            && propertyInfo.Name != "Id";
+        return await Context.Set<TEntity>().AsNoTracking().FirstOrDefaultAsync( expressao );
     }
 
-    private EntityEntry<TEntity> AttachEntity(TEntity entity)
+    protected async Task<IEnumerable<TEntity>> GetEntityList( Expression<Func<TEntity, bool>> expression )
     {
-        Context.Set<TEntity>().Attach(entity);
-        return Context.Entry(entity);
+        return await Context.Set<TEntity>().Where( expression ).AsNoTracking().ToListAsync();
     }
 
-    private void UpdateCore(TEntity entity)
+    public virtual async Task Add( TEntity entity )
     {
-        var entityEntry = AttachEntity(entity);
-        var properties = typeof(TEntity).GetProperties();
-
-        properties.Where(IsValidProperty)
-            .ToList().ForEach(p => entityEntry.Property(p.Name).IsModified = true);
-    }
-
-    protected async Task<TEntity?> GetEntity(Expression<Func<TEntity, bool>> expressao)
-    {
-        return await Context.Set<TEntity>().AsNoTracking().FirstOrDefaultAsync(expressao);
-    }
-
-    protected async Task<IEnumerable<TEntity>> GetEntityList(Expression<Func<TEntity, bool>> expression)
-    {
-        return await Context.Set<TEntity>().Where(expression).AsNoTracking().ToListAsync();
-    }
-
-    public virtual async Task Add(TEntity entity)
-    {
+        ThrowHelper.ThrowNullEntity( entity );
         entity.Id = Guid.NewGuid();
+
         Context.Add( entity );
     }
 
     public async Task AddRange( IEnumerable<TEntity> entities )
     {
-        entities.ForEach<TEntity>( e =>
+        foreach ( var entity in entities )
         {
-            Add( e );
-        } );
+            await Add( entity );
+        }
     }
 
-    public virtual async Task Update(TEntity entity)
+    public virtual async Task Update( TEntity entity )
     {
-        if (entity == null)
-            throw new ArgumentNullException("Entidade não pode ser nula.");
-
-        //UpdateCore( entity );
-        Context.Update(entity);
+        ThrowHelper.ThrowNullEntity( entity );
+        Context.Update( entity );
     }
 
-    public virtual async Task Remove(TEntity entity)
+    public virtual async Task Remove( TEntity entity )
     {
-        if (entity == null)
-            throw new ArgumentNullException("Entidade não pode ser nula.");
-
+        ThrowHelper.ThrowNullEntity( entity );
         Context.Remove( entity );
     }
 
@@ -85,7 +57,7 @@ public class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
         Context.Set<TEntity>().RemoveRange( entities );
     }
 
-    public virtual async Task<TEntity?> GetById(Guid id)
+    public virtual async Task<TEntity?> GetById( Guid id )
     {
         return await GetEntity( e => e.Id == id );
     }

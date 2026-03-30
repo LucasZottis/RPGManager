@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.Backgrounds.ToolProficiencies;
+//using RPGManager.Desktop.Domain.Entities.Backgrounds.ToolProficiencies;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IBackgroundToolProficiencyOptionRepository : IRepositoryBase<BackgroundToolProficiencyOption>
-{
+//public interface IBackgroundToolProficiencyOptionRepository : IRepositoryBase<BackgroundToolProficiencyOption>
+//{
 
-}
+//}

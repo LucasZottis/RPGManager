@@ -20,7 +20,6 @@ public static class RepositoryDependencyInjection
 
         foreach ( var implementation in repositoryImplementations )
         {
-            // Interfaces específicas que herdam de IRepositoryBase<>
             var specificInterfaces = implementation.GetInterfaces()
                 .Where( i =>
                 {
@@ -34,9 +33,6 @@ public static class RepositoryDependencyInjection
 
             foreach ( var service in specificInterfaces )
                 services.AddScoped( service, implementation );
-
-            //// opcional: registrar o tipo concreto
-            //services.AddScoped( implementation );
         }
 
         return services;

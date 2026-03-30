@@ -1,4 +1,5 @@
-using RPGManager.Desktop.Domain.Models.Features;
+using RPGManager.Desktop.Application.Services.Base;
+using RPGManager.Desktop.Domain.DTOs.Features;
 
 namespace RPGManager.Desktop.Application.Services;
 

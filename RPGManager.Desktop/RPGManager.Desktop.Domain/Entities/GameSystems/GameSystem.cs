@@ -7,5 +7,5 @@ public class GameSystem : EntityBase
     public string Name { get; set; }
     public byte LevelLimit { get; set; }
 
-    public ICollection<GameSystemVersion> Versions { get; set; }
+    public ICollection<GameSystemVersion> Versions { get; set; } = [];
 }

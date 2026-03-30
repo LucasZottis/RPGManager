@@ -3,7 +3,8 @@
 public class ClassFeatureAttributeLevel
 {
     public Guid ClassFeatureAttributeId { get; set; }
-    public Guid ClassLevelId { get; set; }
+    public Guid ClassId { get; set; }
+    public Guid LevelId { get; set; }
     public Guid? DiceTypeId { get; set; }
 
     public byte Value { get; set; }

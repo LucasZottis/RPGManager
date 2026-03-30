@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.Feats.FeatBenefits;
+//using RPGManager.Desktop.Domain.Entities.Feats.FeatBenefits;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IFeatBenefitToolProficiencyRepository : IRepositoryBase<FeatBenefitToolProficiency>
-{
+//public interface IFeatBenefitToolProficiencyRepository : IRepositoryBase<FeatBenefitToolProficiency>
+//{
 
-}
+//}

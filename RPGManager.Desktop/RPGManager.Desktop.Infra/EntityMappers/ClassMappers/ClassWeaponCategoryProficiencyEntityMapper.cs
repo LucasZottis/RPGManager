@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
-using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.ClassMappers;
@@ -14,6 +12,6 @@ public class ClassWeaponCategoryProficiencyEntityMapper : EntityBaseEntityMapper
         builder.Property( e => e.WeaponCategoryId ).IsRequired();
 
         builder.HasOne( e => e.Class ).WithMany( e => e.WeaponProficiencies ).HasForeignKey( e => e.ClassId );
-        builder.HasOne( e => e.WeaponCategory ).WithMany().HasForeignKey( e => e.WeaponCategoryId );
+        builder.HasOne( e => e.WeaponCategory ).WithMany(e => e.ClassWeaponCategoryProficiencies).HasForeignKey( e => e.WeaponCategoryId );
     }
 }

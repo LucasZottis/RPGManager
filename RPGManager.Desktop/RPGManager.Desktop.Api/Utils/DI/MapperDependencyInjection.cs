@@ -1,4 +1,4 @@
-﻿using RPGManager.Desktop.Application.Mappers;
+﻿using RPGManager.Desktop.Application.Mappers.Base;
 using RPGManager.Desktop.Domain.Interfaces.Mappers;
 using System.Reflection;
 

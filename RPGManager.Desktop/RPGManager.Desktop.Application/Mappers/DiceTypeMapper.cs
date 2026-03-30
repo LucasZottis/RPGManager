@@ -1,4 +1,6 @@
-﻿namespace RPGManager.Desktop.Application.Mappers;
+﻿using RPGManager.Desktop.Application.Mappers.Base;
+
+namespace RPGManager.Desktop.Application.Mappers;
 
 public class DiceTypeMapper : MapperTwo<DiceType>, IDiceTypeMapper
 {

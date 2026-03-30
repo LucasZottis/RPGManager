@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.Backgrounds.BackgroundAbilityScores;
+//using RPGManager.Desktop.Domain.Entities.Backgrounds.BackgroundAbilityScores;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IBackgroundAbilityScoreOptionRepository : IRepositoryBase<BackgroundAbilityScoreOption>
-{
+//public interface IBackgroundAbilityScoreOptionRepository : IRepositoryBase<BackgroundAbilityScoreOption>
+//{
 
-}
+//}

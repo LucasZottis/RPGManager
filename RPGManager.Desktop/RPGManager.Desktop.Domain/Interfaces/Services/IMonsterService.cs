@@ -1,5 +1,6 @@
+using RPGManager.Desktop.Domain.DTOs.Monsters;
 using RPGManager.Desktop.Domain.Entities;
-using RPGManager.Desktop.Domain.Models.Monsters;
+using RPGManager.Desktop.Domain.Interfaces.Services.BaseServices;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Services;
 

@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IClassLevelRepository : IRepositoryBase<ClassLevel>
-{
+//public interface IClassLevelRepository : IRepositoryBase<ClassLevel>
+//{
 
-}
+//}

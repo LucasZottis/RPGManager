@@ -1,41 +1,45 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using RPGManager.Desktop.Infra.Db.Interfaces;
-using System.Reflection;
 
 namespace RPGManager.Desktop.Infra.Db.Contexts;
 
 public class ContextBase : DbContext
 {
     private readonly ILogger _logger;
-    private readonly IDbContextConfigurator _dbContextConfigurator;
+    private readonly IServiceProvider _serviceProvider;
 
-    public ContextBase( IDbContextConfigurator dbContextConfigurator )
+    public ContextBase( IServiceProvider serviceProvider )
     {
-        _dbContextConfigurator = dbContextConfigurator;
+        _serviceProvider = serviceProvider;
     }
 
     protected override void OnConfiguring( DbContextOptionsBuilder builder )
     {
-        _dbContextConfigurator.GetProviderConfigurator().Configure( builder );
+        var configurator = _serviceProvider.GetRequiredService<IProviderConfigurator>();
+        configurator.Configure( builder );
         base.OnConfiguring( builder );
     }
 
     protected override void ConfigureConventions( ModelConfigurationBuilder builder )
     {
-        var nameConventionConfigurator = _dbContextConfigurator.GetNameConvetionConfigurator();
+        var nameConventionConfigurator = _serviceProvider.GetRequiredService<INameConvetionConfigurator>();
+        var columnTypeConfigurator = _serviceProvider.GetRequiredService<IColumnTypeConfigurator>();
 
-        if ( nameConventionConfigurator != null )
+        if ( nameConventionConfigurator.IsNotNull() )
             builder.Conventions.Add( _ => nameConventionConfigurator );
 
-        _dbContextConfigurator.GetColumnTypeConfigurator().Configure( builder );
+        columnTypeConfigurator.Configure( builder );
 
         base.ConfigureConventions( builder );
     }
 
     protected override void OnModelCreating( ModelBuilder modelBuilder )
     {
-        modelBuilder.ApplyConfigurationsFromAssembly( Assembly.GetExecutingAssembly() );
+        //modelBuilder.ApplyConfigurationsFromAssembly( Assembly.GetExecutingAssembly() );
+        var configurator = _serviceProvider.GetRequiredService<EntityMapperConfigurator>();
+        configurator.Configure( modelBuilder );
         base.OnModelCreating( modelBuilder );
     }
 

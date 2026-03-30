@@ -1,5 +1,6 @@
+using RPGManager.Desktop.Domain.DTOs.Features;
 using RPGManager.Desktop.Domain.Entities;
-using RPGManager.Desktop.Domain.Models.Features;
+using RPGManager.Desktop.Domain.Interfaces.Services.BaseServices;
 
 namespace RPGManager.Desktop.Domain.Interfaces.Services;
 

@@ -9,5 +9,7 @@ public class Armor : Item
     public bool DisadvantageOnStealth { get; set; }
 
     public ArmorCategory ArmorCategory { get; set; }
+    public ShieldArmor? Shield { get; set; }
+    public WearableArmor? WearableArmor { get; set; }
     public AbilityScore? RequiredAbilityScore { get; set; }
 }

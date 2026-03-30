@@ -1,7 +1,6 @@
-﻿using RPGManager.Desktop.Application.Services;
+﻿using RPGManager.Desktop.Application.Services.Base;
+using RPGManager.Desktop.Domain.Interfaces.Services.BaseServices;
 using System.Reflection;
-
-namespace RPGManager.Desktop.Api.Utils.DI;
 
 public static class ServiceDependencyInjection
 {
@@ -10,60 +9,44 @@ public static class ServiceDependencyInjection
         params Assembly[] assemblies )
     {
         var allTypes = assemblies.SelectMany( a => a.GetTypes() );
-        //.Where( t => !t.IsAbstract && !t.IsInterface );
 
         var serviceImplementations = allTypes
             .Where( t =>
-            {
-                //return IsSubclassOfRawGeneric( typeof( ServiceBase<,> ), t )
-                    //|| IsSubclassOfRawGeneric( typeof( CrudServiceBase<,,> ), t );
-
-                return IsSubclassOfRawGeneric( typeof( CrudServiceBase<,,> ), t );
-            } );
+                !t.IsAbstract &&
+                !t.IsInterface &&
+                InheritsFromServiceBase( t ) );
 
         foreach ( var implementation in serviceImplementations )
         {
-            // Interfaces específicas que herdam de IServiceBase<,>
             var specificInterfaces = implementation.GetInterfaces()
                 .Where( i =>
-                {
-                    return i.IsInterface
-                        && i.GetInterfaces().Any( parent =>
-                        {
-                            //var isImplementation = parent.GetGenericTypeDefinition() == typeof( IServiceBase<,> )
-                            //    || parent.GetGenericTypeDefinition() == typeof( ICrudServiceBase<,,> );
-
-                            var isImplementation = parent.GetGenericTypeDefinition() == typeof( ICrudServiceBase<,,> );
-
-                            return parent.IsGenericType
-                                && isImplementation;
-                        } );
-                } );
+                    i.IsInterface &&
+                    InheritsFromIServiceBase( i ) );
 
             foreach ( var service in specificInterfaces )
                 services.AddScoped( service, implementation );
-
-            // opcional: registrar o tipo concreto
-            //services.AddScoped( implementation );
         }
 
         return services;
     }
 
-    private static bool IsSubclassOfRawGeneric( Type generic, Type type )
+    private static bool InheritsFromServiceBase( Type type )
     {
-        while ( type != null && type != typeof( object ) )
+        var current = type.BaseType;
+        while ( current != null && current != typeof( object ) )
         {
-            var current = type.IsGenericType
-                ? type.GetGenericTypeDefinition()
-                : type;
-
-            if ( current == generic )
+            if ( current == typeof( ServiceBase ) ||
+                 ( current.IsGenericType && current.GetGenericTypeDefinition() == typeof( ServiceBase ) ) )
                 return true;
 
-            type = type.BaseType!;
+            current = current.BaseType;
         }
-
         return false;
+    }
+
+    private static bool InheritsFromIServiceBase( Type interfaceType )
+    {
+        return interfaceType.GetInterfaces()
+            .Any( parent => parent == typeof( IServiceBase ) || InheritsFromIServiceBase( parent ) );
     }
 }

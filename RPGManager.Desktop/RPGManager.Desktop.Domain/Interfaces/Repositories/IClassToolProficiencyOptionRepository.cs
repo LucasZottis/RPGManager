@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.ToolProficiency;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities.ToolProficiency;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IClassToolProficiencyOptionRepository : IRepositoryBase<ClassToolProficiencyOption>
-{
+//public interface IClassToolProficiencyOptionRepository : IRepositoryBase<ClassToolProficiencyOption>
+//{
 
-}
+//}

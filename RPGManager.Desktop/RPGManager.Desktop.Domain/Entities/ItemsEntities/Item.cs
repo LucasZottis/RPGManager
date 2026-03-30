@@ -2,6 +2,8 @@
 using RPGManager.Desktop.Domain.Entities.ClassesEntities.StartingEquipment;
 using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
+using RPGManager.Desktop.Domain.Entities.ItemsEntities.Gears;
+using RPGManager.Desktop.Domain.Entities.ItemsEntities.ToolEntities;
 using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 namespace RPGManager.Desktop.Domain.Entities.ItemsEntities;
@@ -17,6 +19,9 @@ public class Item : GameSystemVersionEntityBase
     public CurrencyType? CostCurrencyType { get; set; }
     public Weapon? Weapon { get; set; }
     public Armor? Armor { get; set; }
+    public Tool? Tool { get; set; }
+    public Gear? Gear { get; set; }
+    public AmmunitionType? AmmunitionType { get; set; }
 
     public ICollection<ClassStartingEquipmentItem> ClassStartingEquipmentItems { get; set; }
 }

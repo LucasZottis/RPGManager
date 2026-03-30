@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
+//using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface ICurrencyConversionRateRepository : IRepositoryBase<CurrencyConversionRate>
-{
+//public interface ICurrencyConversionRateRepository : IRepositoryBase<CurrencyConversionRate>
+//{
 
-}
+//}

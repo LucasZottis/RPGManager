@@ -1,4 +1,5 @@
-using RPGManager.Desktop.Domain.Models.Spells;
+using RPGManager.Desktop.Application.Services.Base;
+using RPGManager.Desktop.Domain.DTOs.Spells;
 
 namespace RPGManager.Desktop.Application.Services;
 

@@ -1,4 +1,5 @@
-using RPGManager.Desktop.Domain.Models.Sizes;
+using RPGManager.Desktop.Application.Services.Base;
+using RPGManager.Desktop.Domain.DTOs.Sizes;
 
 namespace RPGManager.Desktop.Application.Services;
 

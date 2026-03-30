@@ -1,4 +1,5 @@
-using RPGManager.Desktop.Domain.Models.Levels;
+using RPGManager.Desktop.Application.Services.Base;
+using RPGManager.Desktop.Domain.DTOs.Levels;
 
 namespace RPGManager.Desktop.Application.Services;
 

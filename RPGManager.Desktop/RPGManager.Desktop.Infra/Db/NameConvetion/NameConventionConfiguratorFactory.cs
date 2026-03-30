@@ -13,10 +13,6 @@ public class NameConventionConfiguratorFactory
         _dataBaseSettings = options.Value;
     }
 
-    //[DoesNotReturn]
-    //private void ThrowError()
-    //    => throw new InvalidOperationException("Não há uma con"
-
     public INameConvetionConfigurator? Create()
     {
         switch ( _dataBaseSettings.DataBaseType )

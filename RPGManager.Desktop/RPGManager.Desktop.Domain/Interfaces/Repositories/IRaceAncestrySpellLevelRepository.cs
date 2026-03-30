@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.RaceEntities.Ancestry;
+//using RPGManager.Desktop.Domain.Entities.RaceEntities.Ancestry;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IRaceAncestrySpellLevelRepository : IRepositoryBase<RaceAncestrySpellLevel>
-{
+//public interface IRaceAncestrySpellLevelRepository : IRepositoryBase<RaceAncestrySpellLevel>
+//{
 
-}
+//}
