@@ -1,0 +1,22 @@
+<!-- src/app/shared/components/toast/toast.component.html -->
+
+<div class="toast-container" aria-live="polite" aria-atomic="false">
+    @for (toast of toastService.toasts(); track toast.id) {
+    <div class="toast" [ngClass]="toast.type" role="alert">
+        <span class="toast__icon">
+            @switch (toast.type) {
+            @case ('success') { ✓ }
+            @case ('error') { ✕ }
+            @case ('warning') { ⚠ }
+            @case ('info') { ℹ }
+            }
+        </span>
+
+        <span class="toast__message">{{ toast.message }}</span>
+
+        <button class="toast__close" (click)="toastService.dismiss(toast.id)" aria-label="Fechar notificação">
+            ×
+        </button>
+    </div>
+    }
+</div>

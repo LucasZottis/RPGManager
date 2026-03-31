@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'rpg-authentication-layout',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './authentication-layout.component.html',
   styleUrl: './authentication-layout.component.scss'
 })
 export class AuthenticationLayoutComponent {
-
+  
 }

@@ -1,0 +1,44 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form-input {
+    background: var(--bg-elevated);
+    border: 0.5px solid var(--border-strong);
+    border-radius: var(--input-border-radius);
+    padding: 9px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color .15s, box-shadow .15s, background .25s;
+}
+
+.form-input::placeholder {
+    color: var(--text-disabled);
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(74, 158, 255, .12);
+}
+
+.form-input.input-danger {
+    border-color: var(--color-danger);
+}
+
+.form-input.input-danger:focus {
+    box-shadow: 0 0 0 3px rgba(229, 80, 80, .12);
+}
+
+.form-input.input-success {
+    border-color: var(--color-success);
+}

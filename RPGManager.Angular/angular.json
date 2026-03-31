@@ -31,8 +31,16 @@
                 "input": "public"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles/variables.scss",
+              "src/styles.scss",
+              "src/styles/input.scss",
+              "src/styles/button.scss"
             ],
             "scripts": []
           },

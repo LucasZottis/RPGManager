@@ -24,4 +24,8 @@
     <ProjectReference Include="..\RPGManager.Desktop.Migration.SqLite\RPGManager.Desktop.SqLite.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\UserControllers\" />
+  </ItemGroup>
+
 </Project>

@@ -8,21 +8,6 @@ namespace RPGManager.Desktop.Api.Utils.DI;
 
 public static class AuthenticationDepencyInjection
 {
-    private static TokenValidationParameters GetTokenValidationParameters()
-    {
-        return new TokenValidationParameters
-        {
-
-            //ValidateIssuer = true,
-            //ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            //ValidIssuer = "yourdomain.com",
-            //ValidAudience = "yourdomain.com",
-            IssuerSigningKey = new SymmetricSecurityKey( Encoding.UTF8.GetBytes( "RPGManager" ) )
-        };
-    }
-
     private static void AddPolicies( AuthorizationOptions options )
     {
         options.AddPolicy( "GameSystemControl", policy => policy.RequireRole( Roles.Admin ) );
@@ -31,11 +16,30 @@ public static class AuthenticationDepencyInjection
 
     public static IServiceCollection AddJWTAuthentication( this IServiceCollection services )
     {
+        var provider = services.BuildServiceProvider();
+        var configuration = provider.GetRequiredService<IConfiguration>();
         services.AddAuthentication( JwtBearerDefaults.AuthenticationScheme )
-            .AddJwtBearer( options =>
-            {
-                options.TokenValidationParameters = GetTokenValidationParameters();
-            } );
+           .AddJwtBearer( options =>
+           {
+               options.SaveToken = true;
+               options.RequireHttpsMetadata = false;
+               options.TokenValidationParameters = new TokenValidationParameters
+               {
+                   ValidateIssuer = false,
+                   ValidateAudience = false,
+                   ValidateLifetime = true,
+                   ValidateIssuerSigningKey = true,
+                   ClockSkew = TimeSpan.Zero,
+                   ValidIssuer = configuration.GetValue<string>( "JWT:ValidAudience" ),
+                   ValidAudience = configuration.GetValue<string>( "JWT:ValidUssuer" ),
+                   IssuerSigningKey = new SymmetricSecurityKey(
+                       Encoding.UTF8.GetBytes(
+                           configuration.GetValue<string>( "JWT:SecretKey" )
+                               ?? throw new InvalidOperationException( "Chave secreta inválida." )
+                       )
+                   ),
+               };
+           } );
 
         services.AddAuthorization( AddPolicies );
 

@@ -1,18 +1,27 @@
+@use 'styles/mixins' as *;
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    color: var(--text-primary);
     font-family: "Roboto", Helvetica, sans-serif !important;
+    font-size: 14px;
+    line-height: 1.6;
     margin: 0;
     outline: 0;
     padding: 0;
 }
 
-//  html,
-//  body {
-//      //  display: flex;
-//      //  flex: 0;
-//  }
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-canvas);
+    min-height: 100vh;
+    transition: background .25s, color .25s;
+}
 
 .page {
     padding: 0.5rem;
@@ -31,7 +40,6 @@ $alignments: center;
     }
 }
 
-
-// .align-center {
-//     align-items: center;
-// }
+.card {
+    @include card();
+}

@@ -13,21 +13,6 @@ namespace RPGManager.Desktop.Api;
 
 public class Program
 {
-    //private static async Task CreateDefaultRoles( WebApplication application )
-    //{
-    //    using var scope = application.Services.CreateScope();
-
-    //    var authorizationService = scope.ServiceProvider.GetRequiredService<IAuthorizationService>();
-    //    await authorizationService.CreateDefaultRoles();
-    //}
-
-    //private static async Task CreateAdmin( WebApplication application )
-    //{
-    //    using var scope = application.Services.CreateScope();
-    //    var userService = scope.ServiceProvider.GetRequiredService<IUserService>();
-    //    await userService.CreateAdmin();
-    //}
-
     public static async Task Main( string[] args )
     {
         var assemblies = AssemblyLoader.LoadAllApplicationAssemblies().Where( a => a.FullName.StartsWith( "RPGManager" ) );
@@ -63,9 +48,6 @@ public class Program
             .UseAuth()
             .UseHttpsRedirection()
             .UseControllerMapper();
-
-        //await CreateDefaultRoles( app );
-        //await CreateAdmin( app );
 
         await app.RunAsync();
     }

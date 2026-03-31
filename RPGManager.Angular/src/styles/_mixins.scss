@@ -1,0 +1,18 @@
+@mixin card {
+    background: var(--bg-card);
+    border: 0.5px solid var(--border-default);
+    border-radius: 12px;
+    padding: 20px 24px;
+    transition: background .25s, border-color .25s;
+}
+
+@mixin button-variant($background-color, $color) {
+    background-color: $background-color;
+    color: $color;
+}
+
+@mixin button-outline-variant($color) {
+    background-color: transparent;
+    border: 0.5px solid $color;
+    color: $color;
+}

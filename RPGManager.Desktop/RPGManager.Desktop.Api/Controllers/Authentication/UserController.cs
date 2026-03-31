@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RPGManager.Desktop.Domain.DTOs.Auth.User;
 using RPGManager.Desktop.Domain.Interfaces.Services.Auth;
 
-namespace RPGManager.Desktop.Api.Controllers.UserControllers;
+namespace RPGManager.Desktop.Api.Controllers.Authentication;
 
 [Route( "api/user" )]
 public class UserController : ControllerBase
@@ -16,6 +16,7 @@ public class UserController : ControllerBase
     }
 
     [AllowAnonymous]
+    [HttpPost( "create" )]
     public async Task<IActionResult> Create( [FromBody] UserRegisterDto model )
     {
         var id = await _service.CreateUser( model );

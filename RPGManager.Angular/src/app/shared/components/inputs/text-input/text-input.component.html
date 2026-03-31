@@ -1,9 +1,9 @@
-<div class="input-group">
+<div class="form-group">
     @if (label() !== "") {
-    <label [for]="'txt-' + id()" class="input-label">
+    <label [for]="'txt-' + id()" class="form-label">
         {{label()}}
     </label>
     }
 
-    <input type="text" name="" [id]="'txt-' + id()" />
+    <input type="text" [name]="id()" [id]="'txt-' + id()" class="form-input" />
 </div>
