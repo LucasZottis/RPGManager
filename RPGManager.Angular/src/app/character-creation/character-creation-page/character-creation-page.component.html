@@ -1,0 +1,75 @@
+<!-- character-creation.component.html -->
+<div class="cc-page">
+    <!-- ── HERO HEADER ──────────────────────────────────── -->
+    <div class="cc-hero">
+        <div class="cc-hero-title">Criar Personagem</div>
+        <div class="cc-hero-sub">
+            D&amp;D 5e SRD 5.2.1 &nbsp;·&nbsp;
+            <span class="cc-srd-ref">{{ steps[currentStep()].srdRef }}</span>
+        </div>
+    </div>
+
+    <!-- ── STEPPER ──────────────────────────────────────── -->
+    <div class="cc-stepper">
+        <div class="cc-stepper-line"></div>
+        <div class="cc-stepper-fill" [style.width.%]="progressPct()"></div>
+
+        @for (step of steps; track step.id) {
+        <div class="cc-step" [class.active]="step.id === currentStep()" [class.done]="step.id < currentStep()"
+            [class.clickable]="step.id <= currentStep()" (click)="jumpTo(step.id)">
+            <div class="cc-step-dot">
+                @if (step.id < currentStep()) { <span class="cc-step-check">✓</span>
+                    } @else {
+                    <span class="cc-step-num">{{ step.id + 1 }}</span>
+                    }
+            </div>
+            <div class="cc-step-label">{{ step.label }}</div>
+        </div>
+        }
+    </div>
+
+    <!-- ── STEP PANELS ──────────────────────────────────── -->
+    <main class="cc-content">
+
+        @switch (currentStep()) {
+
+        @case (0) {
+        <rpg-step-game-system-version (next)="next()" />
+        }
+
+        @case (1) {
+        <rpg-step-class (next)="next()" />
+        }
+
+        @case (2) {
+        <rpg-step-origin (next)="next()" (prev)="prev()" />
+        }
+
+        @case (3) {
+        <rpg-step-abilities (next)="next()" (prev)="prev()" />
+        }
+
+        @case (4) {
+        <rpg-step-alignment (next)="next()" (prev)="prev()" />
+        }
+
+        @case (5) {
+        <rpg-step-details (next)="next()" (prev)="prev()" />
+        }
+
+        @case (6) {
+        <rpg-step-summary [saving]="saving()" (prev)="prev()" (finish)="finish()" />
+        }
+
+        }
+
+    </main>
+
+</div>
+
+<!-- ── TOAST ──────────────────────────────────────────── -->
+@if (toastMsg()) {
+<div class="cc-toast" [class]="'cc-toast--' + toastMsg()!.type">
+    {{ toastMsg()!.text }}
+</div>
+}

@@ -1,0 +1,52 @@
+// step-details.component.scss
+@use '../../helpers/step-shared' as *;
+
+// ── Personality hint ─────────────────────────────────────────
+.personality-hint {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 9px 12px;
+    border-radius: 7px;
+    background: var(--bg-elevated);
+    border: 0.5px solid var(--border-default);
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+// ── Numbers preview ──────────────────────────────────────────
+.numbers-preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    @media (max-width: 580px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.numbers-preview__item {
+    background: var(--bg-elevated);
+    border: 0.5px solid var(--border-default);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.numbers-preview__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-disabled);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.numbers-preview__value {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-family: 'Cinzel', serif;
+}

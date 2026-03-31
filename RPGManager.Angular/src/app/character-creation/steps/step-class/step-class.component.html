@@ -1,0 +1,102 @@
+<!-- step-class.component.html -->
+<div class="step-card">
+    <div class="step-card__head">
+        <div class="step-card__title"><span>⚔️</span> Escolha sua Classe</div>
+        <div class="step-card__sub">
+            A classe define habilidades, dado de vida e progressão do aventureiro.
+            <em>(SRD 5.2.1 — Step 1)</em>
+        </div>
+    </div>
+
+    <!-- Loading skeletons -->
+    @if (loading()) {
+    <div class="opt-grid">
+        @for (i of [1,2,3,4,5,6]; track i) {
+        <div class="skeleton"></div>
+        }
+    </div>
+    }
+
+    <!-- Error state -->
+    @if (error()) {
+    <div class="api-error">
+        <strong>Erro ao carregar classes:</strong> {{ error() }}<br>
+        <span class="api-error__hint">Verifique se a API está acessível em <code>/api/v1/classes</code></span>
+    </div>
+    }
+
+    <!-- Class grid -->
+    @if (!loading() && !error()) {
+    <div class="opt-grid">
+        @for (cls of classes(); track cls.id) {
+        <div class="opt-card" [class.opt-card--selected]="isSelected(cls)" (click)="select(cls)">
+            <div class="opt-card__icon">{{ cls.icon ?? '⚔️' }}</div>
+            <div class="opt-card__name">{{ cls.name }}</div>
+            <div class="opt-card__desc">{{ cls.description }}</div>
+            @if (cls.tags?.length) {
+            <div class="opt-card__tags">
+                @for (tag of cls.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+                }
+            </div>
+            }
+        </div>
+        }
+    </div>
+
+    <!-- Expanded detail -->
+    @if (expanded()) {
+    <div class="opt-detail">
+        <div class="opt-detail__title">
+            {{ expanded()!.icon ?? '⚔️' }} {{ expanded()!.name }}
+        </div>
+        <div class="opt-detail__grid">
+            <div class="detail-block">
+                <div class="detail-block__label">Dado de Vida</div>
+                <div class="detail-block__value">
+                    <span class="chip chip--primary">{{ expanded()!.hitDie }}</span>
+                </div>
+            </div>
+            <div class="detail-block">
+                <div class="detail-block__label">Atributo Principal</div>
+                <div class="detail-block__value">{{ expanded()!.primaryAbility }}</div>
+            </div>
+            @if (expanded()!.savingThrows.length) {
+            <div class="detail-block">
+                <div class="detail-block__label">Saves de Resistência</div>
+                <div class="chip-row">
+                    @for (save of expanded()!.savingThrows; track save) {
+                    <span class="chip chip--secondary">{{ save }}</span>
+                    }
+                </div>
+            </div>
+            }
+            @if (expanded()!.proficiencies) {
+            <div class="detail-block">
+                <div class="detail-block__label">Proficiências</div>
+                <div class="detail-block__value">{{ expanded()!.proficiencies }}</div>
+            </div>
+            }
+            @if (expanded()!.traits?.length) {
+            <div class="detail-block detail-block--full">
+                <div class="detail-block__label">Traços de Classe (Nível 1)</div>
+                <div class="chip-row">
+                    @for (trait of expanded()!.traits!; track trait.id) {
+                    <span class="chip chip--warning">{{ trait.name }}</span>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    }
+    }
+</div>
+
+<!-- Footer -->
+<div class="step-footer">
+    <span class="step-footer__meta">1 / 6 &nbsp;·&nbsp; SRD Step 1</span>
+    <button class="btn btn--primary" (click)="onNext()">
+        Próximo — Origem →
+    </button>
+</div>

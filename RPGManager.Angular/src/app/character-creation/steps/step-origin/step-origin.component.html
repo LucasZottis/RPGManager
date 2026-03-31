@@ -1,0 +1,176 @@
+<!-- step-origin.component.html -->
+<div class="step-card">
+    <div class="step-card__head">
+        <div class="step-card__title"><span>📜</span> Origem do Personagem</div>
+        <div class="step-card__sub">
+            Defina o antecedente, a espécie e dois idiomas do aventureiro.
+            <em>(SRD 5.2.1 — Step 2)</em>
+        </div>
+    </div>
+
+    <!-- ── BACKGROUND ─────────────────────────────────── -->
+    <div class="sec-label">Antecedente</div>
+
+    @if (loadingBg()) {
+    <div class="opt-grid">
+        @for (i of [1,2,3,4]; track i) { <div class="skeleton"></div> }
+    </div>
+    }
+    @if (errorBg()) {
+    <div class="api-error">
+        <strong>Erro ao carregar antecedentes:</strong> {{ errorBg() }}
+        <span class="api-error__hint"> — <code>/api/v1/backgrounds</code></span>
+    </div>
+    }
+    @if (!loadingBg() && !errorBg()) {
+    <div class="opt-grid">
+        @for (bg of backgrounds(); track bg.id) {
+        <div class="opt-card" [class.opt-card--selected]="isSelectedBg(bg)" (click)="selectBackground(bg)">
+            <div class="opt-card__icon">{{ bg.icon ?? '📜' }}</div>
+            <div class="opt-card__name">{{ bg.name }}</div>
+            <div class="opt-card__desc">{{ bg.description }}</div>
+        </div>
+        }
+    </div>
+
+    @if (expandedBg()) {
+    <div class="opt-detail">
+        <div class="opt-detail__title">{{ expandedBg()!.icon ?? '📜' }} {{ expandedBg()!.name }}</div>
+        <div class="opt-detail__grid">
+            @if (expandedBg()!.skills.length) {
+            <div class="detail-block">
+                <div class="detail-block__label">Perícias Concedidas</div>
+                <div class="chip-row">
+                    @for (sk of expandedBg()!.skills; track sk.id) {
+                    <span class="chip chip--secondary">{{ sk.name }}</span>
+                    }
+                </div>
+            </div>
+            }
+            @if (expandedBg()!.feat) {
+            <div class="detail-block">
+                <div class="detail-block__label">Talento</div>
+                <div class="detail-block__value">{{ expandedBg()!.feat }}</div>
+            </div>
+            }
+            @if (expandedBg()!.startingEquipment) {
+            <div class="detail-block detail-block--full">
+                <div class="detail-block__label">Equipamento Inicial</div>
+                <div class="detail-block__value">{{ expandedBg()!.startingEquipment }}</div>
+            </div>
+            }
+        </div>
+    </div>
+    }
+    }
+
+    <!-- ── SPECIES ──────────────────────────────────────── -->
+    <div class="sec-label">Espécie</div>
+
+    @if (loadingSp()) {
+    <div class="opt-grid">
+        @for (i of [1,2,3,4,5,6]; track i) { <div class="skeleton"></div> }
+    </div>
+    }
+    @if (errorSp()) {
+    <div class="api-error">
+        <strong>Erro ao carregar espécies:</strong> {{ errorSp() }}
+        <span class="api-error__hint"> — <code>/api/v1/species</code></span>
+    </div>
+    }
+    @if (!loadingSp() && !errorSp()) {
+    <div class="opt-grid">
+        @for (sp of species(); track sp.id) {
+        <div class="opt-card" [class.opt-card--selected]="isSelectedSp(sp)" (click)="selectSpecies(sp)">
+            <div class="opt-card__icon">{{ sp.icon ?? '👤' }}</div>
+            <div class="opt-card__name">{{ sp.name }}</div>
+            <div class="opt-card__desc">{{ sp.description }}</div>
+            @if (sp.tags?.length) {
+            <div class="opt-card__tags">
+                @for (t of sp.tags!; track t) { <span class="tag">{{ t }}</span> }
+            </div>
+            }
+        </div>
+        }
+    </div>
+
+    @if (expandedSp()) {
+    <div class="opt-detail">
+        <div class="opt-detail__title">{{ expandedSp()!.icon ?? '👤' }} {{ expandedSp()!.name }}</div>
+        <div class="opt-detail__grid">
+            <div class="detail-block">
+                <div class="detail-block__label">Velocidade</div>
+                <div class="detail-block__value">{{ expandedSp()!.speed }} ft</div>
+            </div>
+            <div class="detail-block">
+                <div class="detail-block__label">Tamanho</div>
+                <div class="detail-block__value">{{ expandedSp()!.size }}</div>
+            </div>
+            @if (expandedSp()!.abilityBonuses | keyvalue) {
+            <div class="detail-block detail-block--full">
+                <div class="detail-block__label">Bônus de Atributos</div>
+                <div class="chip-row">
+                    @for (entry of expandedSp()!.abilityBonuses | keyvalue; track entry.key) {
+                    <span class="chip chip--success">+{{ entry.value }} {{ entry.key }}</span>
+                    }
+                </div>
+            </div>
+            }
+            @if (expandedSp()!.traits?.length) {
+            <div class="detail-block detail-block--full">
+                <div class="detail-block__label">Traços de Espécie</div>
+                <div class="chip-row">
+                    @for (t of expandedSp()!.traits!; track t.id) {
+                    <span class="chip chip--warning">{{ t.name }}</span>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    }
+    }
+
+    <!-- ── LANGUAGES ────────────────────────────────────── -->
+    <div class="sec-label">Idiomas (escolha 2)</div>
+
+    <div class="lang-status">
+        <span class="lang-status__count">
+            Selecionados: <strong>{{ draft().languages.length }}</strong> / 2
+        </span>
+        @if (draft().languages.length) {
+        <div class="chip-row">
+            @for (l of draft().languages; track l) {
+            <span class="chip chip--neutral">{{ l }}</span>
+            }
+        </div>
+        }
+    </div>
+
+    @if (!loadingLng()) {
+    <div class="fg" style="margin-bottom: 10px;">
+        <input type="text" placeholder="Filtrar idiomas..." [ngModel]="langSearch()"
+            (ngModelChange)="langSearch.set($event)">
+    </div>
+
+    <div class="lang-grid">
+        @for (lang of filteredLangs(); track lang.id) {
+        <div class="lang-chip" [class.lang-chip--selected]="isLangSelected(lang)"
+            [class.lang-chip--disabled]="!isLangSelected(lang) && draft().languages.length >= 2"
+            (click)="toggleLanguage(lang)">
+            {{ lang.name }}
+            @if (lang.typicalSpeakers) {
+            <span class="lang-chip__hint">{{ lang.typicalSpeakers }}</span>
+            }
+        </div>
+        }
+    </div>
+    }
+</div>
+
+<!-- Footer -->
+<div class="step-footer">
+    <button class="btn btn--ghost" (click)="onPrev()">← Voltar</button>
+    <span class="step-footer__meta">2 / 6 &nbsp;·&nbsp; SRD Step 2</span>
+    <button class="btn btn--primary" (click)="onNext()">Próximo — Atributos →</button>
+</div>

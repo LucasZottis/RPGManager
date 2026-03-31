@@ -1,0 +1,161 @@
+<!-- step-abilities.component.html -->
+<div class="step-card">
+    <div class="step-card__head">
+        <div class="step-card__title"><span>🎲</span> Atributos &amp; Perícias</div>
+        <div class="step-card__sub">
+            Gere os seis atributos e escolha as perícias da classe.
+            <em>(SRD 5.2.1 — Step 3)</em>
+        </div>
+    </div>
+
+    <!-- ── METHOD TABS ──────────────────────────────────── -->
+    <div class="method-tabs">
+        @for (opt of methodOptions; track opt.value) {
+        <button class="method-tab" [class.method-tab--active]="draft().abilityMethod === opt.value"
+            (click)="setMethod(opt.value)">{{ opt.label }}</button>
+        }
+    </div>
+
+    <!-- Point Buy banner -->
+    @if (draft().abilityMethod === 'pointBuy') {
+    <div class="pb-banner" [class.pb-banner--empty]="pointsLeft() === 0">
+        <span>Pontos restantes</span>
+        <span class="pb-banner__num">{{ pointsLeft() }}</span>
+        <span class="pb-banner__hint">Base 8–15 · custo progressivo</span>
+    </div>
+    }
+
+    <!-- Standard array info -->
+    @if (draft().abilityMethod === 'standard') {
+    <div class="alert alert--warning">
+        <span>📋</span>
+        <span>Distribua os valores <strong>15, 14, 13, 12, 10, 8</strong> entre os atributos — cada valor pode ser usado
+            apenas uma vez.</span>
+    </div>
+    }
+
+    <!-- Roll button -->
+    @if (draft().abilityMethod === 'roll') {
+    <button class="roll-btn" [class.roll-btn--rolling]="rolling()" (click)="rollAll()">
+        <span class="roll-btn__icon">🎲</span>
+        {{ rolling() ? 'Rolando...' : 'Rolar 4d6 (descarta o menor)' }}
+    </button>
+    }
+
+    <!-- ── ABILITY CARDS ─────────────────────────────────── -->
+    <div class="ability-grid">
+        @for (ab of abilities(); track ab.key) {
+        <div class="ab-card">
+            <div class="ab-card__label">{{ ab.label }}</div>
+            <div class="ab-card__score">{{ ab.total }}</div>
+            <div class="ab-card__mod" [class.ab-card__mod--pos]="ab.mod > 0" [class.ab-card__mod--neg]="ab.mod < 0"
+                [class.ab-card__mod--zer]="ab.mod === 0">{{ ab.modStr }}</div>
+
+            <!-- Controls: point-buy / roll -->
+            @if (draft().abilityMethod !== 'standard') {
+            <div class="ab-card__ctrl">
+                <button class="ab-btn" (click)="adjust(ab.key, -1)" [attr.disabled]="ab.canDec ? null : true">−</button>
+                <button class="ab-btn" (click)="adjust(ab.key, +1)" [attr.disabled]="ab.canInc ? null : true">+</button>
+            </div>
+            }
+
+            <!-- Controls: standard array -->
+            @if (draft().abilityMethod === 'standard') {
+            <select class="ab-card__std-sel" (change)="assignStd(ab.key, +$any($event.target).value)">
+                <option value="0">—</option>
+                @for (val of STANDARD_ARRAY; track val) {
+                <option [value]="val" [attr.selected]="draft().baseAbilities[ab.key] === val ? '' : null"
+                    [attr.disabled]="stdValueUsed(val, ab.key) ? '' : null">{{ val }}</option>
+                }
+            </select>
+            }
+
+            <!-- Race bonus label -->
+            <div class="ab-card__bonus">
+                @if (ab.bonus > 0) { +{{ ab.bonus }} espécie }
+            </div>
+        </div>
+        }
+    </div>
+
+    <!-- Species bonus summary -->
+    @if (draft().species?.abilityBonuses) {
+    <div class="race-bonus-bar">
+        <div class="race-bonus-bar__label">Bônus de Espécie</div>
+        <div class="race-bonus-bar__content">
+            <strong>{{ draft().species!.name }}:</strong>
+            @for (entry of draft().species!.abilityBonuses | keyvalue; track entry.key) {
+            <span class="chip chip--success">+{{ entry.value }} {{ entry.key }}</span>
+            }
+            <span class="race-bonus-bar__note">— somados automaticamente.</span>
+        </div>
+    </div>
+    }
+
+    <!-- ── SKILLS ─────────────────────────────────────────── -->
+    <div class="sec-label">Perícias da Classe</div>
+
+    @if (loadingSkills()) {
+    <div class="skill-loading">
+        @for (i of [1,2,3,4,5,6]; track i) { <div class="skeleton" style="height:44px"></div> }
+    </div>
+    }
+
+    @if (errorSkills()) {
+    <div class="api-error">
+        <strong>Erro ao carregar perícias:</strong> {{ errorSkills() }}
+    </div>
+    }
+
+    @if (!loadingSkills() && !errorSkills() && classSkills().length) {
+    <!-- <div class="skill-header">
+        <div class="skill-counter">
+            Selecionadas: <strong>{{ chosenSkillsCount() }}</strong>
+            <span> / {{ maxSkills() }}</span>
+        </div>
+        <span class="prof-bonus-tag">Bônus de Prof.: +{{ proficiencyBonus() }}</span>
+    </div> -->
+
+    @if (backgroundSkillsCount()) {
+    <div class="alert alert--secondary" style="margin-bottom: 10px;">
+        <span>✦</span>
+        <span><strong>Antecedente:</strong> {{ draft().background?.skills | skillNames }}</span>
+    </div>
+    }
+
+    <div class="skill-list">
+        @for (sk of skillVMs(); track sk.id) {
+        <div class="skill-row" [class.skill-row--chosen]="sk.chosen" [class.skill-row--from-bg]="sk.fromBg"
+            [class.skill-row--locked]="sk.fromBg" (click)="handleSkillClick(sk.id, sk.fromBg)">
+            <div class="skill-row__left">
+                <div class="skill-row__check" [class.skill-row__check--on]="sk.chosen || sk.fromBg"
+                    [class.skill-row__check--bg]="sk.fromBg">{{ (sk.chosen || sk.fromBg) ? '✓' : '' }}</div>
+                <div>
+                    <div class="skill-row__name">{{ sk.name }}</div>
+                    <div class="skill-row__attr">{{ sk.ability }}</div>
+                </div>
+            </div>
+            <span class="skill-row__val" [class.skill-row__val--pos]="sk.total > 0"
+                [class.skill-row__val--neg]="sk.total < 0">{{ sk.totalStr }}</span>
+        </div>
+        }
+    </div>
+    }
+
+    @if (!draft().class) {
+    <div class="no-class-msg">Volte ao passo anterior e selecione uma classe.</div>
+    }
+
+    <!-- Inline skill toast -->
+    @if (skillToast()) {
+    <div class="inline-toast">{{ skillToast() }}</div>
+    }
+
+</div>
+
+<!-- Footer -->
+<div class="step-footer">
+    <button class="btn btn--ghost" (click)="onPrev()">← Voltar</button>
+    <span class="step-footer__meta">3 / 6 &nbsp;·&nbsp; SRD Step 3</span>
+    <button class="btn btn--primary" (click)="onNext()">Próximo — Alinhamento →</button>
+</div>

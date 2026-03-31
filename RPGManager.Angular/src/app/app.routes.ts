@@ -7,6 +7,6 @@ export const routes: Routes = [
     },
     {
         path: "",
-        loadChildren: () => import('./character-sheet-builder/character-builder.routes').then(r => r.CHARACTERE_BUILDER_ROUTES)
+        loadChildren: () => import('./character-creation/character-builder.routes').then(r => r.CHARACTERE_BUILDER_ROUTES)
     },
 ];

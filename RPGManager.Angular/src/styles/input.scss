@@ -1,3 +1,5 @@
+@use '_mixins' as *;
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -10,16 +12,19 @@
     color: var(--text-secondary);
 }
 
+.input-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: var(--input-group-gap);
+}
+
+.input-group .form-input {
+    flex: 1 1 auto;
+}
+
 .form-input {
-    background: var(--bg-elevated);
-    border: 0.5px solid var(--border-strong);
-    border-radius: var(--input-border-radius);
-    padding: 9px 13px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: var(--text-primary);
-    outline: none;
-    transition: border-color .15s, box-shadow .15s, background .25s;
+    @include input();
 }
 
 .form-input::placeholder {
@@ -41,4 +46,8 @@
 
 .form-input.input-success {
     border-color: var(--color-success);
+}
+
+.form-select {
+    @include input();
 }

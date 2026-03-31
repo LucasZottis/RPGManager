@@ -1,21 +1,21 @@
 import { Component, computed, input, model, signal } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'rpg-text-input',
+  selector: 'rpg-select-input',
   standalone: true,
   imports: [],
-  templateUrl: './text-input.component.html',
-  styleUrl: './text-input.component.scss',
+  templateUrl: './select-input.component.html',
+  styleUrl: './select-input.component.scss',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: TextInputComponent,
+      useExisting: SelectInputComponent,
       multi: true,
     }
   ]
 })
-export class TextInputComponent {
+export class SelectInputComponent implements ControlValueAccessor {
   id = input.required<string>();
   label = input<string>();
 
@@ -24,19 +24,19 @@ export class TextInputComponent {
   onTouchedFn: any = () => { };
 
   // Input for externally set disabled state (e.g., via [disabled] attribute)
-  readonly disabled = input<boolean>(false);
+  protected readonly disabled = input<boolean>(false);
 
   // Signal for disabled state managed by the form (via setDisabledState)
-  readonly formDisabled = signal<boolean>(false);
+  protected readonly formDisabled = signal<boolean>(false);
 
   // Computed signal that combines both disabled states
-  readonly isDisabled = computed(() => this.disabled() || this.formDisabled());
+  protected readonly isDisabled = computed(() => this.disabled() || this.formDisabled());
 
   // Model signal for the component's value, enabling two-way binding
-  readonly value = model<string>('');
+  protected readonly value = model<string>('');
 
   // Signal to indicate an error state for styling
-  readonly error = signal<boolean>(false);
+  protected readonly error = signal<boolean>(false);
 
   /**
    * Writes a new value from the form model into the view (and updates the custom component).
@@ -87,5 +87,4 @@ export class TextInputComponent {
     this.onTouchedFn();
     this.error.set(inputElement.value.trim() === '');
   }
-
 }

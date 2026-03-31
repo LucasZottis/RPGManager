@@ -1,0 +1,170 @@
+<!-- step-summary.component.html -->
+<div class="step-card">
+    <div class="step-card__head">
+        <div class="step-card__title"><span>✨</span> Resumo do Personagem</div>
+        <div class="step-card__sub">Revise todas as informações antes de finalizar.</div>
+    </div>
+
+    <!-- ── HERO BLOCK ────────────────────────────────────── -->
+    <div class="sum-hero">
+        <div class="sum-hero__avatar">
+            <!-- {{ draft().class?.icon ?? draft().species?.icon ?? '🧙' }} -->
+        </div>
+        <div class="sum-hero__body">
+            <div class="sum-hero__name">{{ draft().name || '—' }}</div>
+            <div class="sum-hero__line">
+                {{ draft().species?.name ?? '—' }} &nbsp;·&nbsp;
+                <!-- {{ draft().class?.name ?? '—' }} &nbsp;·&nbsp; -->
+                Nível {{ draft().level }}
+            </div>
+            <div class="sum-hero__badges">
+                @if (draft().class) {
+                <!-- <span class="badge badge--primary">{{ draft().class!.name }}</span> -->
+                }
+                @if (draft().species) {
+                <span class="badge badge--secondary">{{ draft().species!.name }}</span>
+                }
+                @if (draft().background) {
+                <span class="badge badge--warning">{{ draft().background!.name }}</span>
+                }
+                @if (draft().alignment) {
+                <span class="badge badge--neutral">{{ alignmentPt() }}</span>
+                }
+                <span class="badge badge--success">Nível {{ draft().level }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── SUMMARY GRID ──────────────────────────────────── -->
+    <div class="sum-grid">
+
+        <!-- Abilities -->
+        <div class="sum-block">
+            <div class="sum-block__title">Atributos Finais</div>
+            @for (row of abilityRows(); track row.key) {
+            <div class="sum-row">
+                <span class="sum-row__label">{{ row.full }}</span>
+                <span class="sum-row__val">
+                    {{ row.total }}
+                    <span class="sum-row__mod" [class]="'sum-row__mod--' + row.modClass">
+                        ({{ row.modStr }})
+                    </span>
+                </span>
+            </div>
+            }
+        </div>
+
+        <!-- Combat stats -->
+        <div class="sum-block">
+            <div class="sum-block__title">Estatísticas de Combate</div>
+            <!-- @for (stat of combatStats(); track stat.label) {
+            <div class="sum-row">
+                <span class="sum-row__label">{{ stat.label }}</span>
+                <span class="sum-row__val">{{ stat.value }}</span>
+            </div>
+            } -->
+        </div>
+
+        <!-- Skills -->
+        <div class="sum-block">
+            <div class="sum-block__title">Perícias Proficientes</div>
+            @if (proficientSkills().length) {
+            <div class="chip-row" style="margin-top: 4px;">
+                @for (sk of proficientSkills(); track sk) {
+                <span class="chip chip--primary">{{ sk }}</span>
+                }
+            </div>
+            } @else {
+            <span class="sum-empty">Nenhuma perícia selecionada.</span>
+            }
+        </div>
+
+        <!-- Background & Languages -->
+        <div class="sum-block">
+            <div class="sum-block__title">Antecedente &amp; Idiomas</div>
+            <div class="sum-row">
+                <span class="sum-row__label">Antecedente</span>
+                <span class="sum-row__val">{{ draft().background?.name ?? '—' }}</span>
+            </div>
+            <div class="sum-row">
+                <span class="sum-row__label">Espécie</span>
+                <span class="sum-row__val">{{ draft().species?.name ?? '—' }}</span>
+            </div>
+            @if (draft().languages.length) {
+            <div style="margin-top: 10px;">
+                <div class="sum-sub-label">Idiomas</div>
+                <div class="chip-row" style="margin-top: 4px;">
+                    @for (lang of draft().languages; track lang) {
+                    <span class="chip chip--neutral">{{ lang }}</span>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+
+    <!-- ── PERSONALITY ────────────────────────────────────── -->
+    @if (draft().personalityTraits || draft().ideals || draft().bonds || draft().flaws) {
+    <div class="personality-summary">
+        <div class="sum-sub-label" style="margin-bottom: 10px;">Personalidade</div>
+        <div class="personality-summary__grid">
+            @if (draft().personalityTraits) {
+            <div class="personality-summary__item">
+                <div class="personality-summary__label">Traços</div>
+                <div class="personality-summary__text">{{ draft().personalityTraits }}</div>
+            </div>
+            }
+            @if (draft().ideals) {
+            <div class="personality-summary__item">
+                <div class="personality-summary__label">Ideais</div>
+                <div class="personality-summary__text">{{ draft().ideals }}</div>
+            </div>
+            }
+            @if (draft().bonds) {
+            <div class="personality-summary__item">
+                <div class="personality-summary__label">Vínculos</div>
+                <div class="personality-summary__text">{{ draft().bonds }}</div>
+            </div>
+            }
+            @if (draft().flaws) {
+            <div class="personality-summary__item">
+                <div class="personality-summary__label">Falhas</div>
+                <div class="personality-summary__text">{{ draft().flaws }}</div>
+            </div>
+            }
+        </div>
+    </div>
+    }
+
+    <!-- ── STATUS ─────────────────────────────────────────── -->
+    @if (isComplete()) {
+    <div class="status-box status-box--ready">
+        <div class="status-box__title">✅ Personagem pronto para a aventura!</div>
+        <div class="status-box__desc">Confirme para criar o personagem na campanha.</div>
+    </div>
+    } @else {
+    <div class="status-box status-box--warn">
+        <div class="status-box__title">⚠️ Informações incompletas</div>
+        <div class="status-box__desc">
+            Ainda faltam:
+            @for (item of missing(); track item.label; let last = $last) {
+            <strong>{{ item.label }}</strong>{{ last ? '' : ', ' }}
+            }
+        </div>
+    </div>
+    }
+
+</div>
+
+<!-- Footer -->
+<div class="step-footer">
+    <button class="btn btn--ghost" (click)="onPrev()" [disabled]="saving()">
+        ← Editar
+    </button>
+    <span class="step-footer__meta">6 / 6 &nbsp;·&nbsp; Revisão Final</span>
+    <button class="btn btn--success btn--lg" [disabled]="!isComplete() || saving()" (click)="onFinish()">
+        @if (saving()) { ⏳ Salvando... }
+        @else { 🎉 Criar Personagem }
+    </button>
+</div>

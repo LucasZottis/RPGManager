@@ -1,0 +1,66 @@
+// step-origin.component.scss
+@use '../../step-shared' as *;
+
+// ── Language selection ───────────────────────────────────────
+.lang-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.lang-status__count {
+    font-size: 13px;
+    color: var(--text-secondary);
+
+    strong {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--color-primary);
+    }
+}
+
+.lang-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 6px;
+}
+
+.lang-chip {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    border-radius: 7px;
+    border: 0.5px solid var(--border-default);
+    background: var(--bg-elevated);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: border-color 0.12s, background 0.12s;
+
+    &:hover:not(.lang-chip--disabled) {
+        border-color: var(--border-focus);
+        background: var(--bg-hover);
+    }
+
+    &--selected {
+        border-color: var(--color-primary);
+        background: var(--color-primary-subtle);
+        color: var(--color-primary-text);
+    }
+
+    &--disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+}
+
+.lang-chip__hint {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 2px;
+}

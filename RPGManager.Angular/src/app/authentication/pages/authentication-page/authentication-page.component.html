@@ -1,13 +1,6 @@
 <form [formGroup]="authenticateUser" (submit)="onSubmit()" class="login-card">
-    <label for="txt-email" class="input-group">
-        <span>E-mail</span>
-        <input type="text" id="txt-email" class="form-input" formControlName="email" />
-    </label>
-
-    <label for="txt-password" class="input-group">
-        <span>Senha</span>
-        <input type="password" id="txt-password" class="form-input" formControlName="password" />
-    </label>
+    <rpg-text-input id="txt-email" label="E-mail" formControlName="email" />
+    <rpg-secret-input id="txt-password" label="Senha" formControlName="password" />
 
     <button type="submit" class="btn btn-primary">
         Entrar

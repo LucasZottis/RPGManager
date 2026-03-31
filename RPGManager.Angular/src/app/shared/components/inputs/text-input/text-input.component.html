@@ -5,5 +5,6 @@
     </label>
     }
 
-    <input type="text" [name]="id()" [id]="'txt-' + id()" class="form-input" />
+    <input type="text" class="form-input" [name]="id()" [id]="'txt-' + id()" [value]="value()" [class.error]="error()"
+        [class.success]="!error()" [disabled]="isDisabled()" (input)="onChange($event)" />
 </div>

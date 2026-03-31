@@ -1,0 +1,127 @@
+<!-- step-details.component.html -->
+<div class="step-card">
+    <div class="step-card__head">
+        <div class="step-card__title"><span>🪪</span> Detalhes do Personagem</div>
+        <div class="step-card__sub">
+            Preencha o restante da ficha: nome, aparência e traços de personalidade.
+            <em>(SRD 5.2.1 — Step 5)</em>
+        </div>
+    </div>
+
+    <!-- ── IDENTITY ──────────────────────────────────────── -->
+    <div class="sec-label">Identificação</div>
+    <div class="form-row form-row--2">
+        <div class="fg">
+            <label>Nome do Personagem <span class="req">*</span></label>
+            <input type="text" placeholder="Ex: Aldric Stormbrand" [value]="draft().name"
+                (input)="setName($any($event.target).value)">
+        </div>
+        <div class="fg">
+            <label>Nível Inicial</label>
+            <select [value]="draft().level" (change)="setLevel(+$any($event.target).value)">
+                @for (lvl of levelOptions; track lvl) {
+                <option [value]="lvl">{{ lvl }}</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <!-- ── APPEARANCE ────────────────────────────────────── -->
+    <div class="sec-label">Aparência</div>
+    <div class="form-row form-row--3">
+        <div class="fg">
+            <label>Idade</label>
+            <input type="text" placeholder="Ex: 24 anos" [value]="draft().age ?? ''"
+                (input)="setAge($any($event.target).value)">
+        </div>
+        <div class="fg">
+            <label>Altura</label>
+            <input type="text" placeholder="Ex: 1,75 m" [value]="draft().height ?? ''"
+                (input)="setHeight($any($event.target).value)">
+        </div>
+        <div class="fg">
+            <label>Peso</label>
+            <input type="text" placeholder="Ex: 75 kg" [value]="draft().weight ?? ''"
+                (input)="setWeight($any($event.target).value)">
+        </div>
+        <div class="fg">
+            <label>Olhos</label>
+            <input type="text" placeholder="Ex: Azul profundo" [value]="draft().eyes ?? ''"
+                (input)="setEyes($any($event.target).value)">
+        </div>
+        <div class="fg">
+            <label>Cabelo</label>
+            <input type="text" placeholder="Ex: Loiro platinado" [value]="draft().hair ?? ''"
+                (input)="setHair($any($event.target).value)">
+        </div>
+        <div class="fg">
+            <label>Pele</label>
+            <input type="text" placeholder="Ex: Bronzeado" [value]="draft().skin ?? ''"
+                (input)="setSkin($any($event.target).value)">
+        </div>
+    </div>
+
+    <!-- ── PERSONALITY ───────────────────────────────────── -->
+    <div class="sec-label">Personalidade</div>
+
+    <div class="personality-hint">
+        <span>💡</span>
+        Estes campos são narrativos e opcionais, mas enriquecem a história do personagem.
+    </div>
+
+    <div class="form-row form-row--2">
+        <div class="fg">
+            <label>Traços de Personalidade</label>
+            <textarea placeholder="Como seu personagem age e pensa? O que o diferencia dos demais?"
+                [value]="draft().personalityTraits ?? ''"
+                (input)="setPersonalityTraits($any($event.target).value)"></textarea>
+            <span class="field-hint">Descreva em 1–2 frases os hábitos e comportamentos marcantes.</span>
+        </div>
+        <div class="fg">
+            <label>Ideais</label>
+            <textarea placeholder="O que seu personagem mais valoriza? Justiça, liberdade, poder..."
+                [value]="draft().ideals ?? ''" (input)="setIdeals($any($event.target).value)"></textarea>
+            <span class="field-hint">Princípio que norteia as decisões do personagem.</span>
+        </div>
+        <div class="fg">
+            <label>Vínculos</label>
+            <textarea placeholder="O que ou quem seu personagem não pode perder?" [value]="draft().bonds ?? ''"
+                (input)="setBonds($any($event.target).value)"></textarea>
+            <span class="field-hint">Pessoas, lugares ou crenças pelas quais lutaria.</span>
+        </div>
+        <div class="fg">
+            <label>Falhas</label>
+            <textarea placeholder="Qual a fraqueza ou vício do personagem?" [value]="draft().flaws ?? ''"
+                (input)="setFlaws($any($event.target).value)"></textarea>
+            <span class="field-hint">Uma imperfeição que pode ser explorada em jogo.</span>
+        </div>
+    </div>
+
+    <!-- Computed numbers preview -->
+    <div class="sec-label">Números Calculados (Prévia)</div>
+    <div class="numbers-preview">
+        <div class="numbers-preview__item">
+            <div class="numbers-preview__label">Classe</div>
+            <div class="numbers-preview__value">{{ draft().class ?? '—' }}</div>
+        </div>
+        <div class="numbers-preview__item">
+            <div class="numbers-preview__label">Espécie</div>
+            <div class="numbers-preview__value">{{ draft().species?.name ?? '—' }}</div>
+        </div>
+        <div class="numbers-preview__item">
+            <div class="numbers-preview__label">Alinhamento</div>
+            <div class="numbers-preview__value">{{ draft().alignment ?? '—' }}</div>
+        </div>
+        <div class="numbers-preview__item">
+            <div class="numbers-preview__label">Antecedente</div>
+            <div class="numbers-preview__value">{{ draft().background?.name ?? '—' }}</div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="step-footer">
+    <button class="btn btn--ghost" (click)="onPrev()">← Voltar</button>
+    <span class="step-footer__meta">5 / 6 &nbsp;·&nbsp; SRD Step 5</span>
+    <button class="btn btn--primary" (click)="onNext()">Ver Resumo →</button>
+</div>

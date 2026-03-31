@@ -1,0 +1,268 @@
+// character-creation.component.scss
+// Host styles: topbar, stepper, layout shell.
+// Design tokens come from the global stylesheet (showcase tokens).
+
+// ── Page Shell ──────────────────────────────────────────────
+.cc-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+// ── Top Bar ─────────────────────────────────────────────────
+.cc-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-surface);
+    border-bottom: 0.5px solid var(--border-default);
+    padding: 10px 0;
+    margin: 0 -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition: background 0.25s, border-color 0.25s;
+}
+
+.cc-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cc-brand-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.cc-brand-sep {
+    color: var(--border-focus);
+}
+
+.cc-brand-page {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+// ── Hero Header ─────────────────────────────────────────────
+.cc-hero {
+    padding: 28px 0 24px;
+}
+
+.cc-hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.cc-hero-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.cc-srd-ref {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--color-primary);
+    background: var(--color-primary-subtle);
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 0.5px solid var(--color-primary-dark);
+}
+
+// ── Stepper ─────────────────────────────────────────────────
+.cc-stepper {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.cc-stepper-line {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+    background: var(--border-default);
+    z-index: 0;
+}
+
+.cc-stepper-fill {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 1px;
+    background: var(--color-primary);
+    z-index: 1;
+    transition: width 0.35s ease;
+}
+
+.cc-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+    z-index: 2;
+    cursor: default;
+
+    &.clickable {
+        cursor: pointer;
+    }
+}
+
+.cc-step-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-strong);
+    background: var(--bg-canvas);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.cc-step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-disabled);
+}
+
+.cc-step-check {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.cc-step-label {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-disabled);
+    text-align: center;
+    transition: color 0.2s;
+}
+
+// step states
+.cc-step.active {
+    .cc-step-dot {
+        border-color: var(--color-primary);
+        background: var(--color-primary);
+        box-shadow: 0 0 0 4px rgba(74, 158, 255, 0.14);
+    }
+
+    .cc-step-num {
+        color: var(--btn-primary-fg);
+    }
+
+    .cc-step-label {
+        color: var(--color-primary);
+    }
+}
+
+.cc-step.done {
+    .cc-step-dot {
+        border-color: var(--color-primary);
+        background: var(--color-primary-subtle);
+    }
+
+    .cc-step-label {
+        color: var(--text-muted);
+    }
+}
+
+// ── Content Area ─────────────────────────────────────────────
+.cc-content {
+
+    // panels animate in
+    >* {
+        animation: ccRise 0.28s ease both;
+    }
+}
+
+@keyframes ccRise {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ── Toast ────────────────────────────────────────────────────
+.cc-toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-elevated);
+    border: 0.5px solid var(--border-strong);
+    border-radius: 9px;
+    padding: 11px 20px;
+    font-size: 13px;
+    color: var(--text-primary);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    z-index: 500;
+    animation: ccToastIn 0.25s ease both;
+    pointer-events: none;
+    white-space: nowrap;
+
+    &--warning {
+        border-color: var(--color-warning-dark);
+        color: var(--color-warning-text);
+        background: var(--color-warning-subtle);
+    }
+
+    &--success {
+        border-color: var(--color-success-dark);
+        color: var(--color-success-text);
+        background: var(--color-success-subtle);
+    }
+}
+
+@keyframes ccToastIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+// ── Responsive ───────────────────────────────────────────────
+@media (max-width: 640px) {
+    .cc-step-label {
+        display: none;
+    }
+
+    .cc-step-dot {
+        width: 26px;
+        height: 26px;
+    }
+
+    .cc-stepper-line,
+    .cc-stepper-fill {
+        top: 13px;
+    }
+}

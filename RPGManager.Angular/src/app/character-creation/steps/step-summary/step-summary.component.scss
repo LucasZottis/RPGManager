@@ -1,0 +1,244 @@
+// step-summary.component.scss
+@use '../../helpers/step-shared' as *;
+
+// ── Hero block ───────────────────────────────────────────────
+.sum-hero {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: var(--bg-elevated);
+    border: 0.5px solid var(--border-default);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 18px;
+}
+
+.sum-hero__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--color-primary-subtle);
+    border: 2px solid var(--color-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.sum-hero__name {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.sum-hero__line {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+.sum-hero__badges {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+// ── Badges ───────────────────────────────────────────────────
+.badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 5px;
+
+    &--primary {
+        background: var(--color-primary-subtle);
+        color: var(--color-primary-text);
+    }
+
+    &--secondary {
+        background: var(--color-secondary-subtle);
+        color: var(--color-secondary-text);
+    }
+
+    &--warning {
+        background: var(--color-warning-subtle);
+        color: var(--color-warning-text);
+    }
+
+    &--success {
+        background: var(--color-success-subtle);
+        color: var(--color-success-text);
+    }
+
+    &--neutral {
+        background: var(--bg-elevated);
+        color: var(--text-muted);
+        border: 0.5px solid var(--border-default);
+    }
+}
+
+// ── Summary 2×2 grid ─────────────────────────────────────────
+.sum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+
+    @media (max-width: 540px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sum-block {
+    background: var(--bg-elevated);
+    border-radius: 10px;
+    padding: 15px;
+    border: 0.5px solid var(--border-default);
+}
+
+.sum-block__title {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-disabled);
+    margin-bottom: 10px;
+}
+
+// ── Summary rows ─────────────────────────────────────────────
+.sum-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 0.5px solid var(--border-subtle);
+    font-size: 12px;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.sum-row__label {
+    color: var(--text-muted);
+}
+
+.sum-row__val {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sum-row__mod {
+    font-size: 11px;
+
+    &--pos {
+        color: var(--color-success);
+    }
+
+    &--neg {
+        color: var(--color-danger);
+    }
+
+    &--zer {
+        color: var(--text-muted);
+    }
+}
+
+.sum-sub-label {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-disabled);
+}
+
+.sum-empty {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+// ── Personality summary ──────────────────────────────────────
+.personality-summary {
+    background: var(--bg-elevated);
+    border: 0.5px solid var(--border-default);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 16px;
+}
+
+.personality-summary__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    @media (max-width: 540px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.personality-summary__label {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-disabled);
+    margin-bottom: 4px;
+}
+
+.personality-summary__text {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+// ── Status box ───────────────────────────────────────────────
+.status-box {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 0.5px solid;
+
+    &--ready {
+        background: var(--color-success-subtle);
+        border-color: var(--color-success-dark);
+    }
+
+    &--warn {
+        background: var(--color-warning-subtle);
+        border-color: var(--color-warning-dark);
+    }
+}
+
+.status-box__title {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 3px;
+
+    .status-box--ready & {
+        color: var(--color-success-text);
+    }
+
+    .status-box--warn & {
+        color: var(--color-warning-text);
+    }
+}
+
+.status-box__desc {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+// ── Success button ───────────────────────────────────────────
+.btn--success {
+    background: var(--color-success);
+    color: var(--btn-success-fg);
+}

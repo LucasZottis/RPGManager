@@ -5,3 +5,66 @@ $buttons: "primary",
     "warning";
 
 $input-border-radius: 5px;
+
+$card-border-radius: 12px;
+$card-padding: 24px;
+
+$input-group-gap: 6px;
+
+$dark-theme: (
+    "bg-canvas": #090B0E,
+    "bg-surface": #0F1117,
+    "bg-card": #121418,
+    "bg-elevated": #1A1D24,
+    "bg-hover": #21242E,
+
+    "border-subtle": #191C23,
+    "border-default": #1F2229,
+    "border-strong": #2A2D35,
+    "border-focus": #3A3F4D,
+
+    "text-primary": #E2E4EC,
+    "text-secondary": #B8BCC8,
+    "text-muted": #8B90A0,
+    "text-disabled": #5E6070,
+
+    "color-primary": #4A9EFF,
+    "color-primary-dark": #1E7FD4,
+    "color-primary-light": #7FBCFF,
+    "color-primary-subtle": #1A2D42,
+    "color-primary-text": #B3D8FF,
+
+    "color-secondary": #A97FFF,
+    "color-secondary-dark": #7251D4,
+    "color-secondary-light": #C4A3FF,
+    "color-secondary-subtle": #1E1530,
+    "color-secondary-text": #DFD0FF,
+
+    "color-success": #3FC88A,
+    "color-success-dark": #149664,
+    "color-success-light": #72DBA9,
+    "color-success-subtle": #0E2820,
+    "color-success-text": #AAEECB,
+
+    "color-danger": #E55050,
+    "color-danger-dark": #A82828,
+    "color-danger-light": #EE7F7F,
+    "color-danger-subtle": #261010,
+    "color-danger-text": #F5AEAE,
+
+    "color-warning": #F0A832,
+    "color-warning-dark": #A86210,
+    "color-warning-light": #F5C265,
+    "color-warning-subtle": #241A0A,
+    "color-warning-text": #FAD999,
+
+    "color-dark": #090B0E,
+    "color-light": #8B90A0,
+
+    /* btn text colors — fixed regardless of mode */
+    "btn-primary-fg": #042C53,
+    "btn-secondary-fg": #1a0a40,
+    "btn-success-fg": #04201a,
+    "btn-danger-fg": #200808,
+    "btn-warning-fg": #20140a,
+);
