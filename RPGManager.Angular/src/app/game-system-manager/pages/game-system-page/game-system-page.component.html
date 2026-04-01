@@ -1,0 +1,25 @@
+<div class="game-system-content">
+    <!-- <div class="section-header">
+        <h1 class="title">Listagem de Sistemas</h1>
+    </div> -->
+
+    <rpg-stack>
+        <rpg-button label="Criar Sistema" />
+    </rpg-stack>
+
+    <rpg-card style="width: 100%;">
+        <h2 class="subtitle">
+            Sistemas
+        </h2>
+
+        <rpg-divider />
+
+        @for (gameSystem of gameSystems; track gameSystem.id) {
+        <div style="width: 100%;" class="game-system-card">
+            {{gameSystem.name}}
+        </div>
+        } @empty {
+        Nada para mostrar
+        }
+    </rpg-card>
+</div>

@@ -1,11 +1,19 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
+using RPGManager.Desktop.Infra.Seeds;
 
-namespace RPGManager.Desktop.Infra.EntityMappers;
+namespace RPGManager.Desktop.Infra.EntityMappers.CurrencyTypeMappers;
 
 public class CurrencyConversionRateEntityMapper : IEntityTypeConfiguration<CurrencyConversionRate>
 {
+    private readonly DnD521Seed _dnD521Seed;
+
+    public CurrencyConversionRateEntityMapper(DnD521Seed dnD521Seed)
+    {
+        _dnD521Seed = dnD521Seed;
+    }
+
     public void Configure( EntityTypeBuilder<CurrencyConversionRate> builder )
     {
         builder.Property( e => e.FromCurrencyTypeId ).IsRequired().ValueGeneratedNever();
@@ -16,5 +24,7 @@ public class CurrencyConversionRateEntityMapper : IEntityTypeConfiguration<Curre
 
         builder.HasOne( e => e.FromCurrencyType ).WithMany( e => e.FromCurrencyRates ).HasForeignKey( e => e.FromCurrencyTypeId );
         builder.HasOne( e => e.ToCurrencyType ).WithMany( e => e.ToCurrencyRates ).HasForeignKey( e => e.ToCurrencyTypeId );
+
+        builder.HasData( _dnD521Seed.GetCurrencyConversionsRate() );
     }
 }

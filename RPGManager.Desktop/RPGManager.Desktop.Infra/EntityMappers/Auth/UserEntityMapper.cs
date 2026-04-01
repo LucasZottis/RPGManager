@@ -3,16 +3,19 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RPGManager.Desktop.Domain.Entities.AuthEntities;
 using RPGManager.Desktop.Domain.Interfaces;
 using RPGManager.Desktop.Infra.EntityMappers.Base;
+using RPGManager.Desktop.Infra.Seeds;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.Auth;
 
 public class UserEntityMapper : EntityBaseEntityMapper<User>
 {
     private readonly ICrypt _crypt;
+    private readonly AuthSeed _authSeed;
 
-    public UserEntityMapper( ICrypt crypt )
+    public UserEntityMapper( ICrypt crypt, AuthSeed authSeed )
     {
         _crypt = crypt;
+        _authSeed = authSeed;
     }
 
     protected override void Map( EntityTypeBuilder<User> builder )
@@ -30,14 +33,6 @@ public class UserEntityMapper : EntityBaseEntityMapper<User>
         builder.Property( p => p.PasswordHash ).HasMaxLength( MaxLength.Password ).IsRequired();
         builder.Property( p => p.CreatedAt ).HasDefaultValue( DateTime.Now ).IsRequired();
 
-        builder.HasData( [
-            new User {
-                Id = Guid.NewGuid(),
-                Name = "Lucas Zottis",
-                Email = "zottis.lucas@hotmail.com",
-                PasswordHash = _crypt.Hash( "Foxtrot@153" ),
-                CreatedAt = DateTime.Now,
-            }
-        ] );
+        builder.HasData( [ _authSeed.GetUserAdmin() ] );
     }
 }

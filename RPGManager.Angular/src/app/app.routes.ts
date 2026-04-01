@@ -9,4 +9,8 @@ export const routes: Routes = [
         path: "",
         loadChildren: () => import('./character-creation/character-builder.routes').then(r => r.CHARACTERE_BUILDER_ROUTES)
     },
+    {
+        path: "",
+        loadChildren: () => import('./game-system-manager/game-system-manager.routes').then(r => r.GAME_SYSTEM_MANAGER_ROUTES)
+    },
 ];

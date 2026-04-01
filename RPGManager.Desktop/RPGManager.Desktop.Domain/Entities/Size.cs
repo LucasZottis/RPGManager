@@ -7,5 +7,5 @@ public class Size : GameSystemVersionEntityBase
     public string Name { get; set; }
 
     public float MinHeight { get; set; }
-    public float MaxHeight { get; set; }
+    public float? MaxHeight { get; set; }
 }

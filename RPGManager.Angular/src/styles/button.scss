@@ -23,7 +23,7 @@
     }
 }
 
-@each $button in $buttons {
+@each $button in $styles {
     .btn-#{$button} {
         @include button-variant(var(--color-#{$button}), var(--btn-#{$button}-fg));
     }

@@ -1,9 +1,5 @@
+@use 'sass:map';
 @use '_variables' as *;
-
-:root {
-    --input-border-radius: #{$input-border-radius};
-    --input-group-gap: #{$input-group-gap};
-}
 
 /* ══════════════════════════════════════════════
    DARK THEME TOKENS
@@ -11,12 +7,12 @@
 [data-theme="dark"] {
     --bg-canvas: #090B0E;
     --bg-surface: #0F1117;
-    --bg-card: #121418;
+    --bg-card: #{map.get($dark-theme, "bg-card")};
     --bg-elevated: #1A1D24;
     --bg-hover: #21242E;
 
     --border-subtle: #191C23;
-    --border-default: #1F2229;
+    --border-default: #{map.get($dark-theme, "border-default")};
     --border-strong: #2A2D35;
     --border-focus: #3A3F4D;
 
@@ -124,4 +120,53 @@
     --btn-success-fg: #FFFFFF;
     --btn-danger-fg: #FFFFFF;
     --btn-warning-fg: #FFFFFF;
+}
+
+/* BREAKPOINT */
+:root {
+    @each $type in $breakpoint-type {
+        --#{$type}-breakpoint: map.get($breakpoints, $type);
+    }
+}
+
+:root {
+    --input-border-radius: #{$input-border-radius};
+    --input-group-gap: #{$input-group-gap};
+}
+
+/* CARD */
+:root {
+    --card-default-background: var(--bg-card);
+    --card-default-border: var(--border-default);
+    --card-default-color: var(--text-primary);
+
+    --card-primary-background: var(--color-primary-subtle);
+    --card-primary-border: var(--color-primary-dark);
+    --card-primary-color: var(--color-primary-text);
+
+    --card-secondary-background: var(--color-secondary-subtle);
+    --card-secondary-border: var(--color-secondary-dark);
+    --card-secondary-color: var(--color-secondary-text);
+
+    --card-success-background: var(--color-success-subtle);
+    --card-success-border: var(--color-success-dark);
+    --card-success-color: var(--color-success-text);
+
+    --card-warning-background: var(--color-warning-subtle);
+    --card-warning-border: var(--color-warning-dark);
+    --card-warning-color: var(--color-warning-text);
+
+    --card-danger-background: var(--color-danger-subtle);
+    --card-danger-border: var(--color-danger-dark);
+    --card-danger-color: var(--color-danger-text);
+}
+
+/* BORDER */
+:root {
+    --default-border: var(--border-default);
+    --primary-border: var(--color-primary-dark);
+    --secondary-border: var(--color-secondary-dark);
+    --success-border: var(--color-success-dark);
+    --warning-border: var(--color-warning-dark);
+    --danger-border: var(--color-danger-dark);
 }

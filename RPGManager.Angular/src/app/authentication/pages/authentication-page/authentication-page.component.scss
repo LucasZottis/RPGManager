@@ -1,4 +1,4 @@
-@use 'mixins' as *;
+@use '_mixins' as *;
 
 :host {
     height: auto;
@@ -6,7 +6,7 @@
 }
 
 .login-card {
-    @include card();
+    @include card('default');
     display: flex;
     flex-direction: column;
     gap: 15px;

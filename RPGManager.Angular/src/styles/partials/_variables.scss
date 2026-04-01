@@ -1,15 +1,28 @@
-$buttons: "primary",
+$breakpoint-type: 'sm',
+    'md',
+    'lg';
+
+$breakpoints: (
+    "sm": 768px,
+);
+
+$styles: 'default',
+    "primary",
     "secondary",
     "success",
     "danger",
     "warning";
 
+$alignments: center;
+
 $input-border-radius: 5px;
 
-$card-border-radius: 12px;
-$card-padding: 24px;
+$card-border-radius: 6px;
+$card-padding: 16px;
 
-$input-group-gap: 6px;
+$default-gap: 8px;
+$input-group-gap: $default-gap;
+$stack-gap: $default-gap;
 
 $dark-theme: (
     "bg-canvas": #090B0E,

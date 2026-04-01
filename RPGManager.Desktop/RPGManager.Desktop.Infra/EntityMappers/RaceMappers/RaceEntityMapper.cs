@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RPGManager.Desktop.Domain.Entities.RaceEntities;
 using RPGManager.Desktop.Infra.EntityMappers.Base;
 
-namespace RPGManager.Desktop.Infra.EntityMappers;
+namespace RPGManager.Desktop.Infra.EntityMappers.RaceMappers;
 
 public class RaceEntityMapper : GameSystemVersionBaseEntityMapper<Race>
 {

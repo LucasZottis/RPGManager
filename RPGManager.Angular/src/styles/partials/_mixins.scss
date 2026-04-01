@@ -1,11 +1,13 @@
 @use "_variables" as *;
 
-@mixin card {
-    background: var(--bg-card);
-    border: 0.5px solid var(--border-default);
+@mixin card($card-style) {
+    background: var(--card-#{$card-style}-background);
+    border: 0.5px solid var(--card-#{$card-style}-border);
     border-radius: $card-border-radius;
+    color: var(--card-#{$card-style}-color);
     padding: $card-padding;
     transition: background .25s, border-color .25s;
+    width: 100%;
 }
 
 @mixin button-variant($background-color, $color) {
@@ -28,4 +30,16 @@
     color: var(--text-primary);
     outline: none;
     transition: border-color .15s, box-shadow .15s, background .25s;
+}
+
+@mixin stack {
+    display: flex;
+    gap: $stack-gap;
+}
+
+@mixin divider($divider-style) {
+    height: 1.5px;
+    background: var(--#{$divider-style}-border);
+    margin: 10px 0;
+    transition: background .25s;
 }

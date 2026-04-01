@@ -8,6 +8,7 @@ using RPGManager.Desktop.Application.Options;
 using RPGManager.Desktop.Domain.Interfaces;
 using RPGManager.Desktop.Infra.Db.Contexts;
 using RPGManager.Desktop.Infra.DI;
+using RPGManager.Desktop.Infra.Seeds;
 
 namespace RPGManager.Desktop.Api;
 
@@ -41,6 +42,9 @@ public class Program
         } );
 
         builder.Services.AddSingleton<ICrypt, CryptFacade>();
+
+        builder.Services.AddSingleton<AuthSeed>();
+        builder.Services.AddSingleton<DnD521Seed>();
 
         var app = builder.Build()
             .UseSwaggerGenerator()

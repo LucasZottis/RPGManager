@@ -33,14 +33,15 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/styles"
+                "src/styles/partials"
               ]
             },
             "styles": [
               "src/styles/variables.scss",
-              "src/styles.scss",
+              "src/styles/styles.scss",
               "src/styles/input.scss",
-              "src/styles/button.scss"
+              "src/styles/button.scss",
+              "src/styles/titles.scss"
             ],
             "scripts": []
           },
