@@ -1,10 +1,10 @@
-using RPGManager.Desktop.Infra.Db.Contexts;
+//using RPGManager.Desktop.Infra.Db.Contexts;
 
-namespace RPGManager.Desktop.Infra.Repositories;
+//namespace RPGManager.Desktop.Infra.Repositories;
 
-public class MonsterRepository : RepositoryBase<Monster>, IMonsterRepository
-{
-    public MonsterRepository( Context context ) : base( context )
-    {
-    }
-}
+//public class MonsterRepository : RepositoryBase<Monster>, IMonsterRepository
+//{
+//    public MonsterRepository( Context context ) : base( context )
+//    {
+//    }
+//}

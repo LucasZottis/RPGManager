@@ -1,11 +1,9 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
 using RPGManager.Desktop.Infra.Seeds;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.ItemMappers.ArmorMapper;
 
-public class ShieldArmorEntityMapper : IEntityTypeConfiguration<ShieldArmor>
+public class ShieldArmorEntityMapper : ItemEntityMapper<ShieldArmor>
 {
     private readonly DnD521Seed _seed;
 
@@ -14,12 +12,14 @@ public class ShieldArmorEntityMapper : IEntityTypeConfiguration<ShieldArmor>
         _seed = dnD521Seed;
     }
 
-    public void Configure( EntityTypeBuilder<ShieldArmor> builder )
+    protected override void Map( EntityTypeBuilder<ShieldArmor> builder )
     {
-        //builder.Property( e => e.ArmorId ).IsRequired();
         builder.Property( e => e.ArmorClassBonus ).IsRequired();
 
-        builder.HasOne( e => e.Armor ).WithOne( e => e.Shield ).HasForeignKey<Armor>( e => e.Id );
+        builder.HasOne( e => e.GameSystemVersion ).WithMany( e => e.ShieldArmors ).HasForeignKey( e => e.GameSystemVersionId );
+        builder.HasOne( e => e.CostCurrencyType ).WithMany( e => e.ShieldArmors ).HasForeignKey( e => e.CostCurrencyTypeId );
+        builder.HasOne( e => e.ArmorCategory ).WithMany( e => e.ShieldArmors ).HasForeignKey( e => e.ArmorCategoryId );
+        builder.HasOne( e => e.RequiredAbilityScore ).WithMany( e => e.ShieldArmorsRequiredAbilityScoreId ).HasForeignKey( e => e.RequiredAbilityScoreId );
 
         builder.HasData( _seed.GetShieldArmors() );
     }

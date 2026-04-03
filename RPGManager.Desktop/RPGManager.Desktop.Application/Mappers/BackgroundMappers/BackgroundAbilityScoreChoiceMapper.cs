@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Application.Mappers.Base;
-using RPGManager.Desktop.Domain.Entities.Backgrounds.BackgroundAbilityScores;
+//using RPGManager.Desktop.Application.Mappers.Base;
+//using RPGManager.Desktop.Domain.Entities.Backgrounds.BackgroundAbilityScores;
 
-namespace RPGManager.Desktop.Application.Mappers.BackgroundMappers;
+//namespace RPGManager.Desktop.Application.Mappers.BackgroundMappers;
 
-public class BackgroundAbilityScoreChoiceMapper : MapperTwo<BackgroundAbilityScoreChoice>, IBackgroundAbilityScoreChoiceMapper
-{
-}
+//public class BackgroundAbilityScoreChoiceMapper : MapperTwo<BackgroundAbilityScoreChoice>, IBackgroundAbilityScoreChoiceMapper
+//{
+//}

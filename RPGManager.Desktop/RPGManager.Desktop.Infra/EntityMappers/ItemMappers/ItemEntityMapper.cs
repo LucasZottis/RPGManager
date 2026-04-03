@@ -1,22 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RPGManager.Desktop.Domain.Entities.ItemsEntities;
 using RPGManager.Desktop.Infra.EntityMappers.Base;
 
 namespace RPGManager.Desktop.Infra.EntityMappers.ItemMappers;
 
-public class ItemEntityMapper : GameSystemVersionBaseEntityMapper<Item>
+public abstract class ItemEntityMapper<TEntity> : EntityBaseEntityMapper<TEntity>
+    where TEntity : Item
 {
-    protected override void Map( EntityTypeBuilder<Item> builder )
+    protected override void Map( EntityTypeBuilder<TEntity> builder )
     {
-        builder.ToTable( nameof( Item ).ToLower(), $"pk_{nameof( Item ).ToLower()}" ); // tabela separada de Item
-        builder.UseTptMappingStrategy();
+        builder.UseTpcMappingStrategy();
 
+        builder.Property( e => e.GameSystemVersionId ).IsRequired();
         builder.Property( e => e.CostCurrencyTypeId );
         builder.Property( e => e.Name ).IsRequired().HasMaxLength( MaxLength.MediumName );
         builder.Property( e => e.Cost ).IsRequired();
         builder.Property( e => e.Weight );
-
-        builder.HasOne( e => e.CostCurrencyType ).WithMany( e => e.Items ).HasForeignKey( e => e.CostCurrencyTypeId );
     }
 }

@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities;
+//using RPGManager.Desktop.Domain.Entities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IMonsterMapper : IMapperTwo<Monster>
-{
-}
+//public interface IMonsterMapper : IMapperTwo<Monster>
+//{
+//}

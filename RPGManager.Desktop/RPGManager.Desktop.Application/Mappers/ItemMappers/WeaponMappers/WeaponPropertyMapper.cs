@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Application.Mappers.Base;
+//using RPGManager.Desktop.Application.Mappers.Base;
 
-namespace RPGManager.Desktop.Application.Mappers.ItemMappers.WeaponMappers;
+//namespace RPGManager.Desktop.Application.Mappers.ItemMappers.WeaponMappers;
 
-public class WeaponPropertyMapper : MapperTwo<WeaponProperty>, IWeaponPropertyMapper
-{
+//public class WeaponPropertyMapper : MapperTwo<WeaponProperty>, IWeaponPropertyMapper
+//{
 
-}
+//}

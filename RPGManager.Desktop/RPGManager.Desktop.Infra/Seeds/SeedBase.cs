@@ -1,8 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
-using RPGManager.Desktop.Domain.Entities.GameSystems;
-using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
-
-namespace RPGManager.Desktop.Infra.Seeds;
+﻿namespace RPGManager.Desktop.Infra.Seeds;
 
 public abstract class SeedBase
 {
@@ -188,6 +184,213 @@ public abstract class SeedBase
         { "Shield",             Guid.NewGuid() },
     };
 
+    protected IDictionary<string, Guid> WeaponCategoriesId = new Dictionary<string, Guid>
+    {
+        { "Simple",  Guid.NewGuid() },
+        { "Martial", Guid.NewGuid() },
+    };
+
+    protected IDictionary<string, Guid> WeaponMasteryPropertiesId = new Dictionary<string, Guid>
+    {
+        { "Cleave", Guid.NewGuid() },
+        { "Graze",  Guid.NewGuid() },
+        { "Nick",   Guid.NewGuid() },
+        { "Push",   Guid.NewGuid() },
+        { "Sap",    Guid.NewGuid() },
+        { "Slow",   Guid.NewGuid() },
+        { "Topple", Guid.NewGuid() },
+        { "Vex",    Guid.NewGuid() },
+    };
+
+    protected IDictionary<string, Guid> WeaponPropertiesId = new Dictionary<string, Guid>
+    {
+        { "Ammunition",  Guid.NewGuid() },
+        { "Finesse",     Guid.NewGuid() },
+        { "Heavy",       Guid.NewGuid() },
+        { "Light",       Guid.NewGuid() },
+        { "Loading",     Guid.NewGuid() },
+        { "Range",       Guid.NewGuid() },
+        { "Reach",       Guid.NewGuid() },
+        { "Thrown",      Guid.NewGuid() },
+        { "TwoHanded",   Guid.NewGuid() },
+        { "Versatile",   Guid.NewGuid() },
+    };
+
+    protected IDictionary<string, Guid> WeaponTypesId = new Dictionary<string, Guid>
+    {
+        { "Melee",  Guid.NewGuid() },
+        { "Ranged", Guid.NewGuid() },
+    };
+
+    protected IDictionary<string, Guid> WeaponsId = new Dictionary<string, Guid>
+    {
+        // Simple Melee
+        { "Club",          Guid.NewGuid() },
+        { "Dagger",        Guid.NewGuid() },
+        { "Greatclub",     Guid.NewGuid() },
+        { "Handaxe",       Guid.NewGuid() },
+        { "Javelin",       Guid.NewGuid() },
+        { "LightHammer",   Guid.NewGuid() },
+        { "Mace",          Guid.NewGuid() },
+        { "Quarterstaff",  Guid.NewGuid() },
+        { "Sickle",        Guid.NewGuid() },
+        { "Spear",         Guid.NewGuid() },
+        // Simple Ranged
+        { "Dart",          Guid.NewGuid() },
+        { "LightCrossbow", Guid.NewGuid() },
+        { "Shortbow",      Guid.NewGuid() },
+        { "Sling",         Guid.NewGuid() },
+        // Martial Melee
+        { "Battleaxe",     Guid.NewGuid() },
+        { "Flail",         Guid.NewGuid() },
+        { "Glaive",        Guid.NewGuid() },
+        { "Greataxe",      Guid.NewGuid() },
+        { "Greatsword",    Guid.NewGuid() },
+        { "Halberd",       Guid.NewGuid() },
+        { "Lance",         Guid.NewGuid() },
+        { "Longsword",     Guid.NewGuid() },
+        { "Maul",          Guid.NewGuid() },
+        { "Morningstar",   Guid.NewGuid() },
+        { "Pike",          Guid.NewGuid() },
+        { "Rapier",        Guid.NewGuid() },
+        { "Scimitar",      Guid.NewGuid() },
+        { "Shortsword",    Guid.NewGuid() },
+        { "Trident",       Guid.NewGuid() },
+        { "Warhammer",     Guid.NewGuid() },
+        { "WarPick",       Guid.NewGuid() },
+        { "Whip",          Guid.NewGuid() },
+        // Martial Ranged
+        { "Blowgun",       Guid.NewGuid() },
+        { "HandCrossbow",  Guid.NewGuid() },
+        { "HeavyCrossbow", Guid.NewGuid() },
+        { "Longbow",       Guid.NewGuid() },
+        { "Musket",        Guid.NewGuid() },
+        { "Pistol",        Guid.NewGuid() },
+    };
+
+    protected IDictionary<string, Guid> GearsId = new Dictionary<string, Guid>
+    {
+        { "Acid",                Guid.NewGuid() },
+        { "AlchemistsFire",      Guid.NewGuid() },
+        { "Antitoxin",           Guid.NewGuid() },
+        { "Backpack",            Guid.NewGuid() },
+        { "BallBearings",        Guid.NewGuid() },
+        { "Barrel",              Guid.NewGuid() },
+        { "Basket",              Guid.NewGuid() },
+        { "Bedroll",             Guid.NewGuid() },
+        { "Bell",                Guid.NewGuid() },
+        { "Blanket",             Guid.NewGuid() },
+        { "BlockAndTackle",      Guid.NewGuid() },
+        { "Book",                Guid.NewGuid() },
+        { "BottleGlass",         Guid.NewGuid() },
+        { "Bucket",              Guid.NewGuid() },
+        { "BurglarsPack",        Guid.NewGuid() },
+        { "Caltrops",            Guid.NewGuid() },
+        { "Candle",              Guid.NewGuid() },
+        { "CaseCrossbowBolt",    Guid.NewGuid() },
+        { "CaseMapOrScroll",     Guid.NewGuid() },
+        { "Chain",               Guid.NewGuid() },
+        { "Chest",               Guid.NewGuid() },
+        { "ClimbersKit",         Guid.NewGuid() },
+        { "ClothesFine",         Guid.NewGuid() },
+        { "ClothesTravelers",    Guid.NewGuid() },
+        { "ComponentPouch",      Guid.NewGuid() },
+        { "Costume",             Guid.NewGuid() },
+        { "Crowbar",             Guid.NewGuid() },
+        { "DiplomatsPack",       Guid.NewGuid() },
+        { "DungeoneersPack",     Guid.NewGuid() },
+        { "EntertainersPack",    Guid.NewGuid() },
+        { "ExplorersPack",       Guid.NewGuid() },
+        { "Flask",               Guid.NewGuid() },
+        { "GrapplingHook",       Guid.NewGuid() },
+        { "HealersKit",          Guid.NewGuid() },
+        { "HolyWater",           Guid.NewGuid() },
+        { "HuntersTrap",         Guid.NewGuid() },
+        { "Ink",                 Guid.NewGuid() },
+        { "InkPen",              Guid.NewGuid() },
+        { "Jug",                 Guid.NewGuid() },
+        { "Ladder",              Guid.NewGuid() },
+        { "Lamp",                Guid.NewGuid() },
+        { "LanternBullseye",     Guid.NewGuid() },
+        { "LanternHooded",       Guid.NewGuid() },
+        { "Lock",                Guid.NewGuid() },
+        { "MagnifyingGlass",     Guid.NewGuid() },
+        { "Manacles",            Guid.NewGuid() },
+        { "Map",                 Guid.NewGuid() },
+        { "Mirror",              Guid.NewGuid() },
+        { "Net",                 Guid.NewGuid() },
+        { "Oil",                 Guid.NewGuid() },
+        { "Paper",               Guid.NewGuid() },
+        { "Parchment",           Guid.NewGuid() },
+        { "Perfume",             Guid.NewGuid() },
+        { "Pole",                Guid.NewGuid() },
+        { "PotionOfHealing",     Guid.NewGuid() },
+        { "Pouch",               Guid.NewGuid() },
+        { "Quiver",              Guid.NewGuid() },
+        { "RamPortable",         Guid.NewGuid() },
+        { "Rations",             Guid.NewGuid() },
+        { "Robe",                Guid.NewGuid() },
+        { "Rope",                Guid.NewGuid() },
+        { "Sack",                Guid.NewGuid() },
+        { "ScholarsPack",        Guid.NewGuid() },
+        { "Shovel",              Guid.NewGuid() },
+        { "SignalWhistle",       Guid.NewGuid() },
+        { "SpellScrollCantrip",  Guid.NewGuid() },
+        { "SpellScrollLevel1",   Guid.NewGuid() },
+        { "SpikesIron",          Guid.NewGuid() },
+        { "Spyglass",            Guid.NewGuid() },
+        { "String",              Guid.NewGuid() },
+        { "Tent",                Guid.NewGuid() },
+        { "Tinderbox",           Guid.NewGuid() },
+        { "Torch",               Guid.NewGuid() },
+        { "Vial",                Guid.NewGuid() },
+        { "Waterskin",           Guid.NewGuid() },
+    };
+
+    protected IDictionary<string, Guid> AmmunitionTypesId = new Dictionary<string, Guid>
+    {
+        { "Arrow", Guid.NewGuid() },
+        { "Bolt", Guid.NewGuid() },
+        { "Firearm Bullet", Guid.NewGuid() },
+        { "Sling Bullet", Guid.NewGuid() },
+        { "Needle", Guid.NewGuid() },
+    };
+
+    protected IDictionary<string, Guid> ToolCategoriesId = new Dictionary<string, Guid>
+    {
+        { "ArtisansTools", Guid.NewGuid() },
+        { "OtherTools", Guid.NewGuid() },
+    };
+
+    protected IDictionary<string, Guid> ToolsId = new Dictionary<string, Guid>
+    {
+        { "AlchemistsSupplies", Guid.NewGuid() },
+        { "BrewersSupplies", Guid.NewGuid() },
+        { "CalligraphersSupplies", Guid.NewGuid() },
+        { "CarpentersTools", Guid.NewGuid() },
+        { "CartographersTools", Guid.NewGuid() },
+        { "CobblersTools", Guid.NewGuid() },
+        { "CooksUtensils", Guid.NewGuid() },
+        { "GlassblowersTools", Guid.NewGuid() },
+        { "JewelersTools", Guid.NewGuid() },
+        { "LeatherworkersTools", Guid.NewGuid() },
+        { "MasonsTools", Guid.NewGuid() },
+        { "PaintersSupplies", Guid.NewGuid() },
+        { "PottersTools", Guid.NewGuid() },
+        { "SmithsTools", Guid.NewGuid() },
+        { "TinkersTools", Guid.NewGuid() },
+        { "WeaversTools", Guid.NewGuid() },
+        { "WoodcarversTools", Guid.NewGuid() },
+        { "DisguiseKit", Guid.NewGuid() },
+        { "ForgeryKit", Guid.NewGuid() },
+        { "GamingSet", Guid.NewGuid() },
+        { "HerbalismKit", Guid.NewGuid() },
+        { "MusicalInstrument", Guid.NewGuid() },
+        { "NavigatorsTools", Guid.NewGuid() },
+        { "PoisonersKit", Guid.NewGuid() },
+        { "ThievesTools", Guid.NewGuid() },
+    };
+
     public abstract IEnumerable<GameSystem> GetGameSystems();
     public abstract IEnumerable<GameSystemVersion> GetGameSystemVersions();
     public abstract IEnumerable<AbilityScore> GetAbilityScore();
@@ -203,4 +406,15 @@ public abstract class SeedBase
     public abstract IEnumerable<ArmorCategory> GetArmorCategories();
     public abstract IEnumerable<WearableArmor> GetWearableArmors();
     public abstract IEnumerable<ShieldArmor> GetShieldArmors();
+    public abstract IEnumerable<WeaponCategory> GetWeaponCategories();
+    public abstract IEnumerable<WeaponMasteryProperty> GetWeaponMasteryProperties();
+    public abstract IEnumerable<WeaponProperty> GetWeaponProperties();
+    public abstract IEnumerable<WeaponType> GetWeaponTypes();
+    public abstract IEnumerable<Weapon> GetWeapons();
+    public abstract IEnumerable<WeaponDamage> GetWeaponDamages();
+    public abstract IEnumerable<WeaponPropertyAttribute> GetWeaponPropertyAttributes();
+    public abstract IEnumerable<Gear> GetGears();
+    public abstract IEnumerable<AmmunitionType> GetAmmunitionTypes();
+    public abstract IEnumerable<ToolCategory> GetToolCategories();
+    public abstract IEnumerable<Tool> GetTools();
 }

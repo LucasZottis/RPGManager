@@ -1,8 +1,6 @@
-﻿using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
+﻿namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.Gears;
 
-namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.Gears;
-
-public class AmmunitionType : Gear
+public class AmmunitionType : Item
 {
     public byte Amount { get; set; }
     public string Storage { get; set; }

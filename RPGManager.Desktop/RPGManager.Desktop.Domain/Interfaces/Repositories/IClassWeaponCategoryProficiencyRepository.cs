@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IClassWeaponCategoryProficiencyRepository : IRepositoryBase<ClassWeaponCategoryProficiency>
-{
+//public interface IClassWeaponCategoryProficiencyRepository : IRepositoryBase<ClassWeaponCategoryProficiency>
+//{
 
-}
+//}

@@ -1,7 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using RPGManager.Desktop.Domain.Entities.AuthEntities;
-using RPGManager.Desktop.Domain.Entities.GameSystems;
-using RPGManager.Desktop.Infra.Db.Interfaces;
 
 namespace RPGManager.Desktop.Infra.Db.Contexts;
 
@@ -72,23 +69,20 @@ public class Context : ContextBase
     //internal DbSet<FeatBenefitToolProficiency> FeatBenefitToolProficiency { get; set; }
 
     //// Items
-    //internal DbSet<Item> Item { get; set; }
-    //internal DbSet<ArmorCategory> ArmorCategory { get; set; }
-    //internal DbSet<Armor> Armor { get; set; }
-    //internal DbSet<WearableArmor> WearableArmor { get; set; }
-    //internal DbSet<ShieldArmor> ShieldArmor { get; set; }
-    //internal DbSet<Gear> Gear { get; set; }
-    //internal DbSet<AmmunitionType> AmmunitionType { get; set; }
+    internal DbSet<ArmorCategory> ArmorCategory { get; set; }
+    internal DbSet<WearableArmor> WearableArmor { get; set; }
+    internal DbSet<ShieldArmor> ShieldArmor { get; set; }
+    internal DbSet<Gear> Gear { get; set; }
+    internal DbSet<AmmunitionType> AmmunitionType { get; set; }
     //internal DbSet<ToolCategory> ToolCategory { get; set; }
     //internal DbSet<Tool> Tool { get; set; }
-    //internal DbSet<WeaponCategory> WeaponCategory { get; set; }
-    //internal DbSet<WeaponType> WeaponType { get; set; }
-    //internal DbSet<WeaponMasteryProperty> WeaponMasteryProperty { get; set; }
-    //internal DbSet<WeaponProperty> WeaponProperty { get; set; }
-    //internal DbSet<WeaponPropertyAttribute> WeaponPropertyAttribute { get; set; }
-    //internal DbSet<Weapon> Weapon { get; set; }
-    //internal DbSet<WeaponDamage> WeaponDamage { get; set; }
-    //internal DbSet<WeaponDamageDiceType> WeaponDamageDiceType { get; set; }
+    internal DbSet<WeaponCategory> WeaponCategory { get; set; }
+    internal DbSet<WeaponType> WeaponType { get; set; }
+    internal DbSet<WeaponMasteryProperty> WeaponMasteryProperty { get; set; }
+    internal DbSet<WeaponProperty> WeaponProperty { get; set; }
+    internal DbSet<WeaponPropertyAttribute> WeaponPropertyAttribute { get; set; }
+    internal DbSet<Weapon> Weapon { get; set; }
+    internal DbSet<WeaponDamage> WeaponDamage { get; set; }
 
     //// Races
     //internal DbSet<Race> Race { get; set; }

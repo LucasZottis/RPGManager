@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.StartingEquipment;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities.StartingEquipment;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IClassStartingEquipmentItemMapper : IMapperTwo<ClassStartingEquipmentItem>
-{
-}
+//public interface IClassStartingEquipmentItemMapper : IMapperTwo<ClassStartingEquipmentItem>
+//{
+//}

@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.Feats;
+//using RPGManager.Desktop.Domain.Entities.Feats;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IFeatCategoryMapper : IMapperTwo<FeatCategory>
-{
-}
+//public interface IFeatCategoryMapper : IMapperTwo<FeatCategory>
+//{
+//}

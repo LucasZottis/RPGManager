@@ -1,5 +1,5 @@
 ﻿using RPGManager.Desktop.Domain.Entities.Base;
-using RPGManager.Desktop.Domain.Interfaces.Services.BaseServices;
+
 using System.Diagnostics.CodeAnalysis;
 
 namespace RPGManager.Desktop.Application.Services.Base;

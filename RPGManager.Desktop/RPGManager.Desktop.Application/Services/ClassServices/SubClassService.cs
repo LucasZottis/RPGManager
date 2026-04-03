@@ -1,13 +1,13 @@
-using RPGManager.Desktop.Application.Services.Base;
-using RPGManager.Desktop.Domain.DTOs.Classes;
-using RPGManager.Desktop.Domain.Entities.ClassesEntities;
-using RPGManager.Desktop.Domain.Interfaces.Services.ClassServices;
+//using RPGManager.Desktop.Application.Services.Base;
+//using RPGManager.Desktop.Domain.DTOs.Classes;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities;
+//using RPGManager.Desktop.Domain.Interfaces.Services.ClassServices;
 
-namespace RPGManager.Desktop.Application.Services.ClassServices;
+//namespace RPGManager.Desktop.Application.Services.ClassServices;
 
-public class SubClassService : CrudServiceBase<SubClass, SubClassRegisterDto, SubClassQueryDto>, ISubClassService
-{
-    public SubClassService( ISubClassRepository repository, ISubClassMapper mapper ) : base( repository, mapper )
-    {
-    }
-}
+//public class SubClassService : CrudServiceBase<SubClass, SubClassRegisterDto, SubClassQueryDto>, ISubClassService
+//{
+//    public SubClassService( ISubClassRepository repository, ISubClassMapper mapper ) : base( repository, mapper )
+//    {
+//    }
+//}

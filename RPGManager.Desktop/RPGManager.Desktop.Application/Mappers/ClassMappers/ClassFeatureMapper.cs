@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Application.Mappers.Base;
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
+//using RPGManager.Desktop.Application.Mappers.Base;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
 
-namespace RPGManager.Desktop.Application.Mappers.ClassMappers;
+//namespace RPGManager.Desktop.Application.Mappers.ClassMappers;
 
-public class ClassFeatureMapper : MapperTwo<ClassFeature>, IClassFeatureMapper
-{
-}
+//public class ClassFeatureMapper : MapperTwo<ClassFeature>, IClassFeatureMapper
+//{
+//}

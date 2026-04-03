@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface ISubClassMapper : IMapperTwo<SubClass>
-{
-}
+//public interface ISubClassMapper : IMapperTwo<SubClass>
+//{
+//}

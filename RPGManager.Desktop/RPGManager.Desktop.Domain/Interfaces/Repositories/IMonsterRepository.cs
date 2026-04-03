@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities;
+//using RPGManager.Desktop.Domain.Entities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IMonsterRepository : IRepositoryBase<Monster>
-{
+//public interface IMonsterRepository : IRepositoryBase<Monster>
+//{
 
-}
+//}

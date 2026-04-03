@@ -1,8 +1,8 @@
-﻿using RPGManager.Desktop.Domain.Entities.ClassesEntities;
+﻿//using RPGManager.Desktop.Domain.Entities.ClassesEntities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IClassMapper : IMapperTwo<Class>
-{
+//public interface IClassMapper : IMapperTwo<Class>
+//{
 
-}
+//}

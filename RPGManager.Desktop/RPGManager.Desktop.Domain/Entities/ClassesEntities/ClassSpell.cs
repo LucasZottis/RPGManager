@@ -1,12 +1,12 @@
-﻿using RPGManager.Desktop.Domain.Entities.Base;
+﻿//using RPGManager.Desktop.Domain.Entities.Base;
 
-namespace RPGManager.Desktop.Domain.Entities.ClassesEntities;
+//namespace RPGManager.Desktop.Domain.Entities.ClassesEntities;
 
-public class ClassSpell
-{
-    public Guid ClassId { get; set; }
-    public Guid SpellId { get; set; }
+//public class ClassSpell
+//{
+//    public Guid ClassId { get; set; }
+//    public Guid SpellId { get; set; }
 
-    public Class Class { get; set; }
-    public Spell Spell { get; set; }
-}
+//    public Class Class { get; set; }
+//    public Spell Spell { get; set; }
+//}

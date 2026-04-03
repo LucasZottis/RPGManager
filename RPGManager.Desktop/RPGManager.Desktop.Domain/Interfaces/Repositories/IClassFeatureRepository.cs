@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IClassFeatureRepository : IRepositoryBase<ClassFeature>
-{
+//public interface IClassFeatureRepository : IRepositoryBase<ClassFeature>
+//{
 
-}
+//}

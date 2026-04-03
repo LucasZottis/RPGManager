@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.Backgrounds.ToolProficiencies;
+//using RPGManager.Desktop.Domain.Entities.Backgrounds.ToolProficiencies;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IBackgroundToolProficiencyChoiceMapper : IMapperTwo<BackgroundToolProficiencyChoice>
-{
-}
+//public interface IBackgroundToolProficiencyChoiceMapper : IMapperTwo<BackgroundToolProficiencyChoice>
+//{
+//}

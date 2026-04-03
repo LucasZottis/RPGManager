@@ -1,5 +1,4 @@
 ﻿using RPGManager.Desktop.Domain.Entities.Base;
-using RPGManager.Desktop.Domain.Entities.GameSystems;
 
 namespace RPGManager.Desktop.Domain.Entities;
 

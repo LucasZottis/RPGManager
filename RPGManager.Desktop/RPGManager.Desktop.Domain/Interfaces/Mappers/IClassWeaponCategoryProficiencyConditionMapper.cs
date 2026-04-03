@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities.WeaponProficiency;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IClassWeaponCategoryProficiencyConditionMapper : IMapperTwo<ClassWeaponCategoryProficiencyCondition>
-{
-}
+//public interface IClassWeaponCategoryProficiencyConditionMapper : IMapperTwo<ClassWeaponCategoryProficiencyCondition>
+//{
+//}

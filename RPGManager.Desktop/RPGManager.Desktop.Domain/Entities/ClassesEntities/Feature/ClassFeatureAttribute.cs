@@ -1,13 +1,13 @@
-﻿using RPGManager.Desktop.Domain.Entities.Base;
+﻿//using RPGManager.Desktop.Domain.Entities.Base;
 
-namespace RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
+//namespace RPGManager.Desktop.Domain.Entities.ClassesEntities.Feature;
 
-public class ClassFeatureAttribute : EntityBase
-{
-    public Guid ClassFeatureId { get; set; }
-    public string Name { get; set; }
+//public class ClassFeatureAttribute : EntityBase
+//{
+//    public Guid ClassFeatureId { get; set; }
+//    public string Name { get; set; }
 
-    public ClassFeature ClassFeature { get; set; }
+//    public ClassFeature ClassFeature { get; set; }
 
-    public ICollection<ClassFeatureAttributeLevel> AttributeLevels { get; set; }
-}
+//    public ICollection<ClassFeatureAttributeLevel> AttributeLevels { get; set; }
+//}

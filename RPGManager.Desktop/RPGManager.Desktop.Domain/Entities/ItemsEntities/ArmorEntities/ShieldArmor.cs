@@ -3,6 +3,4 @@
 public class ShieldArmor : Armor
 {
     public byte ArmorClassBonus { get; set; }
-
-    public Armor Armor { get; set; }
 }

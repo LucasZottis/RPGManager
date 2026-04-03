@@ -1,9 +1,9 @@
-using RPGManager.Desktop.Domain.DTOs.Feats;
-using RPGManager.Desktop.Domain.Entities.Feats;
-using RPGManager.Desktop.Domain.Interfaces.Services.BaseServices;
+//using RPGManager.Desktop.Domain.DTOs.Feats;
+//using RPGManager.Desktop.Domain.Entities.Feats;
+//using RPGManager.Desktop.Domain.Interfaces.Services.BaseServices;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Services.FeatServices;
+//namespace RPGManager.Desktop.Domain.Interfaces.Services.FeatServices;
 
-public interface IFeatCategoryService : ICrudServiceBase<FeatCategory, FeatCategoryRegisterDto, FeatCategoryQueryDto>
-{
-}
+//public interface IFeatCategoryService : ICrudServiceBase<FeatCategory, FeatCategoryRegisterDto, FeatCategoryQueryDto>
+//{
+//}

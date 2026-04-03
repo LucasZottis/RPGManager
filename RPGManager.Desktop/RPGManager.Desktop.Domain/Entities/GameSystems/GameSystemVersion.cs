@@ -1,10 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Entities.Backgrounds;
-using RPGManager.Desktop.Domain.Entities.Base;
-using RPGManager.Desktop.Domain.Entities.ClassesEntities;
-using RPGManager.Desktop.Domain.Entities.CurrencyTypeEntities;
-using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
-using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
-using RPGManager.Desktop.Domain.Entities.RaceEntities;
+﻿using RPGManager.Desktop.Domain.Entities.ItemsEntities.ToolEntities;
 
 namespace RPGManager.Desktop.Domain.Entities.GameSystems;
 
@@ -19,19 +13,25 @@ public class GameSystemVersion : EntityBase
     public GameSystem GameSystem { get; set; }
 
     public ICollection<AbilityScore> AbilityScores { get; set; }
+    public ICollection<AmmunitionType> Ammunitions { get; set; }
     public ICollection<ArmorCategory> ArmorCategories { get; set; }
     public ICollection<Alignment> Alignments { get; set; }
-    public ICollection<Background> Backgrounds { get; set; }
-    public ICollection<Class> Classes { get; set; }
+    //public ICollection<Background> Backgrounds { get; set; }
+    //public ICollection<Class> Classes { get; set; }
     public ICollection<CurrencyType> CurrencyTypes { get; set; }
     public ICollection<DamageType> DamageTypes { get; set; }
     public ICollection<Language> Languages { get; set; }
     public ICollection<Level> LevelUps { get; set; }
-    public ICollection<Race> Races { get; set; }
+    //public ICollection<Race> Races { get; set; }
+    public ICollection<ShieldArmor> ShieldArmors { get; set; }
     public ICollection<Size> Sizes { get; set; }
     public ICollection<Skill> Skills { get; set; }
-    public ICollection<Weapon> Weapons { get; set; }
+    public ICollection<ToolCategory> ToolCategories { get; set; }
+    public ICollection<Tool> Tools { get; set; }
+    public ICollection<WearableArmor> WearableArmors { get; set; }
     public ICollection<WeaponCategory> WeaponCategories { get; set; }
+    public ICollection<Weapon> Weapons { get; set; }
+    public ICollection<WeaponMasteryProperty> WeaponMasteryProperties { get; set; }
     public ICollection<WeaponProperty> WeaponProperties { get; set; }
     public ICollection<WeaponType> WeaponTypes { get; set; }
 }

@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.SkillProficiency;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities.SkillProficiency;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IClassSkillProficiencyChoiceRepository : IRepositoryBase<ClassSkillProficiencyChoice>
-{
+//public interface IClassSkillProficiencyChoiceRepository : IRepositoryBase<ClassSkillProficiencyChoice>
+//{
 
-}
+//}

@@ -1,11 +1,11 @@
-using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
-using RPGManager.Desktop.Infra.Db.Contexts;
+//using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
+//using RPGManager.Desktop.Infra.Db.Contexts;
 
-namespace RPGManager.Desktop.Infra.Repositories.ItemRepositories.WeaponRepositories;
+//namespace RPGManager.Desktop.Infra.Repositories.ItemRepositories.WeaponRepositories;
 
-public class WeaponDamageRepository : RepositoryBase<WeaponDamage>, IWeaponDamageRepository
-{
-    public WeaponDamageRepository( Context context ) : base( context )
-    {
-    }
-}
+//public class WeaponDamageRepository : RepositoryBase<WeaponDamage>, IWeaponDamageRepository
+//{
+//    public WeaponDamageRepository( Context context ) : base( context )
+//    {
+//    }
+//}

@@ -9,5 +9,4 @@ public class WearableArmor : Armor
     public byte? MaxAbilityModifier { get; set; }
 
     public AbilityScore? ArmorClassAbilityScoreModifier { get; set; }
-    public Armor Armor { get; set; }
 }

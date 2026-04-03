@@ -1,8 +1,8 @@
-﻿using RPGManager.Desktop.Domain.Entities.Backgrounds;
+﻿//using RPGManager.Desktop.Domain.Entities.Backgrounds;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IBackgroundMapper : IMapperTwo<Background>
-{
+//public interface IBackgroundMapper : IMapperTwo<Background>
+//{
 
-}
+//}

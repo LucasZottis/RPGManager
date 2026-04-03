@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.SkillProficiency;
+//using RPGManager.Desktop.Domain.Entities.ClassesEntities.SkillProficiency;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IClassSkillProficiencyOptionMapper : IMapperTwo<ClassSkillProficiencyOption>
-{
-}
+//public interface IClassSkillProficiencyOptionMapper : IMapperTwo<ClassSkillProficiencyOption>
+//{
+//}

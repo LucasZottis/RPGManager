@@ -1,5 +1,4 @@
 ﻿using RPGManager.Desktop.Domain.Entities.Base;
-using RPGManager.Desktop.Domain.Entities.ClassesEntities.SkillProficiency;
 
 namespace RPGManager.Desktop.Domain.Entities;
 
@@ -11,5 +10,5 @@ public class Skill : GameSystemVersionEntityBase
 
     public AbilityScore BaseAbilityScore { get; set; }
 
-    public ICollection<ClassSkillProficiencyOption> ClassSkillProficiencies { get; set; }
+    //public ICollection<ClassSkillProficiencyOption> ClassSkillProficiencies { get; set; }
 }

@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Application.Mappers.Base;
-using RPGManager.Desktop.Domain.Entities.RaceEntities.Trait;
+//using RPGManager.Desktop.Application.Mappers.Base;
+//using RPGManager.Desktop.Domain.Entities.RaceEntities.Trait;
 
-namespace RPGManager.Desktop.Application.Mappers.RaceMappers;
+//namespace RPGManager.Desktop.Application.Mappers.RaceMappers;
 
-public class RaceTraitSpellMapper : MapperTwo<RaceTraitSpell>, IRaceTraitSpellMapper
-{
-}
+//public class RaceTraitSpellMapper : MapperTwo<RaceTraitSpell>, IRaceTraitSpellMapper
+//{
+//}

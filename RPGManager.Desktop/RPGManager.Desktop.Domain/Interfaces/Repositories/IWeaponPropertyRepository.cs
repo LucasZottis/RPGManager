@@ -1,7 +1,7 @@
-﻿using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
+﻿//using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IWeaponPropertyRepository : IRepositoryBase<WeaponProperty>
-{
-}
+//public interface IWeaponPropertyRepository : IRepositoryBase<WeaponProperty>
+//{
+//}

@@ -1,12 +1,7 @@
-﻿using RPGManager.Desktop.Domain.Entities.Base;
-using RPGManager.Desktop.Domain.Entities.GameSystems;
+﻿namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.ToolEntities;
 
-namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.ToolEntities;
-
-public class ToolCategory : EntityBase
+public class ToolCategory : GameSystemVersionEntityBase
 {
-    public Guid GameSystemId { get; set; }
     public string Name { get; set; }
-
-    public GameSystem GameSystem { get; set; }
+    public ICollection<Tool> Tools { get; set; }
 }

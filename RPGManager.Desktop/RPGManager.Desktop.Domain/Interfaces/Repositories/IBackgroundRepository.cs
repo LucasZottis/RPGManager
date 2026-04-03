@@ -1,8 +1,8 @@
-﻿using RPGManager.Desktop.Domain.Entities.Backgrounds;
+﻿//using RPGManager.Desktop.Domain.Entities.Backgrounds;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IBackgroundRepository : IRepositoryBase<Background>
-{
+//public interface IBackgroundRepository : IRepositoryBase<Background>
+//{
 
-}
+//}

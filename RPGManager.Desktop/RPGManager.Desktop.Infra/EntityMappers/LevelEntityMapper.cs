@@ -20,7 +20,7 @@ public class LevelEntityMapper : GameSystemVersionBaseEntityMapper<Level>
         builder.Property( e => e.ExperiencePoints ).IsRequired();
         builder.Property( e => e.ProficiencyBonus ).IsRequired();
 
-        builder.HasMany( e => e.ClassesLevels ).WithOne( cl => cl.Level ).HasForeignKey( cl => cl.LevelId );
+        //builder.HasMany( e => e.ClassesLevels ).WithOne( cl => cl.Level ).HasForeignKey( cl => cl.LevelId );
         builder.HasData( _dnD521Seed.GetLevels() );
     }
 }

@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.Backgrounds.Equipments;
+//using RPGManager.Desktop.Domain.Entities.Backgrounds.Equipments;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IBackgroundEquipmentOptionItemMapper : IMapperTwo<BackgroundEquipmentOptionItem>
-{
-}
+//public interface IBackgroundEquipmentOptionItemMapper : IMapperTwo<BackgroundEquipmentOptionItem>
+//{
+//}

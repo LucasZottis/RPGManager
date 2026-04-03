@@ -1,9 +1,9 @@
-using RPGManager.Desktop.Application.Mappers.Base;
-using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
+//using RPGManager.Desktop.Application.Mappers.Base;
+//using RPGManager.Desktop.Domain.Entities.ItemsEntities.ArmorEntities;
 
-namespace RPGManager.Desktop.Application.Mappers.ItemMappers.ArmorMappers;
+//namespace RPGManager.Desktop.Application.Mappers.ItemMappers.ArmorMappers;
 
-public class ArmorCategoryMapper : MapperTwo<ArmorCategory>, IArmorCategoryMapper
-{
+//public class ArmorCategoryMapper : MapperTwo<ArmorCategory>, IArmorCategoryMapper
+//{
 
-}
+//}

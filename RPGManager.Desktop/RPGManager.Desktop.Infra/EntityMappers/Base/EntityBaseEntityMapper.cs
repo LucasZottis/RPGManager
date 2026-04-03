@@ -19,7 +19,7 @@ public abstract class EntityBaseEntityMapper<TEntity> : IEntityTypeConfiguration
 
     private void InitialConfiguration( EntityTypeBuilder<TEntity> builder )
     {
-        builder.Property( e => e.Id ).IsRequired();
+        builder.Property( e => e.Id ).IsRequired().ValueGeneratedNever();
         ConfigurePrimaryKey( builder );
     }
 

@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Application.Mappers.Base;
+//using RPGManager.Desktop.Application.Mappers.Base;
 
-namespace RPGManager.Desktop.Application.Mappers;
+//namespace RPGManager.Desktop.Application.Mappers;
 
-public class MonsterMapper : MapperTwo<Monster>, IMonsterMapper
-{
-}
+//public class MonsterMapper : MapperTwo<Monster>, IMonsterMapper
+//{
+//}

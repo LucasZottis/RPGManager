@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
+//using RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IWeaponPropertyMapper : IMapperTwo<WeaponProperty>
-{
-}
+//public interface IWeaponPropertyMapper : IMapperTwo<WeaponProperty>
+//{
+//}

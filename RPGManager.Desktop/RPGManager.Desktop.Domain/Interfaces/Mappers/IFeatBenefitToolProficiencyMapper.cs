@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.Feats.FeatBenefits;
+//using RPGManager.Desktop.Domain.Entities.Feats.FeatBenefits;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+//namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IFeatBenefitToolProficiencyMapper : IMapperTwo<FeatBenefitToolProficiency>
-{
-}
+//public interface IFeatBenefitToolProficiencyMapper : IMapperTwo<FeatBenefitToolProficiency>
+//{
+//}

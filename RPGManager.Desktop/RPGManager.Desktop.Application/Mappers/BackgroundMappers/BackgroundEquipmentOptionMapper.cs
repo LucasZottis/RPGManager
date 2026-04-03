@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Application.Mappers.Base;
-using RPGManager.Desktop.Domain.Entities.Backgrounds.Equipments;
+//using RPGManager.Desktop.Application.Mappers.Base;
+//using RPGManager.Desktop.Domain.Entities.Backgrounds.Equipments;
 
-namespace RPGManager.Desktop.Application.Mappers.BackgroundMappers;
+//namespace RPGManager.Desktop.Application.Mappers.BackgroundMappers;
 
-public class BackgroundEquipmentOptionMapper : MapperTwo<BackgroundEquipmentOption>, IBackgroundEquipmentOptionMapper
-{
-}
+//public class BackgroundEquipmentOptionMapper : MapperTwo<BackgroundEquipmentOption>, IBackgroundEquipmentOptionMapper
+//{
+//}

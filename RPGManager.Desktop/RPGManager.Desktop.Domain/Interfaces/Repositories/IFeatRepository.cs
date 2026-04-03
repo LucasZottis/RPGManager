@@ -1,8 +1,8 @@
-using RPGManager.Desktop.Domain.Entities.Feats;
+//using RPGManager.Desktop.Domain.Entities.Feats;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
+//namespace RPGManager.Desktop.Domain.Interfaces.Repositories;
 
-public interface IFeatRepository : IRepositoryBase<Feat>
-{
+//public interface IFeatRepository : IRepositoryBase<Feat>
+//{
 
-}
+//}

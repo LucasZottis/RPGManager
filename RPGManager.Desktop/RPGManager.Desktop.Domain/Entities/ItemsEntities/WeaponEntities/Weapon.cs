@@ -2,9 +2,8 @@
 
 namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
-public class Weapon : EntityBase
+public class Weapon : Item
 {
-    public Guid ItemId { get; set; }
     public Guid WeaponCategoryId { get; set; }
     public Guid WeaponTypeId { get; set; }
     public Guid WeaponMasteryPropertyId { get; set; }
@@ -13,7 +12,6 @@ public class Weapon : EntityBase
     //public string? Description { get; set; }
     //public bool IsMagicWeapon { get; set; }
 
-    public Item Item { get; set; } = null!;
     public WeaponCategory WeaponCategory { get; set; } = null!;
     public WeaponType WeaponType { get; set; } = null!;
     public WeaponMasteryProperty WeaponMasteryProperty { get; set; } = null!;

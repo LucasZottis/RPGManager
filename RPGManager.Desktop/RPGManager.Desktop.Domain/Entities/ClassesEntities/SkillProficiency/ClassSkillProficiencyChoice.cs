@@ -1,11 +1,11 @@
-﻿using RPGManager.Desktop.Domain.Entities.Base;
+﻿//using RPGManager.Desktop.Domain.Entities.Base;
 
-namespace RPGManager.Desktop.Domain.Entities.ClassesEntities.SkillProficiency;
+//namespace RPGManager.Desktop.Domain.Entities.ClassesEntities.SkillProficiency;
 
-public class ClassSkillProficiencyChoice : EntityChoiceBase
-{
-    public Guid ClassId { get; set; }
-    public Class Class { get; set; }
+//public class ClassSkillProficiencyChoice : EntityChoiceBase
+//{
+//    public Guid ClassId { get; set; }
+//    public Class Class { get; set; }
 
-    public ICollection<ClassSkillProficiencyOption> Options { get; set; }
-}
+//    public ICollection<ClassSkillProficiencyOption> Options { get; set; }
+//}

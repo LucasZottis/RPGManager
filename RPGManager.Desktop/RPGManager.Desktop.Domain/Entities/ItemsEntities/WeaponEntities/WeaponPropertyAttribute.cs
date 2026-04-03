@@ -1,6 +1,4 @@
-﻿using RPGManager.Desktop.Domain.Entities.ItemsEntities.Gears;
-
-namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
+﻿namespace RPGManager.Desktop.Domain.Entities.ItemsEntities.WeaponEntities;
 
 public class WeaponPropertyAttribute
 {

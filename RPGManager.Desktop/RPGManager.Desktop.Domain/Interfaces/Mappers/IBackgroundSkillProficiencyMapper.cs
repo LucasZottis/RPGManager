@@ -1,7 +1,7 @@
-using RPGManager.Desktop.Domain.Entities.Backgrounds;
+////using RPGManager.Desktop.Domain.Entities.Backgrounds;
 
-namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
+////namespace RPGManager.Desktop.Domain.Interfaces.Mappers;
 
-public interface IBackgroundSkillProficiencyMapper : IMapperTwo<BackgroundSkillProficiency>
-{
-}
+////public interface IBackgroundSkillProficiencyMapper : IMapperTwo<BackgroundSkillProficiency>
+////{
+////}
