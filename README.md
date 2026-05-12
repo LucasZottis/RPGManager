@@ -32,8 +32,6 @@ O jogador escolhe uma das 12 classes disponíveis:
 - Bruxo
 - Mago
 
-O nível inicial é 1. O XP inicial é 0.
-
 ### Etapa 2 — Origem
 
 A origem é composta por três escolhas:
