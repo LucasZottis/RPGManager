@@ -45,7 +45,11 @@ O jogador escolhe um dos antecedentes disponíveis. Cada antecedente define:
 - Uma proficiência de ferramenta
 - Equipamento inicial ou 50 PO
 
-Os antecedentes disponíveis são: Acólito, Criminoso, Sábio e Soldado.
+Os antecedentes disponíveis são: 
+- Acólito
+- Criminoso
+- Sábio
+- Soldado
 
 **Espécie**
 
@@ -94,6 +98,10 @@ O jogador preenche os dados narrativos do personagem:
 **Hit Points**
 
 HP atual, HP máximo e HP temporário. HP temporário é perdido primeiro ao receber dano e não acumula com novo HP temporário recebido.
+
+Um personagem tem HP máximo, HP atual e HP temporário. O HP máximo é a quantidade de vida do personagem. Quando o HP atual chegar a zero, o personagem fica inconsciente e começará o Death Saving Throws.
+
+O HP atual deve ser reduzido informando a quantidade de dano e tipo de dano. Quando o personagem tiver resistencia e não deve receber dano algum quando for invulnerável.
 
 **Death Saving Throws**
 
