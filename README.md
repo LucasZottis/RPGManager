@@ -107,6 +107,8 @@ O HP atual deve ser reduzido informando a quantidade de dano e tipo de dano. Qua
 
 Exibidos quando o personagem está com 0 HP. O jogador registra manualmente os sucessos e falhas. Três sucessos estabilizam o personagem. Três falhas resultam em morte.
 
+O manager não deve permitir o jogador fazer nada além dos Death Saving Throws quando a vida estiver zerada. O jogador irá jogar o dado e clicar se foi sucesso ou não.
+
 **Hit Dice**
 
 Exibe o total de Hit Dice e quantos foram gastos. O jogador registra o gasto durante descansos curtos.
