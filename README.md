@@ -17,7 +17,20 @@ O fluxo de criação segue a ordem definida pelo manual.
 
 ### Etapa 1 — Classe
 
-O jogador escolhe uma das 12 classes disponíveis: Bárbaro, Bardo, Clérigo, Druida, Guerreiro, Monge, Paladino, Patrulheiro, Ladino, Feiticeiro, Bruxo e Mago.
+O jogador escolhe uma das 12 classes disponíveis: 
+
+- Bárbaro
+- Bardo
+- Clérigo
+- Druida
+- Guerreiro
+- Monge
+- Paladino
+- Patrulheiro
+- Ladino
+- Feiticeiro
+- Bruxo
+- Mago
 
 O nível inicial é 1. O XP inicial é 0.
 
