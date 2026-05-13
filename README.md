@@ -15,35 +15,23 @@ Custo:        Zero
 
 O fluxo de criação segue a ordem definida pelo manual.
 
-### Etapa 1 — Classe
+### Etapa Sistema
 
-O jogador escolhe uma das 12 classes disponíveis: 
+Uma lista de sistemas cadastrados será exibida e o usuário deve selecionar um. Caso tenha apenas um sistema disponível para o usuário será selecionado automaticamente, assim pulando para próxima etapa.
 
-- Bárbaro
-- Bardo
-- Clérigo
-- Druida
-- Guerreiro
-- Monge
-- Paladino
-- Patrulheiro
-- Ladino
-- Feiticeiro
-- Bruxo
-- Mago
+### Etapa Classe
 
-### Etapa 2 — Origem
+O jogador escolhe entre as classes disponíveis para o usuário dentro daquele sistema. Cada classe deve ter uma descrição curta, dificuldade de jogo com a classe e atributos principais.
 
-A origem é composta por três escolhas:
-
-**Antecedente**
+### Etapa Antecedente
 
 O jogador escolhe um dos antecedentes disponíveis. Cada antecedente define:
-- Três atributos com bônus de +2/+1/+1
-- Um Feat de origem
+- Três atributos com bônus de +2/+1/+1 (Três atributos listados — aumenta um em +2 e outro em +1, ou aumenta os três em +1. Nenhum pode ultrapassar 20.)
+
+- Um feat específico do tipo Origin
 - Duas proficiências de perícia
-- Uma proficiência de ferramenta
-- Equipamento inicial ou 50 PO
+- Uma proficiência ferramenta específica ou uma à escolha da categoria de Ferramentas de Artesão
+- Escolha entre um pacote de equipamentos ou 50 PO (Pontos de Ouro)
 
 Os antecedentes disponíveis são: 
 - Acólito
@@ -51,35 +39,27 @@ Os antecedentes disponíveis são:
 - Sábio
 - Soldado
 
-**Espécie**
+Cada antecedente deve ter uma descrição curta.
 
-O jogador escolhe uma das espécies disponíveis: Draconato, Anão, Elfo, Gnomo, Goliath, Halfling, Humano, Orc e Tiefling.
+### Etapa Espécie
 
-**Idiomas**
+O jogador escolhe uma das espécies disponíveis para o usuário. Uma espécie pode ter sub-espécie ou um ancestral e caso a espécie selecionada esteja em um dos casos, o usuário também deve escolher uma opção disponível para aquela espécie.
+
+### Etapa Idiomas
 
 O jogador escolhe os idiomas conforme as regras da espécie e do antecedente escolhidos.
 
-### Etapa 3 — Atributos
+### Etapa Alinhamento
+
+Se tiver alinhamento cadastrado para o sistema selecionado, será exibido nessa etapa. O usuário deve selecionar um dos disponíveis.
+
+### Etapa Atributos
 
 O jogador informa manualmente os seis valores de atributo obtidos por rolagem física de dados. O app calcula e exibe os modificadores correspondentes.
 
 Os seis atributos são: Força, Destreza, Constituição, Inteligência, Sabedoria e Carisma.
 
-### Etapa 4 — Alinhamento
-
-O jogador escolhe um dos nove alinhamentos:
-
-- Leal e Bom
-- Neutro e Bom
-- Caótico e Bom
-- Leal e Neutro
-- Neutro
-- Caótico e Neutro
-- Leal e Mau
-- Neutro e Mau
-- Caótico e Mau
-
-### Etapa 5 — Detalhes
+### Etapa Detalhes
 
 O jogador preenche os dados narrativos do personagem:
 
