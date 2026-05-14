@@ -83,23 +83,35 @@ Um personagem tem HP máximo, HP atual e HP temporário. O HP máximo é a quant
 
 O HP atual deve ser reduzido informando a quantidade de dano e tipo de dano. Quando o personagem tiver resistencia e não deve receber dano algum quando for invulnerável.
 
+O HP atual pode ser aumentado ao curar o personagem.
+
 **Death Saving Throws**
 
 Exibidos quando o personagem está com 0 HP. O jogador registra manualmente os sucessos e falhas. Três sucessos estabilizam o personagem. Três falhas resultam em morte.
 
-O manager não deve permitir o jogador fazer nada além dos Death Saving Throws quando a vida estiver zerada. O jogador irá jogar o dado e clicar se foi sucesso ou não.
+O manager não deve permitir o jogador fazer nada além dos Death Saving Throws quando a vida estiver zerada.
+
+Os Death Saving Throws funcionaram da seguinte forma: O usuário joga o dado manualmente e informa se foi sucesso ou não. Se o personagem morrer, desabilita toda a ficha dele não permitindo realizar nada dentro do app.
 
 **Hit Dice**
 
-Exibe o total de Hit Dice e quantos foram gastos. O jogador registra o gasto durante descansos curtos.
+Exibe o total de Hit Dice e quantos estão disponíveis para uso. Hit Dice é a quantidade de dados que podem ser utilizados para restaurar a vida durante o descanso curto.
 
-**AC, Iniciativa e Velocidade**
+**AC (Armor Class) ou CA (Classe de Armadura)**
 
-Valores calculados automaticamente com base nas escolhas da criação. O jogador pode ajustar manualmente caso haja modificadores situacionais.
+É o valor utilizado para determinar se o personagem recebe dano ou não no momento do combate. Um personagem começa com um valor mínimo de CA conforme a montagem do personagem.
 
-**Condições**
+**Iniciativa**
 
-O jogador registra as condições ativas no personagem.
+É determinado pelo atributo de Destreza, mas pode haver exceções.
+
+**Velocidade**
+
+É um valor determinado uma unidade de medida de distância, por padrão é metros, mas deve haver configuração para isso. É a quantidade de espaços que o personagem pode se movimentar durante o combate. Isso é determinado na espécie do personagem.
+
+<!-- **Condições**
+
+O jogador registra as condições ativas no personagem. -->
 
 ### Atributos e perícias
 
